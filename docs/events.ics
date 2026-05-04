@@ -1,0 +1,624 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BD Events Aggregator//bd-events//EN
+X-WR-CALDESC:Aggregated AEC industry events from associations Tyler tracks
+  for BD.
+X-WR-CALNAME:BD Events — Bay Area & San Diego
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+X-WR-TIMEZONE:America/Los_Angeles
+BEGIN:VEVENT
+SUMMARY:[AIA San Francisco] AIASF: Forest-Timber-Frame: Changing Dynamics 
+ of Wood in the American West
+DTSTART;TZID=America/Los_Angeles:20260505T120000
+DTEND;TZID=America/Los_Angeles:20260505T170000
+DTSTAMP:20260504T235911Z
+UID:5c069abedaab88e07c4d086c8e3d6f83@bd-events
+DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
+ s/forest-timber-frame-changing-dynamics-of-wood-in-the-american-west
+LOCATION:Center for Architecture + Design 140 Sutter Street San Francisco\
+ , CA 94104 United States
+URL:https://www.aiasf.org/events/forest-timber-frame-changing-dynamics-of-
+ wood-in-the-american-west
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] Build Better: Member Connect
+DTSTART:20260506T000000Z
+DTSTAMP:20260504T235911Z
+UID:64046f7f16cee4f0f8c1457168de3576@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=MOB0526&WebsiteKe
+ y=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:LCI National
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=MOB0526&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] AI: A Path to Obsolescence or Transc
+ endence? [VIRTUAL EVENT]
+DTSTART:20260507T000000Z
+DTSTAMP:20260504T235911Z
+UID:e4ebe43d719569b58c97c256d719b468@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=NE050726&WebsiteK
+ ey=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:New England Community of Practice
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=NE050726&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] A Lean Happy Hour - FOX VALLEY
+DTSTART:20260507T000000Z
+DTSTAMP:20260504T235911Z
+UID:43379609165b6b8ddb1b3092fde26d68@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=WIFX050726&Websit
+ eKey=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:Wisconsin Community of Practice
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=WIFX050726&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] Lean Construction Education Program 
+ (AGC)
+DTSTART:20260508T000000Z
+DTSTAMP:20260504T235911Z
+UID:b385a644d59740995d8307d74d6d261d@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=MI_CMLEAN&Website
+ Key=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:Michigan Community of Practice
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=MI_CMLEAN&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] LCI Owners Lean Coffee
+DTSTART:20260508T000000Z
+DTSTAMP:20260504T235911Z
+UID:99f9630422f29dd7c6024fa3bfa7b9f6@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=OLC0526&WebsiteKe
+ y=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:LCI National
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=OLC0526&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[AIA San Francisco] AIASF: 2026 AIASF Design Awards Gala
+DTSTART;TZID=America/Los_Angeles:20260507T173000
+DTEND;TZID=America/Los_Angeles:20260507T210000
+DTSTAMP:20260504T235911Z
+UID:f97ceaf6353c0603df2078c8a26d1aa5@bd-events
+DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
+ s/design-award26
+LOCATION:Chinese Culture Center  750 Kearny Street 3rd Floor  San Francisc
+ o\, CA 94108-1861 United States
+URL:https://www.aiasf.org/events/design-award26
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] Lean Watch Party – Lean Constructi
+ on
+DTSTART:20260511T000000Z
+DTSTAMP:20260504T235911Z
+UID:4e005d0d18b95e72fa3e26923a0c3337@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=OVC051126&Website
+ Key=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:Ohio Valley Community of Practice
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=OVC051126&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] LCI Build Better: The Lean Advantage
+DTSTART:20260511T000000Z
+DTSTAMP:20260504T235911Z
+UID:99fd86266376d6b5fdd1f961aa828ea9@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=BBTLA0526&Website
+ Key=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:LCI National
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=BBTLA0526&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] Making Better Decisions with Choosin
+ g By Advantages - SACRAMENTO
+DTSTART:20260512T000000Z
+DTSTAMP:20260504T235911Z
+UID:885ad26cda6871873b10045ab772a768@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=NCA051226&Website
+ Key=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:Northern California Community of Practice
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=NCA051226&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] Build Better: Marketing Leaders Quar
+ terly
+DTSTART:20260512T000000Z
+DTSTAMP:20260504T235911Z
+UID:173b60fef4aefa051835ea1f167866cc@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=MMQ0526&WebsiteKe
+ y=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:LCI National
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=MMQ0526&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] Fireside Chat with Joe Donarumo [Vir
+ tual Event]
+DTSTART:20260512T000000Z
+DTSTAMP:20260504T235911Z
+UID:d47ee49dbab9c9a743c63e8cda37e424@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=NSH051226&Website
+ Key=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:Nashville Community of Practice
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=NSH051226&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] PULL PLANNING CLASS - Learn the Scie
+ nce of Coordinated Scheduling
+DTSTART:20260512T000000Z
+DTSTAMP:20260504T235911Z
+UID:f23e05ae306d23667b2e88b4475c07eb@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=WI051226&WebsiteK
+ ey=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:Wisconsin Community of Practice
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=WI051226&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] Lean Cocktail - Networking Happy Hou
+ r
+DTSTART:20260512T000000Z
+DTSTAMP:20260504T235911Z
+UID:bed98d5205407433f917df66475ee45e@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=GDM051226&Website
+ Key=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:Greater Des Moines Community of Practice
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=GDM051226&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] Choosing By Advantages: An Introduct
+ ion to Making Durable Decisions
+DTSTART:20260513T000000Z
+DTSTAMP:20260504T235911Z
+UID:50300f4c28e98d8e834ff32355418336@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=NCA051326&Website
+ Key=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:Northern California Community of Practice
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=NCA051326&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CSHE] 2026 CSHE Annual Institute Golf Tournament Registration
+DTSTART:20260513T000000Z
+DTSTAMP:20260504T235911Z
+UID:d55391331f495a50976a047e17fa155f@bd-events
+DESCRIPTION:\nSource: CSHE\nLink: https://cshe.org/events/EventDetails.asp
+ x?id=2045178
+URL:https://cshe.org/events/EventDetails.aspx?id=2045178
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CSHE] 2026 CSHE Annual Institute Sponsorship Application
+DTSTART:20260513T000000Z
+DTSTAMP:20260504T235911Z
+UID:ed4a2a62e8b6fead04ff314167709a49@bd-events
+DESCRIPTION:\nSource: CSHE\nLink: https://cshe.org/events/EventDetails.asp
+ x?id=2045124
+URL:https://cshe.org/events/EventDetails.aspx?id=2045124
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CSHE] 2026 CSHE Annual Institute Attendee Registration
+DTSTART:20260513T000000Z
+DTSTAMP:20260504T235911Z
+UID:15dbd4f7aa9499c25e1aac9064e9b6c6@bd-events
+DESCRIPTION:\nSource: CSHE\nLink: https://cshe.org/events/EventDetails.asp
+ x?id=2045011
+URL:https://cshe.org/events/EventDetails.aspx?id=2045011
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] A Lean Coffee
+DTSTART:20260514T000000Z
+DTSTAMP:20260504T235911Z
+UID:0298352b2b99792ae7bc6be2f20694dd@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=OVC051426&Website
+ Key=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:Ohio Valley Community of Practice
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=OVC051426&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] Atrium Bed Tower – Design & Constr
+ uction Tour
+DTSTART:20260514T000000Z
+DTSTAMP:20260504T235911Z
+UID:faf12e807f02d5e858e3b94204f10665@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=CAR051426&Website
+ Key=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:Carolinas Community of Practice
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=CAR051426&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] Making Better Decisions with Choosin
+ g By Advantages - SAN FRANCISCO
+DTSTART:20260515T000000Z
+DTSTAMP:20260504T235911Z
+UID:bed97996cfaa51503386711d22bd9de6@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=NCA051526&Website
+ Key=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:Northern California Community of Practice
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=NCA051526&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] Lean Construction Practices and Ment
+ al Health
+DTSTART:20260519T000000Z
+DTSTAMP:20260504T235911Z
+UID:e70e2b51e14170014138cfa53020a3a1@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=MN051926&WebsiteK
+ ey=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:Minnesota Community of Practice
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=MN051926&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] Taboo Talk: Real Conversations Acros
+ s the Project Ecosystem
+DTSTART:20260519T000000Z
+DTSTAMP:20260504T235911Z
+UID:a0c4b4b08a3b874b850f71a7c2757509@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=CO051926&WebsiteK
+ ey=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:Colorado Community of Practice
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=CO051926&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] Lean Brew: Shared Learning\, Stronge
+ r Outcomes!
+DTSTART:20260519T000000Z
+DTSTAMP:20260504T235911Z
+UID:598cc72be8807779ae63859b807e2898@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=HOU051926&Website
+ Key=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:Houston Community of Practice
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=HOU051926&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] Respect Works - A Safety Week Follow
+ -up w/OHSU's Respectful Workplace Initiative
+DTSTART:20260519T000000Z
+DTSTAMP:20260504T235911Z
+UID:308de8fd48f724f6aeea563ea8d2dbb2@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=PORT051926&Websit
+ eKey=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:Cascadia-Portland Community of Practice
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=PORT051926&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] Respect for People – Making Mental
+  Health Part of the Conversation
+DTSTART:20260520T000000Z
+DTSTAMP:20260504T235911Z
+UID:8a7bccb4b52927a502eb250227662705@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=AZ052026&WebsiteK
+ ey=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:Arizona Community of Practice
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=AZ052026&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] MILWAUKEE AREA - Lean Carnival
+DTSTART:20260520T000000Z
+DTSTAMP:20260504T235911Z
+UID:3b8103ec35257f32e0f2893f79638c67@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=WIML052026&Websit
+ eKey=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:Wisconsin Community of Practice
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=WIML052026&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] Lean Construction - The Henry Jobsit
+ e Tour & Lunch
+DTSTART:20260521T000000Z
+DTSTAMP:20260504T235911Z
+UID:23bc2c4e70b37b5f4abd8d7b0b154b6e@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=GA052126&WebsiteK
+ ey=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:Georgia Community of Practice
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=GA052126&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] AI-Powered Scrum for Construction Le
+ aders
+DTSTART:20260521T000000Z
+DTSTAMP:20260504T235911Z
+UID:a827eebfaa49fe6ef8a46a3b210a7317@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=AUS041626&Website
+ Key=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:Austin Community of Practice
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=AUS041626&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[AIA San Francisco] AIASF: Quantum + AI: Designing the Environment
+ s Behind Breakthrough Innovation
+DTSTART;TZID=America/Los_Angeles:20260520T173000
+DTEND;TZID=America/Los_Angeles:20260520T203000
+DTSTAMP:20260504T235911Z
+UID:3c50cc5ecce64b9e4562c1d4eb1a4731@bd-events
+DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
+ s/quantum--ai-designing-the-environments-behind-breakthrough-innovation
+LOCATION:Center for Architecture + Design 140 Sutter Street San Francisco\
+ , CA 94104 United States
+URL:https://www.aiasf.org/events/quantum--ai-designing-the-environments-be
+ hind-breakthrough-innovation
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[AIA San Francisco] AIASF: Staffing in the Age of AI & Connected P
+ ractice: Aligning Roles\, Responsibility\, and Digital Maturity in Archite
+ cture Firms
+DTSTART;TZID=America/Los_Angeles:20260521T080000
+DTEND;TZID=America/Los_Angeles:20260521T103000
+DTSTAMP:20260504T235911Z
+UID:5564efdf3358daa0d294a4c6c2c1a8ba@bd-events
+DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
+ s/staffing-in-the-age-of-ai-and-connected-practice-aligning-roles-responsi
+ bility-and-digital-maturity-in-architecture-firms
+LOCATION:Center for Architecture + Design 140 Sutter Street San Francisco\
+ , CA 94104 United States
+URL:https://www.aiasf.org/events/staffing-in-the-age-of-ai-and-connected-p
+ ractice-aligning-roles-responsibility-and-digital-maturity-in-architecture
+ -firms
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] Empower Your Team: How Lean Methods 
+ Drive Collaboration
+DTSTART:20260527T000000Z
+DTSTAMP:20260504T235911Z
+UID:c683f0075ca1ec9d9d7fe166d95baf4a@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=LAOC052726&Websit
+ eKey=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:Los Angeles & Orange County Community of Practice
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=LAOC052726&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] A Lean Coffee
+DTSTART:20260528T000000Z
+DTSTAMP:20260504T235911Z
+UID:d259bac8e343c05c9a7f99ae17c5f47d@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=CHI052826&Website
+ Key=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:Chicago Community of Practice
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=CHI052826&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[AIA San Francisco] AIASF: CRAN Tour: Chris French Metal Studio
+DTSTART;TZID=America/Los_Angeles:20260528T160000
+DTEND;TZID=America/Los_Angeles:20260528T180000
+DTSTAMP:20260504T235911Z
+UID:a515438aad90e78b4f6f52d3537d4316@bd-events
+DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
+ s/chris-french-metal-studio-tour
+LOCATION:Chris french Metal\, Inc 2500 Union Street Oakland\, CA 94607 Uni
+ ted States
+URL:https://www.aiasf.org/events/chris-french-metal-studio-tour
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Lean Construction Institute] Lean at Hilti – A Holistic Approac
+ h [HYBRID EVENT]
+DTSTART:20260529T000000Z
+DTSTAMP:20260504T235911Z
+UID:9946c1b5cb4d49432628ee0b380be2cf@bd-events
+DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
+ nconstruction.org/LCI/Events/Event_display.aspx?EventKey=DCM052926&Website
+ Key=2007eced-50c6-4f09-8b60-274f701143bf
+LOCATION:DC Metro Community of Practice
+URL:https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?Event
+ Key=DCM052926&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[AIA San Francisco] AIASF: MAKERS series: Rob Forbes and Traci Des
+  Jardins
+DTSTART;TZID=America/Los_Angeles:20260604T173000
+DTEND;TZID=America/Los_Angeles:20260604T203000
+DTSTAMP:20260504T235911Z
+UID:451217aac6cdf1327e045bf344e4acd9@bd-events
+DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
+ s/makers-series-rob-forbes-and-traci-des-jardins
+LOCATION:Center for Architecture + Design 140 Sutter Street San Francisco\
+ , CA 94104
+URL:https://www.aiasf.org/events/makers-series-rob-forbes-and-traci-des-ja
+ rdins
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[AIA San Francisco] AIASF: Public Works Permits Portal (Ph. 1): Wa
+ lkthrough and Practitioner Feedback
+DTSTART;TZID=America/Los_Angeles:20260609T093000
+DTEND;TZID=America/Los_Angeles:20260609T103000
+DTSTAMP:20260504T235911Z
+UID:5a2b33a95f0969ad237a19265c2bcd12@bd-events
+DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
+ s/public-works-permits-portal-phase-1-walkthrough-and-practitioner-feedbac
+ k
+LOCATION:Center for Architecture + Design 140 Sutter Street San Francisco\
+ , CA 94104 United States
+URL:https://www.aiasf.org/events/public-works-permits-portal-phase-1-walkt
+ hrough-and-practitioner-feedback
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[AIA San Francisco] AIASF: AIA Conference on Architecture & Design
+ �2026
+DTSTART;TZID=America/Los_Angeles:20260610T000000
+DTEND;TZID=America/Los_Angeles:20260614T000000
+DTSTAMP:20260504T235911Z
+UID:227bd27961c37536a50b3996ac02c26b@bd-events
+DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
+ s/aia-conference-on-architecture-and-design2026
+LOCATION:San Diego\, California
+URL:https://www.aiasf.org/events/aia-conference-on-architecture-and-design
+ 2026
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[NAIOP Silicon Valley] 2026 Capital Markets Panel
+DTSTART:20260611T113000Z
+DTEND:20260611T133000Z
+DTSTAMP:20260504T235911Z
+UID:da6ee1b9b63d0f5cf70c0470959088bc@bd-events
+DESCRIPTION:NAIOP Silicon Valley Capital Markets Panel\nRegister for the 2
+ 026 NAIOP Silicon Valley Capital Markets Panel! Join us on Thursday\, June
+  11\, 2026 at Santa Clara Square for an insightful discussion with top com
+ mercial real estate experts & a networking lunch. Join us for a timely and
+  candid conversation with leading deal makers as we unpack the forces shap
+ ing the Silicon Valley capital markets. \nSpea\n\nSource: NAIOP Silicon Va
+ lley\nLink: https://naiopsv.org/event/2026capitalmarketspanel/
+LOCATION:Santa Clara Square\, 2625 Augustine Drive\, Suite 125\, Santa Cla
+ ra\, CA\, 95054\, United States
+URL:https://naiopsv.org/event/2026capitalmarketspanel/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CSHE] San Francisco Chapter | Education + Social
+DTSTART:20260612T000000Z
+DTSTAMP:20260504T235911Z
+UID:a34115d3d7cf75025d22cdc7da9f052f@bd-events
+DESCRIPTION:\nSource: CSHE\nLink: https://cshe.org/events/EventDetails.asp
+ x?id=2041302
+URL:https://cshe.org/events/EventDetails.aspx?id=2041302
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CSHE] San Francisco Chapter | Everon
+DTSTART:20260617T000000Z
+DTSTAMP:20260504T235911Z
+UID:4d00d8c1926301c5b746f63d3b11c2ac@bd-events
+DESCRIPTION:\nSource: CSHE\nLink: https://cshe.org/events/EventDetails.asp
+ x?id=2041303
+URL:https://cshe.org/events/EventDetails.aspx?id=2041303
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[CSHE] Central Coast Chapter Meeting | Hospital Incident Command S
+ ystem for the Hospital Engineer\, an Intro
+DTSTART:20260617T000000Z
+DTSTAMP:20260504T235911Z
+UID:79c689dded413d525a01da3ed40336d5@bd-events
+DESCRIPTION:\nSource: CSHE\nLink: https://cshe.org/events/EventDetails.asp
+ x?id=2054337
+URL:https://cshe.org/events/EventDetails.aspx?id=2054337
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[AIA San Francisco] AIASF: Building with Pride Happy Hour
+DTSTART;TZID=America/Los_Angeles:20260618T173000
+DTEND;TZID=America/Los_Angeles:20260618T203000
+DTSTAMP:20260504T235911Z
+UID:96db74e09e71044e6a39c3f1e244f694@bd-events
+DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
+ s/building-with-pride-happy-hour-
+LOCATION:Center for Architecture + Design 140 Sutter Street San Francisco\
+ , CA 94104 United States
+URL:https://www.aiasf.org/events/building-with-pride-happy-hour-
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[AIA San Francisco] AIASF: Acoustical Case Study: AIASF Headquarte
+ rs Lecture Hall
+DTSTART;TZID=America/Los_Angeles:20260623T173000
+DTEND;TZID=America/Los_Angeles:20260623T203000
+DTSTAMP:20260504T235911Z
+UID:1d1b6563c0a09497a6109c30af55eea7@bd-events
+DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
+ s/acoustical-case-study-aiasf-headquarters-lecture-hall
+LOCATION:Center for Architecture + Design 140 Sutter Street San Francisco\
+ , CA 94104 United States
+URL:https://www.aiasf.org/events/acoustical-case-study-aiasf-headquarters-
+ lecture-hall
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[AIA San Francisco] AIASF: Design-Build in Practice: Integrated Pr
+ oject Delivery Across Hospitality\, Retail\, and Adaptive Reuse
+DTSTART;TZID=America/Los_Angeles:20260624T173000
+DTEND;TZID=America/Los_Angeles:20260624T200000
+DTSTAMP:20260504T235911Z
+UID:42afbec1d6ae7362f9c38203b8d281e7@bd-events
+DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
+ s/project-delivery-series-hoffman-retreat-center-at-santa-sabina-
+LOCATION:Center for Architecture + Design 140 Sutter Street San Francisco\
+ , CA 94104 United States
+URL:https://www.aiasf.org/events/project-delivery-series-hoffman-retreat-c
+ enter-at-santa-sabina-
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[NAIOP Silicon Valley] 2026 NAIOP Silicon Valley Annual BBQ
+DTSTART:20260916T170000Z
+DTEND:20260916T200000Z
+DTSTAMP:20260504T235911Z
+UID:f3cb8278a1bbb14a60f933d07b034fe3@bd-events
+DESCRIPTION:NAIOP Silicon Valley is hosting our Annual BBQ on September
+  16\, 5:00-8:00 PM! This year\, the BBQ will be hosted at The Ameswell Hot
+ el in Mountain View! Join your NAIOP Silicon Valley colleagues for one of 
+ our most popular events of the year! Tickets may sell out\, so sign up soo
+ n! \nLocation: The Ameswell Hotel | Mountain View\nDate & Time: September
+  16\, 2026 | 5:00- 8:00 PM \nRegister Here\nRegistrati\n\nSource: NAIOP Si
+ licon Valley\nLink: https://naiopsv.org/event/2026bbq/
+LOCATION:The Ameswell Hotel\, 800 Moffett Blvd\, Mountain View\, CA\, 9404
+ 3\, United States
+URL:https://naiopsv.org/event/2026bbq/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[AIA San Francisco] AIASF: 2026 AIASF Golf Classic
+DTSTART;TZID=America/Los_Angeles:20261012T000000
+DTEND;TZID=America/Los_Angeles:20261013T000000
+DTSTAMP:20260504T235911Z
+UID:39b372816b83ade4c700555fa4824c01@bd-events
+DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
+ s/2026-aiasf-golf-classic-
+LOCATION:Marin Country Club 500 Country Club Drive Novato\, CA 94949-5813 
+ United States
+URL:https://www.aiasf.org/events/2026-aiasf-golf-classic-
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[NAIOP Silicon Valley] 2026 NAIOP Silicon Valley Annual Golf Tourn
+ ament
+DTSTART:20261021T110000Z
+DTEND:20261021T190000Z
+DTSTAMP:20260504T235911Z
+UID:88e5365d29f7bb49df1eefd364272697@bd-events
+DESCRIPTION:NAIOP Silicon Valley Annual Golf Tournament\nNAIOP Silicon Val
+ ley is excited to host our 5th Annual Golf Tournament on Wednesday\, Oc
+ tober 21\, 2026\, at the beautiful Cinnabar Hills Golf Club in San Jose
+ \, CA! Don’t miss this premier networking event where commercial real es
+ tate professionals come together for a fun-filled day of golf\, connection
+ s\, and friendly competition. Whether you’re a seasoned g\n\nSource: NAI
+ OP Silicon Valley\nLink: https://naiopsv.org/event/2026golftournament/
+LOCATION:Cinnabar Hills Golf Club\, 23600 McKean Rd.\, San Jose\, CA\, 951
+ 41\, United States
+URL:https://naiopsv.org/event/2026golftournament/
+END:VEVENT
+END:VCALENDAR
