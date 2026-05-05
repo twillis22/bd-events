@@ -8,138 +8,190 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  background: #262626;
+  background: #1f1f1f;
   color: #f6f6f6;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
 }
-.container { max-width: 1080px; margin: 0 auto; padding: 56px 28px 96px; }
+
+/* Ambient gradient — subtle warm depth, like Level 10's hero washes */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% -10%, rgba(255, 103, 31, 0.18), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 100%, rgba(147, 71, 39, 0.15), transparent 70%),
+    radial-gradient(ellipse 100% 60% at 50% 50%, rgba(38, 38, 38, 0.4), transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container { max-width: 1080px; margin: 0 auto; padding: 64px 28px 96px;
+  position: relative; z-index: 1; }
 
 /* Hero */
-.hero { padding-bottom: 36px; margin-bottom: 36px;
-  border-bottom: 1px solid #4a4744; }
-.label { font-size: 12px; font-weight: 600; letter-spacing: 2.5px;
-  text-transform: uppercase; color: #ff671f; margin-bottom: 14px;
-  display: inline-block; padding-bottom: 6px; border-bottom: 2px solid #ff671f; }
-h1 { font-size: 56px; font-weight: 800; color: #f6f6f6; line-height: 1.05;
-  letter-spacing: -0.02em; margin-bottom: 14px; text-transform: uppercase; }
-h1 em { font-style: normal; color: #ff671f; }
-.subtitle { color: #9a9a9a; font-size: 16px; max-width: 620px; margin-bottom: 28px; }
+.hero { padding-bottom: 40px; margin-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12); }
+.label { font-size: 11px; font-weight: 600; letter-spacing: 2.5px;
+  text-transform: uppercase; color: #ff671f; margin-bottom: 18px;
+  display: inline-block; padding: 6px 14px;
+  background: rgba(255, 103, 31, 0.12); border: 1px solid #ff671f33;
+  border-radius: 999px; backdrop-filter: blur(8px); }
+h1 { font-size: 72px; font-weight: 800; color: #f6f6f6; line-height: 1.0;
+  letter-spacing: -0.035em; margin-bottom: 18px; }
+h1 em { font-style: normal;
+  background: linear-gradient(135deg, #ff671f 0%, #ff8a4d 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent; }
+.subtitle { color: rgba(246, 246, 246, 0.62); font-size: 17px; max-width: 620px; margin-bottom: 32px;
+  font-weight: 400; }
 
 .meta-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 8px; }
-.subscribe { display: inline-flex; align-items: center; gap: 8px; background: #ff671f;
-  color: #262626; padding: 12px 22px; border-radius: 4px; text-decoration: none;
-  font-weight: 700; font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase;
-  transition: background 0.15s; }
-.subscribe:hover { background: #e85a14; }
-.stat-pill { background: transparent; border: 1px solid #4a4744; border-radius: 4px;
-  padding: 10px 16px; font-size: 12px; color: #9a9a9a; letter-spacing: 0.5px;
-  text-transform: uppercase; font-weight: 500; }
-.stat-pill strong { color: #f6f6f6; font-weight: 700; margin-right: 4px; }
-.stat-pill.new-pill { background: #93472733; border-color: #ff671f66; color: #ff671f; }
+.subscribe { display: inline-flex; align-items: center; gap: 8px;
+  background: linear-gradient(135deg, #ff671f 0%, #ff8a4d 100%);
+  color: #1a1a1a; padding: 13px 24px; border-radius: 999px; text-decoration: none;
+  font-weight: 700; font-size: 13px; letter-spacing: 0.4px;
+  box-shadow: 0 8px 24px rgba(255, 103, 31, 0.25), inset 0 1px 0 rgba(255,255,255,0.2);
+  transition: transform 0.18s, box-shadow 0.18s; }
+.subscribe:hover { transform: translateY(-1px);
+  box-shadow: 0 12px 32px rgba(255, 103, 31, 0.35), inset 0 1px 0 rgba(255,255,255,0.25); }
+.stat-pill { background: rgba(255, 255, 255, 0.04); backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 999px;
+  padding: 10px 16px; font-size: 12px; color: rgba(246, 246, 246, 0.62); letter-spacing: 0.3px;
+  font-weight: 500; }
+.stat-pill strong { color: #f6f6f6; font-weight: 700; margin-right: 6px; }
+.stat-pill.new-pill { background: rgba(255, 103, 31, 0.12); border-color: #ff671f40; color: #ff671f; }
 .stat-pill.new-pill strong { color: #ff671f; }
 
-/* Filter bar */
-.filters { background: #3d3935; border-radius: 6px; padding: 24px 26px;
-  margin-bottom: 40px; border-left: 3px solid #ff671f; }
+/* Filter bar — frosted glass card */
+.filters { background: rgba(255, 255, 255, 0.04); backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px;
+  padding: 26px 28px; margin-bottom: 44px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255,255,255,0.04); }
 .filter-group { margin-bottom: 18px; }
 .filter-group:last-child { margin-bottom: 0; }
-.filter-label { font-size: 11px; font-weight: 700; letter-spacing: 2px;
-  text-transform: uppercase; color: #ff671f; margin-bottom: 10px; display: block; }
+.filter-label { font-size: 11px; font-weight: 600; letter-spacing: 1.8px;
+  text-transform: uppercase; color: rgba(246, 246, 246, 0.62); margin-bottom: 10px; display: block; }
 .pill-row { display: flex; flex-wrap: wrap; gap: 6px; }
-.pill { background: transparent; border: 1px solid #4a4744; color: #f6f6f6;
-  padding: 7px 14px; border-radius: 3px; font-family: inherit; font-size: 11px;
-  font-weight: 600; cursor: pointer; transition: all 0.12s; letter-spacing: 0.6px;
-  text-transform: uppercase;
-  display: inline-flex; align-items: center; gap: 6px; }
-.pill:hover { border-color: #ff671f; color: #ff671f; }
-.pill.active { background: #ff671f; color: #262626; border-color: #ff671f; }
+.pill { background: rgba(255, 255, 255, 0.04); backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08); color: #f6f6f6;
+  padding: 8px 16px; border-radius: 999px; font-family: inherit; font-size: 12px;
+  font-weight: 500; cursor: pointer; transition: all 0.15s;
+  display: inline-flex; align-items: center; gap: 7px; }
+.pill:hover { border-color: #ff671f66; color: #ff671f;
+  background: rgba(255, 103, 31, 0.12); }
+.pill.active { background: #ff671f; color: #1a1a1a; border-color: #ff671f;
+  font-weight: 600; box-shadow: 0 4px 16px rgba(255,103,31,0.25); }
 .pill[data-filter="region"].active {
-  background: var(--pill-color, #ff671f);
-  border-color: var(--pill-color, #ff671f);
-  color: #262626; }
-.pill .count { background: rgba(255,255,255,0.12); padding: 1px 7px; border-radius: 8px;
-  font-size: 10px; font-weight: 700; }
+  background: var(--pill-color, #ff671f); border-color: var(--pill-color, #ff671f);
+  color: #1a1a1a;
+  box-shadow: 0 4px 16px color-mix(in srgb, var(--pill-color, #ff671f) 35%, transparent); }
+.pill .count { background: rgba(255,255,255,0.10); padding: 1px 7px; border-radius: 8px;
+  font-size: 10px; font-weight: 700; min-width: 18px; text-align: center; }
 .pill.active .count { background: rgba(0,0,0,0.18); color: inherit; }
 
 /* Search */
-.search-box { width: 100%; background: #1c1c1c; border: 1px solid #4a4744; color: #f6f6f6;
-  padding: 12px 16px; border-radius: 4px; font-family: inherit; font-size: 14px;
-  transition: border-color 0.15s; }
-.search-box:focus { outline: none; border-color: #ff671f; }
-.search-box::placeholder { color: #6b6b6b; }
+.search-box { width: 100%; background: #171717; border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f6f6f6; padding: 14px 18px; border-radius: 12px;
+  font-family: inherit; font-size: 14px; transition: all 0.15s; }
+.search-box:focus { outline: none; border-color: #ff671f66;
+  background: rgba(0,0,0,0.4); box-shadow: 0 0 0 3px rgba(255, 103, 31, 0.12); }
+.search-box::placeholder { color: rgba(246, 246, 246, 0.35); }
 
 /* Month sections */
-.month-section { margin-bottom: 52px; }
-.month-header { font-size: 13px; font-weight: 700; color: #ff671f;
-  letter-spacing: 3px; text-transform: uppercase; margin-bottom: 18px;
-  padding-bottom: 10px; border-bottom: 1px solid #4a4744; }
+.month-section { margin-bottom: 56px; }
+.month-header { font-size: 14px; font-weight: 600; color: rgba(246, 246, 246, 0.62);
+  letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 20px;
+  display: flex; align-items: center; gap: 16px; }
+.month-header span { flex-shrink: 0; }
+.month-header::after { content: ''; flex: 1; height: 1px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.12), transparent); }
 
-/* Event cards */
-.event { background: #3d3935; border-radius: 4px; padding: 22px 26px;
-  margin-bottom: 8px; display: grid;
-  grid-template-columns: 70px 1fr; gap: 22px; align-items: start;
-  transition: transform 0.12s, box-shadow 0.12s;
-  border-left: 3px solid transparent; }
-.event:hover { transform: translateX(2px); box-shadow: -2px 0 0 #ff671f; border-left-color: #ff671f; }
-.event.is-new { border-left-color: #ff671f; }
+/* Event cards — translucent glass */
+.event { background: rgba(255, 255, 255, 0.04); backdrop-filter: blur(14px) saturate(130%);
+  -webkit-backdrop-filter: blur(14px) saturate(130%);
+  border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px;
+  padding: 22px 26px; margin-bottom: 10px;
+  display: grid; grid-template-columns: 70px 1fr; gap: 22px; align-items: start;
+  transition: transform 0.18s, background 0.18s, border-color 0.18s, box-shadow 0.18s;
+  position: relative; }
+.event::before { content: ''; position: absolute; inset: 0; border-radius: 14px;
+  background: linear-gradient(135deg, transparent 0%, transparent 70%, rgba(255,103,31,0) 100%);
+  pointer-events: none; transition: background 0.25s; }
+.event:hover { background: rgba(255, 255, 255, 0.07); border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px); box-shadow: 0 8px 28px rgba(0,0,0,0.25); }
+.event:hover::before { background: linear-gradient(135deg, transparent 0%, transparent 70%, rgba(255,103,31,0.08) 100%); }
 
-.event-date { text-align: center; padding-top: 2px; line-height: 1; }
+.event.is-new { border-color: rgba(255,103,31,0.28); background: rgba(255,103,31,0.04); }
+.event.is-new::before { background: linear-gradient(135deg, rgba(255,103,31,0.06) 0%, transparent 50%); }
+
+.event-date { text-align: center; padding-top: 4px; line-height: 1; }
 .event-date .day { font-size: 38px; font-weight: 800; color: #f6f6f6;
-  line-height: 1; letter-spacing: -0.02em; }
-.event-date .dow { font-size: 11px; color: #ff671f; text-transform: uppercase;
-  letter-spacing: 1.5px; margin-top: 6px; font-weight: 700; }
+  line-height: 1; letter-spacing: -0.03em; }
+.event-date .dow { font-size: 10px; color: #ff671f; text-transform: uppercase;
+  letter-spacing: 1.8px; margin-top: 8px; font-weight: 700; }
 
 .event-body a.event-title { color: #f6f6f6; font-size: 16px; font-weight: 600;
-  text-decoration: none; line-height: 1.35; display: inline; }
+  text-decoration: none; line-height: 1.4; display: inline; letter-spacing: -0.005em; }
 .event-body a.event-title:hover { color: #ff671f; }
-.new-badge { display: inline-block; background: #ff671f; color: #262626;
-  font-size: 10px; font-weight: 800; letter-spacing: 1.2px; padding: 2px 7px;
-  border-radius: 2px; margin-left: 10px; vertical-align: 2px;
+.new-badge { display: inline-block;
+  background: linear-gradient(135deg, #ff671f 0%, #ff8a4d 100%);
+  color: #1a1a1a;
+  font-size: 9px; font-weight: 800; letter-spacing: 1.2px; padding: 3px 8px;
+  border-radius: 4px; margin-left: 10px; vertical-align: 2px;
+  box-shadow: 0 2px 8px rgba(255,103,31,0.3);
   animation: pulse 2.4s ease-in-out infinite; }
-@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.65; } }
 
-.event-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;
-  font-size: 12px; color: #9a9a9a; align-items: center; }
-.source-tag { font-weight: 600; font-size: 10px; padding: 3px 9px; border-radius: 2px;
-  letter-spacing: 0.5px; text-transform: uppercase; border: 1px solid; }
-.location { color: #9a9a9a; }
-.location::before { content: "·"; margin-right: 8px; color: #6b6b6b; }
-.time-badge { color: #f6f6f6; font-weight: 600; }
-.time-badge::before { content: "·"; margin-right: 8px; color: #6b6b6b; font-weight: 400;}
+.event-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px;
+  font-size: 12px; color: rgba(246, 246, 246, 0.62); align-items: center; }
+.meta-item { display: inline-flex; align-items: center; gap: 5px;
+  padding: 4px 10px; border-radius: 999px;
+  background: rgba(255,255,255,0.03); border: 1px solid rgba(255, 255, 255, 0.08); }
+.source-tag { font-weight: 600; font-size: 11px;
+  background: color-mix(in srgb, var(--tag-color) 14%, transparent);
+  color: var(--tag-color);
+  border-color: color-mix(in srgb, var(--tag-color) 35%, transparent); }
+.location { color: rgba(246, 246, 246, 0.62); }
+.time-badge { color: #f6f6f6; font-weight: 500; }
 
 /* Empty state */
-.empty { text-align: center; padding: 72px 24px; background: #3d3935;
-  border: 1px dashed #4a4744; border-radius: 4px; margin-top: 20px; }
-.empty-title { font-size: 16px; color: #f6f6f6; margin-bottom: 8px;
-  text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
-.empty-sub { font-size: 14px; color: #9a9a9a; }
+.empty { text-align: center; padding: 80px 24px; background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px); border: 1px dashed rgba(255, 255, 255, 0.08);
+  border-radius: 16px; margin-top: 20px; }
+.empty-title { font-size: 17px; color: #f6f6f6; margin-bottom: 8px; font-weight: 600; }
+.empty-sub { font-size: 14px; color: rgba(246, 246, 246, 0.62); }
 
-footer { margin-top: 72px; padding-top: 32px; border-top: 1px solid #4a4744;
-  color: #9a9a9a; font-size: 12px; line-height: 1.7; }
+footer { margin-top: 80px; padding-top: 36px; border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(246, 246, 246, 0.62); font-size: 12px; line-height: 1.7; }
 footer a { color: #ff671f; text-decoration: none; }
 footer a:hover { text-decoration: underline; }
-.footer-label { display: block; font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
-  color: #ff671f; margin-bottom: 10px; font-weight: 700; }
+.footer-label { display: block; font-size: 11px; letter-spacing: 1.8px; text-transform: uppercase;
+  color: #ff671f; margin-bottom: 10px; font-weight: 600; }
 
 @media (max-width: 720px) {
-  .container { padding: 40px 18px 64px; }
-  h1 { font-size: 38px; }
+  .container { padding: 44px 18px 72px; }
+  h1 { font-size: 46px; }
+  .subtitle { font-size: 15px; }
   .event { grid-template-columns: 56px 1fr; gap: 16px; padding: 18px 18px; }
-  .event-date .day { font-size: 30px; }
-  .filters { padding: 18px 18px; }
+  .event-date .day { font-size: 32px; }
+  .filters { padding: 20px 20px; }
   .meta-bar { gap: 8px; }
-  .stat-pill, .subscribe { font-size: 11px; padding: 9px 14px; }
+  .stat-pill, .subscribe { font-size: 11px; padding: 9px 16px; }
 }
 </style>
 </head>
 <body>
 <div class="container">
-  <div class="hero">
+  <header class="hero">
     <span class="label">BD Resource Library — 12</span>
     <h1>BD <em>Events</em></h1>
     <p class="subtitle">Aggregated AEC industry events across the Bay Area and San Diego. Updated automatically.</p>
@@ -148,9 +200,9 @@ footer a:hover { text-decoration: underline; }
       <span class="stat-pill"><strong id="visibleCount">59</strong>upcoming</span>
       <span class="stat-pill"><strong>7</strong>sources</span>
       <span class="stat-pill new-pill"><strong>59</strong>new this week</span>
-      <span class="stat-pill">Updated May 5, 2026 at 04:53 UTC</span>
+      <span class="stat-pill">Updated May 5, 2026 at 05:09 UTC</span>
     </div>
-  </div>
+  </header>
 
   <div class="filters">
     <div class="filter-group">
@@ -159,1021 +211,1021 @@ footer a:hover { text-decoration: underline; }
     </div>
     <div class="filter-group">
       <label class="filter-label">Region</label>
-      <div class="pill-row"><button class="pill active" data-filter="region" data-value="all">ALL REGIONS</button><button class="pill" data-filter="region" data-value="NorCal" style="--pill-color: #5a8dd6;">NORCAL <span class="count">31</span></button><button class="pill" data-filter="region" data-value="Other" style="--pill-color: #7fb59b;">OTHER <span class="count">28</span></button></div>
+      <div class="pill-row"><button class="pill active" data-filter="region" data-value="all">All Regions</button><button class="pill" data-filter="region" data-value="NorCal" style="--pill-color: #7eaee0;">NorCal <span class="count">31</span></button><button class="pill" data-filter="region" data-value="Other" style="--pill-color: #9ec9b3;">Other <span class="count">28</span></button></div>
     </div>
     <div class="filter-group">
       <label class="filter-label">Source</label>
-      <div class="pill-row"><button class="pill active" data-filter="source" data-value="all">ALL SOURCES</button><button class="pill" data-filter="source" data-value="Lean Construction Institute">LEAN CONSTRUCTION INSTITUTE <span class="count">27</span></button><button class="pill" data-filter="source" data-value="AIA San Francisco">AIA SAN FRANCISCO <span class="count">12</span></button><button class="pill" data-filter="source" data-value="CMAA NorCal">CMAA NORCAL <span class="count">7</span></button><button class="pill" data-filter="source" data-value="CSHE">CSHE <span class="count">6</span></button><button class="pill" data-filter="source" data-value="IIDA Northern California">IIDA NORTHERN CALIFORNIA <span class="count">3</span></button><button class="pill" data-filter="source" data-value="NAIOP Silicon Valley">NAIOP SILICON VALLEY <span class="count">3</span></button><button class="pill" data-filter="source" data-value="ULI (national)">ULI (NATIONAL) <span class="count">1</span></button>
-        <button class="pill" data-filter="new" data-value="true" style="--pill-color: #ff671f;">✦ NEW ONLY</button>
+      <div class="pill-row"><button class="pill active" data-filter="source" data-value="all">All Sources</button><button class="pill" data-filter="source" data-value="Lean Construction Institute">Lean Construction Institute <span class="count">27</span></button><button class="pill" data-filter="source" data-value="AIA San Francisco">AIA San Francisco <span class="count">12</span></button><button class="pill" data-filter="source" data-value="CMAA NorCal">CMAA NorCal <span class="count">7</span></button><button class="pill" data-filter="source" data-value="CSHE">CSHE <span class="count">6</span></button><button class="pill" data-filter="source" data-value="IIDA Northern California">IIDA Northern California <span class="count">3</span></button><button class="pill" data-filter="source" data-value="NAIOP Silicon Valley">NAIOP Silicon Valley <span class="count">3</span></button><button class="pill" data-filter="source" data-value="ULI (national)">ULI (national) <span class="count">1</span></button>
+        <button class="pill" data-filter="new" data-value="true" style="--pill-color: #ff671f;">✦ New only</button>
       </div>
     </div>
   </div>
 
-  <div id="eventsContainer">
-    <div class="month-section" data-month="2026-05"><h2 class="month-header">MAY 2026</h2><div class="event is-new"
+  <main id="eventsContainer">
+    <section class="month-section" data-month="2026-05"><h2 class="month-header"><span>May 2026</span></h2><article class="event is-new"
   data-source="ULI (national)"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">5</div>
-    <div class="dow">TUE</div>
+    <div class="dow">Tue</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://uli.org/events/detail/1E23DA6F-B7B5-41C2-A802-04AF2270079E" target="_blank" rel="noopener">2026 ULI Spring Meeting</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">ULI (national)</span>
-      <span class="time-badge">12:00 PM</span>
-      <span class="location">Music City Center, 201 Rep. John Lewis Way S, Nashville, TN 37203-4205, UNITED S</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">ULI (national)</span>
+      <span class="meta-item time-badge">12:00 PM</span>
+      <span class="meta-item location">Music City Center, 201 Rep. John Lewis Way S, Nashville, TN 37203-4205, UNITED S</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">5</div>
-    <div class="dow">TUE</div>
+    <div class="dow">Tue</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://www.aiasf.org/events/forest-timber-frame-changing-dynamics-of-wood-in-the-american-west" target="_blank" rel="noopener">AIASF: Forest-Timber-Frame: Changing Dynamics of Wood in the American West</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">AIA San Francisco</span>
-      <span class="time-badge">12:00 PM</span>
-      <span class="location">Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 Unite</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">AIA San Francisco</span>
+      <span class="meta-item time-badge">12:00 PM</span>
+      <span class="meta-item location">Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 Unite</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">6</div>
-    <div class="dow">WED</div>
+    <div class="dow">Wed</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=MOB0526&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">Build Better: Member Connect</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">LCI National</span>
+      <span class="meta-item location">LCI National</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">7</div>
-    <div class="dow">THU</div>
+    <div class="dow">Thu</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=NE050726&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">AI: A Path to Obsolescence or Transcendence? [VIRTUAL EVENT]</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">New England Community of Practice</span>
+      <span class="meta-item location">New England Community of Practice</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">7</div>
-    <div class="dow">THU</div>
+    <div class="dow">Thu</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=WIFX050726&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">A Lean Happy Hour - FOX VALLEY</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">Wisconsin Community of Practice</span>
+      <span class="meta-item location">Wisconsin Community of Practice</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">8</div>
-    <div class="dow">FRI</div>
+    <div class="dow">Fri</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=MI_CMLEAN&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">Lean Construction Education Program (AGC)</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">Michigan Community of Practice</span>
+      <span class="meta-item location">Michigan Community of Practice</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">8</div>
-    <div class="dow">FRI</div>
+    <div class="dow">Fri</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=OLC0526&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">LCI Owners Lean Coffee</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">LCI National</span>
+      <span class="meta-item location">LCI National</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">7</div>
-    <div class="dow">THU</div>
+    <div class="dow">Thu</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://www.aiasf.org/events/design-award26" target="_blank" rel="noopener">AIASF: 2026 AIASF Design Awards Gala</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">AIA San Francisco</span>
-      <span class="time-badge">5:30 PM</span>
-      <span class="location">Chinese Culture Center  750 Kearny Street 3rd Floor  San Francisco, CA 94108-186</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">AIA San Francisco</span>
+      <span class="meta-item time-badge">5:30 PM</span>
+      <span class="meta-item location">Chinese Culture Center  750 Kearny Street 3rd Floor  San Francisco, CA 94108-186</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">11</div>
-    <div class="dow">MON</div>
+    <div class="dow">Mon</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=OVC051126&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">Lean Watch Party – Lean Construction</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">Ohio Valley Community of Practice</span>
+      <span class="meta-item location">Ohio Valley Community of Practice</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">11</div>
-    <div class="dow">MON</div>
+    <div class="dow">Mon</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=BBTLA0526&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">LCI Build Better: The Lean Advantage</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">LCI National</span>
+      <span class="meta-item location">LCI National</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">12</div>
-    <div class="dow">TUE</div>
+    <div class="dow">Tue</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=NCA051226&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">Making Better Decisions with Choosing By Advantages - SACRAMENTO</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">Northern California Community of Practice</span>
+      <span class="meta-item location">Northern California Community of Practice</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">12</div>
-    <div class="dow">TUE</div>
+    <div class="dow">Tue</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=MMQ0526&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">Build Better: Marketing Leaders Quarterly</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">LCI National</span>
+      <span class="meta-item location">LCI National</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">12</div>
-    <div class="dow">TUE</div>
+    <div class="dow">Tue</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=NSH051226&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">Fireside Chat with Joe Donarumo [Virtual Event]</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">Nashville Community of Practice</span>
+      <span class="meta-item location">Nashville Community of Practice</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">12</div>
-    <div class="dow">TUE</div>
+    <div class="dow">Tue</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=WI051226&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">PULL PLANNING CLASS - Learn the Science of Coordinated Scheduling</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">Wisconsin Community of Practice</span>
+      <span class="meta-item location">Wisconsin Community of Practice</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">12</div>
-    <div class="dow">TUE</div>
+    <div class="dow">Tue</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=GDM051226&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">Lean Cocktail - Networking Happy Hour</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">Greater Des Moines Community of Practice</span>
+      <span class="meta-item location">Greater Des Moines Community of Practice</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">13</div>
-    <div class="dow">WED</div>
+    <div class="dow">Wed</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=NCA051326&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">Choosing By Advantages: An Introduction to Making Durable Decisions</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">Northern California Community of Practice</span>
+      <span class="meta-item location">Northern California Community of Practice</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="CSHE"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">13</div>
-    <div class="dow">WED</div>
+    <div class="dow">Wed</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://cshe.org/events/EventDetails.aspx?id=2045178" target="_blank" rel="noopener">2026 CSHE Annual Institute Golf Tournament Registration</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">CSHE</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">CSHE</span>
       
       
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="CSHE"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">13</div>
-    <div class="dow">WED</div>
+    <div class="dow">Wed</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://cshe.org/events/EventDetails.aspx?id=2045124" target="_blank" rel="noopener">2026 CSHE Annual Institute Sponsorship Application</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">CSHE</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">CSHE</span>
       
       
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="CSHE"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">13</div>
-    <div class="dow">WED</div>
+    <div class="dow">Wed</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://cshe.org/events/EventDetails.aspx?id=2045011" target="_blank" rel="noopener">2026 CSHE Annual Institute Attendee Registration</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">CSHE</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">CSHE</span>
       
       
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="IIDA Northern California"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">13</div>
-    <div class="dow">WED</div>
+    <div class="dow">Wed</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://iidanc.org/events/2026-pioneers-in-design/" target="_blank" rel="noopener">2026 Pioneers in Design</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">IIDA Northern California</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">IIDA Northern California</span>
       
       
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">14</div>
-    <div class="dow">THU</div>
+    <div class="dow">Thu</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=OVC051426&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">A Lean Coffee</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">Ohio Valley Community of Practice</span>
+      <span class="meta-item location">Ohio Valley Community of Practice</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">14</div>
-    <div class="dow">THU</div>
+    <div class="dow">Thu</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=CAR051426&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">Atrium Bed Tower – Design &amp; Construction Tour</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">Carolinas Community of Practice</span>
+      <span class="meta-item location">Carolinas Community of Practice</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="CMAA NorCal"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">14</div>
-    <div class="dow">THU</div>
+    <div class="dow">Thu</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://www.cmaanorcal.org/events-1/awards-gala-and-industry-celebration-2" target="_blank" rel="noopener">Awards Gala and Industry Celebration</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">CMAA NorCal</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">CMAA NorCal</span>
       
-      <span class="location">BlackHawk Museum</span>
+      <span class="meta-item location">BlackHawk Museum</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">15</div>
-    <div class="dow">FRI</div>
+    <div class="dow">Fri</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=NCA051526&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">Making Better Decisions with Choosing By Advantages - SAN FRANCISCO</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">Northern California Community of Practice</span>
+      <span class="meta-item location">Northern California Community of Practice</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">16</div>
-    <div class="dow">SAT</div>
+    <div class="dow">Sat</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://www.aiasf.org/events/2026-marin-home-tours" target="_blank" rel="noopener">AIASF: 2026 Marin Home Tours</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">AIA San Francisco</span>
-      <span class="time-badge">1:00 PM</span>
-      <span class="location">Seminary Park &amp; Ride 101 Seminary Drive Mill Valley, CA 94941 United States</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">AIA San Francisco</span>
+      <span class="meta-item time-badge">1:00 PM</span>
+      <span class="meta-item location">Seminary Park &amp; Ride 101 Seminary Drive Mill Valley, CA 94941 United States</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">19</div>
-    <div class="dow">TUE</div>
+    <div class="dow">Tue</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=MN051926&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">Lean Construction Practices and Mental Health</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">Minnesota Community of Practice</span>
+      <span class="meta-item location">Minnesota Community of Practice</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">19</div>
-    <div class="dow">TUE</div>
+    <div class="dow">Tue</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=CO051926&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">Taboo Talk: Real Conversations Across the Project Ecosystem</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">Colorado Community of Practice</span>
+      <span class="meta-item location">Colorado Community of Practice</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">19</div>
-    <div class="dow">TUE</div>
+    <div class="dow">Tue</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=HOU051926&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">Lean Brew: Shared Learning, Stronger Outcomes!</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">Houston Community of Practice</span>
+      <span class="meta-item location">Houston Community of Practice</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">19</div>
-    <div class="dow">TUE</div>
+    <div class="dow">Tue</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=PORT051926&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">Respect Works - A Safety Week Follow-up w/OHSU&#x27;s Respectful Workplace Initiative</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">Cascadia-Portland Community of Practice</span>
+      <span class="meta-item location">Cascadia-Portland Community of Practice</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">20</div>
-    <div class="dow">WED</div>
+    <div class="dow">Wed</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=AZ052026&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">Respect for People – Making Mental Health Part of the Conversation</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">Arizona Community of Practice</span>
+      <span class="meta-item location">Arizona Community of Practice</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">20</div>
-    <div class="dow">WED</div>
+    <div class="dow">Wed</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=WIML052026&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">MILWAUKEE AREA - Lean Carnival</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">Wisconsin Community of Practice</span>
+      <span class="meta-item location">Wisconsin Community of Practice</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">21</div>
-    <div class="dow">THU</div>
+    <div class="dow">Thu</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=GA052126&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">Lean Construction - The Henry Jobsite Tour &amp; Lunch</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">Georgia Community of Practice</span>
+      <span class="meta-item location">Georgia Community of Practice</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">21</div>
-    <div class="dow">THU</div>
+    <div class="dow">Thu</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=AUS041626&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">AI-Powered Scrum for Construction Leaders</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">Austin Community of Practice</span>
+      <span class="meta-item location">Austin Community of Practice</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="CMAA NorCal"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">21</div>
-    <div class="dow">THU</div>
+    <div class="dow">Thu</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://www.cmaanorcal.org/events-1/education-webinar-reality-capture" target="_blank" rel="noopener">EDUCATION WEBINAR - Reality Capture</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">CMAA NorCal</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">CMAA NorCal</span>
       
-      <span class="location">ZOOM Webinar</span>
+      <span class="meta-item location">ZOOM Webinar</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">20</div>
-    <div class="dow">WED</div>
+    <div class="dow">Wed</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://www.aiasf.org/events/quantum--ai-designing-the-environments-behind-breakthrough-innovation" target="_blank" rel="noopener">AIASF: Quantum + AI: Designing the Environments Behind Breakthrough Innovation</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">AIA San Francisco</span>
-      <span class="time-badge">5:30 PM</span>
-      <span class="location">Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 Unite</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">AIA San Francisco</span>
+      <span class="meta-item time-badge">5:30 PM</span>
+      <span class="meta-item location">Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 Unite</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">21</div>
-    <div class="dow">THU</div>
+    <div class="dow">Thu</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://www.aiasf.org/events/staffing-in-the-age-of-ai-and-connected-practice-aligning-roles-responsibility-and-digital-maturity-in-architecture-firms" target="_blank" rel="noopener">AIASF: Staffing in the Age of AI &amp; Connected Practice: Aligning Roles, Responsibility, and Digital Maturity in Architecture Firms</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">AIA San Francisco</span>
-      <span class="time-badge">8:00 AM</span>
-      <span class="location">Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 Unite</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">AIA San Francisco</span>
+      <span class="meta-item time-badge">8:00 AM</span>
+      <span class="meta-item location">Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 Unite</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="IIDA Northern California"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">26</div>
-    <div class="dow">TUE</div>
+    <div class="dow">Tue</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://iidanc.org/events/every-color-tells-a-story-how-color-psychology-influences-mood-behaviors/" target="_blank" rel="noopener">Every Color Tells a Story – CEU</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">IIDA Northern California</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">IIDA Northern California</span>
       
       
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">27</div>
-    <div class="dow">WED</div>
+    <div class="dow">Wed</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=LAOC052726&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">Empower Your Team: How Lean Methods Drive Collaboration</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">Los Angeles &amp; Orange County Community of Practice</span>
+      <span class="meta-item location">Los Angeles &amp; Orange County Community of Practice</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">28</div>
-    <div class="dow">THU</div>
+    <div class="dow">Thu</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=CHI052826&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">A Lean Coffee</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">Chicago Community of Practice</span>
+      <span class="meta-item location">Chicago Community of Practice</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">28</div>
-    <div class="dow">THU</div>
+    <div class="dow">Thu</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://www.aiasf.org/events/chris-french-metal-studio-tour" target="_blank" rel="noopener">AIASF: CRAN Tour: Chris French Metal Studio</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">AIA San Francisco</span>
-      <span class="time-badge">4:00 PM</span>
-      <span class="location">Chris french Metal, Inc 2500 Union Street Oakland, CA 94607 United States</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">AIA San Francisco</span>
+      <span class="meta-item time-badge">4:00 PM</span>
+      <span class="meta-item location">Chris french Metal, Inc 2500 Union Street Oakland, CA 94607 United States</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
   data-new="true">
   <div class="event-date">
     <div class="day">29</div>
-    <div class="dow">FRI</div>
+    <div class="dow">Fri</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=DCM052926&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">Lean at Hilti – A Holistic Approach [HYBRID EVENT]</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #7fb59b1f; color: #7fb59b; border-color: #7fb59b55;">Lean Construction Institute</span>
+      <span class="meta-item source-tag" style="--tag-color: #9ec9b3;">Lean Construction Institute</span>
       
-      <span class="location">DC Metro Community of Practice</span>
+      <span class="meta-item location">DC Metro Community of Practice</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="CMAA NorCal"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">30</div>
-    <div class="dow">SAT</div>
+    <div class="dow">Sat</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://www.cmaanorcal.org/events-1/cmit-wellness-hike" target="_blank" rel="noopener">CMIT Wellness Hike</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">CMAA NorCal</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">CMAA NorCal</span>
       
-      <span class="location">Lafayette Reservoir Recreation Area</span>
+      <span class="meta-item location">Lafayette Reservoir Recreation Area</span>
     </div>
   </div>
-</div></div>
-<div class="month-section" data-month="2026-06"><h2 class="month-header">JUNE 2026</h2><div class="event is-new"
+</article></section>
+<section class="month-section" data-month="2026-06"><h2 class="month-header"><span>June 2026</span></h2><article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">4</div>
-    <div class="dow">THU</div>
+    <div class="dow">Thu</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://www.aiasf.org/events/makers-series-rob-forbes-and-traci-des-jardins" target="_blank" rel="noopener">AIASF: MAKERS series: Rob Forbes and Traci Des Jardins</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">AIA San Francisco</span>
-      <span class="time-badge">5:30 PM</span>
-      <span class="location">Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">AIA San Francisco</span>
+      <span class="meta-item time-badge">5:30 PM</span>
+      <span class="meta-item location">Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">9</div>
-    <div class="dow">TUE</div>
+    <div class="dow">Tue</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://www.aiasf.org/events/public-works-permits-portal-phase-1-walkthrough-and-practitioner-feedback" target="_blank" rel="noopener">AIASF: Public Works Permits Portal (Ph. 1): Walkthrough and Practitioner Feedback</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">AIA San Francisco</span>
-      <span class="time-badge">9:30 AM</span>
-      <span class="location">Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 Unite</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">AIA San Francisco</span>
+      <span class="meta-item time-badge">9:30 AM</span>
+      <span class="meta-item location">Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 Unite</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">10</div>
-    <div class="dow">WED</div>
+    <div class="dow">Wed</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://www.aiasf.org/events/aia-conference-on-architecture-and-design2026" target="_blank" rel="noopener">AIASF: AIA Conference on Architecture &amp; Design�2026</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">AIA San Francisco</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">AIA San Francisco</span>
       
-      <span class="location">San Diego, California</span>
+      <span class="meta-item location">San Diego, California</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="NAIOP Silicon Valley"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">11</div>
-    <div class="dow">THU</div>
+    <div class="dow">Thu</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://naiopsv.org/event/2026capitalmarketspanel/" target="_blank" rel="noopener">2026 Capital Markets Panel</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">NAIOP Silicon Valley</span>
-      <span class="time-badge">11:30 AM</span>
-      <span class="location">Santa Clara Square, 2625 Augustine Drive, Suite 125, Santa Clara, CA, 95054, Uni</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">NAIOP Silicon Valley</span>
+      <span class="meta-item time-badge">11:30 AM</span>
+      <span class="meta-item location">Santa Clara Square, 2625 Augustine Drive, Suite 125, Santa Clara, CA, 95054, Uni</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="CSHE"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">12</div>
-    <div class="dow">FRI</div>
+    <div class="dow">Fri</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://cshe.org/events/EventDetails.aspx?id=2041302" target="_blank" rel="noopener">San Francisco Chapter | Education + Social</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">CSHE</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">CSHE</span>
       
       
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="CSHE"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">17</div>
-    <div class="dow">WED</div>
+    <div class="dow">Wed</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://cshe.org/events/EventDetails.aspx?id=2041303" target="_blank" rel="noopener">San Francisco Chapter | Everon</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">CSHE</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">CSHE</span>
       
       
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="CSHE"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">17</div>
-    <div class="dow">WED</div>
+    <div class="dow">Wed</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://cshe.org/events/EventDetails.aspx?id=2054337" target="_blank" rel="noopener">Central Coast Chapter Meeting | Hospital Incident Command System for the Hospital Engineer, an Intro</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">CSHE</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">CSHE</span>
       
       
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="CMAA NorCal"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">18</div>
-    <div class="dow">THU</div>
+    <div class="dow">Thu</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://www.cmaanorcal.org/events-1/education-webinar-the-bim-advantage-reducing-project-risk" target="_blank" rel="noopener">EDUCATION WEBINAR - The BIM Advantage: Reducing Project Risk</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">CMAA NorCal</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">CMAA NorCal</span>
       
-      <span class="location">ZOOM Webinar</span>
+      <span class="meta-item location">ZOOM Webinar</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">18</div>
-    <div class="dow">THU</div>
+    <div class="dow">Thu</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://www.aiasf.org/events/building-with-pride-happy-hour-" target="_blank" rel="noopener">AIASF: Building with Pride Happy Hour</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">AIA San Francisco</span>
-      <span class="time-badge">5:30 PM</span>
-      <span class="location">Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 Unite</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">AIA San Francisco</span>
+      <span class="meta-item time-badge">5:30 PM</span>
+      <span class="meta-item location">Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 Unite</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">23</div>
-    <div class="dow">TUE</div>
+    <div class="dow">Tue</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://www.aiasf.org/events/acoustical-case-study-aiasf-headquarters-lecture-hall" target="_blank" rel="noopener">AIASF: Acoustical Case Study: AIASF Headquarters Lecture Hall</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">AIA San Francisco</span>
-      <span class="time-badge">5:30 PM</span>
-      <span class="location">Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 Unite</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">AIA San Francisco</span>
+      <span class="meta-item time-badge">5:30 PM</span>
+      <span class="meta-item location">Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 Unite</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">24</div>
-    <div class="dow">WED</div>
+    <div class="dow">Wed</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://www.aiasf.org/events/project-delivery-series-hoffman-retreat-center-at-santa-sabina-" target="_blank" rel="noopener">AIASF: Design-Build in Practice: Integrated Project Delivery Across Hospitality, Retail, and Adaptive Reuse</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">AIA San Francisco</span>
-      <span class="time-badge">5:30 PM</span>
-      <span class="location">Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 Unite</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">AIA San Francisco</span>
+      <span class="meta-item time-badge">5:30 PM</span>
+      <span class="meta-item location">Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 Unite</span>
     </div>
   </div>
-</div></div>
-<div class="month-section" data-month="2026-08"><h2 class="month-header">AUGUST 2026</h2><div class="event is-new"
+</article></section>
+<section class="month-section" data-month="2026-08"><h2 class="month-header"><span>August 2026</span></h2><article class="event is-new"
   data-source="CMAA NorCal"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">27</div>
-    <div class="dow">THU</div>
+    <div class="dow">Thu</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://www.cmaanorcal.org/events-1/2026-past-presidents-golf-tournament" target="_blank" rel="noopener">2026 Past Presidents Golf Tournament</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">CMAA NorCal</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">CMAA NorCal</span>
       
-      <span class="location">Chardonnay Golf Club</span>
+      <span class="meta-item location">Chardonnay Golf Club</span>
     </div>
   </div>
-</div></div>
-<div class="month-section" data-month="2026-09"><h2 class="month-header">SEPTEMBER 2026</h2><div class="event is-new"
+</article></section>
+<section class="month-section" data-month="2026-09"><h2 class="month-header"><span>September 2026</span></h2><article class="event is-new"
   data-source="NAIOP Silicon Valley"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">16</div>
-    <div class="dow">WED</div>
+    <div class="dow">Wed</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://naiopsv.org/event/2026bbq/" target="_blank" rel="noopener">2026 NAIOP Silicon Valley Annual BBQ</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">NAIOP Silicon Valley</span>
-      <span class="time-badge">5:00 PM</span>
-      <span class="location">The Ameswell Hotel, 800 Moffett Blvd, Mountain View, CA, 94043, United States</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">NAIOP Silicon Valley</span>
+      <span class="meta-item time-badge">5:00 PM</span>
+      <span class="meta-item location">The Ameswell Hotel, 800 Moffett Blvd, Mountain View, CA, 94043, United States</span>
     </div>
   </div>
-</div></div>
-<div class="month-section" data-month="2026-10"><h2 class="month-header">OCTOBER 2026</h2><div class="event is-new"
+</article></section>
+<section class="month-section" data-month="2026-10"><h2 class="month-header"><span>October 2026</span></h2><article class="event is-new"
   data-source="IIDA Northern California"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">9</div>
-    <div class="dow">FRI</div>
+    <div class="dow">Fri</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://iidanc.org/events/merge-2026/" target="_blank" rel="noopener">Merge 2026</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">IIDA Northern California</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">IIDA Northern California</span>
       
       
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="NAIOP Silicon Valley"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">21</div>
-    <div class="dow">WED</div>
+    <div class="dow">Wed</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://naiopsv.org/event/2026golftournament/" target="_blank" rel="noopener">2026 NAIOP Silicon Valley Annual Golf Tournament</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">NAIOP Silicon Valley</span>
-      <span class="time-badge">11:00 AM</span>
-      <span class="location">Cinnabar Hills Golf Club, 23600 McKean Rd., San Jose, CA, 95141, United States</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">NAIOP Silicon Valley</span>
+      <span class="meta-item time-badge">11:00 AM</span>
+      <span class="meta-item location">Cinnabar Hills Golf Club, 23600 McKean Rd., San Jose, CA, 95141, United States</span>
     </div>
   </div>
-</div></div>
-<div class="month-section" data-month="2026-12"><h2 class="month-header">DECEMBER 2026</h2><div class="event is-new"
+</article></section>
+<section class="month-section" data-month="2026-12"><h2 class="month-header"><span>December 2026</span></h2><article class="event is-new"
   data-source="CMAA NorCal"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">8</div>
-    <div class="dow">TUE</div>
+    <div class="dow">Tue</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://www.cmaanorcal.org/events-1/holiday-mixer-walnut-creek-1" target="_blank" rel="noopener">Holiday Mixer - Walnut Creek</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">CMAA NorCal</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">CMAA NorCal</span>
       
-      <span class="location">Gibsons Irish Pub</span>
+      <span class="meta-item location">Gibsons Irish Pub</span>
     </div>
   </div>
-</div>
-<div class="event is-new"
+</article>
+<article class="event is-new"
   data-source="CMAA NorCal"
   data-region="NorCal"
   data-new="true">
   <div class="event-date">
     <div class="day">10</div>
-    <div class="dow">THU</div>
+    <div class="dow">Thu</div>
   </div>
   <div class="event-body">
     <a class="event-title" href="https://www.cmaanorcal.org/events-1/holiday-mixer-sacramento-5" target="_blank" rel="noopener">Holiday Mixer - Sacramento</a><span class="new-badge">NEW</span>
     <div class="event-meta">
-      <span class="source-tag" style="background: #5a8dd61f; color: #5a8dd6; border-color: #5a8dd655;">CMAA NorCal</span>
+      <span class="meta-item source-tag" style="--tag-color: #7eaee0;">CMAA NorCal</span>
       
-      <span class="location">MIX Downtown</span>
+      <span class="meta-item location">MIX Downtown</span>
     </div>
   </div>
-</div></div>
-  </div>
+</article></section>
+  </main>
 
   <div id="emptyState" class="empty" style="display: none;">
     <p class="empty-title">No matches</p>
