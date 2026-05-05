@@ -1,11 +1,10 @@
 """Generate the bookmarkable HTML page from aggregated events.
 
-Modern Level 10-inspired design:
-  - Translucent cards with backdrop-filter (frosted glass)
-  - Subtle ambient gradient background (depth without heavy texture)
-  - Larger headline, tighter type
-  - Soft inner glow on hover
-  - Brand orange (#ff671f) as accent on focus/hover/active states
+Modern Level 10-inspired design (toned variant):
+  - Solid warm-grey background (no ambient gradient)
+  - Each event card tinted by its region color (subtle)
+  - Glow/bloom intensity halved across the page
+  - Brand orange (#ff671f) still leads accent + interaction states
 """
 from datetime import datetime, timezone
 from typing import List
@@ -14,22 +13,20 @@ import html
 from scrapers.base import Event
 
 
-# Level 10 brand palette + modern translucent layer values
-L10_BG          = "#1f1f1f"   # deeper base for ambient gradient to play against
-L10_BG_DEEP     = "#171717"   # input fields
+# Level 10 brand palette
+L10_BG          = "#262626"   # solid warm grey body bg (matches Level 10)
+L10_BG_DEEP     = "#1c1c1c"   # input fields
 L10_TEXT        = "#f6f6f6"
 L10_TEXT_MUTED  = "rgba(246, 246, 246, 0.62)"
 L10_TEXT_DIM    = "rgba(246, 246, 246, 0.35)"
-L10_BORDER_TR   = "rgba(255, 255, 255, 0.08)"   # translucent card borders
-L10_BORDER_HARD = "rgba(255, 255, 255, 0.12)"   # slightly stronger separators
-L10_GLASS       = "rgba(255, 255, 255, 0.04)"   # base card fill
-L10_GLASS_HOVER = "rgba(255, 255, 255, 0.07)"
+L10_BORDER_TR   = "rgba(255, 255, 255, 0.08)"
+L10_BORDER_HARD = "rgba(255, 255, 255, 0.12)"
+L10_GLASS       = "rgba(255, 255, 255, 0.04)"
 L10_ORANGE      = "#ff671f"
-L10_ORANGE_SOFT = "rgba(255, 103, 31, 0.12)"
-L10_ORANGE_DEEP = "#934727"
+L10_ORANGE_SOFT = "rgba(255, 103, 31, 0.10)"
 
 REGION_COLORS = {
-    "NorCal": "#7eaee0",   # softer, slightly lighter for translucent context
+    "NorCal": "#7eaee0",
     "SoCal":  "#e095b1",
     "Other":  "#9ec9b3",
 }
@@ -125,7 +122,8 @@ def _render_event(ev: Event) -> str:
     return f'''<article class="event{' is-new' if is_new else ''}"
   data-source="{source_attr}"
   data-region="{region}"
-  data-new="{str(is_new).lower()}">
+  data-new="{str(is_new).lower()}"
+  style="--tint: {region_color};">
   <div class="event-date">
     <div class="day">{day}</div>
     <div class="dow">{dow}</div>
@@ -160,25 +158,9 @@ body {{
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
 }}
 
-/* Ambient gradient — subtle warm depth, like Level 10's hero washes */
-body::before {{
-  content: '';
-  position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 80% 50% at 20% -10%, rgba(255, 103, 31, 0.18), transparent 60%),
-    radial-gradient(ellipse 60% 40% at 90% 100%, rgba(147, 71, 39, 0.15), transparent 70%),
-    radial-gradient(ellipse 100% 60% at 50% 50%, rgba(38, 38, 38, 0.4), transparent);
-  pointer-events: none;
-  z-index: 0;
-}}
-
-.container {{ max-width: 1080px; margin: 0 auto; padding: 64px 28px 96px;
-  position: relative; z-index: 1; }}
+.container {{ max-width: 1080px; margin: 0 auto; padding: 64px 28px 96px; }}
 
 /* Hero */
 .hero {{ padding-bottom: 40px; margin-bottom: 40px;
@@ -187,25 +169,23 @@ body::before {{
   text-transform: uppercase; color: {orange}; margin-bottom: 18px;
   display: inline-block; padding: 6px 14px;
   background: {orange_soft}; border: 1px solid {orange}33;
-  border-radius: 999px; backdrop-filter: blur(8px); }}
+  border-radius: 999px; }}
 h1 {{ font-size: 72px; font-weight: 800; color: {text}; line-height: 1.0;
   letter-spacing: -0.035em; margin-bottom: 18px; }}
-h1 em {{ font-style: normal;
-  background: linear-gradient(135deg, {orange} 0%, #ff8a4d 100%);
-  -webkit-background-clip: text; background-clip: text; color: transparent; }}
+h1 em {{ font-style: normal; color: {orange}; }}
 .subtitle {{ color: {text_muted}; font-size: 17px; max-width: 620px; margin-bottom: 32px;
   font-weight: 400; }}
 
 .meta-bar {{ display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 8px; }}
 .subscribe {{ display: inline-flex; align-items: center; gap: 8px;
-  background: linear-gradient(135deg, {orange} 0%, #ff8a4d 100%);
+  background: {orange};
   color: #1a1a1a; padding: 13px 24px; border-radius: 999px; text-decoration: none;
   font-weight: 700; font-size: 13px; letter-spacing: 0.4px;
-  box-shadow: 0 8px 24px rgba(255, 103, 31, 0.25), inset 0 1px 0 rgba(255,255,255,0.2);
+  box-shadow: 0 4px 12px rgba(255, 103, 31, 0.12);
   transition: transform 0.18s, box-shadow 0.18s; }}
 .subscribe:hover {{ transform: translateY(-1px);
-  box-shadow: 0 12px 32px rgba(255, 103, 31, 0.35), inset 0 1px 0 rgba(255,255,255,0.25); }}
-.stat-pill {{ background: {glass}; backdrop-filter: blur(12px);
+  box-shadow: 0 6px 16px rgba(255, 103, 31, 0.18); }}
+.stat-pill {{ background: {glass};
   border: 1px solid {border_tr}; border-radius: 999px;
   padding: 10px 16px; font-size: 12px; color: {text_muted}; letter-spacing: 0.3px;
   font-weight: 500; }}
@@ -213,18 +193,17 @@ h1 em {{ font-style: normal;
 .stat-pill.new-pill {{ background: {orange_soft}; border-color: {orange}40; color: {orange}; }}
 .stat-pill.new-pill strong {{ color: {orange}; }}
 
-/* Filter bar — frosted glass card */
-.filters {{ background: {glass}; backdrop-filter: blur(20px) saturate(140%);
-  -webkit-backdrop-filter: blur(20px) saturate(140%);
+/* Filter bar */
+.filters {{ background: {glass};
   border: 1px solid {border_tr}; border-radius: 16px;
   padding: 26px 28px; margin-bottom: 44px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255,255,255,0.04); }}
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15); }}
 .filter-group {{ margin-bottom: 18px; }}
 .filter-group:last-child {{ margin-bottom: 0; }}
 .filter-label {{ font-size: 11px; font-weight: 600; letter-spacing: 1.8px;
   text-transform: uppercase; color: {text_muted}; margin-bottom: 10px; display: block; }}
 .pill-row {{ display: flex; flex-wrap: wrap; gap: 6px; }}
-.pill {{ background: {glass}; backdrop-filter: blur(8px);
+.pill {{ background: {glass};
   border: 1px solid {border_tr}; color: {text};
   padding: 8px 16px; border-radius: 999px; font-family: inherit; font-size: 12px;
   font-weight: 500; cursor: pointer; transition: all 0.15s;
@@ -232,11 +211,11 @@ h1 em {{ font-style: normal;
 .pill:hover {{ border-color: {orange}66; color: {orange};
   background: {orange_soft}; }}
 .pill.active {{ background: {orange}; color: #1a1a1a; border-color: {orange};
-  font-weight: 600; box-shadow: 0 4px 16px rgba(255,103,31,0.25); }}
+  font-weight: 600; box-shadow: 0 2px 8px rgba(255,103,31,0.12); }}
 .pill[data-filter="region"].active {{
   background: var(--pill-color, {orange}); border-color: var(--pill-color, {orange});
   color: #1a1a1a;
-  box-shadow: 0 4px 16px color-mix(in srgb, var(--pill-color, {orange}) 35%, transparent); }}
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--pill-color, {orange}) 18%, transparent); }}
 .pill .count {{ background: rgba(255,255,255,0.10); padding: 1px 7px; border-radius: 8px;
   font-size: 10px; font-weight: 700; min-width: 18px; text-align: center; }}
 .pill.active .count {{ background: rgba(0,0,0,0.18); color: inherit; }}
@@ -246,7 +225,7 @@ h1 em {{ font-style: normal;
   color: {text}; padding: 14px 18px; border-radius: 12px;
   font-family: inherit; font-size: 14px; transition: all 0.15s; }}
 .search-box:focus {{ outline: none; border-color: {orange}66;
-  background: rgba(0,0,0,0.4); box-shadow: 0 0 0 3px {orange_soft}; }}
+  background: rgba(0,0,0,0.4); box-shadow: 0 0 0 2px {orange_soft}; }}
 .search-box::placeholder {{ color: {text_dim}; }}
 
 /* Month sections */
@@ -258,23 +237,31 @@ h1 em {{ font-style: normal;
 .month-header::after {{ content: ''; flex: 1; height: 1px;
   background: linear-gradient(to right, {border_hard}, transparent); }}
 
-/* Event cards — translucent glass */
-.event {{ background: {glass}; backdrop-filter: blur(14px) saturate(130%);
-  -webkit-backdrop-filter: blur(14px) saturate(130%);
-  border: 1px solid {border_tr}; border-radius: 14px;
+/* Event cards — region-tinted bg, halved hover bloom */
+.event {{
+  background: color-mix(in srgb, var(--tint, white) 8%, rgba(255,255,255,0.02));
+  border: 1px solid color-mix(in srgb, var(--tint, white) 20%, {border_tr});
+  border-radius: 14px;
   padding: 22px 26px; margin-bottom: 10px;
   display: grid; grid-template-columns: 70px 1fr; gap: 22px; align-items: start;
   transition: transform 0.18s, background 0.18s, border-color 0.18s, box-shadow 0.18s;
-  position: relative; }}
-.event::before {{ content: ''; position: absolute; inset: 0; border-radius: 14px;
-  background: linear-gradient(135deg, transparent 0%, transparent 70%, rgba(255,103,31,0) 100%);
-  pointer-events: none; transition: background 0.25s; }}
-.event:hover {{ background: {glass_hover}; border-color: {border_hard};
-  transform: translateY(-1px); box-shadow: 0 8px 28px rgba(0,0,0,0.25); }}
-.event:hover::before {{ background: linear-gradient(135deg, transparent 0%, transparent 70%, rgba(255,103,31,0.08) 100%); }}
+}}
+.event:hover {{
+  background: color-mix(in srgb, var(--tint, white) 12%, rgba(255,255,255,0.04));
+  border-color: color-mix(in srgb, var(--tint, white) 30%, {border_hard});
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+}}
 
-.event.is-new {{ border-color: rgba(255,103,31,0.28); background: rgba(255,103,31,0.04); }}
-.event.is-new::before {{ background: linear-gradient(135deg, rgba(255,103,31,0.06) 0%, transparent 50%); }}
+/* New events override the region tint with an orange tint */
+.event.is-new {{
+  background: rgba(255,103,31,0.06);
+  border-color: rgba(255,103,31,0.22);
+}}
+.event.is-new:hover {{
+  background: rgba(255,103,31,0.09);
+  border-color: rgba(255,103,31,0.32);
+}}
 
 .event-date {{ text-align: center; padding-top: 4px; line-height: 1; }}
 .event-date .day {{ font-size: 38px; font-weight: 800; color: {text};
@@ -286,13 +273,13 @@ h1 em {{ font-style: normal;
   text-decoration: none; line-height: 1.4; display: inline; letter-spacing: -0.005em; }}
 .event-body a.event-title:hover {{ color: {orange}; }}
 .new-badge {{ display: inline-block;
-  background: linear-gradient(135deg, {orange} 0%, #ff8a4d 100%);
+  background: {orange};
   color: #1a1a1a;
   font-size: 9px; font-weight: 800; letter-spacing: 1.2px; padding: 3px 8px;
   border-radius: 4px; margin-left: 10px; vertical-align: 2px;
-  box-shadow: 0 2px 8px rgba(255,103,31,0.3);
+  box-shadow: 0 1px 4px rgba(255,103,31,0.15);
   animation: pulse 2.4s ease-in-out infinite; }}
-@keyframes pulse {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0.65; }} }}
+@keyframes pulse {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0.7; }} }}
 
 .event-meta {{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px;
   font-size: 12px; color: {text_muted}; align-items: center; }}
@@ -308,7 +295,7 @@ h1 em {{ font-style: normal;
 
 /* Empty state */
 .empty {{ text-align: center; padding: 80px 24px; background: {glass};
-  backdrop-filter: blur(12px); border: 1px dashed {border_tr};
+  border: 1px dashed {border_tr};
   border-radius: 16px; margin-top: 20px; }}
 .empty-title {{ font-size: 17px; color: {text}; margin-bottom: 8px; font-weight: 600; }}
 .empty-sub {{ font-size: 14px; color: {text_muted}; }}
@@ -451,8 +438,8 @@ def write_html(events: List[Event], path: str) -> None:
         bg=L10_BG, bg_deep=L10_BG_DEEP,
         text=L10_TEXT, text_muted=L10_TEXT_MUTED, text_dim=L10_TEXT_DIM,
         border_tr=L10_BORDER_TR, border_hard=L10_BORDER_HARD,
-        glass=L10_GLASS, glass_hover=L10_GLASS_HOVER,
-        orange=L10_ORANGE, orange_soft=L10_ORANGE_SOFT, orange_deep=L10_ORANGE_DEEP,
+        glass=L10_GLASS,
+        orange=L10_ORANGE, orange_soft=L10_ORANGE_SOFT,
         event_count=len(events),
         source_count=len(sources_seen),
         new_pill_html=new_pill_html,
