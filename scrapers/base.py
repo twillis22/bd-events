@@ -17,6 +17,8 @@ class Event:
     description: str = ""
     source: str = ""              # human label, e.g. "AIA San Francisco"
     source_region: str = ""       # "NorCal" / "SoCal" / "Both"
+    first_seen: str = ""          # ISO date string set by SeenTracker
+    is_new: bool = False          # set by SeenTracker (true if first_seen within N days)
 
     @property
     def uid(self) -> str:

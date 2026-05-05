@@ -1,13 +1,23 @@
-# BD Events Aggregator (v2)
+# BD Events Aggregator (v3)
 
-Auto-updating events feed pulling AEC industry events from associations across the Bay Area and San Diego. Outputs a single `.ics` calendar (subscribable in Outlook) and a bookmarkable web page, both updated daily.
+Auto-updating events feed pulling AEC industry events from associations across the Bay Area and San Diego. Outputs:
 
-## What's new in v2
+- A subscribable `.ics` calendar (Outlook, Apple Calendar, Google Calendar)
+- A bookmarkable web page with **filtering UI** and **"new this week" highlights**
 
-- **Three new sources** via headless browser: ULI national, IIDA Northern California, CMAA NorCal
-- **Playwright integration** — handles JS-rendered sites that v1 couldn't crack
-- **Smarter filtering** — ULI's globally published events are filtered down to US-relevant ones
-- **Total source count: 12** (was 9 in v1)
+All updated automatically every day.
+
+## What's new in v3
+
+- **Filter UI on the bookmark page** — search box, region pills (NorCal/SoCal/Both), source pills, and "✨ New only" toggle. All client-side, instant.
+- **"New this week" highlights** — events first seen in the last 7 days get an amber border, a pulsing NEW badge, and show in the new-only filter.
+- **Persistent state** via `data/seen.json` — tracks first-seen date per event so "new" actually means new.
+
+## What's new in v2 (still applies)
+
+- **Three additional sources** via headless browser: ULI national, IIDA Northern California, CMAA NorCal
+- **Playwright integration** for JS-rendered sites
+- **Smart international filtering** for ULI's globally-published events
 
 ## Architecture
 
@@ -66,6 +76,30 @@ In Outlook web: **Add calendar → Subscribe from web** → paste URL.
 `https://YOUR-USERNAME.github.io/bd-events/`
 
 ---
+
+## Upgrading from v2 to v3
+
+If you already have v2 deployed, drop the new files in:
+
+**New files:**
+- `seen_tracker.py`
+
+**Modified files:**
+- `main.py`
+- `generate_html.py`
+- `scrapers/base.py` (added two fields to Event)
+- `.github/workflows/update.yml`
+- `README.md`
+
+```bash
+# In your local clone, after replacing the files:
+git add seen_tracker.py main.py generate_html.py scrapers/base.py
+git add .github/workflows/update.yml README.md
+git commit -m "v3: filters and new-this-week highlights"
+git push
+```
+
+The v3 pipeline will run on next push or scheduled run. **No data migration needed** — `data/seen.json` is created automatically on first run. Initially every event will appear "new" (which is technically true — it's the first time the system has seen them); after a week, only genuinely new events will be flagged.
 
 ## Upgrading from v1 to v2
 
@@ -152,14 +186,15 @@ In any case: register the new class in `aggregate.py` by importing it and adding
 ```
 bd-events/
 ├── main.py                  # entrypoint
-├── aggregate.py             # scraper orchestration (handles sync + async)
+├── aggregate.py             # scraper orchestration (sync + async)
 ├── generate_ics.py          # writes events.ics
-├── generate_html.py         # writes index.html
+├── generate_html.py         # writes index.html with filter UI
+├── seen_tracker.py          # persistent first-seen tracking (NEW v3)
 ├── requirements.txt
 ├── scrapers/
 │   ├── base.py              # Event dataclass + BaseScraper
 │   ├── http.py              # shared requests helper
-│   ├── browser.py           # NEW — Playwright session manager
+│   ├── browser.py           # Playwright session manager (v2)
 │   ├── rss_adapter.py       # generic RSS reader
 │   ├── ical_adapter.py      # generic iCal reader
 │   ├── feeds.py             # all feed-based source configs
@@ -167,14 +202,16 @@ bd-events/
 │   ├── lean_construction.py # static HTML scraper
 │   ├── spire_stanford.py    # static HTML scraper
 │   ├── cshe.py              # static HTML scraper
-│   ├── uli_national.py      # NEW — browser scraper
-│   ├── iida_norcal.py       # NEW — browser scraper
-│   └── cmaa_norcal.py       # NEW — browser scraper
+│   ├── uli_national.py      # browser scraper (v2)
+│   ├── iida_norcal.py       # browser scraper (v2)
+│   └── cmaa_norcal.py       # browser scraper (v2)
+├── data/                    # persistent state
+│   └── seen.json            # event UID -> first-seen date (NEW v3)
 ├── docs/                    # GitHub Pages output (auto-generated)
 │   ├── events.ics
 │   └── index.html
 └── .github/workflows/
-    └── update.yml           # daily cron + Playwright install
+    └── update.yml           # daily cron + Playwright
 ```
 
 ---

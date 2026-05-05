@@ -1,23 +1,37 @@
-"""Entrypoint — run all scrapers, write events.ics and index.html into ./docs/.
+"""Entrypoint — run all scrapers, write events.ics, index.html, seen.json.
 
-Run locally:
-    python main.py
+Usage:
+    python main.py                # full run, writes all outputs
 
-In CI (GitHub Actions): the workflow runs this and commits the docs/ folder so
-GitHub Pages serves the updated calendar.
+Run as part of GitHub Actions or locally.
 """
 import os
 from aggregate import collect_events
 from generate_ics import write_ics
 from generate_html import write_html
+from seen_tracker import SeenTracker
 
 
 def main():
     out_dir = os.environ.get("OUTPUT_DIR", "docs")
     os.makedirs(out_dir, exist_ok=True)
 
+    # 1) Aggregate events
     events = collect_events(lookback_days=1, lookahead_days=365)
 
+    # 2) Annotate with first-seen / is-new from persistent state
+    tracker = SeenTracker("data/seen.json")
+    tracker.annotate(events)
+    new_count = sum(1 for e in events if e.is_new)
+    if new_count:
+        print(f"  {new_count} events flagged as new (first seen within last 7 days)")
+
+    # 3) Prune stale UIDs from the seen file (events that aged out of all feeds)
+    current_uids = {e.uid for e in events}
+    tracker.prune(current_uids)
+    tracker.save()
+
+    # 4) Write all output formats
     print("\nWriting outputs...")
     write_ics(events, os.path.join(out_dir, "events.ics"))
     write_html(events, os.path.join(out_dir, "index.html"))
