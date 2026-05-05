@@ -24,7 +24,7 @@ from .http import get
 
 class LeanConstructionScraper(BaseScraper):
     name = "Lean Construction Institute"
-    region = "Both"
+    region = "Other"
     source_url = "https://leanconstruction.org/events/"
 
     def fetch(self) -> List[Event]:
