@@ -12,30 +12,14 @@
 html { scroll-behavior: smooth; }
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  background: #1f1f1f;
+  background: #262626;
   color: #f6f6f6;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
 }
 
-/* Ambient gradient — subtle warm depth, like Level 10's hero washes */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 80% 50% at 20% -10%, rgba(255, 103, 31, 0.18), transparent 60%),
-    radial-gradient(ellipse 60% 40% at 90% 100%, rgba(147, 71, 39, 0.15), transparent 70%),
-    radial-gradient(ellipse 100% 60% at 50% 50%, rgba(38, 38, 38, 0.4), transparent);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.container { max-width: 1080px; margin: 0 auto; padding: 64px 28px 96px;
-  position: relative; z-index: 1; }
+.container { max-width: 1080px; margin: 0 auto; padding: 64px 28px 96px; }
 
 /* Hero */
 .hero { padding-bottom: 40px; margin-bottom: 40px;
@@ -43,67 +27,64 @@ body::before {
 .label { font-size: 11px; font-weight: 600; letter-spacing: 2.5px;
   text-transform: uppercase; color: #ff671f; margin-bottom: 18px;
   display: inline-block; padding: 6px 14px;
-  background: rgba(255, 103, 31, 0.12); border: 1px solid #ff671f33;
-  border-radius: 999px; backdrop-filter: blur(8px); }
+  background: rgba(255, 103, 31, 0.10); border: 1px solid #ff671f33;
+  border-radius: 999px; }
 h1 { font-size: 72px; font-weight: 800; color: #f6f6f6; line-height: 1.0;
   letter-spacing: -0.035em; margin-bottom: 18px; }
-h1 em { font-style: normal;
-  background: linear-gradient(135deg, #ff671f 0%, #ff8a4d 100%);
-  -webkit-background-clip: text; background-clip: text; color: transparent; }
+h1 em { font-style: normal; color: #ff671f; }
 .subtitle { color: rgba(246, 246, 246, 0.62); font-size: 17px; max-width: 620px; margin-bottom: 32px;
   font-weight: 400; }
 
 .meta-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 8px; }
 .subscribe { display: inline-flex; align-items: center; gap: 8px;
-  background: linear-gradient(135deg, #ff671f 0%, #ff8a4d 100%);
+  background: #ff671f;
   color: #1a1a1a; padding: 13px 24px; border-radius: 999px; text-decoration: none;
   font-weight: 700; font-size: 13px; letter-spacing: 0.4px;
-  box-shadow: 0 8px 24px rgba(255, 103, 31, 0.25), inset 0 1px 0 rgba(255,255,255,0.2);
+  box-shadow: 0 4px 12px rgba(255, 103, 31, 0.12);
   transition: transform 0.18s, box-shadow 0.18s; }
 .subscribe:hover { transform: translateY(-1px);
-  box-shadow: 0 12px 32px rgba(255, 103, 31, 0.35), inset 0 1px 0 rgba(255,255,255,0.25); }
-.stat-pill { background: rgba(255, 255, 255, 0.04); backdrop-filter: blur(12px);
+  box-shadow: 0 6px 16px rgba(255, 103, 31, 0.18); }
+.stat-pill { background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 999px;
   padding: 10px 16px; font-size: 12px; color: rgba(246, 246, 246, 0.62); letter-spacing: 0.3px;
   font-weight: 500; }
 .stat-pill strong { color: #f6f6f6; font-weight: 700; margin-right: 6px; }
-.stat-pill.new-pill { background: rgba(255, 103, 31, 0.12); border-color: #ff671f40; color: #ff671f; }
+.stat-pill.new-pill { background: rgba(255, 103, 31, 0.10); border-color: #ff671f40; color: #ff671f; }
 .stat-pill.new-pill strong { color: #ff671f; }
 
-/* Filter bar — frosted glass card */
-.filters { background: rgba(255, 255, 255, 0.04); backdrop-filter: blur(20px) saturate(140%);
-  -webkit-backdrop-filter: blur(20px) saturate(140%);
+/* Filter bar */
+.filters { background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px;
   padding: 26px 28px; margin-bottom: 44px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255,255,255,0.04); }
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15); }
 .filter-group { margin-bottom: 18px; }
 .filter-group:last-child { margin-bottom: 0; }
 .filter-label { font-size: 11px; font-weight: 600; letter-spacing: 1.8px;
   text-transform: uppercase; color: rgba(246, 246, 246, 0.62); margin-bottom: 10px; display: block; }
 .pill-row { display: flex; flex-wrap: wrap; gap: 6px; }
-.pill { background: rgba(255, 255, 255, 0.04); backdrop-filter: blur(8px);
+.pill { background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08); color: #f6f6f6;
   padding: 8px 16px; border-radius: 999px; font-family: inherit; font-size: 12px;
   font-weight: 500; cursor: pointer; transition: all 0.15s;
   display: inline-flex; align-items: center; gap: 7px; }
 .pill:hover { border-color: #ff671f66; color: #ff671f;
-  background: rgba(255, 103, 31, 0.12); }
+  background: rgba(255, 103, 31, 0.10); }
 .pill.active { background: #ff671f; color: #1a1a1a; border-color: #ff671f;
-  font-weight: 600; box-shadow: 0 4px 16px rgba(255,103,31,0.25); }
+  font-weight: 600; box-shadow: 0 2px 8px rgba(255,103,31,0.12); }
 .pill[data-filter="region"].active {
   background: var(--pill-color, #ff671f); border-color: var(--pill-color, #ff671f);
   color: #1a1a1a;
-  box-shadow: 0 4px 16px color-mix(in srgb, var(--pill-color, #ff671f) 35%, transparent); }
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--pill-color, #ff671f) 18%, transparent); }
 .pill .count { background: rgba(255,255,255,0.10); padding: 1px 7px; border-radius: 8px;
   font-size: 10px; font-weight: 700; min-width: 18px; text-align: center; }
 .pill.active .count { background: rgba(0,0,0,0.18); color: inherit; }
 
 /* Search */
-.search-box { width: 100%; background: #171717; border: 1px solid rgba(255, 255, 255, 0.08);
+.search-box { width: 100%; background: #1c1c1c; border: 1px solid rgba(255, 255, 255, 0.08);
   color: #f6f6f6; padding: 14px 18px; border-radius: 12px;
   font-family: inherit; font-size: 14px; transition: all 0.15s; }
 .search-box:focus { outline: none; border-color: #ff671f66;
-  background: rgba(0,0,0,0.4); box-shadow: 0 0 0 3px rgba(255, 103, 31, 0.12); }
+  background: rgba(0,0,0,0.4); box-shadow: 0 0 0 2px rgba(255, 103, 31, 0.10); }
 .search-box::placeholder { color: rgba(246, 246, 246, 0.35); }
 
 /* Month sections */
@@ -115,23 +96,31 @@ h1 em { font-style: normal;
 .month-header::after { content: ''; flex: 1; height: 1px;
   background: linear-gradient(to right, rgba(255, 255, 255, 0.12), transparent); }
 
-/* Event cards — translucent glass */
-.event { background: rgba(255, 255, 255, 0.04); backdrop-filter: blur(14px) saturate(130%);
-  -webkit-backdrop-filter: blur(14px) saturate(130%);
-  border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px;
+/* Event cards — region-tinted bg, halved hover bloom */
+.event {
+  background: color-mix(in srgb, var(--tint, white) 8%, rgba(255,255,255,0.02));
+  border: 1px solid color-mix(in srgb, var(--tint, white) 20%, rgba(255, 255, 255, 0.08));
+  border-radius: 14px;
   padding: 22px 26px; margin-bottom: 10px;
   display: grid; grid-template-columns: 70px 1fr; gap: 22px; align-items: start;
   transition: transform 0.18s, background 0.18s, border-color 0.18s, box-shadow 0.18s;
-  position: relative; }
-.event::before { content: ''; position: absolute; inset: 0; border-radius: 14px;
-  background: linear-gradient(135deg, transparent 0%, transparent 70%, rgba(255,103,31,0) 100%);
-  pointer-events: none; transition: background 0.25s; }
-.event:hover { background: rgba(255, 255, 255, 0.07); border-color: rgba(255, 255, 255, 0.12);
-  transform: translateY(-1px); box-shadow: 0 8px 28px rgba(0,0,0,0.25); }
-.event:hover::before { background: linear-gradient(135deg, transparent 0%, transparent 70%, rgba(255,103,31,0.08) 100%); }
+}
+.event:hover {
+  background: color-mix(in srgb, var(--tint, white) 12%, rgba(255,255,255,0.04));
+  border-color: color-mix(in srgb, var(--tint, white) 30%, rgba(255, 255, 255, 0.12));
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+}
 
-.event.is-new { border-color: rgba(255,103,31,0.28); background: rgba(255,103,31,0.04); }
-.event.is-new::before { background: linear-gradient(135deg, rgba(255,103,31,0.06) 0%, transparent 50%); }
+/* New events override the region tint with an orange tint */
+.event.is-new {
+  background: rgba(255,103,31,0.06);
+  border-color: rgba(255,103,31,0.22);
+}
+.event.is-new:hover {
+  background: rgba(255,103,31,0.09);
+  border-color: rgba(255,103,31,0.32);
+}
 
 .event-date { text-align: center; padding-top: 4px; line-height: 1; }
 .event-date .day { font-size: 38px; font-weight: 800; color: #f6f6f6;
@@ -143,13 +132,13 @@ h1 em { font-style: normal;
   text-decoration: none; line-height: 1.4; display: inline; letter-spacing: -0.005em; }
 .event-body a.event-title:hover { color: #ff671f; }
 .new-badge { display: inline-block;
-  background: linear-gradient(135deg, #ff671f 0%, #ff8a4d 100%);
+  background: #ff671f;
   color: #1a1a1a;
   font-size: 9px; font-weight: 800; letter-spacing: 1.2px; padding: 3px 8px;
   border-radius: 4px; margin-left: 10px; vertical-align: 2px;
-  box-shadow: 0 2px 8px rgba(255,103,31,0.3);
+  box-shadow: 0 1px 4px rgba(255,103,31,0.15);
   animation: pulse 2.4s ease-in-out infinite; }
-@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.65; } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
 
 .event-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px;
   font-size: 12px; color: rgba(246, 246, 246, 0.62); align-items: center; }
@@ -165,7 +154,7 @@ h1 em { font-style: normal;
 
 /* Empty state */
 .empty { text-align: center; padding: 80px 24px; background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(12px); border: 1px dashed rgba(255, 255, 255, 0.08);
+  border: 1px dashed rgba(255, 255, 255, 0.08);
   border-radius: 16px; margin-top: 20px; }
 .empty-title { font-size: 17px; color: #f6f6f6; margin-bottom: 8px; font-weight: 600; }
 .empty-sub { font-size: 14px; color: rgba(246, 246, 246, 0.62); }
@@ -200,7 +189,7 @@ footer a:hover { text-decoration: underline; }
       <span class="stat-pill"><strong id="visibleCount">59</strong>upcoming</span>
       <span class="stat-pill"><strong>7</strong>sources</span>
       <span class="stat-pill new-pill"><strong>59</strong>new this week</span>
-      <span class="stat-pill">Updated May 5, 2026 at 05:09 UTC</span>
+      <span class="stat-pill">Updated May 5, 2026 at 06:01 UTC</span>
     </div>
   </header>
 
@@ -225,7 +214,8 @@ footer a:hover { text-decoration: underline; }
     <section class="month-section" data-month="2026-05"><h2 class="month-header"><span>May 2026</span></h2><article class="event is-new"
   data-source="ULI (national)"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">5</div>
     <div class="dow">Tue</div>
@@ -242,7 +232,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">5</div>
     <div class="dow">Tue</div>
@@ -259,7 +250,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">6</div>
     <div class="dow">Wed</div>
@@ -276,7 +268,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">7</div>
     <div class="dow">Thu</div>
@@ -293,7 +286,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">7</div>
     <div class="dow">Thu</div>
@@ -310,7 +304,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">8</div>
     <div class="dow">Fri</div>
@@ -327,7 +322,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">8</div>
     <div class="dow">Fri</div>
@@ -344,7 +340,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">7</div>
     <div class="dow">Thu</div>
@@ -361,7 +358,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">11</div>
     <div class="dow">Mon</div>
@@ -378,7 +376,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">11</div>
     <div class="dow">Mon</div>
@@ -395,7 +394,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">12</div>
     <div class="dow">Tue</div>
@@ -412,7 +412,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">12</div>
     <div class="dow">Tue</div>
@@ -429,7 +430,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">12</div>
     <div class="dow">Tue</div>
@@ -446,7 +448,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">12</div>
     <div class="dow">Tue</div>
@@ -463,7 +466,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">12</div>
     <div class="dow">Tue</div>
@@ -480,7 +484,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">13</div>
     <div class="dow">Wed</div>
@@ -497,7 +502,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="CSHE"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">13</div>
     <div class="dow">Wed</div>
@@ -514,7 +520,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="CSHE"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">13</div>
     <div class="dow">Wed</div>
@@ -531,7 +538,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="CSHE"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">13</div>
     <div class="dow">Wed</div>
@@ -548,7 +556,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="IIDA Northern California"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">13</div>
     <div class="dow">Wed</div>
@@ -565,7 +574,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">14</div>
     <div class="dow">Thu</div>
@@ -582,7 +592,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">14</div>
     <div class="dow">Thu</div>
@@ -599,7 +610,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="CMAA NorCal"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">14</div>
     <div class="dow">Thu</div>
@@ -616,7 +628,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">15</div>
     <div class="dow">Fri</div>
@@ -633,7 +646,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">16</div>
     <div class="dow">Sat</div>
@@ -650,7 +664,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">19</div>
     <div class="dow">Tue</div>
@@ -667,7 +682,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">19</div>
     <div class="dow">Tue</div>
@@ -684,7 +700,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">19</div>
     <div class="dow">Tue</div>
@@ -701,7 +718,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">19</div>
     <div class="dow">Tue</div>
@@ -718,7 +736,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">20</div>
     <div class="dow">Wed</div>
@@ -735,7 +754,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">20</div>
     <div class="dow">Wed</div>
@@ -752,7 +772,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">21</div>
     <div class="dow">Thu</div>
@@ -769,7 +790,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">21</div>
     <div class="dow">Thu</div>
@@ -786,7 +808,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="CMAA NorCal"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">21</div>
     <div class="dow">Thu</div>
@@ -803,7 +826,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">20</div>
     <div class="dow">Wed</div>
@@ -820,7 +844,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">21</div>
     <div class="dow">Thu</div>
@@ -837,7 +862,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="IIDA Northern California"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">26</div>
     <div class="dow">Tue</div>
@@ -854,7 +880,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">27</div>
     <div class="dow">Wed</div>
@@ -871,7 +898,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">28</div>
     <div class="dow">Thu</div>
@@ -888,7 +916,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">28</div>
     <div class="dow">Thu</div>
@@ -905,7 +934,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="Lean Construction Institute"
   data-region="Other"
-  data-new="true">
+  data-new="true"
+  style="--tint: #9ec9b3;">
   <div class="event-date">
     <div class="day">29</div>
     <div class="dow">Fri</div>
@@ -922,7 +952,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="CMAA NorCal"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">30</div>
     <div class="dow">Sat</div>
@@ -939,7 +970,8 @@ footer a:hover { text-decoration: underline; }
 <section class="month-section" data-month="2026-06"><h2 class="month-header"><span>June 2026</span></h2><article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">4</div>
     <div class="dow">Thu</div>
@@ -956,7 +988,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">9</div>
     <div class="dow">Tue</div>
@@ -973,7 +1006,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">10</div>
     <div class="dow">Wed</div>
@@ -990,7 +1024,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="NAIOP Silicon Valley"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">11</div>
     <div class="dow">Thu</div>
@@ -1007,7 +1042,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="CSHE"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">12</div>
     <div class="dow">Fri</div>
@@ -1024,7 +1060,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="CSHE"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">17</div>
     <div class="dow">Wed</div>
@@ -1041,7 +1078,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="CSHE"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">17</div>
     <div class="dow">Wed</div>
@@ -1058,7 +1096,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="CMAA NorCal"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">18</div>
     <div class="dow">Thu</div>
@@ -1075,7 +1114,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">18</div>
     <div class="dow">Thu</div>
@@ -1092,7 +1132,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">23</div>
     <div class="dow">Tue</div>
@@ -1109,7 +1150,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="AIA San Francisco"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">24</div>
     <div class="dow">Wed</div>
@@ -1126,7 +1168,8 @@ footer a:hover { text-decoration: underline; }
 <section class="month-section" data-month="2026-08"><h2 class="month-header"><span>August 2026</span></h2><article class="event is-new"
   data-source="CMAA NorCal"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">27</div>
     <div class="dow">Thu</div>
@@ -1143,7 +1186,8 @@ footer a:hover { text-decoration: underline; }
 <section class="month-section" data-month="2026-09"><h2 class="month-header"><span>September 2026</span></h2><article class="event is-new"
   data-source="NAIOP Silicon Valley"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">16</div>
     <div class="dow">Wed</div>
@@ -1160,7 +1204,8 @@ footer a:hover { text-decoration: underline; }
 <section class="month-section" data-month="2026-10"><h2 class="month-header"><span>October 2026</span></h2><article class="event is-new"
   data-source="IIDA Northern California"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">9</div>
     <div class="dow">Fri</div>
@@ -1177,7 +1222,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="NAIOP Silicon Valley"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">21</div>
     <div class="dow">Wed</div>
@@ -1194,7 +1240,8 @@ footer a:hover { text-decoration: underline; }
 <section class="month-section" data-month="2026-12"><h2 class="month-header"><span>December 2026</span></h2><article class="event is-new"
   data-source="CMAA NorCal"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">8</div>
     <div class="dow">Tue</div>
@@ -1211,7 +1258,8 @@ footer a:hover { text-decoration: underline; }
 <article class="event is-new"
   data-source="CMAA NorCal"
   data-region="NorCal"
-  data-new="true">
+  data-new="true"
+  style="--tint: #7eaee0;">
   <div class="event-date">
     <div class="day">10</div>
     <div class="dow">Thu</div>
