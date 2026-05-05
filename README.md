@@ -9,7 +9,7 @@ All updated automatically every day.
 
 ## What's new in v3
 
-- **Filter UI on the bookmark page** — search box, region pills (NorCal/SoCal/Both), source pills, and "✨ New only" toggle. All client-side, instant.
+- **Filter UI on the bookmark page** — search box, region pills (NorCal/SoCal/Other), source pills, and "✨ New only" toggle. All client-side, instant.
 - **"New this week" highlights** — events first seen in the last 7 days get an amber border, a pulsing NEW badge, and show in the new-only filter.
 - **Persistent state** via `data/seen.json` — tracks first-seen date per event so "new" actually means new.
 
@@ -125,14 +125,14 @@ The next scheduled run will pick up the changes. Or trigger manually from the Ac
 |---|---|---|---|
 | ✅ | AIA San Francisco | HTML + per-event iCal | NorCal |
 | ✅ | NAIOP Silicon Valley | iCal feed | NorCal |
-| ✅ | Lean Construction Institute | HTML scrape | Both |
+| ✅ | Lean Construction Institute | HTML scrape | Other |
 | ✅ | CSHE | HTML scrape | NorCal |
 | ✅ | SPIRE Stanford | HTML scrape | NorCal |
-| ✅ | DBIA (national) | RSS | Both |
-| ✅ | Bisnow Events | RSS | Both |
+| ✅ | DBIA (national) | RSS | Other |
+| ✅ | Bisnow Events | RSS | Other |
 | ✅ | IIDA SoCal | RSS (events feed) | SoCal |
 | ✅ | San Diego BIA | RSS | SoCal |
-| ✅ **NEW** | ULI (national) | Browser scrape | Both |
+| ✅ **NEW** | ULI (national) | Browser scrape | Other |
 | ✅ **NEW** | IIDA Northern California | Browser scrape | NorCal |
 | ✅ **NEW** | CMAA NorCal | Browser scrape | NorCal |
 | ⚠️  | AIA Silicon Valley | WooCommerce listing has no dates; needs per-product visit + content parse |
