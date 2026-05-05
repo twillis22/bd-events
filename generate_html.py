@@ -17,7 +17,7 @@ from scrapers.base import Event
 REGION_COLORS = {
     "NorCal": "#0a66c2",
     "SoCal":  "#ec4899",
-    "Both":   "#10b981",
+    "Other":   "#10b981",
 }
 
 
@@ -27,7 +27,7 @@ def _render_region_pills(events: List[Event]) -> str:
     for e in events:
         counts[e.source_region or "Other"] = counts.get(e.source_region or "Other", 0) + 1
     parts = ['<button class="pill active" data-filter="region" data-value="all">All Regions</button>']
-    for region in ["NorCal", "SoCal", "Both"]:
+    for region in ["NorCal", "SoCal", "Other"]:
         if region in counts:
             color = REGION_COLORS.get(region, "#6b7280")
             parts.append(
