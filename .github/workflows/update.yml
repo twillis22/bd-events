@@ -2,7 +2,6 @@ name: Update BD Events
 
 on:
   schedule:
-    # Runs daily at 13:00 UTC = 06:00 PT
     - cron: '0 13 * * *'
   workflow_dispatch:
   push:
@@ -35,9 +34,15 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Install Playwright browsers
-        # --with-deps installs system libraries Chromium needs on Ubuntu.
-        # Cached between runs by GitHub's actions cache via the OS image.
         run: python -m playwright install chromium --with-deps
+
+      - name: Verify Playwright install
+        run: |
+          python -c "from playwright.sync_api import sync_playwright; \
+                     p = sync_playwright().start(); \
+                     b = p.chromium.launch(); \
+                     print('Chromium OK'); \
+                     b.close(); p.stop()"
 
       - name: Run aggregator
         run: python main.py
