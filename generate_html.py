@@ -1,17 +1,11 @@
 """Generate the bookmarkable HTML page from aggregated events.
 
-Styled to match Level 10 Construction's brand:
-  - Warm charcoal bg (#262626) instead of cool blue-black
-  - Sans-serif throughout (Inter via Google Fonts)
-  - Brand orange accent (#ff671f) replacing amber
-  - ALL CAPS section labels with orange underline accent
-  - Card bg uses warmer #3d3935
-
-Features (unchanged from prior v3):
-  - Filter pills (region, source, "new only" toggle)
-  - Search input
-  - Live filtering with no page reload (vanilla JS)
-  - "New" pulse badge on events first seen in last 7 days
+Modern Level 10-inspired design:
+  - Translucent cards with backdrop-filter (frosted glass)
+  - Subtle ambient gradient background (depth without heavy texture)
+  - Larger headline, tighter type
+  - Soft inner glow on hover
+  - Brand orange (#ff671f) as accent on focus/hover/active states
 """
 from datetime import datetime, timezone
 from typing import List
@@ -20,22 +14,24 @@ import html
 from scrapers.base import Event
 
 
-# Level 10 brand palette
-L10_BG          = "#262626"   # body background
-L10_BG_CARD     = "#3d3935"   # secondary surfaces (filter bar, event cards)
-L10_BG_DEEP     = "#1c1c1c"   # input fields, deeper layer
-L10_TEXT        = "#f6f6f6"   # body text
-L10_TEXT_MUTED  = "#9a9a9a"   # secondary text
-L10_TEXT_DIM    = "#6b6b6b"   # tertiary, separators
-L10_BORDER      = "#4a4744"   # subtle borders
-L10_ORANGE      = "#ff671f"   # brand accent
-L10_ORANGE_DEEP = "#934727"   # deeper brick orange (band)
+# Level 10 brand palette + modern translucent layer values
+L10_BG          = "#1f1f1f"   # deeper base for ambient gradient to play against
+L10_BG_DEEP     = "#171717"   # input fields
+L10_TEXT        = "#f6f6f6"
+L10_TEXT_MUTED  = "rgba(246, 246, 246, 0.62)"
+L10_TEXT_DIM    = "rgba(246, 246, 246, 0.35)"
+L10_BORDER_TR   = "rgba(255, 255, 255, 0.08)"   # translucent card borders
+L10_BORDER_HARD = "rgba(255, 255, 255, 0.12)"   # slightly stronger separators
+L10_GLASS       = "rgba(255, 255, 255, 0.04)"   # base card fill
+L10_GLASS_HOVER = "rgba(255, 255, 255, 0.07)"
+L10_ORANGE      = "#ff671f"
+L10_ORANGE_SOFT = "rgba(255, 103, 31, 0.12)"
+L10_ORANGE_DEEP = "#934727"
 
-# Region tag colors — keep distinct but tone down to fit the warm palette
 REGION_COLORS = {
-    "NorCal": "#5a8dd6",   # softer blue
-    "SoCal":  "#d97a9a",   # softer pink
-    "Other":  "#7fb59b",   # muted green
+    "NorCal": "#7eaee0",   # softer, slightly lighter for translucent context
+    "SoCal":  "#e095b1",
+    "Other":  "#9ec9b3",
 }
 
 
@@ -43,13 +39,13 @@ def _render_region_pills(events: List[Event]) -> str:
     counts = {}
     for e in events:
         counts[e.source_region or "Other"] = counts.get(e.source_region or "Other", 0) + 1
-    parts = ['<button class="pill active" data-filter="region" data-value="all">ALL REGIONS</button>']
+    parts = ['<button class="pill active" data-filter="region" data-value="all">All Regions</button>']
     for region in ["NorCal", "SoCal", "Other"]:
         if region in counts:
-            color = REGION_COLORS.get(region, L10_TEXT_MUTED)
+            color = REGION_COLORS.get(region, "#aaa")
             parts.append(
                 f'<button class="pill" data-filter="region" data-value="{region}" '
-                f'style="--pill-color: {color};">{region.upper()} '
+                f'style="--pill-color: {color};">{region} '
                 f'<span class="count">{counts[region]}</span></button>'
             )
     return "".join(parts)
@@ -59,12 +55,12 @@ def _render_source_pills(sources: list, events: List[Event]) -> str:
     counts = {}
     for e in events:
         counts[e.source] = counts.get(e.source, 0) + 1
-    parts = ['<button class="pill active" data-filter="source" data-value="all">ALL SOURCES</button>']
+    parts = ['<button class="pill active" data-filter="source" data-value="all">All Sources</button>']
     for source in sorted(sources, key=lambda s: -counts.get(s, 0)):
         c = counts.get(source, 0)
         parts.append(
             f'<button class="pill" data-filter="source" data-value="{html.escape(source)}">'
-            f'{html.escape(source).upper()} <span class="count">{c}</span></button>'
+            f'{html.escape(source)} <span class="count">{c}</span></button>'
         )
     return "".join(parts)
 
@@ -79,10 +75,10 @@ def _render_body(events: List[Event]) -> str:
         if current_key and current_buf:
             ym = events_in_section[0].start.strftime("%Y-%m") if events_in_section else ""
             sections.append(
-                f'<div class="month-section" data-month="{ym}">'
-                f'<h2 class="month-header">{html.escape(current_key.upper())}</h2>'
+                f'<section class="month-section" data-month="{ym}">'
+                f'<h2 class="month-header"><span>{html.escape(current_key)}</span></h2>'
                 + "\n".join(current_buf)
-                + "</div>"
+                + "</section>"
             )
 
     for ev in events:
@@ -106,27 +102,27 @@ def _empty_body() -> str:
 
 def _render_event(ev: Event) -> str:
     day = ev.start.strftime("%-d")
-    dow = ev.start.strftime("%a").upper()
+    dow = ev.start.strftime("%a")
     region = ev.source_region or "Other"
-    region_color = REGION_COLORS.get(region, L10_TEXT_MUTED)
+    region_color = REGION_COLORS.get(region, "#aaa")
     is_new = getattr(ev, "is_new", False)
     new_badge = '<span class="new-badge">NEW</span>' if is_new else ''
 
     time_part = ""
     if ev.start.hour != 0 or ev.start.minute != 0:
         local_time = ev.start.strftime("%-I:%M %p")
-        time_part = f'<span class="time-badge">{local_time}</span>'
+        time_part = f'<span class="meta-item time-badge">{local_time}</span>'
 
     location_part = ""
     if ev.location:
         loc_short = html.escape(ev.location[:80])
-        location_part = f'<span class="location">{loc_short}</span>'
+        location_part = f'<span class="meta-item location">{loc_short}</span>'
 
     title_html = html.escape(ev.title)
     url = html.escape(ev.url or "#")
     source_attr = html.escape(ev.source)
 
-    return f'''<div class="event{' is-new' if is_new else ''}"
+    return f'''<article class="event{' is-new' if is_new else ''}"
   data-source="{source_attr}"
   data-region="{region}"
   data-new="{str(is_new).lower()}">
@@ -137,12 +133,12 @@ def _render_event(ev: Event) -> str:
   <div class="event-body">
     <a class="event-title" href="{url}" target="_blank" rel="noopener">{title_html}</a>{new_badge}
     <div class="event-meta">
-      <span class="source-tag" style="background: {region_color}1f; color: {region_color}; border-color: {region_color}55;">{source_attr}</span>
+      <span class="meta-item source-tag" style="--tag-color: {region_color};">{source_attr}</span>
       {time_part}
       {location_part}
     </div>
   </div>
-</div>'''
+</article>'''
 
 
 PAGE_TEMPLATE = """<!DOCTYPE html>
@@ -155,7 +151,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-* {{ margin: 0; padding: 0; box-sizing: border-box; }}
+*, *::before, *::after {{ margin: 0; padding: 0; box-sizing: border-box; }}
 html {{ scroll-behavior: smooth; }}
 body {{
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -163,130 +159,182 @@ body {{
   color: {text};
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
 }}
-.container {{ max-width: 1080px; margin: 0 auto; padding: 56px 28px 96px; }}
+
+/* Ambient gradient — subtle warm depth, like Level 10's hero washes */
+body::before {{
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% -10%, rgba(255, 103, 31, 0.18), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 100%, rgba(147, 71, 39, 0.15), transparent 70%),
+    radial-gradient(ellipse 100% 60% at 50% 50%, rgba(38, 38, 38, 0.4), transparent);
+  pointer-events: none;
+  z-index: 0;
+}}
+
+.container {{ max-width: 1080px; margin: 0 auto; padding: 64px 28px 96px;
+  position: relative; z-index: 1; }}
 
 /* Hero */
-.hero {{ padding-bottom: 36px; margin-bottom: 36px;
-  border-bottom: 1px solid {border}; }}
-.label {{ font-size: 12px; font-weight: 600; letter-spacing: 2.5px;
-  text-transform: uppercase; color: {orange}; margin-bottom: 14px;
-  display: inline-block; padding-bottom: 6px; border-bottom: 2px solid {orange}; }}
-h1 {{ font-size: 56px; font-weight: 800; color: {text}; line-height: 1.05;
-  letter-spacing: -0.02em; margin-bottom: 14px; text-transform: uppercase; }}
-h1 em {{ font-style: normal; color: {orange}; }}
-.subtitle {{ color: {text_muted}; font-size: 16px; max-width: 620px; margin-bottom: 28px; }}
+.hero {{ padding-bottom: 40px; margin-bottom: 40px;
+  border-bottom: 1px solid {border_hard}; }}
+.label {{ font-size: 11px; font-weight: 600; letter-spacing: 2.5px;
+  text-transform: uppercase; color: {orange}; margin-bottom: 18px;
+  display: inline-block; padding: 6px 14px;
+  background: {orange_soft}; border: 1px solid {orange}33;
+  border-radius: 999px; backdrop-filter: blur(8px); }}
+h1 {{ font-size: 72px; font-weight: 800; color: {text}; line-height: 1.0;
+  letter-spacing: -0.035em; margin-bottom: 18px; }}
+h1 em {{ font-style: normal;
+  background: linear-gradient(135deg, {orange} 0%, #ff8a4d 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent; }}
+.subtitle {{ color: {text_muted}; font-size: 17px; max-width: 620px; margin-bottom: 32px;
+  font-weight: 400; }}
 
 .meta-bar {{ display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 8px; }}
-.subscribe {{ display: inline-flex; align-items: center; gap: 8px; background: {orange};
-  color: {bg}; padding: 12px 22px; border-radius: 4px; text-decoration: none;
-  font-weight: 700; font-size: 13px; letter-spacing: 1.2px; text-transform: uppercase;
-  transition: background 0.15s; }}
-.subscribe:hover {{ background: #e85a14; }}
-.stat-pill {{ background: transparent; border: 1px solid {border}; border-radius: 4px;
-  padding: 10px 16px; font-size: 12px; color: {text_muted}; letter-spacing: 0.5px;
-  text-transform: uppercase; font-weight: 500; }}
-.stat-pill strong {{ color: {text}; font-weight: 700; margin-right: 4px; }}
-.stat-pill.new-pill {{ background: {orange_deep}33; border-color: {orange}66; color: {orange}; }}
+.subscribe {{ display: inline-flex; align-items: center; gap: 8px;
+  background: linear-gradient(135deg, {orange} 0%, #ff8a4d 100%);
+  color: #1a1a1a; padding: 13px 24px; border-radius: 999px; text-decoration: none;
+  font-weight: 700; font-size: 13px; letter-spacing: 0.4px;
+  box-shadow: 0 8px 24px rgba(255, 103, 31, 0.25), inset 0 1px 0 rgba(255,255,255,0.2);
+  transition: transform 0.18s, box-shadow 0.18s; }}
+.subscribe:hover {{ transform: translateY(-1px);
+  box-shadow: 0 12px 32px rgba(255, 103, 31, 0.35), inset 0 1px 0 rgba(255,255,255,0.25); }}
+.stat-pill {{ background: {glass}; backdrop-filter: blur(12px);
+  border: 1px solid {border_tr}; border-radius: 999px;
+  padding: 10px 16px; font-size: 12px; color: {text_muted}; letter-spacing: 0.3px;
+  font-weight: 500; }}
+.stat-pill strong {{ color: {text}; font-weight: 700; margin-right: 6px; }}
+.stat-pill.new-pill {{ background: {orange_soft}; border-color: {orange}40; color: {orange}; }}
 .stat-pill.new-pill strong {{ color: {orange}; }}
 
-/* Filter bar */
-.filters {{ background: {bg_card}; border-radius: 6px; padding: 24px 26px;
-  margin-bottom: 40px; border-left: 3px solid {orange}; }}
+/* Filter bar — frosted glass card */
+.filters {{ background: {glass}; backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid {border_tr}; border-radius: 16px;
+  padding: 26px 28px; margin-bottom: 44px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255,255,255,0.04); }}
 .filter-group {{ margin-bottom: 18px; }}
 .filter-group:last-child {{ margin-bottom: 0; }}
-.filter-label {{ font-size: 11px; font-weight: 700; letter-spacing: 2px;
-  text-transform: uppercase; color: {orange}; margin-bottom: 10px; display: block; }}
+.filter-label {{ font-size: 11px; font-weight: 600; letter-spacing: 1.8px;
+  text-transform: uppercase; color: {text_muted}; margin-bottom: 10px; display: block; }}
 .pill-row {{ display: flex; flex-wrap: wrap; gap: 6px; }}
-.pill {{ background: transparent; border: 1px solid {border}; color: {text};
-  padding: 7px 14px; border-radius: 3px; font-family: inherit; font-size: 11px;
-  font-weight: 600; cursor: pointer; transition: all 0.12s; letter-spacing: 0.6px;
-  text-transform: uppercase;
-  display: inline-flex; align-items: center; gap: 6px; }}
-.pill:hover {{ border-color: {orange}; color: {orange}; }}
-.pill.active {{ background: {orange}; color: {bg}; border-color: {orange}; }}
+.pill {{ background: {glass}; backdrop-filter: blur(8px);
+  border: 1px solid {border_tr}; color: {text};
+  padding: 8px 16px; border-radius: 999px; font-family: inherit; font-size: 12px;
+  font-weight: 500; cursor: pointer; transition: all 0.15s;
+  display: inline-flex; align-items: center; gap: 7px; }}
+.pill:hover {{ border-color: {orange}66; color: {orange};
+  background: {orange_soft}; }}
+.pill.active {{ background: {orange}; color: #1a1a1a; border-color: {orange};
+  font-weight: 600; box-shadow: 0 4px 16px rgba(255,103,31,0.25); }}
 .pill[data-filter="region"].active {{
-  background: var(--pill-color, {orange});
-  border-color: var(--pill-color, {orange});
-  color: {bg}; }}
-.pill .count {{ background: rgba(255,255,255,0.12); padding: 1px 7px; border-radius: 8px;
-  font-size: 10px; font-weight: 700; }}
+  background: var(--pill-color, {orange}); border-color: var(--pill-color, {orange});
+  color: #1a1a1a;
+  box-shadow: 0 4px 16px color-mix(in srgb, var(--pill-color, {orange}) 35%, transparent); }}
+.pill .count {{ background: rgba(255,255,255,0.10); padding: 1px 7px; border-radius: 8px;
+  font-size: 10px; font-weight: 700; min-width: 18px; text-align: center; }}
 .pill.active .count {{ background: rgba(0,0,0,0.18); color: inherit; }}
 
 /* Search */
-.search-box {{ width: 100%; background: {bg_deep}; border: 1px solid {border}; color: {text};
-  padding: 12px 16px; border-radius: 4px; font-family: inherit; font-size: 14px;
-  transition: border-color 0.15s; }}
-.search-box:focus {{ outline: none; border-color: {orange}; }}
+.search-box {{ width: 100%; background: {bg_deep}; border: 1px solid {border_tr};
+  color: {text}; padding: 14px 18px; border-radius: 12px;
+  font-family: inherit; font-size: 14px; transition: all 0.15s; }}
+.search-box:focus {{ outline: none; border-color: {orange}66;
+  background: rgba(0,0,0,0.4); box-shadow: 0 0 0 3px {orange_soft}; }}
 .search-box::placeholder {{ color: {text_dim}; }}
 
 /* Month sections */
-.month-section {{ margin-bottom: 52px; }}
-.month-header {{ font-size: 13px; font-weight: 700; color: {orange};
-  letter-spacing: 3px; text-transform: uppercase; margin-bottom: 18px;
-  padding-bottom: 10px; border-bottom: 1px solid {border}; }}
+.month-section {{ margin-bottom: 56px; }}
+.month-header {{ font-size: 14px; font-weight: 600; color: {text_muted};
+  letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 20px;
+  display: flex; align-items: center; gap: 16px; }}
+.month-header span {{ flex-shrink: 0; }}
+.month-header::after {{ content: ''; flex: 1; height: 1px;
+  background: linear-gradient(to right, {border_hard}, transparent); }}
 
-/* Event cards */
-.event {{ background: {bg_card}; border-radius: 4px; padding: 22px 26px;
-  margin-bottom: 8px; display: grid;
-  grid-template-columns: 70px 1fr; gap: 22px; align-items: start;
-  transition: transform 0.12s, box-shadow 0.12s;
-  border-left: 3px solid transparent; }}
-.event:hover {{ transform: translateX(2px); box-shadow: -2px 0 0 {orange}; border-left-color: {orange}; }}
-.event.is-new {{ border-left-color: {orange}; }}
+/* Event cards — translucent glass */
+.event {{ background: {glass}; backdrop-filter: blur(14px) saturate(130%);
+  -webkit-backdrop-filter: blur(14px) saturate(130%);
+  border: 1px solid {border_tr}; border-radius: 14px;
+  padding: 22px 26px; margin-bottom: 10px;
+  display: grid; grid-template-columns: 70px 1fr; gap: 22px; align-items: start;
+  transition: transform 0.18s, background 0.18s, border-color 0.18s, box-shadow 0.18s;
+  position: relative; }}
+.event::before {{ content: ''; position: absolute; inset: 0; border-radius: 14px;
+  background: linear-gradient(135deg, transparent 0%, transparent 70%, rgba(255,103,31,0) 100%);
+  pointer-events: none; transition: background 0.25s; }}
+.event:hover {{ background: {glass_hover}; border-color: {border_hard};
+  transform: translateY(-1px); box-shadow: 0 8px 28px rgba(0,0,0,0.25); }}
+.event:hover::before {{ background: linear-gradient(135deg, transparent 0%, transparent 70%, rgba(255,103,31,0.08) 100%); }}
 
-.event-date {{ text-align: center; padding-top: 2px; line-height: 1; }}
+.event.is-new {{ border-color: rgba(255,103,31,0.28); background: rgba(255,103,31,0.04); }}
+.event.is-new::before {{ background: linear-gradient(135deg, rgba(255,103,31,0.06) 0%, transparent 50%); }}
+
+.event-date {{ text-align: center; padding-top: 4px; line-height: 1; }}
 .event-date .day {{ font-size: 38px; font-weight: 800; color: {text};
-  line-height: 1; letter-spacing: -0.02em; }}
-.event-date .dow {{ font-size: 11px; color: {orange}; text-transform: uppercase;
-  letter-spacing: 1.5px; margin-top: 6px; font-weight: 700; }}
+  line-height: 1; letter-spacing: -0.03em; }}
+.event-date .dow {{ font-size: 10px; color: {orange}; text-transform: uppercase;
+  letter-spacing: 1.8px; margin-top: 8px; font-weight: 700; }}
 
 .event-body a.event-title {{ color: {text}; font-size: 16px; font-weight: 600;
-  text-decoration: none; line-height: 1.35; display: inline; }}
+  text-decoration: none; line-height: 1.4; display: inline; letter-spacing: -0.005em; }}
 .event-body a.event-title:hover {{ color: {orange}; }}
-.new-badge {{ display: inline-block; background: {orange}; color: {bg};
-  font-size: 10px; font-weight: 800; letter-spacing: 1.2px; padding: 2px 7px;
-  border-radius: 2px; margin-left: 10px; vertical-align: 2px;
+.new-badge {{ display: inline-block;
+  background: linear-gradient(135deg, {orange} 0%, #ff8a4d 100%);
+  color: #1a1a1a;
+  font-size: 9px; font-weight: 800; letter-spacing: 1.2px; padding: 3px 8px;
+  border-radius: 4px; margin-left: 10px; vertical-align: 2px;
+  box-shadow: 0 2px 8px rgba(255,103,31,0.3);
   animation: pulse 2.4s ease-in-out infinite; }}
-@keyframes pulse {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0.55; }} }}
+@keyframes pulse {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0.65; }} }}
 
-.event-meta {{ display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;
+.event-meta {{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px;
   font-size: 12px; color: {text_muted}; align-items: center; }}
-.source-tag {{ font-weight: 600; font-size: 10px; padding: 3px 9px; border-radius: 2px;
-  letter-spacing: 0.5px; text-transform: uppercase; border: 1px solid; }}
+.meta-item {{ display: inline-flex; align-items: center; gap: 5px;
+  padding: 4px 10px; border-radius: 999px;
+  background: rgba(255,255,255,0.03); border: 1px solid {border_tr}; }}
+.source-tag {{ font-weight: 600; font-size: 11px;
+  background: color-mix(in srgb, var(--tag-color) 14%, transparent);
+  color: var(--tag-color);
+  border-color: color-mix(in srgb, var(--tag-color) 35%, transparent); }}
 .location {{ color: {text_muted}; }}
-.location::before {{ content: "·"; margin-right: 8px; color: {text_dim}; }}
-.time-badge {{ color: {text}; font-weight: 600; }}
-.time-badge::before {{ content: "·"; margin-right: 8px; color: {text_dim}; font-weight: 400;}}
+.time-badge {{ color: {text}; font-weight: 500; }}
 
 /* Empty state */
-.empty {{ text-align: center; padding: 72px 24px; background: {bg_card};
-  border: 1px dashed {border}; border-radius: 4px; margin-top: 20px; }}
-.empty-title {{ font-size: 16px; color: {text}; margin-bottom: 8px;
-  text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }}
+.empty {{ text-align: center; padding: 80px 24px; background: {glass};
+  backdrop-filter: blur(12px); border: 1px dashed {border_tr};
+  border-radius: 16px; margin-top: 20px; }}
+.empty-title {{ font-size: 17px; color: {text}; margin-bottom: 8px; font-weight: 600; }}
 .empty-sub {{ font-size: 14px; color: {text_muted}; }}
 
-footer {{ margin-top: 72px; padding-top: 32px; border-top: 1px solid {border};
+footer {{ margin-top: 80px; padding-top: 36px; border-top: 1px solid {border_hard};
   color: {text_muted}; font-size: 12px; line-height: 1.7; }}
 footer a {{ color: {orange}; text-decoration: none; }}
 footer a:hover {{ text-decoration: underline; }}
-.footer-label {{ display: block; font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
-  color: {orange}; margin-bottom: 10px; font-weight: 700; }}
+.footer-label {{ display: block; font-size: 11px; letter-spacing: 1.8px; text-transform: uppercase;
+  color: {orange}; margin-bottom: 10px; font-weight: 600; }}
 
 @media (max-width: 720px) {{
-  .container {{ padding: 40px 18px 64px; }}
-  h1 {{ font-size: 38px; }}
+  .container {{ padding: 44px 18px 72px; }}
+  h1 {{ font-size: 46px; }}
+  .subtitle {{ font-size: 15px; }}
   .event {{ grid-template-columns: 56px 1fr; gap: 16px; padding: 18px 18px; }}
-  .event-date .day {{ font-size: 30px; }}
-  .filters {{ padding: 18px 18px; }}
+  .event-date .day {{ font-size: 32px; }}
+  .filters {{ padding: 20px 20px; }}
   .meta-bar {{ gap: 8px; }}
-  .stat-pill, .subscribe {{ font-size: 11px; padding: 9px 14px; }}
+  .stat-pill, .subscribe {{ font-size: 11px; padding: 9px 16px; }}
 }}
 </style>
 </head>
 <body>
 <div class="container">
-  <div class="hero">
+  <header class="hero">
     <span class="label">BD Resource Library — 12</span>
     <h1>BD <em>Events</em></h1>
     <p class="subtitle">Aggregated AEC industry events across the Bay Area and San Diego. Updated automatically.</p>
@@ -297,7 +345,7 @@ footer a:hover {{ text-decoration: underline; }}
       {new_pill_html}
       <span class="stat-pill">Updated {updated_at}</span>
     </div>
-  </div>
+  </header>
 
   <div class="filters">
     <div class="filter-group">
@@ -311,14 +359,14 @@ footer a:hover {{ text-decoration: underline; }}
     <div class="filter-group">
       <label class="filter-label">Source</label>
       <div class="pill-row">{source_pills}
-        <button class="pill" data-filter="new" data-value="true" style="--pill-color: {orange};">✦ NEW ONLY</button>
+        <button class="pill" data-filter="new" data-value="true" style="--pill-color: {orange};">✦ New only</button>
       </div>
     </div>
   </div>
 
-  <div id="eventsContainer">
+  <main id="eventsContainer">
     {body}
-  </div>
+  </main>
 
   <div id="emptyState" class="empty" style="display: none;">
     <p class="empty-title">No matches</p>
@@ -400,9 +448,11 @@ def write_html(events: List[Event], path: str) -> None:
     source_pills = _render_source_pills(sources_seen, events)
 
     page = PAGE_TEMPLATE.format(
-        bg=L10_BG, bg_card=L10_BG_CARD, bg_deep=L10_BG_DEEP,
+        bg=L10_BG, bg_deep=L10_BG_DEEP,
         text=L10_TEXT, text_muted=L10_TEXT_MUTED, text_dim=L10_TEXT_DIM,
-        border=L10_BORDER, orange=L10_ORANGE, orange_deep=L10_ORANGE_DEEP,
+        border_tr=L10_BORDER_TR, border_hard=L10_BORDER_HARD,
+        glass=L10_GLASS, glass_hover=L10_GLASS_HOVER,
+        orange=L10_ORANGE, orange_soft=L10_ORANGE_SOFT, orange_deep=L10_ORANGE_DEEP,
         event_count=len(events),
         source_count=len(sources_seen),
         new_pill_html=new_pill_html,
