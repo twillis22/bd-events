@@ -28,7 +28,7 @@ class IIDASoCalScraper(RSSAdapter):
 class DBIANationalScraper(RSSAdapter):
     """DBIA national — main site RSS. Mixed news + events; we filter for event terms."""
     name = "DBIA (national)"
-    region = "Both"
+    region = "Other"
     source_url = "https://dbia.org/conferences/"
     feed_url = "https://dbia.org/feed/"
 
