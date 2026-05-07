@@ -25,6 +25,7 @@ from scrapers.feeds import (
 
 # Browser scrapers (v2)
 from scrapers.uli_national import ULINationalScraper
+from scrapers.uli_sf import ULISanFranciscoScraper
 from scrapers.iida_norcal import IIDANorCalScraper
 from scrapers.cmaa_norcal import CMAANorCalScraper
 
@@ -41,6 +42,7 @@ ALL_SCRAPERS: List[Type[BaseScraper]] = [
     SDBIAScraper,
     # Browser scrapers
     ULINationalScraper,
+    ULISanFranciscoScraper,
     IIDANorCalScraper,
     CMAANorCalScraper,
 ]
