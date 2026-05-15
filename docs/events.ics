@@ -8,37 +8,10 @@ REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
 X-WR-TIMEZONE:America/Los_Angeles
 BEGIN:VEVENT
-SUMMARY:[IIDA SoCal] San Diego Sustainability Panel Discussion 06.17.26
-DTSTART:20260513T183748Z
-DTSTAMP:20260514T151646Z
-UID:958935caf70d47d8809cac53c7778751@bd-events
-DESCRIPTION:Join sustainability leaders from top firms for a dynamic panel
-  on advancing carbon-neutral design and shaping the future of our industry
- . Learn how organizations are implementing impactful internal programs\, t
- ackling today’s most pressing sustainability challenges\, and organizing
-  for long-term\, future-proof goals. Panelists include: Jill Pedro\, LPA D
- esign Studios Juan Soto\, Gensler Eric Brossy de \n\nSource: IIDA SoCal\nL
- ink: https://iida-socal.org/events/san-diego-sustainability-panel-discussi
- on-06-17-26/
-URL:https://iida-socal.org/events/san-diego-sustainability-panel-discussio
- n-06-17-26/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[CMAA NorCal] ~SOLD OUT~ Awards Gala and Industry Celebration
-DTSTART:20260514T000000Z
-DTSTAMP:20260514T151646Z
-UID:4682f3875f19fd140afdf38d95b6064a@bd-events
-DESCRIPTION:\nSource: CMAA NorCal\nLink: https://www.cmaanorcal.org/events
- -1/sold-out-awards-gala-and-industry-celebration
-LOCATION:BlackHawk Museum
-URL:https://www.cmaanorcal.org/events-1/sold-out-awards-gala-and-industry-
- celebration
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[Lean Construction Institute] Making Better Decisions with Choosin
  g By Advantages - SAN FRANCISCO
 DTSTART:20260515T000000Z
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:bed97996cfaa51503386711d22bd9de6@bd-events
 DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
  nconstruction.org/LCI/Events/Event_display.aspx?EventKey=NCA051526&Website
@@ -51,7 +24,7 @@ BEGIN:VEVENT
 SUMMARY:[AIA San Francisco] AIASF: 2026 Marin Home Tours
 DTSTART;TZID=America/Los_Angeles:20260516T124500
 DTEND;TZID=America/Los_Angeles:20260516T180000
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:e53d83c8aad7c0a0214b11fd3268f418@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/2026-marin-home-tours
@@ -62,7 +35,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CMAA NorCal] EDUCATION WEBINAR - Reality Capture
 DTSTART:20260521T000000Z
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:a2bef0203830a16d75d52bdd862212c7@bd-events
 DESCRIPTION:\nSource: CMAA NorCal\nLink: https://www.cmaanorcal.org/events
  -1/education-webinar-reality-capture
@@ -74,7 +47,7 @@ SUMMARY:[AIA San Francisco] AIASF: Quantum + AI: Designing the Environment
  s Behind Breakthrough Innovation
 DTSTART;TZID=America/Los_Angeles:20260520T173000
 DTEND;TZID=America/Los_Angeles:20260520T203000
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:3c50cc5ecce64b9e4562c1d4eb1a4731@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/quantum--ai-designing-the-environments-behind-breakthrough-innovation
@@ -89,7 +62,7 @@ SUMMARY:[AIA San Francisco] AIASF: Staffing in the Age of AI & Connected P
  cture Firms
 DTSTART;TZID=America/Los_Angeles:20260521T080000
 DTEND;TZID=America/Los_Angeles:20260521T103000
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:5564efdf3358daa0d294a4c6c2c1a8ba@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/staffing-in-the-age-of-ai-and-connected-practice-aligning-roles-responsi
@@ -103,7 +76,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[IIDA Northern California] Every Color Tells a Story – CEU
 DTSTART:20260526T000000Z
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:ebfeb50932cee3980cd3542020d362cb@bd-events
 DESCRIPTION:Categories: Professional Development EVENT\, SILICON VALLEY EV
  ENT\n\nSource: IIDA Northern California\nLink: https://iidanc.org/events/e
@@ -115,7 +88,7 @@ BEGIN:VEVENT
 SUMMARY:[Lean Construction Institute] Empower Your Team: How Lean Methods 
  Drive Collaboration
 DTSTART:20260527T000000Z
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:c683f0075ca1ec9d9d7fe166d95baf4a@bd-events
 DESCRIPTION:\nSource: Lean Construction Institute\nLink: https://mylci.lea
  nconstruction.org/LCI/Events/Event_display.aspx?EventKey=LAOC052726&Websit
@@ -128,7 +101,7 @@ BEGIN:VEVENT
 SUMMARY:[AIA San Francisco] AIASF: CRAN Tour: Chris French Metal Studio
 DTSTART;TZID=America/Los_Angeles:20260528T160000
 DTEND;TZID=America/Los_Angeles:20260528T180000
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:a515438aad90e78b4f6f52d3537d4316@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/chris-french-metal-studio-tour
@@ -139,7 +112,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CMAA NorCal] CMIT Wellness Hike
 DTSTART:20260530T000000Z
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:ba910dee3a457483595f039c6d359a89@bd-events
 DESCRIPTION:\nSource: CMAA NorCal\nLink: https://www.cmaanorcal.org/events
  -1/cmit-wellness-hike
@@ -151,7 +124,7 @@ SUMMARY:[AIA San Francisco] AIASF: OSHA-Compliant CPR\, AED\, & First Aid
  Certification
 DTSTART;TZID=America/Los_Angeles:20260601T140000
 DTEND;TZID=America/Los_Angeles:20260601T180000
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:a6852d50643383343f622942e219eb8a@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/cpr--first-aid-training
@@ -163,7 +136,7 @@ SUMMARY:[AIA San Francisco] AIASF: MAKERS series: Rob Forbes and Traci Des
   Jardins
 DTSTART;TZID=America/Los_Angeles:20260604T173000
 DTEND;TZID=America/Los_Angeles:20260604T203000
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:451217aac6cdf1327e045bf344e4acd9@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/makers-series-rob-forbes-and-traci-des-jardins
@@ -177,7 +150,7 @@ SUMMARY:[AIA San Francisco] AIASF: Public Works Permits Portal (Ph. 1): Wa
  lkthrough and Practitioner Feedback
 DTSTART;TZID=America/Los_Angeles:20260609T093000
 DTEND;TZID=America/Los_Angeles:20260609T103000
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:5a2b33a95f0969ad237a19265c2bcd12@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/public-works-permits-portal-phase-1-walkthrough-and-practitioner-feedbac
@@ -192,7 +165,7 @@ SUMMARY:[AIA San Francisco] AIASF: AIA Conference on Architecture & Design
  �2026
 DTSTART;TZID=America/Los_Angeles:20260610T000000
 DTEND;TZID=America/Los_Angeles:20260614T000000
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:227bd27961c37536a50b3996ac02c26b@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/aia-conference-on-architecture-and-design2026
@@ -204,7 +177,7 @@ BEGIN:VEVENT
 SUMMARY:[NAIOP Silicon Valley] 2026 Capital Markets Panel
 DTSTART:20260611T113000Z
 DTEND:20260611T133000Z
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:da6ee1b9b63d0f5cf70c0470959088bc@bd-events
 DESCRIPTION:NAIOP Silicon Valley Capital Markets Panel\nRegister for the 2
  026 NAIOP Silicon Valley Capital Markets Panel! Join us on Thursday\, June
@@ -220,7 +193,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CSHE] San Francisco Chapter | Education + Social
 DTSTART:20260612T000000Z
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:a34115d3d7cf75025d22cdc7da9f052f@bd-events
 DESCRIPTION:\nSource: CSHE\nLink: https://cshe.org/events/EventDetails.asp
  x?id=2041302
@@ -229,7 +202,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CSHE] San Francisco Chapter | Everon
 DTSTART:20260617T000000Z
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:4d00d8c1926301c5b746f63d3b11c2ac@bd-events
 DESCRIPTION:\nSource: CSHE\nLink: https://cshe.org/events/EventDetails.asp
  x?id=2041303
@@ -239,7 +212,7 @@ BEGIN:VEVENT
 SUMMARY:[CSHE] Central Coast Chapter Meeting | Hospital Incident Command S
  ystem for the Hospital Engineer\, an Intro
 DTSTART:20260617T000000Z
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:79c689dded413d525a01da3ed40336d5@bd-events
 DESCRIPTION:\nSource: CSHE\nLink: https://cshe.org/events/EventDetails.asp
  x?id=2054337
@@ -248,7 +221,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CSHE] Central Valley Chapter Meeting | Flammable Refrigerants
 DTSTART:20260618T000000Z
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:33b6ec78dfd06445028c532f70abf416@bd-events
 DESCRIPTION:\nSource: CSHE\nLink: https://cshe.org/events/EventDetails.asp
  x?id=2053002
@@ -258,7 +231,7 @@ BEGIN:VEVENT
 SUMMARY:[CMAA NorCal] EDUCATION WEBINAR - The BIM Advantage: Reducing Proj
  ect Risk
 DTSTART:20260618T000000Z
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:6f5fc3154d2c6c9551742365d39920d1@bd-events
 DESCRIPTION:\nSource: CMAA NorCal\nLink: https://www.cmaanorcal.org/events
  -1/education-webinar-the-bim-advantage-reducing-project-risk
@@ -270,7 +243,7 @@ BEGIN:VEVENT
 SUMMARY:[AIA San Francisco] AIASF: Building with Pride Happy Hour
 DTSTART;TZID=America/Los_Angeles:20260618T173000
 DTEND;TZID=America/Los_Angeles:20260618T203000
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:96db74e09e71044e6a39c3f1e244f694@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/building-with-pride-happy-hour-
@@ -283,7 +256,7 @@ SUMMARY:[AIA San Francisco] AIASF: Acoustical Case Study: AIASF Headquarte
  rs Lecture Hall
 DTSTART;TZID=America/Los_Angeles:20260623T173000
 DTEND;TZID=America/Los_Angeles:20260623T203000
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:1d1b6563c0a09497a6109c30af55eea7@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/acoustical-case-study-aiasf-headquarters-lecture-hall
@@ -297,7 +270,7 @@ SUMMARY:[AIA San Francisco] AIASF: Design-Build in Practice: Integrated Pr
  oject Delivery Across Hospitality\, Retail\, and Adaptive Reuse
 DTSTART;TZID=America/Los_Angeles:20260624T173000
 DTEND;TZID=America/Los_Angeles:20260624T200000
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:42afbec1d6ae7362f9c38203b8d281e7@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/project-delivery-series-hoffman-retreat-center-at-santa-sabina-
@@ -310,7 +283,7 @@ BEGIN:VEVENT
 SUMMARY:[AIA San Francisco] AIASF: 2026 Housing Symposium
 DTSTART;TZID=America/Los_Angeles:20260625T101500
 DTEND;TZID=America/Los_Angeles:20260625T170000
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:601a4dc451d1ed87d1d10beba0eb899a@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/2026-housing-symposium
@@ -321,7 +294,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[IIDA Northern California] Design Expo
 DTSTART:20260709T000000Z
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:fa71ca2db7d9c4d65f080f12eef64b8d@bd-events
 DESCRIPTION:Categories: City Center EVENT\, SACRAMENTO EVENT\n\nSource: II
  DA Northern California\nLink: https://iidanc.org/events/design-expo-2/
@@ -330,7 +303,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CMAA NorCal] 2026 Past Presidents Golf Tournament
 DTSTART:20260827T000000Z
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:ed4dcd61ec4c0949f58f80e1eabf2d3c@bd-events
 DESCRIPTION:\nSource: CMAA NorCal\nLink: https://www.cmaanorcal.org/events
  -1/2026-past-presidents-golf-tournament
@@ -341,7 +314,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[IIDA Northern California] Design Expo
 DTSTART:20260916T000000Z
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:ebdc96d49a7218a495961c696ffa50d9@bd-events
 DESCRIPTION:Categories: FRESNO EVENT\n\nSource: IIDA Northern California\n
  Link: https://iidanc.org/events/design-expo/
@@ -351,7 +324,7 @@ BEGIN:VEVENT
 SUMMARY:[NAIOP Silicon Valley] 2026 NAIOP Silicon Valley Annual BBQ
 DTSTART:20260916T170000Z
 DTEND:20260916T200000Z
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:f3cb8278a1bbb14a60f933d07b034fe3@bd-events
 DESCRIPTION:NAIOP Silicon Valley is hosting our Annual BBQ on September
   16\, 5:00-8:00 PM! This year\, the BBQ will be hosted at The Ameswell Hot
@@ -367,7 +340,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[IIDA Northern California] Merge 2026
 DTSTART:20261009T000000Z
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:3064c764500dc592817c6c203ffdadf1@bd-events
 DESCRIPTION:Categories: SACRAMENTO EVENT\n\nSource: IIDA Northern Californ
  ia\nLink: https://iidanc.org/events/merge-2026/
@@ -378,7 +351,7 @@ SUMMARY:[NAIOP Silicon Valley] 2026 NAIOP Silicon Valley Annual Golf Tourn
  ament
 DTSTART:20261021T110000Z
 DTEND:20261021T190000Z
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:88e5365d29f7bb49df1eefd364272697@bd-events
 DESCRIPTION:NAIOP Silicon Valley Annual Golf Tournament\nNAIOP Silicon Val
  ley is excited to host our 5th Annual Golf Tournament on Wednesday\, Oc
@@ -394,7 +367,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CMAA NorCal] Holiday Mixer - Walnut Creek
 DTSTART:20261208T000000Z
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:dcd25f422c61091b1331e6eeccf7c98b@bd-events
 DESCRIPTION:\nSource: CMAA NorCal\nLink: https://www.cmaanorcal.org/events
  -1/holiday-mixer-walnut-creek-1
@@ -404,7 +377,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CMAA NorCal] Holiday Mixer - Sacramento
 DTSTART:20261210T000000Z
-DTSTAMP:20260514T151646Z
+DTSTAMP:20260515T151239Z
 UID:54498fa03c02e370d279930079c7dae3@bd-events
 DESCRIPTION:\nSource: CMAA NorCal\nLink: https://www.cmaanorcal.org/events
  -1/holiday-mixer-sacramento-5
