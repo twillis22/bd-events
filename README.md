@@ -9,7 +9,7 @@ All updated automatically every day.
 
 ## What's new in v3
 
-- **Filter UI on the bookmark page** — search box, region pills (NorCal/SoCal/Other), source pills, and "✨ New only" toggle. All client-side, instant.
+- **Filter UI on the bookmark page** — search box, submarket pills (San Francisco / Silicon Valley / East Bay / Sacramento / San Diego / Bay Area / Online), source pills, and "✨ New only" toggle. All client-side, instant.
 - **"New this week" highlights** — events first seen in the last 7 days get an amber border, a pulsing NEW badge, and show in the new-only filter.
 - **Persistent state** via `data/seen.json` — tracks first-seen date per event so "new" actually means new.
 

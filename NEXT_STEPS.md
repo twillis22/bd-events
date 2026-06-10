@@ -12,6 +12,10 @@ of SoCal is OUT.
 
 ## TASK 1 — Replace coarse regions with geographic submarkets ⭐ (biggest change)
 
+> **STATUS: DONE** — `scrapers/regions.py` + `Event.region` + classification in
+> `aggregate.py`; pills/tints render from `e.region`. East Bay kept as its own
+> bucket (confirmed with Ty 2026-06-10).
+
 **Problem:** Region is assigned per *source* today (`NorCal` / `SoCal` / `Other`), so
 every AIA SF event is "NorCal" and every Bisnow event is "Both/Other" regardless of
 where the event actually is. Ty wants to filter by **submarket**, and a single source
@@ -64,6 +68,10 @@ SF event and a San Jose event from the *same* source land in different buckets.
 
 ## TASK 2 — Keep San Diego, drop Los Angeles, in the SoCal feeds
 
+> **STATUS: DONE** — IIDA SoCal and LCI now have no fallback region, so only
+> events that classify into a kept bucket survive. Verify counts after the next
+> Action run (live sites are unreachable from the dev sandbox).
+
 This mostly falls out of Task 1 (the classifier drops LA). But also:
 
 - `scrapers/feeds.py` → `IIDASoCalScraper` pulls the IIDA SoCal feed, which covers both
@@ -104,6 +112,10 @@ irrelevant national/international ones.
 ---
 
 ## TASK 4 — Fix known bugs / data-quality issues
+
+> **STATUS: items 1, 2(b), 4 DONE** — stale `Both` removed; Bisnow gated by the
+> classifier (no fallback region); iCal decoding hardened + `\ufffd` → `–`.
+> Item 3 (RSS publish-date-as-event-date) still open.
 
 1. **Stale `region = "Both"`** on `BisnowScraper` in `scrapers/feeds.py`. After Task 1
    this attribute becomes just a fallback default; set it to something sane (`"Bay Area"`)

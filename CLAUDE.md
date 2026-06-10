@@ -74,9 +74,9 @@ for e in CMAANorCalScraper().fetch(): print(e.start.date(), e.title, "|", e.loca
   `SeenTracker.NEW_WINDOW_DAYS`). The GitHub Action commits it back every run. When
   changing UID composition, you WILL reset everyone's "new" status — avoid unless
   intentional, and call it out.
-- **Region is currently assigned per-source** (each scraper has a fixed `region`
-  class attr). See `NEXT_STEPS.md` — we are moving this to **per-event geographic
-  classification**, which is the main task.
+- **Region is assigned per-event** by `scrapers/regions.py::classify(location,
+  title, source_default)` during aggregation; each scraper's `region` class attr
+  is just the fallback default for events with no recognizable city.
 
 ## Design system (the HTML page)
 
@@ -97,9 +97,12 @@ of the submarket work in `NEXT_STEPS.md`.
 
 - **Outreach sign-off** (not relevant to this repo's output, but project-wide): Ty
   signs as "Ty". The page never needs a signature.
-- **Region buckets** are currently `NorCal` / `SoCal` / `Other`. Known leftover bug:
-  `scrapers/feeds.py` still has `region = "Both"` on `BisnowScraper` — that's stale
-  and falls through to the gray fallback color. Fix as part of the region overhaul.
+- **Region buckets** are per-event geographic submarkets (San Francisco / Silicon
+  Valley / East Bay / Sacramento / San Diego / Bay Area / Online), assigned by
+  `scrapers/regions.py::classify()` in the aggregator. A scraper's `region` class
+  attr is only the *fallback* when no city matches; `""` means drop unmatched
+  events (used for national feeds). `classify` returning `None` drops the event —
+  that's how LA / Orange County / out-of-state events are excluded.
 - **RSS sources use publish-date as event-date** (`scrapers/rss_adapter.py`). This is
   a real weakness — an event *announced* today may actually occur months later, so its
   date is wrong. Bisnow/DBIA/SDBIA all inherit this. Treat RSS dates as approximate.
