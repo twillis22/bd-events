@@ -11,6 +11,7 @@ from typing import List
 import html
 
 from scrapers.base import Event
+from scrapers.regions import KEPT_BUCKETS
 
 
 # Level 10 brand palette
@@ -25,19 +26,25 @@ L10_GLASS       = "rgba(255, 255, 255, 0.04)"
 L10_ORANGE      = "#ff671f"
 L10_ORANGE_SOFT = "rgba(255, 103, 31, 0.10)"
 
+# Muted, distinct tints per submarket — same restrained saturation family
+# as the original NorCal blue / SoCal pink.
 REGION_COLORS = {
-    "NorCal": "#7eaee0",
-    "SoCal":  "#e095b1",
-    "Other":  "#9ec9b3",
+    "San Francisco":  "#7eaee0",   # blue
+    "Silicon Valley": "#9ec9b3",   # sage green
+    "East Bay":       "#d4b483",   # warm tan
+    "Sacramento":     "#d8c873",   # golden
+    "San Diego":      "#e095b1",   # pink
+    "Bay Area":       "#a8b2c4",   # neutral slate (catch-all)
+    "Online":         "#b9a3d6",   # lavender
 }
 
 
 def _render_region_pills(events: List[Event]) -> str:
     counts = {}
     for e in events:
-        counts[e.source_region or "Other"] = counts.get(e.source_region or "Other", 0) + 1
+        counts[e.region] = counts.get(e.region, 0) + 1
     parts = ['<button class="pill active" data-filter="region" data-value="all">All Regions</button>']
-    for region in ["NorCal", "SoCal", "Other"]:
+    for region in KEPT_BUCKETS:
         if region in counts:
             color = REGION_COLORS.get(region, "#aaa")
             parts.append(
@@ -100,7 +107,7 @@ def _empty_body() -> str:
 def _render_event(ev: Event) -> str:
     day = ev.start.strftime("%-d")
     dow = ev.start.strftime("%a")
-    region = ev.source_region or "Other"
+    region = ev.region or "Bay Area"
     region_color = REGION_COLORS.get(region, "#aaa")
     is_new = getattr(ev, "is_new", False)
     new_badge = '<span class="new-badge">NEW</span>' if is_new else ''
@@ -144,7 +151,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BD Events — Bay Area &amp; San Diego</title>
+<title>BD Events — Bay Area, Sacramento &amp; San Diego</title>
 <link rel="alternate" type="text/calendar" title="Subscribe (iCal)" href="events.ics">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
@@ -324,7 +331,7 @@ footer a:hover {{ text-decoration: underline; }}
   <header class="hero">
     <span class="label">BD Resource Library — 12</span>
     <h1>BD <em>Events</em></h1>
-    <p class="subtitle">Aggregated AEC industry events across the Bay Area and San Diego. Updated automatically.</p>
+    <p class="subtitle">Aggregated AEC industry events across the Bay Area, Sacramento, and San Diego. Updated automatically.</p>
     <div class="meta-bar">
       <a class="subscribe" href="events.ics" download>📅 Subscribe in Outlook</a>
       <span class="stat-pill"><strong id="visibleCount">{event_count}</strong>upcoming</span>
