@@ -22,7 +22,7 @@ from .browser import BrowserScraper, BrowserSession
 
 class CMAANorCalScraper(BrowserScraper, BaseScraper):
     name = "CMAA NorCal"
-    region = "NorCal"
+    region = "Bay Area"
     source_url = "https://www.cmaanorcal.org/events-list"
 
     # Lines we want to drop from the visible card text.

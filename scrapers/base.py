@@ -16,7 +16,8 @@ class Event:
     location: str = ""
     description: str = ""
     source: str = ""              # human label, e.g. "AIA San Francisco"
-    source_region: str = ""       # "NorCal" / "SoCal" / "Other"
+    source_region: str = ""       # source's default bucket, fallback for classify()
+    region: str = ""              # per-event submarket, set by regions.classify()
     first_seen: str = ""          # ISO date string set by SeenTracker
     is_new: bool = False          # set by SeenTracker (true if first_seen within N days)
 
@@ -35,7 +36,7 @@ class Event:
 class BaseScraper:
     """One subclass per source. Implement `fetch()` returning a list of Events."""
     name: str = ""        # human label
-    region: str = ""      # NorCal / SoCal / Other
+    region: str = ""      # default submarket when classify() finds no city ("" = drop unmatched)
     source_url: str = ""  # the page being scraped (for fallback links)
 
     def fetch(self) -> List[Event]:

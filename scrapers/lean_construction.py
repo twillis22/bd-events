@@ -22,26 +22,11 @@ from .base import BaseScraper, Event
 from .http import get
 
 
-_CA_STATE_RE = re.compile(r"\bCA\b")
-_CA_CITIES = (
-    "California", "San Francisco", "Los Angeles", "San Diego", "San Jose",
-    "Sacramento", "Oakland", "Long Beach", "Fresno", "Anaheim",
-    "Santa Monica", "Santa Clara", "Santa Barbara", "Berkeley", "Palo Alto",
-    "Pasadena", "Burbank", "Irvine", "Riverside", "San Bernardino",
-    "Bakersfield", "Stockton", "Modesto", "Fremont", "Sunnyvale",
-    "Mountain View", "Cupertino", "Redwood City", "San Mateo",
-    "Walnut Creek", "Costa Mesa", "Newport Beach", "Beverly Hills",
-    "Hollywood", "Culver City",
-)
-_CA_CITY_RE = re.compile(
-    r"\b(" + "|".join(re.escape(c) for c in _CA_CITIES) + r")\b",
-    re.IGNORECASE,
-)
-
-
 class LeanConstructionScraper(BaseScraper):
+    """National event calendar. region stays "" so the aggregator's geographic
+    classifier keeps only events whose location names an in-market city."""
     name = "Lean Construction Institute"
-    region = "Other"
+    region = ""
     source_url = "https://leanconstruction.org/events/"
 
     def fetch(self) -> List[Event]:
@@ -78,17 +63,7 @@ class LeanConstructionScraper(BaseScraper):
                 place_el = ev.select_one(".ec-event__place")
                 location = place_el.get_text(" ", strip=True)[:120] if place_el else ""
                 events.append(Event(title=title, start=day_dt, url=url, location=location))
-        return [e for e in events if self._is_california(e.location)]
-
-    @staticmethod
-    def _is_california(location: str) -> bool:
-        if not location:
-            return False
-        if _CA_STATE_RE.search(location):
-            return True
-        if _CA_CITY_RE.search(location):
-            return True
-        return False
+        return events
 
     @staticmethod
     def _parse_month_year(soup) -> Optional[tuple]:

@@ -16,7 +16,7 @@ from .http import get
 
 class CSHEScraper(BaseScraper):
     name = "CSHE"
-    region = "NorCal"
+    region = "Bay Area"  # statewide org; chapter usually in the title
     source_url = "https://cshe.org/events/event_list.asp"
 
     DATE_RE = re.compile(r"(\d{1,2}/\d{1,2}/\d{2,4})")

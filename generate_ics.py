@@ -10,7 +10,7 @@ def write_ics(events: List[Event], path: str) -> None:
     cal = Calendar()
     cal.add("prodid", "-//BD Events Aggregator//bd-events//EN")
     cal.add("version", "2.0")
-    cal.add("x-wr-calname", "BD Events — Bay Area & San Diego")
+    cal.add("x-wr-calname", "BD Events — Bay Area, Sacramento & San Diego")
     cal.add("x-wr-caldesc", "Aggregated AEC industry events from associations Tyler tracks for BD.")
     cal.add("x-wr-timezone", "America/Los_Angeles")
     cal.add("refresh-interval;value=duration", "PT6H")
