@@ -58,6 +58,37 @@ class BrowserSession:
         return await self._context.new_page()
 
 
+def watch_api_calls(page, bucket, keyword="event", limit=8):
+    """Record XHR/fetch responses whose URL contains `keyword` into `bucket`.
+
+    Diagnostic aid: when a hydrated page stops rendering events, the captured
+    API URLs/statuses show whether the data endpoint moved or started
+    rejecting us.
+    """
+    def _on_response(resp):
+        try:
+            if (resp.request.resource_type in ("xhr", "fetch")
+                    and keyword in resp.url.lower() and len(bucket) < limit):
+                bucket.append(f"{resp.status} {resp.url[:160]}")
+        except Exception:
+            pass
+    page.on("response", _on_response)
+
+
+async def dump_page_diagnostics(page, name, status, api_calls):
+    """Print why a JS-rendered page yielded no events (status, title, body head)."""
+    try:
+        title = await page.title()
+        snippet = " ".join((await page.content()).split())[:300]
+    except Exception as exc:
+        title, snippet = f"<unavailable: {exc}>", ""
+    print(f"  [diag] {name}: HTTP {status}, expected event markup not found")
+    print(f"  [diag] {name}: page title: {title!r}")
+    print(f"  [diag] {name}: content head: {snippet!r}")
+    for line in api_calls:
+        print(f"  [diag] {name}: api call: {line}")
+
+
 class BrowserScraper:
     """Mixin/base for any scraper that needs a headless browser.
 

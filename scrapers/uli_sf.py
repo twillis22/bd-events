@@ -11,7 +11,7 @@ from typing import List
 from dateutil import parser as dateparser
 
 from .base import BaseScraper, Event
-from .browser import BrowserScraper, BrowserSession
+from .browser import BrowserScraper, BrowserSession, dump_page_diagnostics, watch_api_calls
 
 
 class ULISanFranciscoScraper(BrowserScraper, BaseScraper):
@@ -21,11 +21,14 @@ class ULISanFranciscoScraper(BrowserScraper, BaseScraper):
 
     async def fetch_with_browser(self, session: BrowserSession) -> List[Event]:
         page = await session.new_page()
+        api_calls = []
+        watch_api_calls(page, api_calls)
         try:
-            await page.goto(self.source_url, wait_until="domcontentloaded", timeout=30000)
+            resp = await page.goto(self.source_url, wait_until="domcontentloaded", timeout=30000)
             try:
                 await page.wait_for_selector("article a.c-events-list__link", timeout=15000)
             except Exception:
+                await dump_page_diagnostics(page, self.name, resp.status if resp else "?", api_calls)
                 return []
             await page.wait_for_timeout(1500)
 
