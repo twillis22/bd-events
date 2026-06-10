@@ -18,6 +18,12 @@ on:
 permissions:
   contents: write
 
+# Serialize runs: a push-triggered run and the daily cron (or a manual
+# dispatch) can otherwise race, and the loser's git push gets rejected.
+concurrency:
+  group: update-events
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
