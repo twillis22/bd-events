@@ -87,6 +87,27 @@ events still present.
 
 ## TASK 3 — Expand ULI coverage
 
+> **STATUS: BLOCKED by Cloudflare (2026-06-10).** ULI national and ULI SF both return
+> **0 events** and have since ~May 8. Diagnostics added to both scrapers confirm
+> `*.uli.org` serves a **Cloudflare JS challenge** ("Just a moment...", HTTP 403,
+> `noindex,nofollow`) to the GitHub Actions runner. The block is the **datacenter IP**,
+> not the page markup — `sf.uli.org/events/` loads fine in a normal browser on a
+> residential connection. So fixing selectors won't help, and adding more ULI district
+> councils (SD–Tijuana, Sacramento) is pointless until the access path is solved.
+>
+> Options when we revisit (cleanest first):
+> 1. **Run the scrape from a residential IP** (Ty's Mac on a schedule, or a small
+>    always-on box) instead of GitHub Actions. Most reliable; stays free; loses pure-cloud.
+> 2. **Alternate non-Cloudflare sources** that re-list ULI events (A.CRE Events, SV@Home,
+>    etc.) — partial coverage but works from Actions.
+> 3. **Member-assisted ingest** — Ty downloads the per-event `.ics` from his browser (or
+>    forwards the ULI newsletter) into a watched path the pipeline reads. Unbreakable.
+> 4. *(avoid)* Stealth tooling / Cloudflare solvers on Actions — fragile from datacenter
+>    IPs, breaks silently, and paid solvers break the "free" constraint.
+>
+> The ULI scrapers stay registered (they fail gracefully and self-recover if the block
+> ever lifts); the diagnostics print current status each run.
+
 ULI is a priority for Ty. Currently we scrape ULI national (filtered) and ULI SF. Add the
 other California district councils so we catch Sacramento + San Diego ULI events:
 

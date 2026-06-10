@@ -94,10 +94,17 @@ def collect_events(lookback_days: int = 1, lookahead_days: int = 365) -> List[Ev
         if region is None:
             dropped += 1
             continue
+        # National-scope feeds (no in-market default region) shouldn't
+        # contribute generic online webinars: with no local organizer or
+        # venue there's nothing tying them to Ty's markets. Local chapters
+        # (which have a default region) keep their online events.
+        if region == "Online" and not e.source_region:
+            dropped += 1
+            continue
         e.region = region
         classified.append(e)
     if dropped:
-        print(f"  Dropped {dropped} out-of-market events")
+        print(f"  Dropped {dropped} out-of-market / national-online events")
 
     # 4) Dedupe + sort
     by_uid = {}
