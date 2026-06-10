@@ -12,6 +12,7 @@ from typing import List, Type
 
 from scrapers.base import BaseScraper, Event
 from scrapers.browser import BrowserScraper, BrowserSession
+from scrapers.regions import classify
 
 # Static scrapers
 from scrapers.aia_sf import AIASFScraper
@@ -72,16 +73,35 @@ def collect_events(lookback_days: int = 1, lookahead_days: int = 365) -> List[Ev
     # 2) Browser scrapers (one shared Playwright session)
     if browser_classes:
         print("  Launching headless browser for JS-rendered sites...")
-        browser_events = asyncio.run(_run_browser_scrapers(browser_classes))
+        try:
+            browser_events = asyncio.run(_run_browser_scrapers(browser_classes))
+        except Exception as exc:
+            # e.g. Chromium not installed — static sources still publish
+            print(f"  [error] browser session failed, skipping browser scrapers: {exc}")
+            browser_events = []
         for scraper_name, events in browser_events:
             kept = [e for e in events if earliest <= e.start <= latest]
             suffix = f" ({len(events) - len(kept)} outside window)" if len(kept) < len(events) else ""
             print(f"  {scraper_name}: {len(kept)} events{suffix}")
             all_events.extend(kept)
 
-    # 3) Dedupe + sort
-    by_uid = {}
+    # 3) Geographic classification — assigns each event a submarket bucket and
+    #    drops out-of-market events (LA / Orange County / other states / etc.)
+    classified: List[Event] = []
+    dropped = 0
     for e in all_events:
+        region = classify(e.location, e.title, e.source_region)
+        if region is None:
+            dropped += 1
+            continue
+        e.region = region
+        classified.append(e)
+    if dropped:
+        print(f"  Dropped {dropped} out-of-market events")
+
+    # 4) Dedupe + sort
+    by_uid = {}
+    for e in classified:
         if e.uid not in by_uid:
             by_uid[e.uid] = e
     deduped = sorted(by_uid.values(), key=lambda e: e.start)

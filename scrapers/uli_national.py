@@ -20,7 +20,7 @@ from .browser import BrowserScraper, BrowserSession
 
 class ULINationalScraper(BrowserScraper, BaseScraper):
     name = "ULI (national)"
-    region = "Other"
+    region = ""  # national feed: keep only events that classify into a kept submarket
     source_url = "https://uli.org/events/"
 
     async def fetch_with_browser(self, session: BrowserSession) -> List[Event]:

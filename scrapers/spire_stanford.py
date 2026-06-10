@@ -16,7 +16,7 @@ from .http import get
 
 class SPIREStanfordScraper(BaseScraper):
     name = "SPIRE Stanford"
-    region = "NorCal"
+    region = "Silicon Valley"
     source_url = "https://spirestanford.org/inspire_events/"
 
     DATE_RE = re.compile(r"([A-Z][a-z]+\s+\d{1,2},\s*\d{4})")

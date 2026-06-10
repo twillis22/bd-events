@@ -16,7 +16,7 @@ from .browser import BrowserScraper, BrowserSession
 
 class ULISanFranciscoScraper(BrowserScraper, BaseScraper):
     name = "ULI San Francisco"
-    region = "NorCal"
+    region = "Bay Area"
     source_url = "https://sf.uli.org/events/"
 
     async def fetch_with_browser(self, session: BrowserSession) -> List[Event]:

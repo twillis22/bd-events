@@ -18,7 +18,7 @@ from .browser import BrowserScraper, BrowserSession
 
 class IIDANorCalScraper(BrowserScraper, BaseScraper):
     name = "IIDA Northern California"
-    region = "NorCal"
+    region = "Bay Area"
     source_url = "https://iidanc.org/attend/"
 
     async def fetch_with_browser(self, session: BrowserSession) -> List[Event]:

@@ -17,7 +17,7 @@ from .http import get
 
 class AIASFScraper(BaseScraper):
     name = "AIA San Francisco"
-    region = "NorCal"
+    region = "San Francisco"
     source_url = "https://www.aiasf.org/events/"
 
     def fetch(self) -> List[Event]:
@@ -67,21 +67,33 @@ class AIASFScraper(BaseScraper):
         ir = get(ical_url, timeout=15)
         if not ir or ir.status_code != 200:
             return None
-        cal = Calendar.from_ical(ir.content)
+        # Their iCal endpoint sometimes emits cp1252 bytes (en-dashes) in a
+        # nominally UTF-8 file, which decode to U+FFFD mojibake. Decode
+        # explicitly with a fallback, then scrub any residual U+FFFD.
+        try:
+            raw = ir.content.decode("utf-8")
+        except UnicodeDecodeError:
+            raw = ir.content.decode("cp1252", errors="replace")
+        cal = Calendar.from_ical(raw)
         for comp in cal.walk("VEVENT"):
             start = self._to_dt(comp.get("DTSTART"))
             end = self._to_dt(comp.get("DTEND"))
             if not start:
                 continue
             return Event(
-                title=str(comp.get("SUMMARY") or fallback_title).strip(),
+                title=self._clean(comp.get("SUMMARY")) or fallback_title,
                 start=start,
                 end=end,
                 url=detail_url,
-                location=str(comp.get("LOCATION") or "").strip(),
-                description=str(comp.get("DESCRIPTION") or "").strip()[:400],
+                location=self._clean(comp.get("LOCATION")),
+                description=self._clean(comp.get("DESCRIPTION"))[:400],
             )
         return None
+
+    @staticmethod
+    def _clean(prop) -> str:
+        # U+FFFD in source text is almost always a mangled en-dash.
+        return str(prop or "").strip().replace("�", "–")
 
     @staticmethod
     def _to_dt(prop):
