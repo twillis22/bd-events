@@ -6,9 +6,11 @@ Modern Level 10-inspired design (toned variant):
   - Glow/bloom intensity halved across the page
   - Brand orange (#ff671f) still leads accent + interaction states
 """
-from datetime import datetime, timezone
-from typing import List
+from datetime import datetime, timedelta, timezone
+from typing import List, Optional
+from urllib.parse import quote
 import html
+import re
 
 from scrapers.base import Event
 from scrapers.regions import KEPT_BUCKETS
@@ -52,20 +54,31 @@ def _render_region_pills(events: List[Event]) -> str:
                 f'style="--pill-color: {color};">{region} '
                 f'<span class="count">{counts[region]}</span></button>'
             )
+    parts.append('<button class="pill" data-filter="new" data-value="true">✦ New only</button>')
     return "".join(parts)
+
+
+# Source pills shown before the "+N more" expander kicks in.
+VISIBLE_SOURCE_PILLS = 8
 
 
 def _render_source_pills(sources: list, events: List[Event]) -> str:
     counts = {}
     for e in events:
         counts[e.source] = counts.get(e.source, 0) + 1
+    ordered = sorted(sources, key=lambda s: -counts.get(s, 0))
+
+    def pill(source):
+        return (f'<button class="pill" data-filter="source" data-value="{html.escape(source)}">'
+                f'{html.escape(source)} <span class="count">{counts.get(source, 0)}</span></button>')
+
     parts = ['<button class="pill active" data-filter="source" data-value="all">All Sources</button>']
-    for source in sorted(sources, key=lambda s: -counts.get(s, 0)):
-        c = counts.get(source, 0)
-        parts.append(
-            f'<button class="pill" data-filter="source" data-value="{html.escape(source)}">'
-            f'{html.escape(source)} <span class="count">{c}</span></button>'
-        )
+    parts += [pill(s) for s in ordered[:VISIBLE_SOURCE_PILLS]]
+    overflow = ordered[VISIBLE_SOURCE_PILLS:]
+    if overflow:
+        parts.append('<span class="more-sources">' + "".join(pill(s) for s in overflow) + '</span>')
+        parts.append(f'<button class="pill more-toggle" id="moreSources" type="button">'
+                     f'+{len(overflow)} more</button>')
     return "".join(parts)
 
 
@@ -104,6 +117,51 @@ def _empty_body() -> str:
             'check back tomorrow.</p></div>')
 
 
+def _display_end(ev: Event) -> Optional[datetime]:
+    """End datetime for display, or None for single-day events.
+
+    iCal all-day DTENDs are exclusive (midnight after the last day), so a
+    midnight end is pulled back one day before comparing.
+    """
+    if not ev.end:
+        return None
+    end = ev.end
+    if end.hour == 0 and end.minute == 0:
+        end = end - timedelta(days=1)
+    return end if end.date() > ev.start.date() else None
+
+
+def _ics_escape(s: str) -> str:
+    return (s or "").replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,").replace("\n", "\\n")
+
+
+def _event_ics_href(ev: Event) -> str:
+    """Single-event .ics as a data: URI — per-event add-to-calendar without
+    generating per-event files."""
+    all_day = ev.start.hour == 0 and ev.start.minute == 0
+    lines = [
+        "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//BD Events Aggregator//bd-events//EN",
+        "BEGIN:VEVENT", f"UID:{ev.uid}", f"SUMMARY:{_ics_escape(ev.title)}",
+    ]
+    if all_day:
+        lines.append(f"DTSTART;VALUE=DATE:{ev.start.strftime('%Y%m%d')}")
+        if ev.end:
+            end = ev.end if (ev.end.hour == 0 and ev.end.minute == 0) else ev.end + timedelta(days=1)
+            if end.date() > ev.start.date():
+                lines.append(f"DTEND;VALUE=DATE:{end.strftime('%Y%m%d')}")
+    else:
+        lines.append("DTSTART:" + ev.start.astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ"))
+        if ev.end:
+            lines.append("DTEND:" + ev.end.astimezone(timezone.utc).strftime("%Y%m%dT%H%M%SZ"))
+    if ev.location:
+        lines.append(f"LOCATION:{_ics_escape(ev.location)}")
+    if ev.url:
+        lines.append(f"URL:{ev.url}")
+        lines.append(f"DESCRIPTION:{_ics_escape('Source: ' + ev.source + chr(10) + ev.url)}")
+    lines += ["END:VEVENT", "END:VCALENDAR"]
+    return "data:text/calendar;charset=utf-8," + quote("\r\n".join(lines))
+
+
 def _render_event(ev: Event) -> str:
     day = ev.start.strftime("%-d")
     dow = ev.start.strftime("%a")
@@ -112,8 +170,15 @@ def _render_event(ev: Event) -> str:
     is_new = getattr(ev, "is_new", False)
     new_badge = '<span class="new-badge">NEW</span>' if is_new else ''
 
+    end_disp = _display_end(ev)
+    range_part = ""
     time_part = ""
-    if ev.start.hour != 0 or ev.start.minute != 0:
+    if end_disp:
+        same_month = (end_disp.year, end_disp.month) == (ev.start.year, ev.start.month)
+        end_txt = end_disp.strftime("%-d") if same_month else end_disp.strftime("%b %-d")
+        range_part = (f'<span class="meta-item time-badge">'
+                      f'{ev.start.strftime("%b %-d")} – {end_txt}</span>')
+    elif ev.start.hour != 0 or ev.start.minute != 0:
         local_time = ev.start.strftime("%-I:%M %p")
         time_part = f'<span class="meta-item time-badge">{local_time}</span>'
 
@@ -125,10 +190,15 @@ def _render_event(ev: Event) -> str:
     title_html = html.escape(ev.title)
     url = html.escape(ev.url or "#")
     source_attr = html.escape(ev.source)
+    slug = re.sub(r'[^a-z0-9]+', '-', ev.title.lower()).strip('-')[:48] or "event"
+    cal_part = (f'<a class="meta-item cal-link" href="{_event_ics_href(ev)}" '
+                f'download="{slug}.ics" title="Download .ics (Outlook / Apple / Google)">'
+                f'+ Calendar</a>')
 
     return f'''<article class="event{' is-new' if is_new else ''}"
   data-source="{source_attr}"
   data-region="{region}"
+  data-date="{ev.start.strftime('%Y-%m-%d')}"
   data-new="{str(is_new).lower()}"
   style="--tint: {region_color};">
   <div class="event-date">
@@ -138,9 +208,12 @@ def _render_event(ev: Event) -> str:
   <div class="event-body">
     <a class="event-title" href="{url}" target="_blank" rel="noopener">{title_html}</a>{new_badge}
     <div class="event-meta">
-      <span class="meta-item source-tag" style="--tag-color: {region_color};">{source_attr}</span>
+      <span class="meta-item region-tag" style="--tag-color: {region_color};">{html.escape(region)}</span>
+      <span class="meta-item source-tag">{source_attr}</span>
+      {range_part}
       {time_part}
       {location_part}
+      {cal_part}
     </div>
   </div>
 </article>'''
@@ -293,12 +366,20 @@ h1 em {{ font-style: normal; color: {orange}; }}
 .meta-item {{ display: inline-flex; align-items: center; gap: 5px;
   padding: 4px 10px; border-radius: 999px;
   background: rgba(255,255,255,0.03); border: 1px solid {border_tr}; }}
-.source-tag {{ font-weight: 600; font-size: 11px;
+.region-tag {{ font-weight: 600; font-size: 11px;
   background: color-mix(in srgb, var(--tag-color) 14%, transparent);
   color: var(--tag-color);
   border-color: color-mix(in srgb, var(--tag-color) 35%, transparent); }}
+.source-tag {{ font-weight: 500; font-size: 11px; color: {text_muted}; }}
 .location {{ color: {text_muted}; }}
 .time-badge {{ color: {text}; font-weight: 500; }}
+.soon-badge {{ background: {orange_soft}; color: {orange};
+  border-color: {orange}40; font-weight: 700; font-size: 11px; }}
+a.cal-link {{ color: {text_dim}; text-decoration: none; font-weight: 500; }}
+a.cal-link:hover {{ color: {orange}; border-color: {orange}66; }}
+.more-sources {{ display: none; }}
+.more-sources.open {{ display: contents; }}
+.pill.more-toggle {{ border-style: dashed; color: {text_muted}; }}
 
 /* Empty state */
 .empty {{ text-align: center; padding: 80px 24px; background: {glass};
@@ -352,9 +433,7 @@ footer a:hover {{ text-decoration: underline; }}
     </div>
     <div class="filter-group">
       <label class="filter-label">Source</label>
-      <div class="pill-row">{source_pills}
-        <button class="pill" data-filter="new" data-value="true" style="--pill-color: {orange};">✦ New only</button>
-      </div>
+      <div class="pill-row">{source_pills}</div>
     </div>
   </div>
 
@@ -380,6 +459,16 @@ footer a:hover {{ text-decoration: underline; }}
 (function() {{
   const filters = {{ region: 'all', source: 'all', new: 'all', search: '' }};
 
+  function updateHash() {{
+    const p = new URLSearchParams();
+    if (filters.region !== 'all') p.set('region', filters.region);
+    if (filters.source !== 'all') p.set('source', filters.source);
+    if (filters.new !== 'all') p.set('new', '1');
+    if (filters.search) p.set('q', filters.search);
+    const s = p.toString();
+    history.replaceState(null, '', s ? '#' + s : location.pathname + location.search);
+  }}
+
   function applyFilters() {{
     const events = document.querySelectorAll('.event');
     const search = filters.search.toLowerCase();
@@ -400,6 +489,7 @@ footer a:hover {{ text-decoration: underline; }}
     document.getElementById('visibleCount').textContent = visible;
     document.getElementById('eventsContainer').style.display = visible ? '' : 'none';
     document.getElementById('emptyState').style.display = visible ? 'none' : '';
+    updateHash();
   }}
 
   document.querySelectorAll('.pill[data-filter]').forEach(btn => {{
@@ -422,6 +512,60 @@ footer a:hover {{ text-decoration: underline; }}
     filters.search = e.target.value;
     applyFilters();
   }});
+
+  // "+N more" source pills expander
+  const moreBtn = document.getElementById('moreSources');
+  function showAllSources() {{
+    const hidden = document.querySelector('.more-sources');
+    if (hidden) hidden.classList.add('open');
+    if (moreBtn) moreBtn.remove();
+  }}
+  if (moreBtn) moreBtn.addEventListener('click', showAllSources);
+
+  // Relative date cues for events within the next 7 days (computed
+  // client-side so they stay correct between daily rebuilds)
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  document.querySelectorAll('.event[data-date]').forEach(ev => {{
+    const d = new Date(ev.dataset.date + 'T00:00:00');
+    const days = Math.round((d - today) / 86400000);
+    let label = null;
+    if (days === 0) label = 'Today';
+    else if (days === 1) label = 'Tomorrow';
+    else if (days > 1 && days <= 7) label = 'In ' + days + ' days';
+    if (label) {{
+      const chip = document.createElement('span');
+      chip.className = 'meta-item soon-badge';
+      chip.textContent = label;
+      const meta = ev.querySelector('.event-meta');
+      meta.insertBefore(chip, meta.firstChild);
+    }}
+  }});
+
+  // Restore filters from the URL so bookmarked/shared views stick
+  (function restoreFromHash() {{
+    const p = new URLSearchParams(location.hash.slice(1));
+    const q = p.get('q');
+    if (q) {{
+      const input = document.getElementById('searchInput');
+      input.value = q;
+      filters.search = q;
+    }}
+    ['region', 'source'].forEach(dim => {{
+      const val = p.get(dim);
+      if (!val) return;
+      const pill = document.querySelector('.pill[data-filter="' + dim + '"][data-value="' + CSS.escape(val) + '"]');
+      if (!pill) return;
+      if (pill.closest('.more-sources')) showAllSources();
+      document.querySelectorAll('.pill[data-filter="' + dim + '"]').forEach(b => b.classList.remove('active'));
+      pill.classList.add('active');
+      filters[dim] = val;
+    }});
+    if (p.get('new') === '1') {{
+      const pill = document.querySelector('.pill[data-filter="new"]');
+      if (pill) {{ pill.classList.add('active'); filters.new = 'true'; }}
+    }}
+    applyFilters();
+  }})();
 }})();
 </script>
 </body>
