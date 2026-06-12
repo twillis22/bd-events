@@ -1,0 +1,22 @@
+name: Probe Sources
+
+# Manual-only diagnostic: fetches candidate event sources from the runner
+# (which has open network access, unlike the dev sandbox) and logs what each
+# site serves. Used while building new scrapers; safe to delete afterwards.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests
+      - run: python tools/probe_sources.py
