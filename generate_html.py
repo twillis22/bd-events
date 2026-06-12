@@ -98,9 +98,12 @@ def _render_body(events: List[Event]) -> str:
             ym = events_in_section[0].start.strftime("%Y-%m") if events_in_section else ""
             sections.append(
                 f'<section class="month-section" data-month="{ym}">'
-                f'<h2 class="month-header"><span>{html.escape(current_key)}</span></h2>'
+                f'<h2 class="month-header" role="button" tabindex="0" aria-expanded="true">'
+                f'<span>{html.escape(current_key)}</span>'
+                f'<span class="count">{len(events_in_section)}</span></h2>'
+                f'<div class="month-body"><div class="month-body-inner">'
                 + "\n".join(current_buf)
-                + "</section>"
+                + "</div></div></section>"
             )
 
     for ev in events:
@@ -263,6 +266,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
   --count-bg: rgba(255,255,255,0.10);
   --search-focus-bg: rgba(0,0,0,0.4);
   --tag-text-mix: white;
+  interpolate-size: allow-keywords; /* lets height:auto animate (details) */
 }}
 html[data-theme="light"] {{
   --bg: #f3f1ee;
@@ -388,7 +392,10 @@ button.theme-toggle:hover {{ border-color: #ff671f66; color: var(--orange); }}
   color: var(--text-dim); text-transform: uppercase; padding: 4px 0 8px; }}
 .cal-day {{ min-height: 58px; border-radius: 10px; padding: 6px 8px;
   border: 1px solid transparent; font-size: 12px; color: var(--text-dim);
-  display: flex; flex-direction: column; gap: 5px; }}
+  display: flex; flex-direction: column; gap: 5px;
+  transition: background 0.15s, border-color 0.15s, transform 0.12s;
+  animation: fadeIn 0.25s ease both; }}
+.cal-day.has-events:active {{ transform: scale(0.95); }}
 .cal-day.in-month {{ color: var(--text-muted); background: var(--chip-bg);
   border-color: var(--border-tr); }}
 .cal-day.today {{ border-color: var(--orange); }}
@@ -401,14 +408,26 @@ button.theme-toggle:hover {{ border-color: #ff671f66; color: var(--orange); }}
 .cal-dot {{ width: 7px; height: 7px; border-radius: 50%; display: inline-block; }}
 .cal-more {{ font-size: 9px; font-weight: 700; color: var(--text-dim); }}
 
-/* Month sections */
+/* Month sections — headers toggle a smooth grid-rows collapse */
 .month-section {{ margin-bottom: 56px; }}
+.month-section.collapsed {{ margin-bottom: 28px; }}
 .month-header {{ font-size: 14px; font-weight: 600; color: var(--text-muted);
   letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 20px;
-  display: flex; align-items: center; gap: 16px; }}
+  display: flex; align-items: center; gap: 16px;
+  cursor: pointer; user-select: none; transition: color 0.2s; }}
+.month-header:hover {{ color: var(--text); }}
+.month-header::before {{ content: '▾'; color: var(--orange); flex-shrink: 0;
+  transition: transform 0.25s ease; }}
+.month-section.collapsed .month-header::before {{ transform: rotate(-90deg); }}
 .month-header span {{ flex-shrink: 0; }}
+.month-header .count {{ background: var(--count-bg); padding: 2px 9px;
+  border-radius: 8px; font-size: 11px; letter-spacing: 0; }}
 .month-header::after {{ content: ''; flex: 1; height: 1px;
   background: linear-gradient(to right, var(--border-hard), transparent); }}
+.month-body {{ display: grid; grid-template-rows: 1fr;
+  transition: grid-template-rows 0.35s ease; }}
+.month-body-inner {{ min-height: 0; overflow: hidden; }}
+.month-section.collapsed .month-body {{ grid-template-rows: 0fr; }}
 
 /* Event cards — region-tinted bg, halved hover bloom */
 .event {{
@@ -504,6 +523,26 @@ footer a {{ color: var(--orange); text-decoration: none; }}
 footer a:hover {{ text-decoration: underline; }}
 .footer-label {{ display: block; font-size: 11px; letter-spacing: 1.8px; text-transform: uppercase;
   color: var(--orange); margin-bottom: 10px; font-weight: 600; }}
+
+/* Interaction polish */
+@keyframes fadeIn {{ from {{ opacity: 0; transform: translateY(3px); }} }}
+.pill:active, .subscribe:active, button.theme-toggle:active {{ transform: scale(0.96); }}
+.cal-view summary:active, .past-archive summary:active, .month-header:active {{ transform: scale(0.99); }}
+.meta-item, a.cal-link {{ transition: color 0.15s, border-color 0.15s, background 0.15s; }}
+.event.flash {{ transition: outline-color 0.3s; }}
+/* Smooth open/close for <details> panels (calendar, recently passed) in
+   browsers that support ::details-content; harmless no-op elsewhere */
+details::details-content {{
+  transition: height 0.3s ease, content-visibility 0.3s allow-discrete;
+  height: 0; overflow: clip; }}
+details[open]::details-content {{ height: auto; }}
+
+@media (prefers-reduced-motion: reduce) {{
+  *, *::before, *::after {{
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important; }}
+  html {{ scroll-behavior: auto; }}
+}}
 
 @media (max-width: 720px) {{
   .container {{ padding: 44px 18px 72px; }}
@@ -655,6 +694,19 @@ footer a:hover {{ text-decoration: underline; }}
   document.getElementById('searchInput').addEventListener('input', function(e) {{
     filters.search = e.target.value;
     applyFilters();
+  }});
+
+  // Collapsible month sections
+  document.querySelectorAll('.month-header').forEach(h => {{
+    function toggle() {{
+      const sec = h.closest('.month-section');
+      const collapsed = sec.classList.toggle('collapsed');
+      h.setAttribute('aria-expanded', String(!collapsed));
+    }}
+    h.addEventListener('click', toggle);
+    h.addEventListener('keydown', e => {{
+      if (e.key === 'Enter' || e.key === ' ') {{ e.preventDefault(); toggle(); }}
+    }});
   }});
 
   // "+N more" source pills expander
