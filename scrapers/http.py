@@ -1,4 +1,6 @@
 """Shared HTTP helpers."""
+import time
+
 import requests
 from typing import Optional
 
@@ -14,9 +16,11 @@ HEADERS = {
 
 
 def get(url: str, timeout: int = 20, **kwargs) -> Optional[requests.Response]:
-    """GET with retry on transient errors. Returns None on hard failure."""
+    """GET with backoff retry on transient errors. Returns None on hard failure."""
     last_err = None
-    for attempt in range(2):
+    for attempt in range(3):
+        if attempt:
+            time.sleep(2 * attempt)  # 2s, 4s — flaky association hosts (HL, ASP)
         try:
             r = requests.get(url, headers=HEADERS, timeout=timeout, **kwargs)
             if r.status_code == 200:
