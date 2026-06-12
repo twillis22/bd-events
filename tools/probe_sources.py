@@ -1,9 +1,10 @@
-"""Probe candidate event sources from the GitHub Actions runner — phase 2.
+"""Probe candidate event sources from the GitHub Actions runner — phase 3.
 
-Phase 1 established which sites the runner can reach. This pass digs into the
-reachable ones and dumps the structures a scraper would parse: JSON-LD blocks,
-markup snippets around event links, the Squarespace JSON for CREW SD, and feed
-item structure for USGBC-CA. Run via the manual "Probe Sources" workflow.
+1. Run the draft BOMA SD / BOMA SF scrapers for real and print their events.
+2. Dig deeper on the holdouts whose data didn't surface in phase 2:
+   NAIOP SFBA (full GrowthZone card), CREW network chapters (embedded JSON?),
+   CREW San Diego (Squarespace collection shape), USGBC-CA (events markup),
+   AIA East Bay (embedded calendar widget?).
 """
 import json
 import re
@@ -24,118 +25,100 @@ def fetch(url):
         return None
 
 
-def dump_jsonld(text, limit=3, width=900):
-    blocks = re.findall(r'<script[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
-                        text, re.DOTALL | re.IGNORECASE)
-    print(f"    ld+json blocks: {len(blocks)}")
-    for b in blocks[:limit]:
-        compact = " ".join(b.split())
-        print(f"      {compact[:width]}")
-
-
-def dump_snippets(text, pattern, label, limit=3, width=700):
-    print(f"    snippets matching {label}:")
-    count = 0
+def around(text, pattern, label, limit=3, width=800):
+    print(f"    around {label}:")
+    n = 0
     for m in re.finditer(pattern, text, re.IGNORECASE):
-        start = max(0, m.start() - 100)
-        snip = " ".join(text[start:m.start() + width].split())
+        snip = " ".join(text[max(0, m.start() - 150):m.start() + width].split())
         print(f"      ...{snip[:width]}")
-        count += 1
-        if count >= limit:
+        n += 1
+        if n >= limit:
             break
-    if not count:
+    if not n:
         print("      (no matches)")
 
 
-def page(label, url):
-    print(f"\n=== {label}: {url}")
-    r = fetch(url)
-    if r is None or r.status_code != 200:
-        if r is not None:
-            print(f"    {r.status_code}; head: {r.text[:200]!r}")
-        return None
-    print(f"    200, {len(r.content)} bytes")
-    return r.text
-
-
 def main():
-    # --- CREW San Diego: Squarespace JSON endpoint
-    print("\n##### CREW San Diego (Squarespace JSON)")
-    r = fetch("https://www.crewsandiego.org/events?format=json")
-    if r is not None:
-        print(f"    {r.status_code} {r.headers.get('content-type','?')}")
-        if r.status_code == 200:
-            try:
-                data = r.json()
-                items = data.get("items") or data.get("upcoming") or []
-                print(f"    top-level keys: {sorted(data.keys())[:15]}")
-                print(f"    items: {len(items)}")
-                for it in items[:2]:
-                    keep = {k: it.get(k) for k in
-                            ("title", "startDate", "endDate", "fullUrl", "location", "excerpt")}
-                    print(f"      {json.dumps(keep)[:600]}")
-            except Exception as exc:
-                print(f"    JSON parse failed: {exc}; head: {r.text[:200]!r}")
+    # --- 1) Draft scrapers, run for real
+    print("##### Draft scraper validation")
+    from scrapers.boma_sd import BOMASDScraper
+    from scrapers.boma_sf import BOMASFScraper
+    for cls in (BOMASDScraper, BOMASFScraper):
+        s = cls()
+        events = s.safe_fetch()
+        print(f"\n  {s.name}: {len(events)} events")
+        for e in events[:6]:
+            print(f"    {e.start} | {e.title[:60]} | loc={e.location[:50]!r}")
 
-    # --- CREW Network platform (SF; same template as East Bay/Sacramento)
-    t = page("CREW SF view-all-events", "https://san-francisco.crewnetwork.org/events/view-all-events")
-    if t:
-        dump_jsonld(t)
-        dump_snippets(t, r'href="[^"]*/events/2\d{3}[^"]*"', "event detail links")
-        dump_snippets(t, r'class="[^"]*event[^"]*card[^"]*"|class="[^"]*card[^"]*event[^"]*"', "event card classes", limit=2)
-
-    # --- NAIOP SFBA GrowthZone calendar
-    t = page("NAIOP SFBA calendar", "https://members.naiopsfba.org/event-calendar")
-    if t:
-        dump_jsonld(t)
-        dump_snippets(t, r'/event-calendar/Details/|class="[^"]*gz-[^"]*event[^"]*"', "GrowthZone event links")
-        m = re.findall(r'(https?://[^"\']*api[^"\']*)["\']', t)
-        print(f"    api-ish urls: {m[:5]}")
-
-    # --- AIA East Bay calendar
-    t = page("AIA East Bay calendar", "https://aiaeb.org/calendar/")
-    if t:
-        dump_jsonld(t)
-        dump_snippets(t, r'href="https://aiaeb\.org/calendar/[^"]+"', "calendar detail links")
-        dump_snippets(t, r'class="[^"]*(?:event|calendar)[^"]*item[^"]*"', "calendar item classes", limit=2)
-
-    # --- BOMA SF Drupal calendar
-    t = page("BOMA SF events calendar", "https://bomasf.org/events/events-calendar")
-    if t:
-        dump_jsonld(t)
-        dump_snippets(t, r'\d{2}\.\d{2}\.\d{4}', "MM.DD.YYYY dates")
-        dump_snippets(t, r'class="[^"]*views-row[^"]*"', "drupal views rows", limit=2)
-
-    # --- BOMA San Diego: find events nav link, then fetch it
-    t = page("BOMA SD homepage", "https://www.bomasd.org/")
-    if t:
-        links = sorted(set(re.findall(r'href="([^"]*(?:event|calendar)[^"]*)"', t, re.IGNORECASE)))
-        print(f"    event-ish links: {links[:10]}")
-        for link in links:
-            if "calendar" in link.lower() or "event" in link.lower():
-                url = link if link.startswith("http") else "https://www.bomasd.org" + link
-                t2 = page("BOMA SD events page", url)
-                if t2:
-                    dump_jsonld(t2)
-                    dump_snippets(t2, r'class="[^"]*event[^"]*"', "event classes", limit=3)
+    # --- 2) NAIOP SFBA: dump one full GrowthZone event card
+    print("\n##### NAIOP SFBA full card")
+    r = fetch("https://members.naiopsfba.org/event-calendar")
+    if r is not None and r.status_code == 200:
+        i = r.text.find('gz-events-card')
+        # skip the commented-out template card if present; find a card with an href
+        while i != -1:
+            chunk = r.text[i:i + 5000]
+            if 'href' in chunk:
+                print("    " + " ".join(chunk.split())[:4500])
                 break
+            i = r.text.find('gz-events-card', i + 1)
+        else:
+            print("    (no card found)")
 
-    # --- AIA Central Valley via Eventbrite organizer page
-    t = page("AIA CV Eventbrite organizer", "https://www.eventbrite.com/o/aia-central-valley-30419137788")
-    if t:
-        dump_jsonld(t, limit=2, width=1200)
-        dump_snippets(t, r'window\.__SERVER_DATA__', "__SERVER_DATA__", limit=1, width=1000)
+    # --- 3) CREW network platform: what holds the event data?
+    print("\n##### CREW SF deep dig")
+    r = fetch("https://san-francisco.crewnetwork.org/events/view-all-events")
+    if r is not None and r.status_code == 200:
+        t = r.text
+        hrefs = sorted(set(re.findall(r'href="([^"]*event[^"]*)"', t, re.IGNORECASE)))
+        print(f"    event-ish hrefs ({len(hrefs)}):")
+        for h in hrefs[:15]:
+            print(f"      {h[:140]}")
+        around(t, r'"startDate"|"start_date"|data-start', "start date keys", limit=2)
+        around(t, r'<(article|li|div)[^>]*class="[^"]*(listing|result|tile|teaser)[^"]*"', "listing classes", limit=2)
 
-    # --- USGBC-CA events RSS: item structure
-    print("\n##### USGBC-CA events feed")
-    r = fetch("https://usgbc-ca.org/events/?feed=rss2")
+    # --- 4) CREW San Diego: Squarespace collection shape
+    print("\n##### CREW SD JSON shape")
+    r = fetch("https://www.crewsandiego.org/events?format=json")
+    if r is not None and r.status_code == 200:
+        try:
+            data = r.json()
+            coll = data.get("collection") or {}
+            print(f"    collection.typeName={coll.get('typeName')!r} type={coll.get('type')!r} title={coll.get('title')!r}")
+            raw = json.dumps(data)
+            for key in ('"startDate"', '"eventStartDate"', '"upcoming"'):
+                idx = raw.find(key)
+                print(f"    {key} at {idx}")
+                if idx != -1:
+                    print(f"      {raw[max(0,idx-100):idx+500]}")
+        except Exception as exc:
+            print(f"    parse fail: {exc}")
+    # the upcoming list may live on a sub-collection
+    r = fetch("https://www.crewsandiego.org/events?format=json&past=false")
     if r is not None:
-        print(f"    {r.status_code} {r.headers.get('content-type','?')}")
-        if r.status_code == 200:
-            items = re.findall(r'<item>(.*?)</item>', r.text, re.DOTALL)
-            print(f"    items: {len(items)}")
-            for it in items[:2]:
-                print(f"      {' '.join(it.split())[:900]}")
+        print(f"    past=false variant: {r.status_code}")
+
+    # --- 5) USGBC-CA events page markup
+    print("\n##### USGBC-CA events page")
+    r = fetch("https://usgbc-ca.org/events/")
+    if r is not None and r.status_code == 200:
+        t = r.text
+        around(t, r'<(article|div|li)[^>]*class="[^"]*event[^"]*"', "event classes", limit=3)
+        around(t, r'"@type"\s*:\s*"Event"', "JSON-LD events", limit=2)
+        hrefs = sorted(set(re.findall(r'href="(https://usgbc-ca\.org/event[^"]*)"', t)))
+        print(f"    event detail hrefs: {hrefs[:8]}")
+
+    # --- 6) AIA East Bay: embedded calendar widget?
+    print("\n##### AIA East Bay widget hunt")
+    r = fetch("https://aiaeb.org/calendar/")
+    if r is not None and r.status_code == 200:
+        t = r.text
+        around(t, r'<iframe[^>]*>', "iframes", limit=3, width=400)
+        around(t, r'(ecwd|eventon|mec-|em-calendar|simcal|tribe|calendarize|wp-calendar)', "calendar plugin markers", limit=4, width=300)
+        scripts = sorted(set(re.findall(r'src="([^"]*plugins/[^"]*)"', t)))
+        print(f"    plugin script srcs:")
+        for s in scripts[:10]:
+            print(f"      {s[:140]}")
 
 
 if __name__ == "__main__":
