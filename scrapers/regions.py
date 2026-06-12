@@ -31,7 +31,7 @@ KEPT_BUCKETS = (
 # Listed in match-priority order: specific submarkets before catch-alls.
 _SUBMARKET_CITIES = {
     "San Francisco": (
-        "San Francisco", "SOMA", "Presidio", "Embarcadero", "Fisherman's Wharf",
+        "San Francisco", "SF", "SOMA", "Presidio", "Embarcadero", "Fisherman's Wharf",
     ),
     "Silicon Valley": (
         "San Jose", "Santa Clara", "Mountain View", "Palo Alto", "Sunnyvale",
@@ -80,6 +80,11 @@ _DROP_PLACES = (
     "Riverside", "San Bernardino", "Inland Empire", "Palm Springs",
     "Palm Desert", "Temecula", "Ontario",
     "Bakersfield", "Fresno", "Santa Barbara", "Ventura", "Oxnard",
+    # Central Coast / Central Valley — out of market. "Central Valley Chapter"
+    # stays specific (CSHE's Fresno-area chapter) so a future Sacramento-based
+    # "AIA Central Valley" source isn't collateral damage.
+    "Central Coast", "Central Valley Chapter", "Monterey", "Salinas",
+    "San Luis Obispo", "Modesto", "Stockton",
     "New York", "NYC", "Brooklyn", "Manhattan", "Chicago", "Boston", "Atlanta",
     "Miami", "Dallas", "Houston", "Austin", "Denver", "Seattle", "Portland",
     "Phoenix", "Scottsdale", "Las Vegas", "Nashville", "Charlotte",
