@@ -1,22 +1,27 @@
 """Generate the bookmarkable HTML page from aggregated events.
 
 Modern Level 10-inspired design (toned variant):
-  - Solid warm-grey background (no ambient gradient)
+  - Solid warm-grey background (no ambient gradient); light theme via toggle
   - Each event card tinted by its region color (subtle)
   - Glow/bloom intensity halved across the page
   - Brand orange (#ff671f) still leads accent + interaction states
+
+All colors flow through CSS custom properties on :root; the light theme is a
+[data-theme="light"] override block, toggled client-side and persisted in
+localStorage.
 """
 from datetime import datetime, timedelta, timezone
 from typing import List, Optional
 from urllib.parse import quote
 import html
+import json
 import re
 
 from scrapers.base import Event
 from scrapers.regions import KEPT_BUCKETS
 
 
-# Level 10 brand palette
+# Level 10 brand palette (dark theme defaults)
 L10_BG          = "#262626"   # solid warm grey body bg (matches Level 10)
 L10_BG_DEEP     = "#1c1c1c"   # input fields
 L10_TEXT        = "#f6f6f6"
@@ -236,135 +241,214 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BD Events — Bay Area, Sacramento &amp; San Diego</title>
 <link rel="alternate" type="text/calendar" title="Subscribe (iCal)" href="events.ics">
+<script>try {{ var t = localStorage.getItem('bd-theme'); if (t) document.documentElement.setAttribute('data-theme', t); }} catch (e) {{}}</script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {{
+  --bg: {bg};
+  --bg-deep: {bg_deep};
+  --text: {text};
+  --text-muted: {text_muted};
+  --text-dim: {text_dim};
+  --border-tr: {border_tr};
+  --border-hard: {border_hard};
+  --glass: {glass};
+  --orange: {orange};
+  --orange-soft: {orange_soft};
+  --on-orange: #1a1a1a;
+  --card-base: rgba(255,255,255,0.02);
+  --card-base-hover: rgba(255,255,255,0.04);
+  --chip-bg: rgba(255,255,255,0.03);
+  --count-bg: rgba(255,255,255,0.10);
+  --search-focus-bg: rgba(0,0,0,0.4);
+  --tag-text-mix: white;
+}}
+html[data-theme="light"] {{
+  --bg: #f3f1ee;
+  --bg-deep: #ffffff;
+  --text: #262626;
+  --text-muted: rgba(38, 38, 38, 0.66);
+  --text-dim: rgba(38, 38, 38, 0.42);
+  --border-tr: rgba(38, 38, 38, 0.10);
+  --border-hard: rgba(38, 38, 38, 0.16);
+  --glass: rgba(38, 38, 38, 0.04);
+  --card-base: #ffffff;
+  --card-base-hover: #fffdfb;
+  --chip-bg: rgba(38, 38, 38, 0.04);
+  --count-bg: rgba(38, 38, 38, 0.10);
+  --search-focus-bg: #ffffff;
+  --tag-text-mix: #262626;
+}}
 
 *, *::before, *::after {{ margin: 0; padding: 0; box-sizing: border-box; }}
 html {{ scroll-behavior: smooth; }}
 body {{
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  background: {bg};
-  color: {text};
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
+  transition: background 0.25s, color 0.25s;
 }}
 
 .container {{ max-width: 1080px; margin: 0 auto; padding: 64px 28px 96px; }}
 
 /* Hero */
 .hero {{ padding-bottom: 40px; margin-bottom: 40px;
-  border-bottom: 1px solid {border_hard}; }}
+  border-bottom: 1px solid var(--border-hard); }}
 .label {{ font-size: 11px; font-weight: 600; letter-spacing: 2.5px;
-  text-transform: uppercase; color: {orange}; margin-bottom: 18px;
+  text-transform: uppercase; color: var(--orange); margin-bottom: 18px;
   display: inline-block; padding: 6px 14px;
-  background: {orange_soft}; border: 1px solid {orange}33;
+  background: var(--orange-soft); border: 1px solid #ff671f33;
   border-radius: 999px; }}
-h1 {{ font-size: 72px; font-weight: 800; color: {text}; line-height: 1.0;
+h1 {{ font-size: 72px; font-weight: 800; color: var(--text); line-height: 1.0;
   letter-spacing: -0.035em; margin-bottom: 18px; }}
-h1 em {{ font-style: normal; color: {orange}; }}
-.subtitle {{ color: {text_muted}; font-size: 17px; max-width: 620px; margin-bottom: 32px;
+h1 em {{ font-style: normal; color: var(--orange); }}
+.subtitle {{ color: var(--text-muted); font-size: 17px; max-width: 620px; margin-bottom: 32px;
   font-weight: 400; }}
 
 .meta-bar {{ display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 8px; }}
 .subscribe {{ display: inline-flex; align-items: center; gap: 8px;
-  background: {orange};
-  color: #1a1a1a; padding: 13px 24px; border-radius: 999px; text-decoration: none;
+  background: var(--orange);
+  color: var(--on-orange); padding: 13px 24px; border-radius: 999px; text-decoration: none;
   font-weight: 700; font-size: 13px; letter-spacing: 0.4px;
   box-shadow: 0 4px 12px rgba(255, 103, 31, 0.12);
   transition: transform 0.18s, box-shadow 0.18s; }}
 .subscribe:hover {{ transform: translateY(-1px);
   box-shadow: 0 6px 16px rgba(255, 103, 31, 0.18); }}
-.stat-pill {{ background: {glass};
-  border: 1px solid {border_tr}; border-radius: 999px;
-  padding: 10px 16px; font-size: 12px; color: {text_muted}; letter-spacing: 0.3px;
+.stat-pill {{ background: var(--glass);
+  border: 1px solid var(--border-tr); border-radius: 999px;
+  padding: 10px 16px; font-size: 12px; color: var(--text-muted); letter-spacing: 0.3px;
   font-weight: 500; }}
-.stat-pill strong {{ color: {text}; font-weight: 700; margin-right: 6px; }}
-.stat-pill.new-pill {{ background: {orange_soft}; border-color: {orange}40; color: {orange}; }}
-.stat-pill.new-pill strong {{ color: {orange}; }}
+.stat-pill strong {{ color: var(--text); font-weight: 700; margin-right: 6px; }}
+.stat-pill.new-pill {{ background: var(--orange-soft); border-color: #ff671f40; color: var(--orange); }}
+.stat-pill.new-pill strong {{ color: var(--orange); }}
+button.theme-toggle {{ cursor: pointer; font-family: inherit;
+  transition: border-color 0.15s, color 0.15s; }}
+button.theme-toggle:hover {{ border-color: #ff671f66; color: var(--orange); }}
 
 /* Filter bar */
-.filters {{ background: {glass};
-  border: 1px solid {border_tr}; border-radius: 16px;
-  padding: 26px 28px; margin-bottom: 44px;
+.filters {{ background: var(--glass);
+  border: 1px solid var(--border-tr); border-radius: 16px;
+  padding: 26px 28px; margin-bottom: 18px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15); }}
 .filter-group {{ margin-bottom: 18px; }}
 .filter-group:last-child {{ margin-bottom: 0; }}
 .filter-label {{ font-size: 11px; font-weight: 600; letter-spacing: 1.8px;
-  text-transform: uppercase; color: {text_muted}; margin-bottom: 10px; display: block; }}
+  text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; display: block; }}
 .pill-row {{ display: flex; flex-wrap: wrap; gap: 6px; }}
-.pill {{ background: {glass};
-  border: 1px solid {border_tr}; color: {text};
+.pill {{ background: var(--glass);
+  border: 1px solid var(--border-tr); color: var(--text);
   padding: 8px 16px; border-radius: 999px; font-family: inherit; font-size: 12px;
   font-weight: 500; cursor: pointer; transition: all 0.15s;
   display: inline-flex; align-items: center; gap: 7px; }}
-.pill:hover {{ border-color: {orange}66; color: {orange};
-  background: {orange_soft}; }}
-.pill.active {{ background: {orange}; color: #1a1a1a; border-color: {orange};
+.pill:hover {{ border-color: #ff671f66; color: var(--orange);
+  background: var(--orange-soft); }}
+.pill.active {{ background: var(--orange); color: var(--on-orange); border-color: var(--orange);
   font-weight: 600; box-shadow: 0 2px 8px rgba(255,103,31,0.12); }}
 .pill[data-filter="region"].active {{
-  background: var(--pill-color, {orange}); border-color: var(--pill-color, {orange});
+  background: var(--pill-color, var(--orange)); border-color: var(--pill-color, var(--orange));
   color: #1a1a1a;
-  box-shadow: 0 2px 8px color-mix(in srgb, var(--pill-color, {orange}) 18%, transparent); }}
-.pill .count {{ background: rgba(255,255,255,0.10); padding: 1px 7px; border-radius: 8px;
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--pill-color, var(--orange)) 18%, transparent); }}
+.pill .count {{ background: var(--count-bg); padding: 1px 7px; border-radius: 8px;
   font-size: 10px; font-weight: 700; min-width: 18px; text-align: center; }}
 .pill.active .count {{ background: rgba(0,0,0,0.18); color: inherit; }}
 
 /* Search */
-.search-box {{ width: 100%; background: {bg_deep}; border: 1px solid {border_tr};
-  color: {text}; padding: 14px 18px; border-radius: 12px;
+.search-box {{ width: 100%; background: var(--bg-deep); border: 1px solid var(--border-tr);
+  color: var(--text); padding: 14px 18px; border-radius: 12px;
   font-family: inherit; font-size: 14px; transition: all 0.15s; }}
-.search-box:focus {{ outline: none; border-color: {orange}66;
-  background: rgba(0,0,0,0.4); box-shadow: 0 0 0 2px {orange_soft}; }}
-.search-box::placeholder {{ color: {text_dim}; }}
+.search-box:focus {{ outline: none; border-color: #ff671f66;
+  background: var(--search-focus-bg); box-shadow: 0 0 0 2px var(--orange-soft); }}
+.search-box::placeholder {{ color: var(--text-dim); }}
+
+/* Collapsible calendar view */
+.cal-view {{ margin-bottom: 44px; }}
+.cal-view summary {{ cursor: pointer; list-style: none;
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 11px; font-weight: 600; letter-spacing: 1.8px; text-transform: uppercase;
+  color: var(--text-muted); padding: 10px 18px;
+  background: var(--glass); border: 1px solid var(--border-tr); border-radius: 999px;
+  transition: color 0.15s, border-color 0.15s; }}
+.cal-view summary::-webkit-details-marker {{ display: none; }}
+.cal-view summary::before {{ content: '▸'; color: var(--orange); transition: transform 0.15s; }}
+.cal-view[open] summary::before {{ transform: rotate(90deg); }}
+.cal-view summary:hover {{ color: var(--orange); border-color: #ff671f66; }}
+.cal-card {{ margin-top: 12px; background: var(--glass);
+  border: 1px solid var(--border-tr); border-radius: 16px; padding: 22px 24px; }}
+.cal-nav {{ display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 16px; }}
+.cal-nav .pill {{ padding: 6px 14px; font-size: 14px; line-height: 1; }}
+#calTitle {{ font-size: 14px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--text); }}
+.cal-grid {{ display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }}
+.cal-dow {{ text-align: center; font-size: 10px; font-weight: 700; letter-spacing: 1.2px;
+  color: var(--text-dim); text-transform: uppercase; padding: 4px 0 8px; }}
+.cal-day {{ min-height: 58px; border-radius: 10px; padding: 6px 8px;
+  border: 1px solid transparent; font-size: 12px; color: var(--text-dim);
+  display: flex; flex-direction: column; gap: 5px; }}
+.cal-day.in-month {{ color: var(--text-muted); background: var(--chip-bg);
+  border-color: var(--border-tr); }}
+.cal-day.today {{ border-color: var(--orange); }}
+.cal-day.today .cal-num {{ color: var(--orange); font-weight: 800; }}
+.cal-day.has-events {{ cursor: pointer; }}
+.cal-day.has-events:hover {{ border-color: #ff671f66; background: var(--orange-soft); }}
+.cal-day.has-events .cal-num {{ color: var(--text); font-weight: 700; }}
+.cal-num {{ font-size: 12px; line-height: 1; }}
+.cal-dots {{ display: flex; flex-wrap: wrap; gap: 3px; align-items: center; }}
+.cal-dot {{ width: 7px; height: 7px; border-radius: 50%; display: inline-block; }}
+.cal-more {{ font-size: 9px; font-weight: 700; color: var(--text-dim); }}
 
 /* Month sections */
 .month-section {{ margin-bottom: 56px; }}
-.month-header {{ font-size: 14px; font-weight: 600; color: {text_muted};
+.month-header {{ font-size: 14px; font-weight: 600; color: var(--text-muted);
   letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 20px;
   display: flex; align-items: center; gap: 16px; }}
 .month-header span {{ flex-shrink: 0; }}
 .month-header::after {{ content: ''; flex: 1; height: 1px;
-  background: linear-gradient(to right, {border_hard}, transparent); }}
+  background: linear-gradient(to right, var(--border-hard), transparent); }}
 
 /* Event cards — region-tinted bg, halved hover bloom */
 .event {{
-  background: color-mix(in srgb, var(--tint, white) 8%, rgba(255,255,255,0.02));
-  border: 1px solid color-mix(in srgb, var(--tint, white) 20%, {border_tr});
+  background: color-mix(in srgb, var(--tint, white) 8%, var(--card-base));
+  border: 1px solid color-mix(in srgb, var(--tint, white) 20%, var(--border-tr));
   border-radius: 14px;
   padding: 22px 26px; margin-bottom: 10px;
   display: grid; grid-template-columns: 70px 1fr; gap: 22px; align-items: start;
   transition: transform 0.18s, background 0.18s, border-color 0.18s, box-shadow 0.18s;
 }}
 .event:hover {{
-  background: color-mix(in srgb, var(--tint, white) 12%, rgba(255,255,255,0.04));
-  border-color: color-mix(in srgb, var(--tint, white) 30%, {border_hard});
+  background: color-mix(in srgb, var(--tint, white) 12%, var(--card-base-hover));
+  border-color: color-mix(in srgb, var(--tint, white) 30%, var(--border-hard));
   transform: translateY(-1px);
   box-shadow: 0 4px 14px rgba(0,0,0,0.18);
 }}
+.event.flash {{ outline: 2px solid var(--orange); outline-offset: 2px; }}
 
 /* New events override the region tint with an orange tint */
 .event.is-new {{
-  background: rgba(255,103,31,0.06);
+  background: color-mix(in srgb, var(--orange) 6%, var(--card-base));
   border-color: rgba(255,103,31,0.22);
 }}
 .event.is-new:hover {{
-  background: rgba(255,103,31,0.09);
+  background: color-mix(in srgb, var(--orange) 9%, var(--card-base-hover));
   border-color: rgba(255,103,31,0.32);
 }}
 
 .event-date {{ text-align: center; padding-top: 4px; line-height: 1; }}
-.event-date .day {{ font-size: 38px; font-weight: 800; color: {text};
+.event-date .day {{ font-size: 38px; font-weight: 800; color: var(--text);
   line-height: 1; letter-spacing: -0.03em; }}
-.event-date .dow {{ font-size: 10px; color: {orange}; text-transform: uppercase;
+.event-date .dow {{ font-size: 10px; color: var(--orange); text-transform: uppercase;
   letter-spacing: 1.8px; margin-top: 8px; font-weight: 700; }}
 
-.event-body a.event-title {{ color: {text}; font-size: 16px; font-weight: 600;
+.event-body a.event-title {{ color: var(--text); font-size: 16px; font-weight: 600;
   text-decoration: none; line-height: 1.4; display: inline; letter-spacing: -0.005em; }}
-.event-body a.event-title:hover {{ color: {orange}; }}
+.event-body a.event-title:hover {{ color: var(--orange); }}
 .new-badge {{ display: inline-block;
-  background: {orange};
-  color: #1a1a1a;
+  background: var(--orange);
+  color: var(--on-orange);
   font-size: 9px; font-weight: 800; letter-spacing: 1.2px; padding: 3px 8px;
   border-radius: 4px; margin-left: 10px; vertical-align: 2px;
   box-shadow: 0 1px 4px rgba(255,103,31,0.15);
@@ -372,54 +456,54 @@ h1 em {{ font-style: normal; color: {orange}; }}
 @keyframes pulse {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0.7; }} }}
 
 .event-meta {{ display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px;
-  font-size: 12px; color: {text_muted}; align-items: center; }}
+  font-size: 12px; color: var(--text-muted); align-items: center; }}
 .meta-item {{ display: inline-flex; align-items: center; gap: 5px;
   padding: 4px 10px; border-radius: 999px;
-  background: rgba(255,255,255,0.03); border: 1px solid {border_tr}; }}
+  background: var(--chip-bg); border: 1px solid var(--border-tr); }}
 .region-tag {{ font-weight: 600; font-size: 11px;
   background: color-mix(in srgb, var(--tag-color) 14%, transparent);
-  color: var(--tag-color);
+  color: color-mix(in srgb, var(--tag-color) 78%, var(--tag-text-mix));
   border-color: color-mix(in srgb, var(--tag-color) 35%, transparent); }}
-.source-tag {{ font-weight: 500; font-size: 11px; color: {text_muted}; }}
-.location {{ color: {text_muted}; }}
-.time-badge {{ color: {text}; font-weight: 500; }}
-.soon-badge {{ background: {orange_soft}; color: {orange};
-  border-color: {orange}40; font-weight: 700; font-size: 11px; }}
-a.cal-link {{ color: {text_dim}; text-decoration: none; font-weight: 500; }}
-a.cal-link:hover {{ color: {orange}; border-color: {orange}66; }}
+.source-tag {{ font-weight: 500; font-size: 11px; color: var(--text-muted); }}
+.location {{ color: var(--text-muted); }}
+.time-badge {{ color: var(--text); font-weight: 500; }}
+.soon-badge {{ background: var(--orange-soft); color: var(--orange);
+  border-color: #ff671f40; font-weight: 700; font-size: 11px; }}
+a.cal-link {{ color: var(--text-dim); text-decoration: none; font-weight: 500; }}
+a.cal-link:hover {{ color: var(--orange); border-color: #ff671f66; }}
 .more-sources {{ display: none; }}
 .more-sources.open {{ display: contents; }}
-.pill.more-toggle {{ border-style: dashed; color: {text_muted}; }}
-.ago-badge {{ color: {text_dim}; font-weight: 600; font-size: 11px; }}
+.pill.more-toggle {{ border-style: dashed; color: var(--text-muted); }}
+.ago-badge {{ color: var(--text-dim); font-weight: 600; font-size: 11px; }}
 
 /* Recently passed archive — muted, collapsed by default */
 .past-archive {{ margin-top: 64px; }}
 .past-archive summary {{ cursor: pointer; list-style: none;
-  font-size: 14px; font-weight: 600; color: {text_muted};
+  font-size: 14px; font-weight: 600; color: var(--text-muted);
   letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 20px;
   display: flex; align-items: center; gap: 12px; }}
 .past-archive summary::-webkit-details-marker {{ display: none; }}
-.past-archive summary::before {{ content: '▸'; color: {orange}; transition: transform 0.15s; }}
+.past-archive summary::before {{ content: '▸'; color: var(--orange); transition: transform 0.15s; }}
 .past-archive[open] summary::before {{ transform: rotate(90deg); }}
-.past-archive summary .count {{ background: rgba(255,255,255,0.08); padding: 2px 9px;
+.past-archive summary .count {{ background: var(--count-bg); padding: 2px 9px;
   border-radius: 8px; font-size: 11px; }}
-.past-archive summary:hover {{ color: {text}; }}
+.past-archive summary:hover {{ color: var(--text); }}
 .past-archive .event {{ opacity: 0.55; }}
 .past-archive .event:hover {{ opacity: 1; }}
 
 /* Empty state */
-.empty {{ text-align: center; padding: 80px 24px; background: {glass};
-  border: 1px dashed {border_tr};
+.empty {{ text-align: center; padding: 80px 24px; background: var(--glass);
+  border: 1px dashed var(--border-tr);
   border-radius: 16px; margin-top: 20px; }}
-.empty-title {{ font-size: 17px; color: {text}; margin-bottom: 8px; font-weight: 600; }}
-.empty-sub {{ font-size: 14px; color: {text_muted}; }}
+.empty-title {{ font-size: 17px; color: var(--text); margin-bottom: 8px; font-weight: 600; }}
+.empty-sub {{ font-size: 14px; color: var(--text-muted); }}
 
-footer {{ margin-top: 80px; padding-top: 36px; border-top: 1px solid {border_hard};
-  color: {text_muted}; font-size: 12px; line-height: 1.7; }}
-footer a {{ color: {orange}; text-decoration: none; }}
+footer {{ margin-top: 80px; padding-top: 36px; border-top: 1px solid var(--border-hard);
+  color: var(--text-muted); font-size: 12px; line-height: 1.7; }}
+footer a {{ color: var(--orange); text-decoration: none; }}
 footer a:hover {{ text-decoration: underline; }}
 .footer-label {{ display: block; font-size: 11px; letter-spacing: 1.8px; text-transform: uppercase;
-  color: {orange}; margin-bottom: 10px; font-weight: 600; }}
+  color: var(--orange); margin-bottom: 10px; font-weight: 600; }}
 
 @media (max-width: 720px) {{
   .container {{ padding: 44px 18px 72px; }}
@@ -430,6 +514,8 @@ footer a:hover {{ text-decoration: underline; }}
   .filters {{ padding: 20px 20px; }}
   .meta-bar {{ gap: 8px; }}
   .stat-pill, .subscribe {{ font-size: 11px; padding: 9px 16px; }}
+  .cal-day {{ min-height: 44px; padding: 4px 5px; }}
+  .cal-dot {{ width: 5px; height: 5px; }}
 }}
 </style>
 </head>
@@ -445,6 +531,7 @@ footer a:hover {{ text-decoration: underline; }}
       <span class="stat-pill"><strong>{source_count}</strong>sources</span>
       {new_pill_html}
       <span class="stat-pill">Updated {updated_at}</span>
+      <button id="themeToggle" class="stat-pill theme-toggle" type="button" aria-label="Toggle light/dark theme">☀️ Light</button>
     </div>
   </header>
 
@@ -462,6 +549,18 @@ footer a:hover {{ text-decoration: underline; }}
       <div class="pill-row">{source_pills}</div>
     </div>
   </div>
+
+  <details class="cal-view" id="calView">
+    <summary>Calendar view</summary>
+    <div class="cal-card">
+      <div class="cal-nav">
+        <button id="calPrev" class="pill" type="button" aria-label="Previous month">‹</button>
+        <span id="calTitle"></span>
+        <button id="calNext" class="pill" type="button" aria-label="Next month">›</button>
+      </div>
+      <div class="cal-grid" id="calGrid"></div>
+    </div>
+  </details>
 
   <main id="eventsContainer">
     {body}
@@ -484,7 +583,24 @@ footer a:hover {{ text-decoration: underline; }}
 
 <script>
 (function() {{
+  const REGION_COLORS = {region_colors_json};
   const filters = {{ region: 'all', source: 'all', new: 'all', search: '' }};
+
+  // --- Theme toggle (persisted; pre-paint script in <head> avoids flash) ---
+  const themeBtn = document.getElementById('themeToggle');
+  function syncThemeBtn() {{
+    const light = document.documentElement.getAttribute('data-theme') === 'light';
+    themeBtn.textContent = light ? '🌙 Dark' : '☀️ Light';
+  }}
+  themeBtn.addEventListener('click', function() {{
+    const light = document.documentElement.getAttribute('data-theme') === 'light';
+    const next = light ? '' : 'light';
+    if (next) document.documentElement.setAttribute('data-theme', next);
+    else document.documentElement.removeAttribute('data-theme');
+    try {{ localStorage.setItem('bd-theme', next); }} catch (e) {{}}
+    syncThemeBtn();
+  }});
+  syncThemeBtn();
 
   function updateHash() {{
     const p = new URLSearchParams();
@@ -517,6 +633,7 @@ footer a:hover {{ text-decoration: underline; }}
     document.getElementById('eventsContainer').style.display = visible ? '' : 'none';
     document.getElementById('emptyState').style.display = visible ? 'none' : '';
     updateHash();
+    renderCalendar();
   }}
 
   document.querySelectorAll('.pill[data-filter]').forEach(btn => {{
@@ -549,7 +666,7 @@ footer a:hover {{ text-decoration: underline; }}
   }}
   if (moreBtn) moreBtn.addEventListener('click', showAllSources);
 
-  // Relative date cues for events within the next 7 days (computed
+  // Relative date cues for events within 7 days either side (computed
   // client-side so they stay correct between daily rebuilds)
   const today = new Date(); today.setHours(0, 0, 0, 0);
   document.querySelectorAll('.event[data-date]').forEach(ev => {{
@@ -569,6 +686,90 @@ footer a:hover {{ text-decoration: underline; }}
       meta.insertBefore(chip, meta.firstChild);
     }}
   }});
+
+  // --- Collapsible calendar view (reflects active filters) ---
+  let calY = today.getFullYear(), calM = today.getMonth();
+  const todayStr = today.getFullYear() + '-' +
+    String(today.getMonth() + 1).padStart(2, '0') + '-' +
+    String(today.getDate()).padStart(2, '0');
+
+  function visibleEventsByDate() {{
+    const map = {{}};
+    document.querySelectorAll('.event[data-date]').forEach(ev => {{
+      if (ev.style.display === 'none') return;
+      (map[ev.dataset.date] = map[ev.dataset.date] || []).push(ev);
+    }});
+    return map;
+  }}
+
+  function renderCalendar() {{
+    const grid = document.getElementById('calGrid');
+    if (!grid) return;
+    document.getElementById('calTitle').textContent =
+      new Date(calY, calM, 1).toLocaleString('en-US', {{ month: 'long', year: 'numeric' }});
+    const map = visibleEventsByDate();
+    grid.innerHTML = '';
+    ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'].forEach(d => {{
+      const h = document.createElement('div');
+      h.className = 'cal-dow';
+      h.textContent = d;
+      grid.appendChild(h);
+    }});
+    const startDow = new Date(calY, calM, 1).getDay();
+    const daysInMonth = new Date(calY, calM + 1, 0).getDate();
+    for (let i = 0; i < startDow; i++) {{
+      grid.appendChild(Object.assign(document.createElement('div'), {{ className: 'cal-day' }}));
+    }}
+    for (let d = 1; d <= daysInMonth; d++) {{
+      const ds = calY + '-' + String(calM + 1).padStart(2, '0') + '-' + String(d).padStart(2, '0');
+      const cell = document.createElement('div');
+      cell.className = 'cal-day in-month';
+      const num = document.createElement('span');
+      num.className = 'cal-num';
+      num.textContent = d;
+      cell.appendChild(num);
+      if (ds === todayStr) cell.classList.add('today');
+      const evs = map[ds] || [];
+      if (evs.length) {{
+        cell.classList.add('has-events');
+        cell.title = evs.map(e => e.querySelector('.event-title').textContent).join('\\n');
+        const dots = document.createElement('div');
+        dots.className = 'cal-dots';
+        evs.slice(0, 4).forEach(e => {{
+          const dot = document.createElement('span');
+          dot.className = 'cal-dot';
+          dot.style.background = REGION_COLORS[e.dataset.region] || '#aaa';
+          dots.appendChild(dot);
+        }});
+        if (evs.length > 4) {{
+          const more = document.createElement('span');
+          more.className = 'cal-more';
+          more.textContent = '+' + (evs.length - 4);
+          dots.appendChild(more);
+        }}
+        cell.appendChild(dots);
+        cell.addEventListener('click', function() {{
+          const target = evs[0];
+          const archive = target.closest('.past-archive');
+          if (archive) archive.open = true;
+          target.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
+          target.classList.add('flash');
+          setTimeout(() => target.classList.remove('flash'), 1800);
+        }});
+      }}
+      grid.appendChild(cell);
+    }}
+  }}
+
+  document.getElementById('calPrev').addEventListener('click', function() {{
+    calM--; if (calM < 0) {{ calM = 11; calY--; }}
+    renderCalendar();
+  }});
+  document.getElementById('calNext').addEventListener('click', function() {{
+    calM++; if (calM > 11) {{ calM = 0; calY++; }}
+    renderCalendar();
+  }});
+  document.getElementById('calView').addEventListener('toggle', renderCalendar);
 
   // Restore filters from the URL so bookmarked/shared views stick
   (function restoreFromHash() {{
@@ -634,6 +835,7 @@ def write_html(events: List[Event], path: str) -> None:
         region_pills=region_pills,
         source_pills=source_pills,
         sources_list=", ".join(html.escape(s) for s in sources_seen),
+        region_colors_json=json.dumps(REGION_COLORS),
     )
     with open(path, "w", encoding="utf-8") as f:
         f.write(page)
