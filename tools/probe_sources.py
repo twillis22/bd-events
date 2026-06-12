@@ -7,8 +7,13 @@
    AIA East Bay (embedded calendar widget?).
 """
 import json
+import os
 import re
+import sys
+
 import requests
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 HEADERS = {
     "User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
