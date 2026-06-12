@@ -30,8 +30,11 @@ class BOMASDScraper(BaseScraper):
                 r'<script[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
                 r.text, re.DOTALL | re.IGNORECASE):
             try:
-                data = json.loads(block)
-            except ValueError:
+                # strict=False tolerates literal newlines/tabs inside strings,
+                # which this hand-emitted ASP JSON-LD contains.
+                data = json.loads(block, strict=False)
+            except ValueError as exc:
+                print(f"  [warn] {self.name}: ld+json parse failed: {exc}")
                 continue
             items = data if isinstance(data, list) else [data]
             for item in items:
