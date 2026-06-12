@@ -111,6 +111,16 @@ def _render_body(events: List[Event]) -> str:
     return "\n".join(sections)
 
 
+def _render_past(past: List[Event]) -> str:
+    """Collapsed archive of recently-passed events, most recent first."""
+    if not past:
+        return ""
+    cards = "\n".join(_render_event(ev) for ev in sorted(past, key=lambda e: e.start, reverse=True))
+    return (f'<details class="past-archive">'
+            f'<summary>Recently passed <span class="count">{len(past)}</span></summary>'
+            f'{cards}</details>')
+
+
 def _empty_body() -> str:
     return ('<div class="empty"><p class="empty-title">No upcoming events found.</p>'
             '<p class="empty-sub">The aggregator may be having trouble — '
@@ -380,6 +390,22 @@ a.cal-link:hover {{ color: {orange}; border-color: {orange}66; }}
 .more-sources {{ display: none; }}
 .more-sources.open {{ display: contents; }}
 .pill.more-toggle {{ border-style: dashed; color: {text_muted}; }}
+.ago-badge {{ color: {text_dim}; font-weight: 600; font-size: 11px; }}
+
+/* Recently passed archive — muted, collapsed by default */
+.past-archive {{ margin-top: 64px; }}
+.past-archive summary {{ cursor: pointer; list-style: none;
+  font-size: 14px; font-weight: 600; color: {text_muted};
+  letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 20px;
+  display: flex; align-items: center; gap: 12px; }}
+.past-archive summary::-webkit-details-marker {{ display: none; }}
+.past-archive summary::before {{ content: '▸'; color: {orange}; transition: transform 0.15s; }}
+.past-archive[open] summary::before {{ transform: rotate(90deg); }}
+.past-archive summary .count {{ background: rgba(255,255,255,0.08); padding: 2px 9px;
+  border-radius: 8px; font-size: 11px; }}
+.past-archive summary:hover {{ color: {text}; }}
+.past-archive .event {{ opacity: 0.55; }}
+.past-archive .event:hover {{ opacity: 1; }}
 
 /* Empty state */
 .empty {{ text-align: center; padding: 80px 24px; background: {glass};
@@ -439,6 +465,7 @@ footer a:hover {{ text-decoration: underline; }}
 
   <main id="eventsContainer">
     {body}
+    {past_html}
   </main>
 
   <div id="emptyState" class="empty" style="display: none;">
@@ -480,7 +507,7 @@ footer a:hover {{ text-decoration: underline; }}
       if (filters.new !== 'all' && ev.dataset.new !== 'true') show = false;
       if (search && !ev.innerText.toLowerCase().includes(search)) show = false;
       ev.style.display = show ? '' : 'none';
-      if (show) visible++;
+      if (show && !ev.closest('.past-archive')) visible++;
     }});
     document.querySelectorAll('.month-section').forEach(sec => {{
       const anyVisible = sec.querySelector('.event:not([style*="display: none"])');
@@ -528,13 +555,15 @@ footer a:hover {{ text-decoration: underline; }}
   document.querySelectorAll('.event[data-date]').forEach(ev => {{
     const d = new Date(ev.dataset.date + 'T00:00:00');
     const days = Math.round((d - today) / 86400000);
-    let label = null;
+    let label = null, cls = 'soon-badge';
     if (days === 0) label = 'Today';
     else if (days === 1) label = 'Tomorrow';
     else if (days > 1 && days <= 7) label = 'In ' + days + ' days';
+    else if (days === -1) {{ label = 'Yesterday'; cls = 'ago-badge'; }}
+    else if (days < -1) {{ label = (-days) + ' days ago'; cls = 'ago-badge'; }}
     if (label) {{
       const chip = document.createElement('span');
-      chip.className = 'meta-item soon-badge';
+      chip.className = 'meta-item ' + cls;
       chip.textContent = label;
       const meta = ev.querySelector('.event-meta');
       meta.insertBefore(chip, meta.firstChild);
@@ -574,14 +603,19 @@ footer a:hover {{ text-decoration: underline; }}
 
 
 def write_html(events: List[Event], path: str) -> None:
+    today = datetime.now(timezone.utc).date()
+    upcoming = [e for e in events if e.start.date() >= today]
+    past = [e for e in events if e.start.date() < today]
+
     sources_seen = sorted({e.source for e in events})
-    new_count = sum(1 for e in events if getattr(e, "is_new", False))
+    new_count = sum(1 for e in upcoming if getattr(e, "is_new", False))
     new_pill_html = (
         f'<span class="stat-pill new-pill"><strong>{new_count}</strong>new this week</span>'
         if new_count else ''
     )
 
-    body = _render_body(events) if events else _empty_body()
+    body = _render_body(upcoming) if upcoming else _empty_body()
+    past_html = _render_past(past)
     region_pills = _render_region_pills(events)
     source_pills = _render_source_pills(sources_seen, events)
 
@@ -591,11 +625,12 @@ def write_html(events: List[Event], path: str) -> None:
         border_tr=L10_BORDER_TR, border_hard=L10_BORDER_HARD,
         glass=L10_GLASS,
         orange=L10_ORANGE, orange_soft=L10_ORANGE_SOFT,
-        event_count=len(events),
+        event_count=len(upcoming),
         source_count=len(sources_seen),
         new_pill_html=new_pill_html,
         updated_at=datetime.now(timezone.utc).strftime("%b %-d, %Y at %H:%M UTC"),
         body=body,
+        past_html=past_html,
         region_pills=region_pills,
         source_pills=source_pills,
         sources_list=", ".join(html.escape(s) for s in sources_seen),
