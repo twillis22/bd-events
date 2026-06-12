@@ -158,6 +158,16 @@ removed with a note; no `�` characters in titles.
 
 ## TASK 5 — Broaden source coverage (the "list ALL events" goal)
 
+> **STATUS (2026-06-12): partial.** Added and live-validated via the "Probe
+> Sources" workflow: **BOMA San Diego** (JSON-LD), **BOMA San Francisco**
+> (curated date list), **NAIOP SF Bay Area** (GrowthZone microdata).
+> Blocked by Cloudflare (same as ULI): SMPS SF + SD, BOMA Sacramento.
+> Dead/unreachable: DBIA Western Pacific, BOMA Oakland/East Bay (hard 403).
+> Needs a browser or API work (deferred): CREW Network chapters (client-side
+> Next.js), CREW San Diego (Squarespace page blocks), USGBC-CA (AJAX grid),
+> AIA East Bay (calendar not in static HTML), AIA Central Valley (Wix;
+> Eventbrite page has no structured data and ~1 event).
+
 To genuinely be the one-stop list, add more associations across the three markets.
 Prioritized; do the easy structured ones first. For each: probe the site, pick the right
 scraper flavor (prefer iCal feed > RSS > static HTML > Playwright), add the file, register

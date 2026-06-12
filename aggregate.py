@@ -23,6 +23,9 @@ from scrapers.feeds import (
     NAIOPSVScraper, IIDASoCalScraper, DBIANationalScraper,
     BisnowScraper, SDBIAScraper,
 )
+from scrapers.boma_sd import BOMASDScraper
+from scrapers.boma_sf import BOMASFScraper
+from scrapers.naiop_sfba import NAIOPSFBAScraper
 
 # Browser scrapers (v2)
 from scrapers.uli_national import ULINationalScraper
@@ -41,6 +44,9 @@ ALL_SCRAPERS: List[Type[BaseScraper]] = [
     DBIANationalScraper,
     BisnowScraper,
     SDBIAScraper,
+    BOMASDScraper,
+    BOMASFScraper,
+    NAIOPSFBAScraper,
     # Browser scrapers
     ULINationalScraper,
     ULISanFranciscoScraper,
