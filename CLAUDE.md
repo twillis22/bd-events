@@ -69,6 +69,10 @@ for e in CMAANorCalScraper().fetch(): print(e.start.date(), e.title, "|", e.loca
 - **One broken scraper never kills the run.** `BaseScraper.safe_fetch()` and the
   browser-scraper loop both catch per-scraper exceptions and print `[error] ...`,
   then continue. Preserve this resilience in any new code.
+- **`data/archive.json`** persists a snapshot of every scraped event so
+  recently-passed events (14-day window, `event_archive.RETAIN_DAYS`) stay on
+  the page in the collapsed "Recently passed" section even after sources
+  delist them. Committed back by the Action each run, like seen.json.
 - **`data/seen.json` is sacred state.** It records the first date each event UID was
   observed, which powers the "NEW this week" badge (7-day window via
   `SeenTracker.NEW_WINDOW_DAYS`). The GitHub Action commits it back every run. When

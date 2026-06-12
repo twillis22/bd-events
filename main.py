@@ -7,6 +7,7 @@ Run as part of GitHub Actions or locally.
 """
 import os
 from aggregate import collect_events
+from event_archive import EventArchive, RETAIN_DAYS
 from generate_ics import write_ics
 from generate_html import write_html
 from seen_tracker import SeenTracker
@@ -16,8 +17,12 @@ def main():
     out_dir = os.environ.get("OUTPUT_DIR", "docs")
     os.makedirs(out_dir, exist_ok=True)
 
-    # 1) Aggregate events
-    events = collect_events(lookback_days=1, lookahead_days=365)
+    # 1) Aggregate events (lookback covers the "Recently passed" window)
+    events = collect_events(lookback_days=RETAIN_DAYS, lookahead_days=365)
+
+    # 1b) Restore recently-passed events the sources have already delisted
+    archive = EventArchive("data/archive.json")
+    events = archive.merge(events)
 
     # 2) Annotate with first-seen / is-new from persistent state
     tracker = SeenTracker("data/seen.json")
@@ -30,6 +35,7 @@ def main():
     current_uids = {e.uid for e in events}
     tracker.prune(current_uids)
     tracker.save()
+    archive.save()
 
     # 4) Write all output formats
     print("\nWriting outputs...")

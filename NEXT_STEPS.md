@@ -203,7 +203,8 @@ all three markets well represented.
 
 - **Event-type facet** (Networking / Education / Conference / Social) as a second filter
   dimension, classified from the title.
-- **Past-events archive** page or a "recently passed" collapsed section.
+- ~~**Past-events archive** page or a "recently passed" collapsed section.~~ DONE
+  (2026-06-12): `data/archive.json` + collapsed "Recently passed" section, 14-day window.
 - **De-dupe across sources** when two associations co-host the same event (currently dedup
   is per-source by UID; cross-source identical events show twice).
 - **Bootstrap mode** for `seen.json` so a fresh deploy doesn't flag literally everything as
