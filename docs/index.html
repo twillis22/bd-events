@@ -159,6 +159,22 @@ a.cal-link:hover { color: #ff671f; border-color: #ff671f66; }
 .more-sources { display: none; }
 .more-sources.open { display: contents; }
 .pill.more-toggle { border-style: dashed; color: rgba(246, 246, 246, 0.62); }
+.ago-badge { color: rgba(246, 246, 246, 0.35); font-weight: 600; font-size: 11px; }
+
+/* Recently passed archive — muted, collapsed by default */
+.past-archive { margin-top: 64px; }
+.past-archive summary { cursor: pointer; list-style: none;
+  font-size: 14px; font-weight: 600; color: rgba(246, 246, 246, 0.62);
+  letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 20px;
+  display: flex; align-items: center; gap: 12px; }
+.past-archive summary::-webkit-details-marker { display: none; }
+.past-archive summary::before { content: '▸'; color: #ff671f; transition: transform 0.15s; }
+.past-archive[open] summary::before { transform: rotate(90deg); }
+.past-archive summary .count { background: rgba(255,255,255,0.08); padding: 2px 9px;
+  border-radius: 8px; font-size: 11px; }
+.past-archive summary:hover { color: #f6f6f6; }
+.past-archive .event { opacity: 0.55; }
+.past-archive .event:hover { opacity: 1; }
 
 /* Empty state */
 .empty { text-align: center; padding: 80px 24px; background: rgba(255, 255, 255, 0.04);
@@ -194,10 +210,10 @@ footer a:hover { text-decoration: underline; }
     <p class="subtitle">Aggregated AEC industry events across the Bay Area, Sacramento, and San Diego. Updated automatically.</p>
     <div class="meta-bar">
       <a class="subscribe" href="events.ics" download>📅 Subscribe in Outlook</a>
-      <span class="stat-pill"><strong id="visibleCount">36</strong>upcoming</span>
-      <span class="stat-pill"><strong>6</strong>sources</span>
-      <span class="stat-pill new-pill"><strong>16</strong>new this week</span>
-      <span class="stat-pill">Updated Jun 12, 2026 at 16:15 UTC</span>
+      <span class="stat-pill"><strong id="visibleCount">81</strong>upcoming</span>
+      <span class="stat-pill"><strong>10</strong>sources</span>
+      <span class="stat-pill new-pill"><strong>61</strong>new this week</span>
+      <span class="stat-pill">Updated Jun 12, 2026 at 17:41 UTC</span>
     </div>
   </header>
 
@@ -208,11 +224,11 @@ footer a:hover { text-decoration: underline; }
     </div>
     <div class="filter-group">
       <label class="filter-label">Region</label>
-      <div class="pill-row"><button class="pill active" data-filter="region" data-value="all">All Regions</button><button class="pill" data-filter="region" data-value="San Francisco" style="--pill-color: #7eaee0;">San Francisco <span class="count">13</span></button><button class="pill" data-filter="region" data-value="Silicon Valley" style="--pill-color: #9ec9b3;">Silicon Valley <span class="count">2</span></button><button class="pill" data-filter="region" data-value="East Bay" style="--pill-color: #d4b483;">East Bay <span class="count">1</span></button><button class="pill" data-filter="region" data-value="Sacramento" style="--pill-color: #d8c873;">Sacramento <span class="count">1</span></button><button class="pill" data-filter="region" data-value="San Diego" style="--pill-color: #e095b1;">San Diego <span class="count">2</span></button><button class="pill" data-filter="region" data-value="Bay Area" style="--pill-color: #a8b2c4;">Bay Area <span class="count">16</span></button><button class="pill" data-filter="region" data-value="Online" style="--pill-color: #b9a3d6;">Online <span class="count">1</span></button><button class="pill" data-filter="new" data-value="true">✦ New only</button></div>
+      <div class="pill-row"><button class="pill active" data-filter="region" data-value="all">All Regions</button><button class="pill" data-filter="region" data-value="San Francisco" style="--pill-color: #7eaee0;">San Francisco <span class="count">38</span></button><button class="pill" data-filter="region" data-value="Silicon Valley" style="--pill-color: #9ec9b3;">Silicon Valley <span class="count">2</span></button><button class="pill" data-filter="region" data-value="East Bay" style="--pill-color: #d4b483;">East Bay <span class="count">2</span></button><button class="pill" data-filter="region" data-value="Sacramento" style="--pill-color: #d8c873;">Sacramento <span class="count">2</span></button><button class="pill" data-filter="region" data-value="San Diego" style="--pill-color: #e095b1;">San Diego <span class="count">16</span></button><button class="pill" data-filter="region" data-value="Bay Area" style="--pill-color: #a8b2c4;">Bay Area <span class="count">22</span></button><button class="pill" data-filter="region" data-value="Online" style="--pill-color: #b9a3d6;">Online <span class="count">6</span></button><button class="pill" data-filter="new" data-value="true">✦ New only</button></div>
     </div>
     <div class="filter-group">
       <label class="filter-label">Source</label>
-      <div class="pill-row"><button class="pill active" data-filter="source" data-value="all">All Sources</button><button class="pill" data-filter="source" data-value="AIA San Francisco">AIA San Francisco <span class="count">11</span></button><button class="pill" data-filter="source" data-value="CMAA NorCal">CMAA NorCal <span class="count">9</span></button><button class="pill" data-filter="source" data-value="IIDA Northern California">IIDA Northern California <span class="count">7</span></button><button class="pill" data-filter="source" data-value="CSHE">CSHE <span class="count">6</span></button><button class="pill" data-filter="source" data-value="NAIOP Silicon Valley">NAIOP Silicon Valley <span class="count">2</span></button><button class="pill" data-filter="source" data-value="Lean Construction Institute">Lean Construction Institute <span class="count">1</span></button></div>
+      <div class="pill-row"><button class="pill active" data-filter="source" data-value="all">All Sources</button><button class="pill" data-filter="source" data-value="BOMA San Francisco">BOMA San Francisco <span class="count">26</span></button><button class="pill" data-filter="source" data-value="BOMA San Diego">BOMA San Diego <span class="count">16</span></button><button class="pill" data-filter="source" data-value="AIA San Francisco">AIA San Francisco <span class="count">12</span></button><button class="pill" data-filter="source" data-value="CMAA NorCal">CMAA NorCal <span class="count">9</span></button><button class="pill" data-filter="source" data-value="IIDA Northern California">IIDA Northern California <span class="count">7</span></button><button class="pill" data-filter="source" data-value="CSHE">CSHE <span class="count">6</span></button><button class="pill" data-filter="source" data-value="NAIOP SF Bay Area">NAIOP SF Bay Area <span class="count">6</span></button><button class="pill" data-filter="source" data-value="Lean Construction Institute">Lean Construction Institute <span class="count">3</span></button><span class="more-sources"><button class="pill" data-filter="source" data-value="NAIOP Silicon Valley">NAIOP Silicon Valley <span class="count">2</span></button><button class="pill" data-filter="source" data-value="San Diego BIA">San Diego BIA <span class="count">1</span></button></span><button class="pill more-toggle" id="moreSources" type="button">+2 more</button></div>
     </div>
   </div>
 
@@ -236,6 +252,28 @@ footer a:hover { text-decoration: underline; }
       
       
       <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A67419ac814d3c9bfdadc9b6709baf340%40bd-events%0D%0ASUMMARY%3ALegacy%20FM%20ICRA%202.0%20Training%20%7C%20June%2012%5C%2C%202026%0D%0ADTSTART%3BVALUE%3DDATE%3A20260612%0D%0AURL%3Ahttps%3A//cshe.org/events/EventDetails.aspx%3Fid%3D2059998%0D%0ADESCRIPTION%3ASource%3A%20CSHE%5Cnhttps%3A//cshe.org/events/EventDetails.aspx%3Fid%3D2059998%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="legacy-fm-icra-2-0-training-june-12-2026.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-06-16"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">16</div>
+    <div class="dow">Tue</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">San Francisco’s Ferry Building: The Icon</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A7dc33ba94f82eda031493f071aa9dc1c%40bd-events%0D%0ASUMMARY%3ASan%20Francisco%E2%80%99s%20Ferry%20Building%3A%20The%20Icon%0D%0ADTSTART%3BVALUE%3DDATE%3A20260616%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="san-francisco-s-ferry-building-the-icon.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
     </div>
   </div>
 </article>
@@ -327,6 +365,28 @@ footer a:hover { text-decoration: underline; }
     </div>
   </div>
 </article>
+<article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="Online"
+  data-date="2026-06-18"
+  data-new="true"
+  style="--tint: #b9a3d6;">
+  <div class="event-date">
+    <div class="day">18</div>
+    <div class="dow">Thu</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">DEI Virtual Candid Conversation - Inclusive Leadership</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #b9a3d6;">Online</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A572231c47df19bafd87cb48f99b3ae6e%40bd-events%0D%0ASUMMARY%3ADEI%20Virtual%20Candid%20Conversation%20-%20Inclusive%20Leadership%0D%0ADTSTART%3BVALUE%3DDATE%3A20260618%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="dei-virtual-candid-conversation-inclusive-leader.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
 <article class="event"
   data-source="CMAA NorCal"
   data-region="Online"
@@ -368,6 +428,50 @@ footer a:hover { text-decoration: underline; }
       <span class="meta-item time-badge">6:00 PM</span>
       <span class="meta-item location">Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 Unite</span>
       <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Af6df036de9372ccba49d16af4ca0e761%40bd-events%0D%0ASUMMARY%3AAIASF%3A%20OVERTIME%2026%3A%20REDUX%20-%20Opening%20Reception%0D%0ADTSTART%3A20260618T010000Z%0D%0ADTEND%3A20260618T030000Z%0D%0ALOCATION%3ACenter%20for%20Architecture%20%2B%20Design%20140%20Sutter%20Street%20San%20Francisco%5C%2C%20CA%2094104%20United%20States%0D%0AURL%3Ahttps%3A//www.aiasf.org/events/overtime-26-redux---opening-reception%0D%0ADESCRIPTION%3ASource%3A%20AIA%20San%20Francisco%5Cnhttps%3A//www.aiasf.org/events/overtime-26-redux---opening-reception%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="aiasf-overtime-26-redux-opening-reception.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="NAIOP SF Bay Area"
+  data-region="Bay Area"
+  data-date="2026-06-18"
+  data-new="true"
+  style="--tint: #a8b2c4;">
+  <div class="event-date">
+    <div class="day">18</div>
+    <div class="dow">Thu</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://members.naiopsfba.org/event-calendar/Details/coffee-connections-membership-breakfast-june-2026-1663532?sourceTypeId=Website" target="_blank" rel="noopener">Coffee &amp; Connections Membership Breakfast – June 2026</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #a8b2c4;">Bay Area</span>
+      <span class="meta-item source-tag">NAIOP SF Bay Area</span>
+      
+      <span class="meta-item time-badge">9:00 AM</span>
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Ac11da46c90a6473ac1698a9b21ebd2ea%40bd-events%0D%0ASUMMARY%3ACoffee%20%26%20Connections%20Membership%20Breakfast%20%E2%80%93%20June%202026%0D%0ADTSTART%3A20260618T090000Z%0D%0ADTEND%3A20260618T100000Z%0D%0AURL%3Ahttps%3A//members.naiopsfba.org/event-calendar/Details/coffee-connections-membership-breakfast-june-2026-1663532%3FsourceTypeId%3DWebsite%0D%0ADESCRIPTION%3ASource%3A%20NAIOP%20SF%20Bay%20Area%5Cnhttps%3A//members.naiopsfba.org/event-calendar/Details/coffee-connections-membership-breakfast-june-2026-1663532%3FsourceTypeId%3DWebsite%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="coffee-connections-membership-breakfast-june-202.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Diego"
+  data-region="San Diego"
+  data-date="2026-06-18"
+  data-new="true"
+  style="--tint: #e095b1;">
+  <div class="event-date">
+    <div class="day">18</div>
+    <div class="dow">Thu</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://www.bomasd.org/calendar_list.asp" target="_blank" rel="noopener">Inclusive Leadership: Creating Impact From Any Position</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #e095b1;">San Diego</span>
+      <span class="meta-item source-tag">BOMA San Diego</span>
+      
+      <span class="meta-item time-badge">9:30 AM</span>
+      <span class="meta-item location">Virtual - Zoom, San Diego, CA</span>
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Aa624f3b02c0f8d4bf276221ad69ada2d%40bd-events%0D%0ASUMMARY%3AInclusive%20Leadership%3A%20Creating%20Impact%20From%20Any%20Position%0D%0ADTSTART%3A20260618T093000Z%0D%0ADTEND%3A20260618T103000Z%0D%0ALOCATION%3AVirtual%20-%20Zoom%5C%2C%20San%20Diego%5C%2C%20CA%0D%0AURL%3Ahttps%3A//www.bomasd.org/calendar_list.asp%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Diego%5Cnhttps%3A//www.bomasd.org/calendar_list.asp%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="inclusive-leadership-creating-impact-from-any-po.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
     </div>
   </div>
 </article>
@@ -416,6 +520,28 @@ footer a:hover { text-decoration: underline; }
   </div>
 </article>
 <article class="event is-new"
+  data-source="NAIOP SF Bay Area"
+  data-region="San Francisco"
+  data-date="2026-06-23"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">23</div>
+    <div class="dow">Tue</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://members.naiopsfba.org/event-calendar/Details/behind-the-scenes-tour-presidio-highlands-development-site-1742417?sourceTypeId=Website" target="_blank" rel="noopener">Behind the Scenes Tour: Presidio Highlands Development Site</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">NAIOP SF Bay Area</span>
+      
+      <span class="meta-item time-badge">4:00 PM</span>
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A53133eac4313cb5c99fb495737f8cf3e%40bd-events%0D%0ASUMMARY%3ABehind%20the%20Scenes%20Tour%3A%20Presidio%20Highlands%20Development%20Site%0D%0ADTSTART%3A20260623T160000Z%0D%0ADTEND%3A20260623T180000Z%0D%0AURL%3Ahttps%3A//members.naiopsfba.org/event-calendar/Details/behind-the-scenes-tour-presidio-highlands-development-site-1742417%3FsourceTypeId%3DWebsite%0D%0ADESCRIPTION%3ASource%3A%20NAIOP%20SF%20Bay%20Area%5Cnhttps%3A//members.naiopsfba.org/event-calendar/Details/behind-the-scenes-tour-presidio-highlands-development-site-1742417%3FsourceTypeId%3DWebsite%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="behind-the-scenes-tour-presidio-highlands-develo.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
   data-source="CSHE"
   data-region="Bay Area"
   data-date="2026-06-24"
@@ -434,6 +560,50 @@ footer a:hover { text-decoration: underline; }
       
       
       <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A9f9126b6ffbbf22c4f2640d93d2e25bd%40bd-events%0D%0ASUMMARY%3ARedwood%20Chapter%20Meeting%20%7C%20Energy%20Efficient%20Buildings%0D%0ADTSTART%3BVALUE%3DDATE%3A20260624%0D%0AURL%3Ahttps%3A//cshe.org/events/EventDetails.aspx%3Fid%3D2062750%0D%0ADESCRIPTION%3ASource%3A%20CSHE%5Cnhttps%3A//cshe.org/events/EventDetails.aspx%3Fid%3D2062750%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="redwood-chapter-meeting-energy-efficient-buildin.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-06-24"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">24</div>
+    <div class="dow">Wed</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">BOMA at the Ballpark: Game &amp; Patio Party</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Ad27e75466f6686890f6c8b43d168c94d%40bd-events%0D%0ASUMMARY%3ABOMA%20at%20the%20Ballpark%3A%20Game%20%26%20Patio%20Party%0D%0ADTSTART%3BVALUE%3DDATE%3A20260624%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="boma-at-the-ballpark-game-patio-party.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-06-24"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">24</div>
+    <div class="dow">Wed</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">BOMA at the Ballpark: Patio Party Only</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Aa97912253db7a739f76d9e8ff10f84dd%40bd-events%0D%0ASUMMARY%3ABOMA%20at%20the%20Ballpark%3A%20Patio%20Party%20Only%0D%0ADTSTART%3BVALUE%3DDATE%3A20260624%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="boma-at-the-ballpark-patio-party-only.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
     </div>
   </div>
 </article>
@@ -614,6 +784,50 @@ footer a:hover { text-decoration: underline; }
   </div>
 </article>
 <article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-07-08"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">8</div>
+    <div class="dow">Wed</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">BOMA Java</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A5b0681fd3009fa88cc4486734a732f14%40bd-events%0D%0ASUMMARY%3ABOMA%20Java%0D%0ADTSTART%3BVALUE%3DDATE%3A20260708%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="boma-java.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="NAIOP SF Bay Area"
+  data-region="East Bay"
+  data-date="2026-07-08"
+  data-new="true"
+  style="--tint: #d4b483;">
+  <div class="event-date">
+    <div class="day">8</div>
+    <div class="dow">Wed</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://members.naiopsfba.org/event-calendar/Details/real-estate-insider-a-closer-look-at-the-rotunda-in-downtown-oakland-1741640?sourceTypeId=Website" target="_blank" rel="noopener">Real Estate Insider: A Closer Look at The Rotunda in Downtown Oakland</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #d4b483;">East Bay</span>
+      <span class="meta-item source-tag">NAIOP SF Bay Area</span>
+      
+      <span class="meta-item time-badge">11:30 AM</span>
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Adac70f300193b5191a59eadc5a241421%40bd-events%0D%0ASUMMARY%3AReal%20Estate%20Insider%3A%20A%20Closer%20Look%20at%20The%20Rotunda%20in%20Downtown%20Oakland%0D%0ADTSTART%3A20260708T113000Z%0D%0ADTEND%3A20260708T133000Z%0D%0AURL%3Ahttps%3A//members.naiopsfba.org/event-calendar/Details/real-estate-insider-a-closer-look-at-the-rotunda-in-downtown-oakland-1741640%3FsourceTypeId%3DWebsite%0D%0ADESCRIPTION%3ASource%3A%20NAIOP%20SF%20Bay%20Area%5Cnhttps%3A//members.naiopsfba.org/event-calendar/Details/real-estate-insider-a-closer-look-at-the-rotunda-in-downtown-oakland-1741640%3FsourceTypeId%3DWebsite%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="real-estate-insider-a-closer-look-at-the-rotunda.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
   data-source="IIDA Northern California"
   data-region="Bay Area"
   data-date="2026-07-09"
@@ -679,6 +893,72 @@ footer a:hover { text-decoration: underline; }
     </div>
   </div>
 </article>
+<article class="event is-new"
+  data-source="BOMA San Diego"
+  data-region="San Diego"
+  data-date="2026-07-18"
+  data-new="true"
+  style="--tint: #e095b1;">
+  <div class="event-date">
+    <div class="day">18</div>
+    <div class="dow">Sat</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://www.bomasd.org/calendar_list.asp" target="_blank" rel="noopener">Annual, Multi-Industry Beach Clean-up</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #e095b1;">San Diego</span>
+      <span class="meta-item source-tag">BOMA San Diego</span>
+      
+      <span class="meta-item time-badge">9:00 AM</span>
+      <span class="meta-item location">Mission Beach - Belmont Park, San Diego, CA</span>
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Addfbab52038004df1d8f132e3108a235%40bd-events%0D%0ASUMMARY%3AAnnual%5C%2C%20Multi-Industry%20Beach%20Clean-up%0D%0ADTSTART%3A20260718T090000Z%0D%0ADTEND%3A20260718T110000Z%0D%0ALOCATION%3AMission%20Beach%20-%20Belmont%20Park%5C%2C%20San%20Diego%5C%2C%20CA%0D%0AURL%3Ahttps%3A//www.bomasd.org/calendar_list.asp%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Diego%5Cnhttps%3A//www.bomasd.org/calendar_list.asp%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="annual-multi-industry-beach-clean-up.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-07-22"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">22</div>
+    <div class="dow">Wed</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">TOBY Awards Workshop</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A2ecd84a067d85e1643d116d8d7705e2e%40bd-events%0D%0ASUMMARY%3ATOBY%20Awards%20Workshop%0D%0ADTSTART%3BVALUE%3DDATE%3A20260722%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="toby-awards-workshop.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Diego"
+  data-region="San Diego"
+  data-date="2026-07-22"
+  data-new="true"
+  style="--tint: #e095b1;">
+  <div class="event-date">
+    <div class="day">22</div>
+    <div class="dow">Wed</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://www.bomasd.org/calendar_list.asp" target="_blank" rel="noopener">BOMA San Diego Designer Purse Bingo</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #e095b1;">San Diego</span>
+      <span class="meta-item source-tag">BOMA San Diego</span>
+      
+      <span class="meta-item time-badge">4:00 PM</span>
+      <span class="meta-item location">Farmer &amp;amp; The Seahorse Americana Ballroom , 10996 Torreyana Rd Suite 240, San</span>
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A8d13101605454e258e1eceea3e3a2476%40bd-events%0D%0ASUMMARY%3ABOMA%20San%20Diego%20Designer%20Purse%20Bingo%0D%0ADTSTART%3A20260722T160000Z%0D%0ADTEND%3A20260722T193000Z%0D%0ALOCATION%3AFarmer%20%26amp%5C%3B%20The%20Seahorse%20Americana%20Ballroom%20%5C%2C%2010996%20Torreyana%20Rd%20Suite%20240%5C%2C%20San%20Diego%5C%2C%20CA%0D%0AURL%3Ahttps%3A//www.bomasd.org/calendar_list.asp%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Diego%5Cnhttps%3A//www.bomasd.org/calendar_list.asp%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="boma-san-diego-designer-purse-bingo.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
 <article class="event"
   data-source="CMAA NorCal"
   data-region="Bay Area"
@@ -700,8 +980,74 @@ footer a:hover { text-decoration: underline; }
       <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Afea3083e5476a0e26f870905f99b3b12%40bd-events%0D%0ASUMMARY%3AThe%20Next%20Generation%20of%20Community%20College%20Facilities%3A%20Programs%5C%2C%20Priorities%20%26%20Opportunities%0D%0ADTSTART%3BVALUE%3DDATE%3A20260723%0D%0ALOCATION%3AAmerican%20River%20College%20Community%20Rooms%0D%0AURL%3Ahttps%3A//www.cmaanorcal.org/events-1/the-next-generation-of-community-college-facilities-programs-priorities-opportunities%0D%0ADESCRIPTION%3ASource%3A%20CMAA%20NorCal%5Cnhttps%3A//www.cmaanorcal.org/events-1/the-next-generation-of-community-college-facilities-programs-priorities-opportunities%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="the-next-generation-of-community-college-facilit.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
     </div>
   </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-07-30"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">30</div>
+    <div class="dow">Thu</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">EP Career Success Workshop</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A65370e0f577c4b63ef5b51fec3303b37%40bd-events%0D%0ASUMMARY%3AEP%20Career%20Success%20Workshop%0D%0ADTSTART%3BVALUE%3DDATE%3A20260730%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="ep-career-success-workshop.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
 </article></section>
-<section class="month-section" data-month="2026-08"><h2 class="month-header"><span>August 2026</span></h2><article class="event"
+<section class="month-section" data-month="2026-08"><h2 class="month-header"><span>August 2026</span></h2><article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="Online"
+  data-date="2026-08-04"
+  data-new="true"
+  style="--tint: #b9a3d6;">
+  <div class="event-date">
+    <div class="day">4</div>
+    <div class="dow">Tue</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">TOBY Awards Virtual Workshop</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #b9a3d6;">Online</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Ad4435138d80adee60c0a751ccf34f9c7%40bd-events%0D%0ASUMMARY%3ATOBY%20Awards%20Virtual%20Workshop%0D%0ADTSTART%3BVALUE%3DDATE%3A20260804%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="toby-awards-virtual-workshop.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-08-05"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">5</div>
+    <div class="dow">Wed</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">August Membership Luncheon</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A075c41cfaad40f3070d3a678043c6772%40bd-events%0D%0ASUMMARY%3AAugust%20Membership%20Luncheon%0D%0ADTSTART%3BVALUE%3DDATE%3A20260805%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="august-membership-luncheon.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event"
   data-source="CMAA NorCal"
   data-region="Bay Area"
   data-date="2026-08-06"
@@ -720,6 +1066,160 @@ footer a:hover { text-decoration: underline; }
       
       <span class="meta-item location">Nido&#x27;s Backyard</span>
       <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A356996cc0b2d7d647cd1da854500df74%40bd-events%0D%0ASUMMARY%3AMeet%20the%20Primes%5C%2C%20In-Person%20Networking%20Event%0D%0ADTSTART%3BVALUE%3DDATE%3A20260806%0D%0ALOCATION%3ANido%27s%20Backyard%0D%0AURL%3Ahttps%3A//www.cmaanorcal.org/events-1/meet-the-primes-in-person-networking-event-4%0D%0ADESCRIPTION%3ASource%3A%20CMAA%20NorCal%5Cnhttps%3A//www.cmaanorcal.org/events-1/meet-the-primes-in-person-networking-event-4%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="meet-the-primes-in-person-networking-event.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Diego"
+  data-region="San Diego"
+  data-date="2026-08-11"
+  data-new="true"
+  style="--tint: #e095b1;">
+  <div class="event-date">
+    <div class="day">11</div>
+    <div class="dow">Tue</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://www.bomasd.org/calendar_list.asp" target="_blank" rel="noopener">August Membership Luncheon</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #e095b1;">San Diego</span>
+      <span class="meta-item source-tag">BOMA San Diego</span>
+      
+      <span class="meta-item time-badge">11:00 AM</span>
+      <span class="meta-item location">Farmer &amp;amp; The Seahorse, 10996 Torreyana Rd Ste 240, San Diego, CA</span>
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Ab7512d5c9fbf0d7c084922a48300622d%40bd-events%0D%0ASUMMARY%3AAugust%20Membership%20Luncheon%0D%0ADTSTART%3A20260811T110000Z%0D%0ADTEND%3A20260811T130000Z%0D%0ALOCATION%3AFarmer%20%26amp%5C%3B%20The%20Seahorse%5C%2C%2010996%20Torreyana%20Rd%20Ste%20240%5C%2C%20San%20Diego%5C%2C%20CA%0D%0AURL%3Ahttps%3A//www.bomasd.org/calendar_list.asp%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Diego%5Cnhttps%3A//www.bomasd.org/calendar_list.asp%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="august-membership-luncheon.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Diego"
+  data-region="Sacramento"
+  data-date="2026-08-11"
+  data-new="true"
+  style="--tint: #d8c873;">
+  <div class="event-date">
+    <div class="day">11</div>
+    <div class="dow">Tue</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://www.bomasd.org/calendar_list.asp" target="_blank" rel="noopener">California Commercial Real Estate Summit</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #d8c873;">Sacramento</span>
+      <span class="meta-item source-tag">BOMA San Diego</span>
+      <span class="meta-item time-badge">Aug 11 – 12</span>
+      
+      <span class="meta-item location">Hyatt Regency, Downtown Sancramento , Sacramento, CA</span>
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Aedfdf847523ed52fc0eece729de7d612%40bd-events%0D%0ASUMMARY%3ACalifornia%20Commercial%20Real%20Estate%20Summit%0D%0ADTSTART%3A20260811T130000Z%0D%0ADTEND%3A20260812T173000Z%0D%0ALOCATION%3AHyatt%20Regency%5C%2C%20Downtown%20Sancramento%20%5C%2C%20Sacramento%5C%2C%20CA%0D%0AURL%3Ahttps%3A//www.bomasd.org/calendar_list.asp%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Diego%5Cnhttps%3A//www.bomasd.org/calendar_list.asp%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="california-commercial-real-estate-summit.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Diego"
+  data-region="Online"
+  data-date="2026-08-19"
+  data-new="true"
+  style="--tint: #b9a3d6;">
+  <div class="event-date">
+    <div class="day">19</div>
+    <div class="dow">Wed</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://www.bomasd.org/calendar_list.asp" target="_blank" rel="noopener">Environmental Health &amp; Safety</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #b9a3d6;">Online</span>
+      <span class="meta-item source-tag">BOMA San Diego</span>
+      <span class="meta-item time-badge">Aug 19 – 21</span>
+      
+      <span class="meta-item location">Online, CA</span>
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A891329cd025188c3d23aa20238201793%40bd-events%0D%0ASUMMARY%3AEnvironmental%20Health%20%26%20Safety%0D%0ADTSTART%3A20260819T080000Z%0D%0ADTEND%3A20260821T170000Z%0D%0ALOCATION%3AOnline%5C%2C%20CA%0D%0AURL%3Ahttps%3A//www.bomasd.org/calendar_list.asp%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Diego%5Cnhttps%3A//www.bomasd.org/calendar_list.asp%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="environmental-health-safety.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="NAIOP SF Bay Area"
+  data-region="Bay Area"
+  data-date="2026-08-19"
+  data-new="true"
+  style="--tint: #a8b2c4;">
+  <div class="event-date">
+    <div class="day">19</div>
+    <div class="dow">Wed</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://members.naiopsfba.org/event-calendar/Details/real-estate-insider-350-california-the-state-of-the-sf-office-market-1741611?sourceTypeId=Website" target="_blank" rel="noopener">Real Estate Insider: 350 California &amp; the State of the SF Office Market</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #a8b2c4;">Bay Area</span>
+      <span class="meta-item source-tag">NAIOP SF Bay Area</span>
+      
+      <span class="meta-item time-badge">11:30 AM</span>
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Af5e74ca7340ad9330b1a9abb7bd41770%40bd-events%0D%0ASUMMARY%3AReal%20Estate%20Insider%3A%20350%20California%20%26%20the%20State%20of%20the%20SF%20Office%20Market%0D%0ADTSTART%3A20260819T113000Z%0D%0ADTEND%3A20260819T133000Z%0D%0AURL%3Ahttps%3A//members.naiopsfba.org/event-calendar/Details/real-estate-insider-350-california-the-state-of-the-sf-office-market-1741611%3FsourceTypeId%3DWebsite%0D%0ADESCRIPTION%3ASource%3A%20NAIOP%20SF%20Bay%20Area%5Cnhttps%3A//members.naiopsfba.org/event-calendar/Details/real-estate-insider-350-california-the-state-of-the-sf-office-market-1741611%3FsourceTypeId%3DWebsite%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="real-estate-insider-350-california-the-state-of-.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-08-20"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">20</div>
+    <div class="dow">Thu</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">Emerging Professionals Summer Mixer</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Ae3141a90d6a133ac0d6b707acc372342%40bd-events%0D%0ASUMMARY%3AEmerging%20Professionals%20Summer%20Mixer%0D%0ADTSTART%3BVALUE%3DDATE%3A20260820%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="emerging-professionals-summer-mixer.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="NAIOP SF Bay Area"
+  data-region="Bay Area"
+  data-date="2026-08-20"
+  data-new="true"
+  style="--tint: #a8b2c4;">
+  <div class="event-date">
+    <div class="day">20</div>
+    <div class="dow">Thu</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://members.naiopsfba.org/event-calendar/Details/pickleball-social-2026-1747403?sourceTypeId=Website" target="_blank" rel="noopener">Pickleball Social 2026</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #a8b2c4;">Bay Area</span>
+      <span class="meta-item source-tag">NAIOP SF Bay Area</span>
+      
+      <span class="meta-item time-badge">3:00 PM</span>
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A4a3d5325c09e5e3c4142864a7551fc44%40bd-events%0D%0ASUMMARY%3APickleball%20Social%202026%0D%0ADTSTART%3A20260820T150000Z%0D%0ADTEND%3A20260820T183000Z%0D%0AURL%3Ahttps%3A//members.naiopsfba.org/event-calendar/Details/pickleball-social-2026-1747403%3FsourceTypeId%3DWebsite%0D%0ADESCRIPTION%3ASource%3A%20NAIOP%20SF%20Bay%20Area%5Cnhttps%3A//members.naiopsfba.org/event-calendar/Details/pickleball-social-2026-1747403%3FsourceTypeId%3DWebsite%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="pickleball-social-2026.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-08-27"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">27</div>
+    <div class="dow">Thu</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">Life Safety &amp; Security Seminar</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A6714ecee5a2101b0b06dcb7116996d6b%40bd-events%0D%0ASUMMARY%3ALife%20Safety%20%26%20Security%20Seminar%0D%0ADTSTART%3BVALUE%3DDATE%3A20260827%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="life-safety-security-seminar.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
     </div>
   </div>
 </article>
@@ -768,6 +1268,50 @@ footer a:hover { text-decoration: underline; }
   </div>
 </article></section>
 <section class="month-section" data-month="2026-09"><h2 class="month-header"><span>September 2026</span></h2><article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-09-02"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">2</div>
+    <div class="dow">Wed</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">BOMA Java</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Ab9371b3c35185797e2a419222f2fcb78%40bd-events%0D%0ASUMMARY%3ABOMA%20Java%0D%0ADTSTART%3BVALUE%3DDATE%3A20260902%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="boma-java.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Diego"
+  data-region="San Diego"
+  data-date="2026-09-09"
+  data-new="true"
+  style="--tint: #e095b1;">
+  <div class="event-date">
+    <div class="day">9</div>
+    <div class="dow">Wed</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://www.bomasd.org/calendar_list.asp" target="_blank" rel="noopener">BOMA Basics (For Associates)</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #e095b1;">San Diego</span>
+      <span class="meta-item source-tag">BOMA San Diego</span>
+      
+      <span class="meta-item time-badge">9:00 AM</span>
+      <span class="meta-item location">San Diego, CA</span>
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A448fece2a1e7035a07236931ee5f52d8%40bd-events%0D%0ASUMMARY%3ABOMA%20Basics%20%28For%20Associates%29%0D%0ADTSTART%3A20260909T090000Z%0D%0ADTEND%3A20260909T103000Z%0D%0ALOCATION%3ASan%20Diego%5C%2C%20CA%0D%0AURL%3Ahttps%3A//www.bomasd.org/calendar_list.asp%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Diego%5Cnhttps%3A//www.bomasd.org/calendar_list.asp%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="boma-basics-for-associates.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
   data-source="AIA San Francisco"
   data-region="San Francisco"
   data-date="2026-09-10"
@@ -786,6 +1330,28 @@ footer a:hover { text-decoration: underline; }
       
       <span class="meta-item location">None</span>
       <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Ad0e29323a0866a48272aaabeb82bb626%40bd-events%0D%0ASUMMARY%3AAIASF%3A%2023rd%20Annual%20Architecture%20%2B%20City%20Festival%0D%0ADTSTART%3BVALUE%3DDATE%3A20260910%0D%0ADTEND%3BVALUE%3DDATE%3A20260928%0D%0ALOCATION%3ANone%0D%0AURL%3Ahttps%3A//www.aiasf.org/events/2026-architecture--city-the-city-festival-%0D%0ADESCRIPTION%3ASource%3A%20AIA%20San%20Francisco%5Cnhttps%3A//www.aiasf.org/events/2026-architecture--city-the-city-festival-%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="aiasf-23rd-annual-architecture-city-festival.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-09-14"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">14</div>
+    <div class="dow">Mon</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">Annual Elmer Johnson Golf Tournament</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A4683aebb6498f439522b917eb9ec6958%40bd-events%0D%0ASUMMARY%3AAnnual%20Elmer%20Johnson%20Golf%20Tournament%0D%0ADTSTART%3BVALUE%3DDATE%3A20260914%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="annual-elmer-johnson-golf-tournament.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
     </div>
   </div>
 </article>
@@ -834,6 +1400,72 @@ footer a:hover { text-decoration: underline; }
   </div>
 </article>
 <article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-09-17"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">17</div>
+    <div class="dow">Thu</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">CREATE Celebration</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Aa11fe5019b813f351732343957bb4444%40bd-events%0D%0ASUMMARY%3ACREATE%20Celebration%0D%0ADTSTART%3BVALUE%3DDATE%3A20260917%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="create-celebration.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Diego"
+  data-region="San Diego"
+  data-date="2026-09-23"
+  data-new="true"
+  style="--tint: #e095b1;">
+  <div class="event-date">
+    <div class="day">23</div>
+    <div class="dow">Wed</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://www.bomasd.org/calendar_list.asp" target="_blank" rel="noopener">Principal Member Download</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #e095b1;">San Diego</span>
+      <span class="meta-item source-tag">BOMA San Diego</span>
+      
+      <span class="meta-item time-badge">8:00 AM</span>
+      <span class="meta-item location">MODA - BioMed Realty, 5555 Oberlin Dr, San Diego, CA</span>
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Ac3c7a298f969437762fb63b5c580c2e6%40bd-events%0D%0ASUMMARY%3APrincipal%20Member%20Download%0D%0ADTSTART%3A20260923T080000Z%0D%0ADTEND%3A20260923T110000Z%0D%0ALOCATION%3AMODA%20-%20BioMed%20Realty%5C%2C%205555%20Oberlin%20Dr%5C%2C%20San%20Diego%5C%2C%20CA%0D%0AURL%3Ahttps%3A//www.bomasd.org/calendar_list.asp%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Diego%5Cnhttps%3A//www.bomasd.org/calendar_list.asp%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="principal-member-download.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-09-24"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">24</div>
+    <div class="dow">Thu</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">PAC Spirits Tasting Experience</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A9ee48b613cee9f3d95d8962969ce1b82%40bd-events%0D%0ASUMMARY%3APAC%20Spirits%20Tasting%20Experience%0D%0ADTSTART%3BVALUE%3DDATE%3A20260924%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="pac-spirits-tasting-experience.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
   data-source="IIDA Northern California"
   data-region="Bay Area"
   data-date="2026-09-24"
@@ -854,8 +1486,118 @@ footer a:hover { text-decoration: underline; }
       <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Ac95d9a81eebdf3ca929e2bf325ce55fa%40bd-events%0D%0ASUMMARY%3ADesign%20Expo%0D%0ADTSTART%3BVALUE%3DDATE%3A20260924%0D%0AURL%3Ahttps%3A//iidanc.org/events/silicon-valley-design-expo/%0D%0ADESCRIPTION%3ASource%3A%20IIDA%20Northern%20California%5Cnhttps%3A//iidanc.org/events/silicon-valley-design-expo/%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="design-expo.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
     </div>
   </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-09-30"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">30</div>
+    <div class="dow">Wed</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">BOMA Block Party</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A2b10bfd983f3b6b17ae652c98999a334%40bd-events%0D%0ASUMMARY%3ABOMA%20Block%20Party%0D%0ADTSTART%3BVALUE%3DDATE%3A20260930%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="boma-block-party.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="NAIOP SF Bay Area"
+  data-region="Bay Area"
+  data-date="2026-09-30"
+  data-new="true"
+  style="--tint: #a8b2c4;">
+  <div class="event-date">
+    <div class="day">30</div>
+    <div class="dow">Wed</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://members.naiopsfba.org/event-calendar/Details/dealmakers-uncorked-1760474?sourceTypeId=Website" target="_blank" rel="noopener">DealMakers Uncorked</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #a8b2c4;">Bay Area</span>
+      <span class="meta-item source-tag">NAIOP SF Bay Area</span>
+      
+      <span class="meta-item time-badge">4:00 PM</span>
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A2d258e3215b00e299dd75ed66e03856d%40bd-events%0D%0ASUMMARY%3ADealMakers%20Uncorked%0D%0ADTSTART%3A20260930T160000Z%0D%0ADTEND%3A20260930T190000Z%0D%0AURL%3Ahttps%3A//members.naiopsfba.org/event-calendar/Details/dealmakers-uncorked-1760474%3FsourceTypeId%3DWebsite%0D%0ADESCRIPTION%3ASource%3A%20NAIOP%20SF%20Bay%20Area%5Cnhttps%3A//members.naiopsfba.org/event-calendar/Details/dealmakers-uncorked-1760474%3FsourceTypeId%3DWebsite%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="dealmakers-uncorked.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
 </article></section>
 <section class="month-section" data-month="2026-10"><h2 class="month-header"><span>October 2026</span></h2><article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-10-07"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">7</div>
+    <div class="dow">Wed</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">DEI Candid Conversation</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A730c972ce14da2194f9e46f8b0f4a417%40bd-events%0D%0ASUMMARY%3ADEI%20Candid%20Conversation%0D%0ADTSTART%3BVALUE%3DDATE%3A20261007%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="dei-candid-conversation.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Diego"
+  data-region="Online"
+  data-date="2026-10-07"
+  data-new="true"
+  style="--tint: #b9a3d6;">
+  <div class="event-date">
+    <div class="day">7</div>
+    <div class="dow">Wed</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://www.bomasd.org/calendar_list.asp" target="_blank" rel="noopener">Design, Operation and Maintenance of Building Systems Part I</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #b9a3d6;">Online</span>
+      <span class="meta-item source-tag">BOMA San Diego</span>
+      <span class="meta-item time-badge">Oct 7 – 9</span>
+      
+      <span class="meta-item location">Online, CA</span>
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A67fa2c71f81a6d5533f73c705aa95d2d%40bd-events%0D%0ASUMMARY%3ADesign%5C%2C%20Operation%20and%20Maintenance%20of%20Building%20Systems%20Part%20I%0D%0ADTSTART%3A20261007T080000Z%0D%0ADTEND%3A20261009T170000Z%0D%0ALOCATION%3AOnline%5C%2C%20CA%0D%0AURL%3Ahttps%3A//www.bomasd.org/calendar_list.asp%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Diego%5Cnhttps%3A//www.bomasd.org/calendar_list.asp%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="design-operation-and-maintenance-of-building-sys.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Diego"
+  data-region="San Diego"
+  data-date="2026-10-07"
+  data-new="true"
+  style="--tint: #e095b1;">
+  <div class="event-date">
+    <div class="day">7</div>
+    <div class="dow">Wed</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://www.bomasd.org/calendar_list.asp" target="_blank" rel="noopener">Annual Joint Expo: BOMA, IFMA, IREM, &amp; SDBEA</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #e095b1;">San Diego</span>
+      <span class="meta-item source-tag">BOMA San Diego</span>
+      
+      <span class="meta-item time-badge">4:00 PM</span>
+      <span class="meta-item location">Center for Novel Therapeutics, a BioMed Property, 9310 Athena Circle, La Jolla, </span>
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A58e0774213b4f4d8f69ff94215113e88%40bd-events%0D%0ASUMMARY%3AAnnual%20Joint%20Expo%3A%20BOMA%5C%2C%20IFMA%5C%2C%20IREM%5C%2C%20%26%20SDBEA%0D%0ADTSTART%3A20261007T160000Z%0D%0ADTEND%3A20261007T190000Z%0D%0ALOCATION%3ACenter%20for%20Novel%20Therapeutics%5C%2C%20a%20BioMed%20Property%5C%2C%209310%20Athena%20Circle%5C%2C%20La%20Jolla%5C%2C%20CA%0D%0AURL%3Ahttps%3A//www.bomasd.org/calendar_list.asp%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Diego%5Cnhttps%3A//www.bomasd.org/calendar_list.asp%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="annual-joint-expo-boma-ifma-irem-sdbea.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
   data-source="IIDA Northern California"
   data-region="Bay Area"
   data-date="2026-10-09"
@@ -899,6 +1641,50 @@ footer a:hover { text-decoration: underline; }
     </div>
   </div>
 </article>
+<article class="event is-new"
+  data-source="BOMA San Diego"
+  data-region="San Diego"
+  data-date="2026-10-13"
+  data-new="true"
+  style="--tint: #e095b1;">
+  <div class="event-date">
+    <div class="day">13</div>
+    <div class="dow">Tue</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://www.bomasd.org/calendar_list.asp" target="_blank" rel="noopener">October Membership Luncheon</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #e095b1;">San Diego</span>
+      <span class="meta-item source-tag">BOMA San Diego</span>
+      
+      <span class="meta-item time-badge">11:00 AM</span>
+      <span class="meta-item location">Farmer &amp;amp; The Seahorse, 10996 Torreyana Rd Ste 240, San Diego, CA</span>
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Ad0509dd909eececa63d4f40251339a5a%40bd-events%0D%0ASUMMARY%3AOctober%20Membership%20Luncheon%0D%0ADTSTART%3A20261013T110000Z%0D%0ADTEND%3A20261013T130000Z%0D%0ALOCATION%3AFarmer%20%26amp%5C%3B%20The%20Seahorse%5C%2C%2010996%20Torreyana%20Rd%20Ste%20240%5C%2C%20San%20Diego%5C%2C%20CA%0D%0AURL%3Ahttps%3A//www.bomasd.org/calendar_list.asp%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Diego%5Cnhttps%3A//www.bomasd.org/calendar_list.asp%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="october-membership-luncheon.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-10-15"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">15</div>
+    <div class="dow">Thu</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">Annual Meeting &amp; Membership Luncheon</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A5dba07903858c64b69f90e3da5aeac85%40bd-events%0D%0ASUMMARY%3AAnnual%20Meeting%20%26%20Membership%20Luncheon%0D%0ADTSTART%3BVALUE%3DDATE%3A20261015%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="annual-meeting-membership-luncheon.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
 <article class="event"
   data-source="NAIOP Silicon Valley"
   data-region="Silicon Valley"
@@ -918,6 +1704,50 @@ footer a:hover { text-decoration: underline; }
       <span class="meta-item time-badge">11:00 AM</span>
       <span class="meta-item location">Cinnabar Hills Golf Club, 23600 McKean Rd., San Jose, CA, 95141, United States</span>
       <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A88e5365d29f7bb49df1eefd364272697%40bd-events%0D%0ASUMMARY%3A2026%20NAIOP%20Silicon%20Valley%20Annual%20Golf%20Tournament%0D%0ADTSTART%3A20261021T110000Z%0D%0ADTEND%3A20261021T190000Z%0D%0ALOCATION%3ACinnabar%20Hills%20Golf%20Club%5C%2C%2023600%20McKean%20Rd.%5C%2C%20San%20Jose%5C%2C%20CA%5C%2C%2095141%5C%2C%20United%20States%0D%0AURL%3Ahttps%3A//naiopsv.org/event/2026golftournament/%0D%0ADESCRIPTION%3ASource%3A%20NAIOP%20Silicon%20Valley%5Cnhttps%3A//naiopsv.org/event/2026golftournament/%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="2026-naiop-silicon-valley-annual-golf-tournament.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Diego"
+  data-region="San Diego"
+  data-date="2026-10-22"
+  data-new="true"
+  style="--tint: #e095b1;">
+  <div class="event-date">
+    <div class="day">22</div>
+    <div class="dow">Thu</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://www.bomasd.org/calendar_list.asp" target="_blank" rel="noopener">Emerging Professionals Evening Event</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #e095b1;">San Diego</span>
+      <span class="meta-item source-tag">BOMA San Diego</span>
+      
+      <span class="meta-item time-badge">4:00 PM</span>
+      <span class="meta-item location">Stone Brewing Liberty Station, 2816 Historic Decatur Rd UNIT 116, San Diego, CA</span>
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A09c54059e64634471618627c2bf98721%40bd-events%0D%0ASUMMARY%3AEmerging%20Professionals%20Evening%20Event%0D%0ADTSTART%3A20261022T160000Z%0D%0ADTEND%3A20261022T190000Z%0D%0ALOCATION%3AStone%20Brewing%20Liberty%20Station%5C%2C%202816%20Historic%20Decatur%20Rd%20UNIT%20116%5C%2C%20San%20Diego%5C%2C%20CA%0D%0AURL%3Ahttps%3A//www.bomasd.org/calendar_list.asp%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Diego%5Cnhttps%3A//www.bomasd.org/calendar_list.asp%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="emerging-professionals-evening-event.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-10-28"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">28</div>
+    <div class="dow">Wed</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">BOMA Java</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Ae8951c3d154235d3424dec29682f1ed2%40bd-events%0D%0ASUMMARY%3ABOMA%20Java%0D%0ADTSTART%3BVALUE%3DDATE%3A20261028%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="boma-java.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
     </div>
   </div>
 </article>
@@ -944,6 +1774,72 @@ footer a:hover { text-decoration: underline; }
   </div>
 </article></section>
 <section class="month-section" data-month="2026-11"><h2 class="month-header"><span>November 2026</span></h2><article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-11-05"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">5</div>
+    <div class="dow">Thu</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">DEI Social Event</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Aeb89654eba3439db59fc154f44215f0f%40bd-events%0D%0ASUMMARY%3ADEI%20Social%20Event%0D%0ADTSTART%3BVALUE%3DDATE%3A20261105%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="dei-social-event.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Diego"
+  data-region="San Diego"
+  data-date="2026-11-05"
+  data-new="true"
+  style="--tint: #e095b1;">
+  <div class="event-date">
+    <div class="day">5</div>
+    <div class="dow">Thu</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://www.bomasd.org/calendar_list.asp" target="_blank" rel="noopener">CBPA Awards Summit &amp; BOMA Cal Board Meeting</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #e095b1;">San Diego</span>
+      <span class="meta-item source-tag">BOMA San Diego</span>
+      
+      <span class="meta-item time-badge">3:00 PM</span>
+      <span class="meta-item location">Southern California, CA</span>
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Abb84a20a3b9ac0f9b8a2b0530cf60ba5%40bd-events%0D%0ASUMMARY%3ACBPA%20Awards%20Summit%20%26%20BOMA%20Cal%20Board%20Meeting%0D%0ADTSTART%3A20261105T150000Z%0D%0ADTEND%3A20261105T190000Z%0D%0ALOCATION%3ASouthern%20California%5C%2C%20CA%0D%0AURL%3Ahttps%3A//www.bomasd.org/calendar_list.asp%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Diego%5Cnhttps%3A//www.bomasd.org/calendar_list.asp%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="cbpa-awards-summit-boma-cal-board-meeting.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-11-10"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">10</div>
+    <div class="dow">Tue</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">Codes Seminar</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Aa8ab2c1d4e9dad4296af6560b2450285%40bd-events%0D%0ASUMMARY%3ACodes%20Seminar%0D%0ADTSTART%3BVALUE%3DDATE%3A20261110%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="codes-seminar.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
   data-source="CMAA NorCal"
   data-region="Bay Area"
   data-date="2026-11-14"
@@ -964,8 +1860,74 @@ footer a:hover { text-decoration: underline; }
       <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A7c3138d465b12ce0e038aa983ae71e58%40bd-events%0D%0ASUMMARY%3ACMAA%20Rising%20CM%20Conference%20%7C%20Save%20the%20Date%0D%0ADTSTART%3BVALUE%3DDATE%3A20261114%0D%0ALOCATION%3ACalifornia%20State%20Polytechnic%20University%5C%2C%0D%0AURL%3Ahttps%3A//www.cmaanorcal.org/events-1/cmaa-rising-cm-conference-save-the-date%0D%0ADESCRIPTION%3ASource%3A%20CMAA%20NorCal%5Cnhttps%3A//www.cmaanorcal.org/events-1/cmaa-rising-cm-conference-save-the-date%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="cmaa-rising-cm-conference-save-the-date.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
     </div>
   </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-11-19"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">19</div>
+    <div class="dow">Thu</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">EP Career Success Workshop</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A7ffb96bf4b89a65a272995e9184408d6%40bd-events%0D%0ASUMMARY%3AEP%20Career%20Success%20Workshop%0D%0ADTSTART%3BVALUE%3DDATE%3A20261119%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="ep-career-success-workshop.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Diego"
+  data-region="San Diego"
+  data-date="2026-11-20"
+  data-new="true"
+  style="--tint: #e095b1;">
+  <div class="event-date">
+    <div class="day">20</div>
+    <div class="dow">Fri</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://www.bomasd.org/calendar_list.asp" target="_blank" rel="noopener">Annual Membership Awards &amp; TOBY Gala</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #e095b1;">San Diego</span>
+      <span class="meta-item source-tag">BOMA San Diego</span>
+      
+      <span class="meta-item time-badge">4:00 PM</span>
+      <span class="meta-item location">Rancho Bernardo Inn - Aragon Lawn &amp;amp; Ballroom, 17550 Bernardo Oaks Drive, San</span>
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A1d4a30e6ffe847d0584d591a22018141%40bd-events%0D%0ASUMMARY%3AAnnual%20Membership%20Awards%20%26%20TOBY%20Gala%0D%0ADTSTART%3A20261120T160000Z%0D%0ADTEND%3A20261120T220000Z%0D%0ALOCATION%3ARancho%20Bernardo%20Inn%20-%20Aragon%20Lawn%20%26amp%5C%3B%20Ballroom%5C%2C%2017550%20Bernardo%20Oaks%20Drive%5C%2C%20San%20Diego%5C%2C%20CA%0D%0AURL%3Ahttps%3A//www.bomasd.org/calendar_list.asp%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Diego%5Cnhttps%3A//www.bomasd.org/calendar_list.asp%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="annual-membership-awards-toby-gala.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
 </article></section>
-<section class="month-section" data-month="2026-12"><h2 class="month-header"><span>December 2026</span></h2><article class="event"
+<section class="month-section" data-month="2026-12"><h2 class="month-header"><span>December 2026</span></h2><article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-12-03"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">3</div>
+    <div class="dow">Thu</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">Holiday Party</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A3c62390ffc756e751f43165408c74284%40bd-events%0D%0ASUMMARY%3AHoliday%20Party%0D%0ADTSTART%3BVALUE%3DDATE%3A20261203%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="holiday-party.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event"
   data-source="CMAA NorCal"
   data-region="East Bay"
   data-date="2026-12-08"
@@ -984,6 +1946,28 @@ footer a:hover { text-decoration: underline; }
       
       <span class="meta-item location">Gibsons Irish Pub</span>
       <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Adcd25f422c61091b1331e6eeccf7c98b%40bd-events%0D%0ASUMMARY%3AHoliday%20Mixer%20-%20Walnut%20Creek%0D%0ADTSTART%3BVALUE%3DDATE%3A20261208%0D%0ALOCATION%3AGibsons%20Irish%20Pub%0D%0AURL%3Ahttps%3A//www.cmaanorcal.org/events-1/holiday-mixer-walnut-creek-1%0D%0ADESCRIPTION%3ASource%3A%20CMAA%20NorCal%5Cnhttps%3A//www.cmaanorcal.org/events-1/holiday-mixer-walnut-creek-1%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="holiday-mixer-walnut-creek.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Diego"
+  data-region="San Diego"
+  data-date="2026-12-08"
+  data-new="true"
+  style="--tint: #e095b1;">
+  <div class="event-date">
+    <div class="day">8</div>
+    <div class="dow">Tue</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://www.bomasd.org/calendar_list.asp" target="_blank" rel="noopener">December Membership Luncheon</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #e095b1;">San Diego</span>
+      <span class="meta-item source-tag">BOMA San Diego</span>
+      
+      <span class="meta-item time-badge">10:00 AM</span>
+      <span class="meta-item location">Farmer &amp;amp; The Seahorse, 10996 Torreyana Rd Ste 240, San Diego, CA</span>
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Affccc79b2ba5e07250bd64b10206eda9%40bd-events%0D%0ASUMMARY%3ADecember%20Membership%20Luncheon%0D%0ADTSTART%3A20261208T100000Z%0D%0ADTEND%3A20261208T130000Z%0D%0ALOCATION%3AFarmer%20%26amp%5C%3B%20The%20Seahorse%5C%2C%2010996%20Torreyana%20Rd%20Ste%20240%5C%2C%20San%20Diego%5C%2C%20CA%0D%0AURL%3Ahttps%3A//www.bomasd.org/calendar_list.asp%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Diego%5Cnhttps%3A//www.bomasd.org/calendar_list.asp%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="december-membership-luncheon.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
     </div>
   </div>
 </article>
@@ -1008,7 +1992,183 @@ footer a:hover { text-decoration: underline; }
       <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A54498fa03c02e370d279930079c7dae3%40bd-events%0D%0ASUMMARY%3AHoliday%20Mixer%20-%20Sacramento%0D%0ADTSTART%3BVALUE%3DDATE%3A20261210%0D%0ALOCATION%3AMIX%20Downtown%0D%0AURL%3Ahttps%3A//www.cmaanorcal.org/events-1/holiday-mixer-sacramento-5%0D%0ADESCRIPTION%3ASource%3A%20CMAA%20NorCal%5Cnhttps%3A//www.cmaanorcal.org/events-1/holiday-mixer-sacramento-5%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="holiday-mixer-sacramento.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
     </div>
   </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-12-16"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">16</div>
+    <div class="dow">Wed</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">Coffee with a Cop</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A7b04d4ab54bd73952a48bbb168c7d507%40bd-events%0D%0ASUMMARY%3ACoffee%20with%20a%20Cop%0D%0ADTSTART%3BVALUE%3DDATE%3A20261216%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="coffee-with-a-cop.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
 </article></section>
+    <details class="past-archive"><summary>Recently passed <span class="count">7</span></summary><article class="event is-new"
+  data-source="BOMA San Diego"
+  data-region="Online"
+  data-date="2026-06-10"
+  data-new="true"
+  style="--tint: #b9a3d6;">
+  <div class="event-date">
+    <div class="day">10</div>
+    <div class="dow">Wed</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://www.bomasd.org/calendar_list.asp" target="_blank" rel="noopener">Budgeting &amp; Accounting</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #b9a3d6;">Online</span>
+      <span class="meta-item source-tag">BOMA San Diego</span>
+      <span class="meta-item time-badge">Jun 10 – 12</span>
+      
+      <span class="meta-item location">Online, CA</span>
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Adbb792413656c820f0a0f675d803f103%40bd-events%0D%0ASUMMARY%3ABudgeting%20%26%20Accounting%0D%0ADTSTART%3A20260610T080000Z%0D%0ADTEND%3A20260612T170000Z%0D%0ALOCATION%3AOnline%5C%2C%20CA%0D%0AURL%3Ahttps%3A//www.bomasd.org/calendar_list.asp%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Diego%5Cnhttps%3A//www.bomasd.org/calendar_list.asp%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="budgeting-accounting.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="AIA San Francisco"
+  data-region="San Diego"
+  data-date="2026-06-10"
+  data-new="true"
+  style="--tint: #e095b1;">
+  <div class="event-date">
+    <div class="day">10</div>
+    <div class="dow">Wed</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://www.aiasf.org/events/aia-conference-on-architecture-and-design2026" target="_blank" rel="noopener">AIASF: AIA Conference on Architecture &amp; Design®2026</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #e095b1;">San Diego</span>
+      <span class="meta-item source-tag">AIA San Francisco</span>
+      <span class="meta-item time-badge">Jun 10 – 13</span>
+      
+      <span class="meta-item location">San Diego, California</span>
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A227bd27961c37536a50b3996ac02c26b%40bd-events%0D%0ASUMMARY%3AAIASF%3A%20AIA%20Conference%20on%20Architecture%20%26%20Design%C2%AE2026%0D%0ADTSTART%3BVALUE%3DDATE%3A20260610%0D%0ADTEND%3BVALUE%3DDATE%3A20260614%0D%0ALOCATION%3ASan%20Diego%5C%2C%20California%0D%0AURL%3Ahttps%3A//www.aiasf.org/events/aia-conference-on-architecture-and-design2026%0D%0ADESCRIPTION%3ASource%3A%20AIA%20San%20Francisco%5Cnhttps%3A//www.aiasf.org/events/aia-conference-on-architecture-and-design2026%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="aiasf-aia-conference-on-architecture-design-2026.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="Lean Construction Institute"
+  data-region="Bay Area"
+  data-date="2026-06-10"
+  data-new="true"
+  style="--tint: #a8b2c4;">
+  <div class="event-date">
+    <div class="day">10</div>
+    <div class="dow">Wed</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=NCA061026&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">Project Walk: Sutter Medical Center - 42 Bed Expansion Gemba</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #a8b2c4;">Bay Area</span>
+      <span class="meta-item source-tag">Lean Construction Institute</span>
+      
+      
+      <span class="meta-item location">Northern California Community of Practice</span>
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A36707ad84595c4fd415acc1ce9031e95%40bd-events%0D%0ASUMMARY%3AProject%20Walk%3A%20Sutter%20Medical%20Center%20-%2042%20Bed%20Expansion%20Gemba%0D%0ADTSTART%3BVALUE%3DDATE%3A20260610%0D%0ALOCATION%3ANorthern%20California%20Community%20of%20Practice%0D%0AURL%3Ahttps%3A//mylci.leanconstruction.org/LCI/Events/Event_display.aspx%3FEventKey%3DNCA061026%26WebsiteKey%3D2007eced-50c6-4f09-8b60-274f701143bf%0D%0ADESCRIPTION%3ASource%3A%20Lean%20Construction%20Institute%5Cnhttps%3A//mylci.leanconstruction.org/LCI/Events/Event_display.aspx%3FEventKey%3DNCA061026%26WebsiteKey%3D2007eced-50c6-4f09-8b60-274f701143bf%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="project-walk-sutter-medical-center-42-bed-expans.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-06-10"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">10</div>
+    <div class="dow">Wed</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">Education Seminar - Mechanical Systems 101: Speak the Language of Your Engineers</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A72a2ced1c3b45b9eaf76c2736c6c2f78%40bd-events%0D%0ASUMMARY%3AEducation%20Seminar%20-%20Mechanical%20Systems%20101%3A%20Speak%20the%20Language%20of%20Your%20Engineers%0D%0ADTSTART%3BVALUE%3DDATE%3A20260610%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="education-seminar-mechanical-systems-101-speak-t.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="San Diego BIA"
+  data-region="San Diego"
+  data-date="2026-06-09"
+  data-new="true"
+  style="--tint: #e095b1;">
+  <div class="event-date">
+    <div class="day">9</div>
+    <div class="dow">Tue</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://biasandiego.org/vehicle-miles-traveled-mitigation-updates-and-related-ceqa-exemption-item-9/" target="_blank" rel="noopener">Vehicle Miles Traveled Mitigation Updates and Related CEQA Exemption (Item 9)</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #e095b1;">San Diego</span>
+      <span class="meta-item source-tag">San Diego BIA</span>
+      
+      <span class="meta-item time-badge">4:54 PM</span>
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A24fe681cec849da52bb3806a5d4400ad%40bd-events%0D%0ASUMMARY%3AVehicle%20Miles%20Traveled%20Mitigation%20Updates%20and%20Related%20CEQA%20Exemption%20%28Item%209%29%0D%0ADTSTART%3A20260609T165402Z%0D%0AURL%3Ahttps%3A//biasandiego.org/vehicle-miles-traveled-mitigation-updates-and-related-ceqa-exemption-item-9/%0D%0ADESCRIPTION%3ASource%3A%20San%20Diego%20BIA%5Cnhttps%3A//biasandiego.org/vehicle-miles-traveled-mitigation-updates-and-related-ceqa-exemption-item-9/%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="vehicle-miles-traveled-mitigation-updates-and-re.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="Lean Construction Institute"
+  data-region="Bay Area"
+  data-date="2026-06-05"
+  data-new="true"
+  style="--tint: #a8b2c4;">
+  <div class="event-date">
+    <div class="day">5</div>
+    <div class="dow">Fri</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=NCA060526&amp;WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf" target="_blank" rel="noopener">The Myths of Multitasking: How Scrum Helps Construction Teams Work Smarter</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #a8b2c4;">Bay Area</span>
+      <span class="meta-item source-tag">Lean Construction Institute</span>
+      
+      
+      <span class="meta-item location">Northern California Community of Practice</span>
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3A6b26ed84d3099304ef2f05e9393de611%40bd-events%0D%0ASUMMARY%3AThe%20Myths%20of%20Multitasking%3A%20How%20Scrum%20Helps%20Construction%20Teams%20Work%20Smarter%0D%0ADTSTART%3BVALUE%3DDATE%3A20260605%0D%0ALOCATION%3ANorthern%20California%20Community%20of%20Practice%0D%0AURL%3Ahttps%3A//mylci.leanconstruction.org/LCI/Events/Event_display.aspx%3FEventKey%3DNCA060526%26WebsiteKey%3D2007eced-50c6-4f09-8b60-274f701143bf%0D%0ADESCRIPTION%3ASource%3A%20Lean%20Construction%20Institute%5Cnhttps%3A//mylci.leanconstruction.org/LCI/Events/Event_display.aspx%3FEventKey%3DNCA060526%26WebsiteKey%3D2007eced-50c6-4f09-8b60-274f701143bf%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="the-myths-of-multitasking-how-scrum-helps-constr.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article>
+<article class="event is-new"
+  data-source="BOMA San Francisco"
+  data-region="San Francisco"
+  data-date="2026-06-04"
+  data-new="true"
+  style="--tint: #7eaee0;">
+  <div class="event-date">
+    <div class="day">4</div>
+    <div class="dow">Thu</div>
+  </div>
+  <div class="event-body">
+    <a class="event-title" href="https://bomasf.org/events/events-calendar" target="_blank" rel="noopener">Emerging Professionals Boat Bash</a><span class="new-badge">NEW</span>
+    <div class="event-meta">
+      <span class="meta-item region-tag" style="--tag-color: #7eaee0;">San Francisco</span>
+      <span class="meta-item source-tag">BOMA San Francisco</span>
+      
+      
+      
+      <a class="meta-item cal-link" href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0D%0AVERSION%3A2.0%0D%0APRODID%3A-//BD%20Events%20Aggregator//bd-events//EN%0D%0ABEGIN%3AVEVENT%0D%0AUID%3Ab6caa4dcb5bdb11e1d23184be99a083b%40bd-events%0D%0ASUMMARY%3AEmerging%20Professionals%20Boat%20Bash%0D%0ADTSTART%3BVALUE%3DDATE%3A20260604%0D%0AURL%3Ahttps%3A//bomasf.org/events/events-calendar%0D%0ADESCRIPTION%3ASource%3A%20BOMA%20San%20Francisco%5Cnhttps%3A//bomasf.org/events/events-calendar%0D%0AEND%3AVEVENT%0D%0AEND%3AVCALENDAR" download="emerging-professionals-boat-bash.ics" title="Download .ics (Outlook / Apple / Google)">+ Calendar</a>
+    </div>
+  </div>
+</article></details>
   </main>
 
   <div id="emptyState" class="empty" style="display: none;">
@@ -1021,7 +2181,7 @@ footer a:hover { text-decoration: underline; }
     Generated automatically by the BD Events Aggregator. The
     <a href="events.ics">.ics calendar feed</a> can be subscribed in Outlook, Apple Calendar, or
     Google Calendar — events refresh on their own every few hours.<br><br>
-    Sources tracked: AIA San Francisco, CMAA NorCal, CSHE, IIDA Northern California, Lean Construction Institute, NAIOP Silicon Valley
+    Sources tracked: AIA San Francisco, BOMA San Diego, BOMA San Francisco, CMAA NorCal, CSHE, IIDA Northern California, Lean Construction Institute, NAIOP SF Bay Area, NAIOP Silicon Valley, San Diego BIA
   </footer>
 </div>
 
@@ -1050,7 +2210,7 @@ footer a:hover { text-decoration: underline; }
       if (filters.new !== 'all' && ev.dataset.new !== 'true') show = false;
       if (search && !ev.innerText.toLowerCase().includes(search)) show = false;
       ev.style.display = show ? '' : 'none';
-      if (show) visible++;
+      if (show && !ev.closest('.past-archive')) visible++;
     });
     document.querySelectorAll('.month-section').forEach(sec => {
       const anyVisible = sec.querySelector('.event:not([style*="display: none"])');
@@ -1098,13 +2258,15 @@ footer a:hover { text-decoration: underline; }
   document.querySelectorAll('.event[data-date]').forEach(ev => {
     const d = new Date(ev.dataset.date + 'T00:00:00');
     const days = Math.round((d - today) / 86400000);
-    let label = null;
+    let label = null, cls = 'soon-badge';
     if (days === 0) label = 'Today';
     else if (days === 1) label = 'Tomorrow';
     else if (days > 1 && days <= 7) label = 'In ' + days + ' days';
+    else if (days === -1) { label = 'Yesterday'; cls = 'ago-badge'; }
+    else if (days < -1) { label = (-days) + ' days ago'; cls = 'ago-badge'; }
     if (label) {
       const chip = document.createElement('span');
-      chip.className = 'meta-item soon-badge';
+      chip.className = 'meta-item ' + cls;
       chip.textContent = label;
       const meta = ev.querySelector('.event-meta');
       meta.insertBefore(chip, meta.firstChild);
