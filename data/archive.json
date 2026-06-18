@@ -111,7 +111,7 @@
 },
 "2fbd44da607fc136e25d251530d64c6f@bd-events": {
 "description": "",
-"end": "2026-06-23T20:00:00-07:00",
+"end": "2026-06-23T19:30:00-07:00",
 "location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
 "source": "AIA San Francisco",
 "source_region": "San Francisco",
@@ -439,6 +439,16 @@
 "title": "~SOLD OUT~Member Appreciation, CMAA in the Outfield, Pirates V. Athletics",
 "url": "https://www.cmaanorcal.org/events-1/sold-out-member-appreciation-cmaa-in-the-outfield-pirates-v-athletics"
 },
+"7aca1e35a04fad6fb06d1cc858b29730@bd-events": {
+"description": "",
+"end": "2026-10-03T12:00:00-07:00",
+"location": "Top Golf Burlingame  258 Anza Boulevard Burlingame, CA 94010 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-10-03T09:30:00-07:00",
+"title": "AIASF: Tee Time Tune-Up",
+"url": "https://www.aiasf.org/events/golf-clinic"
+},
 "7b04d4ab54bd73952a48bbb168c7d507@bd-events": {
 "description": "",
 "end": null,
@@ -468,6 +478,16 @@
 "start": "2026-06-16T00:00:00+00:00",
 "title": "San Francisco\u2019s Ferry Building: The Icon",
 "url": "https://bomasf.org/events/events-calendar"
+},
+"7fb6a7b3ab9d15d85e154af3f3db79a0@bd-events": {
+"description": "",
+"end": null,
+"location": "",
+"source": "CSHE",
+"source_region": "Bay Area",
+"start": "2026-07-09T00:00:00+00:00",
+"title": "San Diego Chapter Meeting | Fire Doors Inspections",
+"url": "https://cshe.org/events/EventDetails.aspx?id=2018870"
 },
 "7ffb96bf4b89a65a272995e9184408d6@bd-events": {
 "description": "",
