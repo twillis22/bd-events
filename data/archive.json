@@ -189,9 +189,19 @@
 "title": "Holiday Party",
 "url": "https://bomasf.org/events/events-calendar"
 },
+"3cc50acfe23acddf53a42ccc313378c8@bd-events": {
+"description": "",
+"end": null,
+"location": "Palo Alto, CA",
+"source": "CoreNet NorCal",
+"source_region": "Bay Area",
+"start": "2026-07-30T00:00:00+00:00",
+"title": "NorCal End User Connection Happy Hour @ Ter\u00fan Pizzeria",
+"url": "https://nocal.corenetglobal.org/events/upcoming-events"
+},
 "42afbec1d6ae7362f9c38203b8d281e7@bd-events": {
 "description": "",
-"end": "2026-06-24T20:00:00-07:00",
+"end": "2026-06-24T19:30:00-07:00",
 "location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
 "source": "AIA San Francisco",
 "source_region": "San Francisco",
@@ -699,6 +709,16 @@
 "title": "BOMA at the Ballpark: Patio Party Only",
 "url": "https://bomasf.org/events/events-calendar"
 },
+"a9e3e6a935a3619a5beff3545524abda@bd-events": {
+"description": "",
+"end": null,
+"location": "",
+"source": "SPIRE Stanford",
+"source_region": "Silicon Valley",
+"start": "2026-06-15T00:00:00+00:00",
+"title": "350 & 450 California Tour with SPIRE \u2013 SF",
+"url": "https://spirestanford.org/inspire_events/350-450-california-tour-with-spire/"
+},
 "add4ec16a1c08601847e827684584906@bd-events": {
 "description": "",
 "end": null,
@@ -728,6 +748,16 @@
 "start": "2026-09-12T00:00:00-07:00",
 "title": "AIASF: 2026 AIASF San Francisco Home Tours",
 "url": "https://www.aiasf.org/events/2026-aiasf-home-tours"
+},
+"af6e90e7ac329c4f4844b63ffb986228@bd-events": {
+"description": "",
+"end": null,
+"location": "",
+"source": "SPIRE Stanford",
+"source_region": "Silicon Valley",
+"start": "2026-06-22T00:00:00+00:00",
+"title": "SPIRE Regional Breakfast \u2013 DC",
+"url": "https://spirestanford.org/inspire_events/spire-regional-breakfast-dc/"
 },
 "b6caa4dcb5bdb11e1d23184be99a083b@bd-events": {
 "description": "",
@@ -909,6 +939,16 @@
 "title": "Emerging Professionals Summer Mixer",
 "url": "https://bomasf.org/events/events-calendar"
 },
+"e585b6560728ee72449c90765da4f5af@bd-events": {
+"description": "",
+"end": "2026-09-26T16:00:00-07:00",
+"location": "None",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-09-26T10:00:00-07:00",
+"title": "AIASF: 2026 AIASF San Francisco Home Tours",
+"url": "https://www.aiasf.org/events/2026-aiasf-home-tours"
+},
 "e8951c3d154235d3424dec29682f1ed2@bd-events": {
 "description": "",
 "end": null,
@@ -978,6 +1018,16 @@
 "start": "2026-08-11T13:00:00+00:00",
 "title": "California Commercial Real Estate Summit",
 "url": "https://www.bomasd.org/calendar_list.asp"
+},
+"f04f3c66e04d08185257b96d5615d39d@bd-events": {
+"description": "",
+"end": null,
+"location": "",
+"source": "CSHE",
+"source_region": "Bay Area",
+"start": "2026-07-16T00:00:00+00:00",
+"title": "San Francisco Chapter | Fireside Chat with the Facility Experts!",
+"url": "https://cshe.org/events/EventDetails.aspx?id=2041304"
 },
 "f2f35cc99d0517ab5d6d60173538614c@bd-events": {
 "description": "Save the Date! Sponsorships/Booths go one sale July 22.",
