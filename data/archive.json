@@ -359,6 +359,16 @@
 "title": "Annual Meeting & Membership Luncheon",
 "url": "https://bomasf.org/events/events-calendar"
 },
+"5e5bd3072d3e7891f5657eef2a63440d@bd-events": {
+"description": "",
+"end": null,
+"location": "ZOOM Webinar",
+"source": "CMAA NorCal",
+"source_region": "Bay Area",
+"start": "2026-07-16T00:00:00+00:00",
+"title": "EDUCATION WEBINAR - Navigating DSA without the Guesswork",
+"url": "https://www.cmaanorcal.org/events-1/education-webinar-navigating-dsa-without-the-guesswork"
+},
 "5f479c623f5b6475c8d39e59cd11121c@bd-events": {
 "description": "",
 "end": null,
@@ -779,16 +789,6 @@
 "title": "SPIRE Regional Breakfast \u2013 DC",
 "url": "https://spirestanford.org/inspire_events/spire-regional-breakfast-dc/"
 },
-"b6caa4dcb5bdb11e1d23184be99a083b@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "BOMA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-06-04T00:00:00+00:00",
-"title": "Emerging Professionals Boat Bash",
-"url": "https://bomasf.org/events/events-calendar"
-},
 "b7512d5c9fbf0d7c084922a48300622d@bd-events": {
 "description": "August Membership Luncheon\n\n&nbsp;Details to come!\n\nWhen: Tuesday, August&nbsp;11th, 11 AM - 1 PM\nWhere: Farmer &amp; The Seahorse | 10996 Torreyana Rd, San Diego, CA 92121\n\nCost: $50 for BOMA Principal members; $110 for BOMA Associate members; $150 non-members\n&nbsp;\nNote: Guests with dietary restrictions/preferences please select vegetarian meal option in registration.&nbsp;\n\n\n",
 "end": "2026-08-11T13:00:00+00:00",
@@ -908,6 +908,16 @@
 "start": "2026-07-08T11:30:00+00:00",
 "title": "Real Estate Insider: A Closer Look at The Rotunda in Downtown Oakland",
 "url": "https://members.naiopsfba.org/event-calendar/Details/real-estate-insider-a-closer-look-at-the-rotunda-in-downtown-oakland-1741640?sourceTypeId=Website"
+},
+"dad94430269f8947d4493395b9d0f12e@bd-events": {
+"description": "",
+"end": "2026-10-22T20:00:00-07:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-10-22T17:30:00-07:00",
+"title": "AIASF: MAKERS series: Lewis Watts + Dewey Crumpler",
+"url": "https://www.aiasf.org/events/makers-series-lewis-watts"
 },
 "dbb792413656c820f0a0f675d803f103@bd-events": {
 "description": "Budgeting &amp; Accounting\n\nThis class will be live, online and a book will be sent to all students.\n\nTimes: 8 a.m. - 5 p.m. each day\n\nInstructor: Richard Wieland\n\nDescription: Budgeting and Accounting features applications and problems you can use to create building and facilities&#39; budgets. In this course, you will have the opportunity to apply concepts within the real property and facilities",
@@ -1050,7 +1060,7 @@
 "url": "https://cshe.org/events/EventDetails.aspx?id=2041304"
 },
 "f2f35cc99d0517ab5d6d60173538614c@bd-events": {
-"description": "Save the Date! Sponsorships/Booths go one sale July 22.",
+"description": "Save the Date! Sponsorships &#38; booths sales open to the general public\u00a0on\u00a0sale July 22. Must be an IIDA Member to purchase a booth.",
 "end": null,
 "location": "",
 "source": "IIDA SoCal",
