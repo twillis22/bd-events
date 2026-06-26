@@ -429,15 +429,15 @@
 "title": "Design, Operation and Maintenance of Building Systems Part I",
 "url": "https://www.bomasd.org/calendar_list.asp"
 },
-"6b26ed84d3099304ef2f05e9393de611@bd-events": {
+"6969f7cad404d1660a8850ca3dae9bf2@bd-events": {
 "description": "",
-"end": null,
-"location": "Northern California Community of Practice",
-"source": "Lean Construction Institute",
-"source_region": "",
-"start": "2026-06-05T00:00:00+00:00",
-"title": "The Myths of Multitasking: How Scrum Helps Construction Teams Work Smarter",
-"url": "https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=NCA060526&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf"
+"end": "2027-02-11T00:00:00-08:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2027-02-10T00:00:00-08:00",
+"title": "AIASF: 2027 Mass Timber Symposium",
+"url": "https://www.aiasf.org/events/mass-timber-symposium-2027"
 },
 "6f5fc3154d2c6c9551742365d39920d1@bd-events": {
 "description": "",
@@ -659,6 +659,16 @@
 "title": "AIASF: Building with Pride Happy Hour",
 "url": "https://www.aiasf.org/events/building-with-pride-happy-hour-"
 },
+"9946786e634f4676eb878aea6cd2300c@bd-events": {
+"description": "",
+"end": null,
+"location": "San Francisco, CA",
+"source": "CoreNet NorCal",
+"source_region": "Bay Area",
+"start": "2026-07-16T00:00:00+00:00",
+"title": "What Drives Bay Area Construction Costs?",
+"url": "https://nocal.corenetglobal.org/events/upcoming-events"
+},
 "9ee48b613cee9f3d95d8962969ce1b82@bd-events": {
 "description": "",
 "end": null,
@@ -778,6 +788,16 @@
 "start": "2026-09-12T00:00:00-07:00",
 "title": "AIASF: 2026 AIASF San Francisco Home Tours",
 "url": "https://www.aiasf.org/events/2026-aiasf-home-tours"
+},
+"ae6b6ee8e5cc93a78c34c31b4f2daf8a@bd-events": {
+"description": "",
+"end": "2026-11-12T21:00:00-08:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-11-12T18:00:00-08:00",
+"title": "AIASF: Small Firms, Great Projects (SFGP) Launch Party + Presentation",
+"url": "https://www.aiasf.org/events/small-firms-great-projects-launch-party--panel-copy"
 },
 "af6e90e7ac329c4f4844b63ffb986228@bd-events": {
 "description": "",
