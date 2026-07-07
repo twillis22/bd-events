@@ -392,7 +392,7 @@
 "65230afcce0edf16eda8bec6f7d8e6f3@bd-events": {
 "description": "",
 "end": null,
-"location": "Location is TBD",
+"location": "Aurora Rooftop",
 "source": "CMAA NorCal",
 "source_region": "Bay Area",
 "start": "2026-08-20T00:00:00+00:00",
@@ -518,16 +518,6 @@
 "start": "2026-11-14T00:00:00+00:00",
 "title": "CMAA Rising CM Conference | Save the Date",
 "url": "https://www.cmaanorcal.org/events-1/cmaa-rising-cm-conference-save-the-date"
-},
-"7dc33ba94f82eda031493f071aa9dc1c@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "BOMA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-06-16T00:00:00+00:00",
-"title": "San Francisco\u2019s Ferry Building: The Icon",
-"url": "https://bomasf.org/events/events-calendar"
 },
 "7fb6a7b3ab9d15d85e154af3f3db79a0@bd-events": {
 "description": "",
@@ -769,6 +759,16 @@
 "title": "SPIRE Regional Breakfast \u2013 DC",
 "url": "https://spirestanford.org/inspire_events/spire-regional-breakfast-dc/"
 },
+"b66223189d25518c6deea474ca86d718@bd-events": {
+"description": "",
+"end": "2026-11-04T18:30:00+00:00",
+"location": "",
+"source": "NAIOP SF Bay Area",
+"source_region": "Bay Area",
+"start": "2026-11-04T15:00:00+00:00",
+"title": "Commercial Real Estate Finance Panel",
+"url": "https://members.naiopsfba.org/event-calendar/Details/commercial-real-estate-finance-panel-1844719?sourceTypeId=Website"
+},
 "b7512d5c9fbf0d7c084922a48300622d@bd-events": {
 "description": "August Membership Luncheon\n\n&nbsp;Details to come!\n\nWhen: Tuesday, August&nbsp;11th, 11 AM - 1 PM\nWhere: Farmer &amp; The Seahorse | 10996 Torreyana Rd, San Diego, CA 92121\n\nCost: $50 for BOMA Principal members; $110 for BOMA Associate members; $150 non-members\n&nbsp;\nNote: Guests with dietary restrictions/preferences please select vegetarian meal option in registration.&nbsp;\n\n\n",
 "end": "2026-08-11T13:00:00+00:00",
@@ -888,6 +888,16 @@
 "start": "2026-08-04T00:00:00+00:00",
 "title": "TOBY Awards Virtual Workshop",
 "url": "https://bomasf.org/events/events-calendar"
+},
+"d708b250f1905c10ec42f0f5080f4e4b@bd-events": {
+"description": "",
+"end": "2027-01-14T18:30:00+00:00",
+"location": "",
+"source": "NAIOP SF Bay Area",
+"source_region": "Bay Area",
+"start": "2027-01-14T13:00:00+00:00",
+"title": "CREDA NorCal Regional Symposium",
+"url": "https://members.naiopsfba.org/event-calendar/Details/creda-norcal-regional-symposium-1844753?sourceTypeId=Website"
 },
 "dac70f300193b5191a59eadc5a241421@bd-events": {
 "description": "",
