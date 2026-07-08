@@ -6,7 +6,7 @@ configured markets. This intentionally drops Long Beach / LA / Orange County /
 out-of-state / global conferences.
 """
 import re
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import List, Optional, Tuple
 
 from bs4 import BeautifulSoup
@@ -93,6 +93,9 @@ class ISPEConferencesScraper(BaseScraper):
                 month, start_day, end_day, year = m.group(5), m.group(6), m.group(7), m.group(8)
             start = ISPEConferencesScraper._parse_dt(f"{month} {start_day}, {year}")
             end = ISPEConferencesScraper._parse_dt(f"{month} {end_day}, {year}")
+            # All-day ranges use exclusive DTEND semantics in the HTML and ICS writers.
+            if end:
+                end = end + timedelta(days=1)
             return start, end
         if _SINGLE_DATE_RE.match(text):
             return ISPEConferencesScraper._parse_dt(text), None
