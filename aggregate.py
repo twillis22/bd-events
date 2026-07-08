@@ -27,6 +27,11 @@ from scrapers.boma_sd import BOMASDScraper
 from scrapers.boma_sf import BOMASFScraper
 from scrapers.naiop_sfba import NAIOPSFBAScraper
 from scrapers.corenet_norcal import CoreNetNorCalScraper
+from scrapers.business_journal import (
+    SanFranciscoBusinessTimesScraper,
+    SiliconValleyBusinessJournalScraper,
+)
+from scrapers.i2sl import I2SLNorCalScraper, I2SLSanDiegoScraper
 
 # Browser scrapers (v2)
 from scrapers.uli_national import ULINationalScraper
@@ -49,6 +54,10 @@ ALL_SCRAPERS: List[Type[BaseScraper]] = [
     BOMASFScraper,
     NAIOPSFBAScraper,
     CoreNetNorCalScraper,
+    SanFranciscoBusinessTimesScraper,
+    SiliconValleyBusinessJournalScraper,
+    I2SLNorCalScraper,
+    I2SLSanDiegoScraper,
     # Browser scrapers
     ULINationalScraper,
     ULISanFranciscoScraper,
