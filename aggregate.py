@@ -32,6 +32,7 @@ from scrapers.business_journal import (
     SiliconValleyBusinessJournalScraper,
 )
 from scrapers.i2sl import I2SLNorCalScraper, I2SLSanDiegoScraper
+from scrapers.ispe import ISPEConferencesScraper
 
 # Browser scrapers (v2)
 from scrapers.uli_national import ULINationalScraper
@@ -58,6 +59,7 @@ ALL_SCRAPERS: List[Type[BaseScraper]] = [
     SiliconValleyBusinessJournalScraper,
     I2SLNorCalScraper,
     I2SLSanDiegoScraper,
+    ISPEConferencesScraper,
     # Browser scrapers
     ULINationalScraper,
     ULISanFranciscoScraper,
