@@ -1,9 +1,9 @@
 """Business Journal event calendars.
 
 The San Francisco Business Times and Silicon Valley Business Journal event pages
-render event cards with detail links under /event/<id>/<year>/<slug>. The detail
-pages expose cleaner date/time/location blocks, so the scraper collects detail
-URLs from the calendar page and parses each detail page.
+expose event dates and titles directly on the calendar listing page. Detail links
+are inconsistent, so listing-page parsing is the primary strategy and detail-page
+parsing remains as a fallback when event detail URLs are present.
 """
 import re
 from datetime import datetime, timedelta, timezone
@@ -18,11 +18,19 @@ from .http import get
 
 
 _EVENT_URL_RE = re.compile(r"/event/\d+/\d{4}/[A-Za-z0-9_-]+")
+_LISTING_DT_RE = re.compile(
+    r"^[A-Z][a-z]+\s+\d{1,2},\s+\d{4}\s+\d{1,2}:\d{2}\s*(?:AM|PM)$",
+    re.IGNORECASE,
+)
 _WEEKDAY_DATE_RE = re.compile(
     r"\b(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),\s+"
     r"[A-Z][a-z]+\s+\d{1,2},\s+\d{4}\b"
 )
 _TIME_RE = re.compile(r"(\d{1,2}:\d{2}\s*(?:am|pm))", re.IGNORECASE)
+_NOISE = {
+    "IN-PERSON", "VIRTUAL", "HYBRID", "Register", "Events Calendar", "Events Newsletter",
+    "Back to Top", "Subscribe", "Nominations", "Event Photos", "Business Events Calendar",
+}
 
 
 class BusinessJournalBaseScraper(BaseScraper):
@@ -35,17 +43,83 @@ class BusinessJournalBaseScraper(BaseScraper):
         if not r or r.status_code != 200:
             return []
         soup = BeautifulSoup(r.text, "html.parser")
-        detail_urls = self._detail_urls(soup)
 
-        events: List[Event] = []
-        for url in detail_urls[: self.max_detail_pages]:
+        events = self._listing_events(soup)
+        seen_keys = {self._event_key(e) for e in events}
+
+        for url in self._detail_urls(soup)[: self.max_detail_pages]:
             try:
                 ev = self._fetch_detail(url)
-                if ev:
+                if ev and self._event_key(ev) not in seen_keys:
                     events.append(ev)
+                    seen_keys.add(self._event_key(ev))
             except Exception as exc:
                 print(f"  [warn] {self.name}: skipping {url}: {exc}")
         return events
+
+    def _listing_events(self, soup: BeautifulSoup) -> List[Event]:
+        lines = self._lines(soup)
+        try:
+            start_idx = lines.index("Events Calendar") + 1
+        except ValueError:
+            start_idx = 0
+        end_idx = len(lines)
+        for marker in ("Events Newsletter", "Find out how our events can impact your business and your career"):
+            if marker in lines[start_idx:]:
+                end_idx = min(end_idx, lines.index(marker))
+
+        events: List[Event] = []
+        i = start_idx
+        while i < end_idx:
+            line = lines[i]
+            if not _LISTING_DT_RE.match(line):
+                i += 1
+                continue
+            start = self._parse_dt(line)
+            title, title_idx = self._next_title(lines, i + 1, end_idx)
+            desc = self._next_description(lines, title_idx + 1, end_idx) if title_idx >= 0 else ""
+            if start and title:
+                events.append(Event(
+                    title=title,
+                    start=start,
+                    url=self.source_url,
+                    location=self.default_location,
+                    description=desc,
+                ))
+            i = max(i + 1, title_idx + 1)
+        return events
+
+    @property
+    def default_location(self) -> str:
+        return self.region
+
+    @staticmethod
+    def _next_title(lines: List[str], start: int, end: int) -> Tuple[str, int]:
+        for idx in range(start, min(end, start + 8)):
+            line = lines[idx].strip("# ").strip()
+            if not line or line in _NOISE or line.isdigit():
+                continue
+            if _LISTING_DT_RE.match(line):
+                return "", -1
+            if len(line) >= 5:
+                return line, idx
+        return "", -1
+
+    @staticmethod
+    def _next_description(lines: List[str], start: int, end: int) -> str:
+        desc = []
+        for line in lines[start : min(end, start + 4)]:
+            cleaned = line.strip("# ").strip()
+            if not cleaned or cleaned in _NOISE or cleaned.isdigit():
+                continue
+            if _LISTING_DT_RE.match(cleaned):
+                break
+            desc.append(cleaned)
+        return " ".join(desc)[:400]
+
+    @staticmethod
+    def _event_key(ev: Event) -> str:
+        return f"{Event._normalize(ev.title)}|{ev.start.date().isoformat()}"
 
     def _detail_urls(self, soup: BeautifulSoup) -> List[str]:
         seen = set()
@@ -78,7 +152,7 @@ class BusinessJournalBaseScraper(BaseScraper):
             start=start,
             end=end,
             url=url,
-            location=self._where(lines),
+            location=self._where(lines) or self.default_location,
             description=self._description(lines),
         )
 
@@ -93,7 +167,6 @@ class BusinessJournalBaseScraper(BaseScraper):
             title = h1.get_text(" ", strip=True)
             if title and len(title) > 2:
                 return title
-        # Fallback: detail pages usually put the event title directly before "When".
         for idx, line in enumerate(lines):
             if line == "When" and idx > 0:
                 return lines[idx - 1]
@@ -110,7 +183,6 @@ class BusinessJournalBaseScraper(BaseScraper):
                         date_line = _WEEKDAY_DATE_RE.search(candidate).group(0)
                         break
                 if date_line:
-                    # The time range is usually the next line after the date.
                     after_date = lines[idx + 2 : idx + 7]
                     time_line = next((ln for ln in after_date if _TIME_RE.search(ln)), "")
                     break
@@ -176,8 +248,16 @@ class SanFranciscoBusinessTimesScraper(BusinessJournalBaseScraper):
     region = "Bay Area"
     source_url = "https://www.bizjournals.com/sanfrancisco/event/"
 
+    @property
+    def default_location(self) -> str:
+        return "San Francisco"
+
 
 class SiliconValleyBusinessJournalScraper(BusinessJournalBaseScraper):
     name = "Silicon Valley Business Journal"
     region = "Silicon Valley"
     source_url = "https://www.bizjournals.com/sanjose/event/"
+
+    @property
+    def default_location(self) -> str:
+        return "San Jose"
