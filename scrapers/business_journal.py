@@ -3,11 +3,11 @@
 The San Francisco Business Times and Silicon Valley Business Journal event pages
 expose event dates and titles directly on the calendar listing page. Detail links
 are inconsistent, so listing-page parsing is the primary strategy and detail-page
-parsing remains as a fallback when event detail URLs are present.
+parsing enriches/replaces listing events when available.
 """
 import re
 from datetime import datetime, timedelta, timezone
-from typing import List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple
 from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
@@ -44,18 +44,35 @@ class BusinessJournalBaseScraper(BaseScraper):
             return []
         soup = BeautifulSoup(r.text, "html.parser")
 
-        events = self._listing_events(soup)
-        seen_keys = {self._event_key(e) for e in events}
+        events_by_key: Dict[str, Event] = {
+            self._event_key(e): e for e in self._listing_events(soup)
+        }
 
         for url in self._detail_urls(soup)[: self.max_detail_pages]:
             try:
                 ev = self._fetch_detail(url)
-                if ev and self._event_key(ev) not in seen_keys:
-                    events.append(ev)
-                    seen_keys.add(self._event_key(ev))
+                if not ev:
+                    continue
+                key = self._event_key(ev)
+                existing = events_by_key.get(key)
+                events_by_key[key] = self._prefer_detail(ev, existing)
             except Exception as exc:
                 print(f"  [warn] {self.name}: skipping {url}: {exc}")
-        return events
+        return list(events_by_key.values())
+
+    @staticmethod
+    def _prefer_detail(detail: Event, listing: Optional[Event]) -> Event:
+        """Prefer venue/url/description from the detail page for listing duplicates."""
+        if not listing:
+            return detail
+        return Event(
+            title=detail.title or listing.title,
+            start=detail.start or listing.start,
+            end=detail.end or listing.end,
+            url=detail.url or listing.url,
+            location=detail.location or listing.location,
+            description=detail.description or listing.description,
+        )
 
     def _listing_events(self, soup: BeautifulSoup) -> List[Event]:
         lines = self._lines(soup)
