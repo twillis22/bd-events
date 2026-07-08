@@ -39,6 +39,16 @@
 "title": "BOMA Java",
 "url": "https://bomasf.org/events/events-calendar"
 },
+"14d52f48aa40fcd5aa50876ea6b1392b@bd-events": {
+"description": "",
+"end": null,
+"location": "Aurora Rooftop",
+"source": "CMAA NorCal",
+"source_region": "Bay Area",
+"start": "2026-09-24T00:00:00+00:00",
+"title": "Education Program: Inside the Evaluation Room",
+"url": "https://www.cmaanorcal.org/events-1/education-program-inside-the-evaluation-room"
+},
 "1ae17a4323efcf76868478fec1a526c7@bd-events": {
 "description": "",
 "end": "2026-06-25T20:00:00-07:00",
@@ -219,6 +229,16 @@
 "title": "BOMA Basics (For Associates)",
 "url": "https://www.bomasd.org/calendar_list.asp"
 },
+"453f8170b9d7baa8b942a1486d38bdbc@bd-events": {
+"description": "",
+"end": null,
+"location": "Location TBD",
+"source": "I2SL San Diego",
+"source_region": "San Diego",
+"start": "2026-09-02T00:00:00+00:00",
+"title": "San Diego Chapter Annual Conference",
+"url": "https://www.i2sl.org/san-diego"
+},
 "4683aebb6498f439522b917eb9ec6958@bd-events": {
 "description": "",
 "end": null,
@@ -349,6 +369,16 @@
 "title": "BOMA Java",
 "url": "https://bomasf.org/events/events-calendar"
 },
+"5c31847697fb9f255c0cbf2669e7f804@bd-events": {
+"description": "More Info to come....",
+"end": null,
+"location": "Mountain View, CA",
+"source": "CoreNet NorCal",
+"source_region": "Bay Area",
+"start": "2026-08-20T00:00:00+00:00",
+"title": "The Power-Driven Future of CRE Decisions",
+"url": "https://nocal.corenetglobal.org/events/upcoming-events"
+},
 "5dba07903858c64b69f90e3da5aeac85@bd-events": {
 "description": "",
 "end": null,
@@ -459,6 +489,16 @@
 "title": "DEI Candid Conversation",
 "url": "https://bomasf.org/events/events-calendar"
 },
+"739847b1ea481f743f434fa2bf99d824@bd-events": {
+"description": "",
+"end": "2026-07-16T20:00:00-07:00",
+"location": "None",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-07-16T18:00:00-07:00",
+"title": "AIASF: Women in Architecture Dine Around",
+"url": "https://www.aiasf.org/events/women-in-architecture-dine-around"
+},
 "76d05b2efb448e72d92272cfc1b560d8@bd-events": {
 "description": "",
 "end": "2026-07-14T18:00:00-07:00",
@@ -468,26 +508,6 @@
 "start": "2026-07-14T17:00:00-07:00",
 "title": "AIASF: Mentorship X Fellows Fireside Chat",
 "url": "https://www.aiasf.org/events/mentorship-x-fellows-fire-side-chat"
-},
-"79c689dded413d525a01da3ed40336d5@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "CSHE",
-"source_region": "Bay Area",
-"start": "2026-06-17T00:00:00+00:00",
-"title": "Central Coast Chapter Meeting | Hospital Incident Command System for the Hospital Engineer, an Intro",
-"url": "https://cshe.org/events/EventDetails.aspx?id=2054337"
-},
-"7a3f1d4b37aa65274d93fd003f016a80@bd-events": {
-"description": "",
-"end": null,
-"location": "Drakes the Barn",
-"source": "CMAA NorCal",
-"source_region": "Bay Area",
-"start": "2026-06-17T00:00:00+00:00",
-"title": "~SOLD OUT~Member Appreciation, CMAA in the Outfield, Pirates V. Athletics",
-"url": "https://www.cmaanorcal.org/events-1/sold-out-member-appreciation-cmaa-in-the-outfield-pirates-v-athletics"
 },
 "7aca1e35a04fad6fb06d1cc858b29730@bd-events": {
 "description": "",
@@ -517,7 +537,7 @@
 "source_region": "Bay Area",
 "start": "2026-11-14T00:00:00+00:00",
 "title": "CMAA Rising CM Conference | Save the Date",
-"url": "https://www.cmaanorcal.org/events-1/cmaa-rising-cm-conference-save-the-date"
+"url": "https://cmaascfndn.org/CA-Rising-CM-Conference"
 },
 "7fb6a7b3ab9d15d85e154af3f3db79a0@bd-events": {
 "description": "",
@@ -598,6 +618,16 @@
 "start": "2026-07-15T17:00:00+00:00",
 "title": "NED Alumni Happy Hour",
 "url": "https://members.naiopsfba.org/event-calendar/Details/ned-alumni-happy-hour-1769262?sourceTypeId=Website"
+},
+"8ac6b02fb13e7e2b20a1167cb5bf5193@bd-events": {
+"description": "",
+"end": null,
+"location": "Oaks North Golf Course",
+"source": "I2SL San Diego",
+"source_region": "San Diego",
+"start": "2026-09-18T00:00:00+00:00",
+"title": "Golf Tournament",
+"url": "https://www.i2sl.org/san-diego"
 },
 "8d13101605454e258e1eceea3e3a2476@bd-events": {
 "description": "BOMA SAN DIEGO DESIGNER PURSE BINGO 2026\n\nEvent Contacts\nParis Cox: paris.cox@jll.com,&nbsp;619-318-5284\n\nAmber Molina: amolina@cwp-ms.com, 619.618.2955.\n\n\n \nJoin us for a fun-filled night of&nbsp;luxury raffle prizes and BINGO! Bingo winners have a chance to win a designer handbag! You can also check out a recap of last year&#39;s event here!&nbsp;\n\nDue to the overwhelming popularity of this even",
@@ -839,16 +869,6 @@
 "title": "Design Expo",
 "url": "https://iidanc.org/events/silicon-valley-design-expo/"
 },
-"d00ecf1e652190a62b9d5104c31e0b71@bd-events": {
-"description": "",
-"end": null,
-"location": "Drakes the Barn",
-"source": "CMAA NorCal",
-"source_region": "Bay Area",
-"start": "2026-06-17T00:00:00+00:00",
-"title": "Member Appreciation, CMAA in the Outfield, Pirates V. Athletics",
-"url": "https://www.cmaanorcal.org/events-1/member-appreciation-cmaa-in-the-outfield-pirates-v-athletics"
-},
 "d0509dd909eececa63d4f40251339a5a@bd-events": {
 "description": "October Membership Luncheon: Land Development Focus\n\n&nbsp;Details to come!\n\nWhen: Tuesday, October 13th, 11 AM - 1 PM\nWhere: Farmer &amp; The Seahorse | 10996 Torreyana Rd, San Diego, CA 92121\n\nCost: $50 for BOMA Principal members; $110 for BOMA Associate members; $150 non-members\n&nbsp;\nNote: Guests with dietary restrictions/preferences please select vegetarian meal option in registration.&nbsp;",
 "end": "2026-10-13T13:00:00+00:00",
@@ -988,16 +1008,6 @@
 "start": "2026-10-28T00:00:00+00:00",
 "title": "BOMA Java",
 "url": "https://bomasf.org/events/events-calendar"
-},
-"e917be939bdb3bb2d3a5885b72aa6d1e@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "CSHE",
-"source_region": "Bay Area",
-"start": "2026-06-17T00:00:00+00:00",
-"title": "San Francisco Chapter | Fire & Life Safety in Healthcare",
-"url": "https://cshe.org/events/EventDetails.aspx?id=2041303"
 },
 "eb89654eba3439db59fc154f44215f0f@bd-events": {
 "description": "",
