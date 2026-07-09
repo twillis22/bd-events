@@ -139,16 +139,6 @@
 "title": "Merge 2026",
 "url": "https://iidanc.org/events/merge-2026/"
 },
-"33b6ec78dfd06445028c532f70abf416@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "CSHE",
-"source_region": "Bay Area",
-"start": "2026-06-18T00:00:00+00:00",
-"title": "Central Valley Chapter Meeting | Flammable Refrigerants",
-"url": "https://cshe.org/events/EventDetails.aspx?id=2053002"
-},
 "356996cc0b2d7d647cd1da854500df74@bd-events": {
 "description": "",
 "end": null,
@@ -158,6 +148,16 @@
 "start": "2026-08-06T00:00:00+00:00",
 "title": "Meet the Primes, In-Person Networking Event",
 "url": "https://www.cmaanorcal.org/events-1/meet-the-primes-in-person-networking-event-4"
+},
+"392d2a876a9097fafabf8741936cc848@bd-events": {
+"description": "Categories: IIDA NC CHAPTER EVENT, Membership EVENT",
+"end": null,
+"location": "",
+"source": "IIDA Northern California",
+"source_region": "Bay Area",
+"start": "2026-09-02T00:00:00+00:00",
+"title": "Members Only Bowling Event",
+"url": "https://iidanc.org/events/members-only-bowling-event/"
 },
 "39b372816b83ade4c700555fa4824c01@bd-events": {
 "description": "",
@@ -309,16 +309,6 @@
 "title": "Holiday Mixer - Sacramento",
 "url": "https://www.cmaanorcal.org/events-1/holiday-mixer-sacramento-5"
 },
-"572231c47df19bafd87cb48f99b3ae6e@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "BOMA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-06-18T00:00:00+00:00",
-"title": "DEI Virtual Candid Conversation - Inclusive Leadership",
-"url": "https://bomasf.org/events/events-calendar"
-},
 "575449054ca1d399e18423158e53ea25@bd-events": {
 "description": "",
 "end": "2026-08-27T20:30:00-07:00",
@@ -399,16 +389,6 @@
 "title": "EDUCATION WEBINAR - Navigating DSA without the Guesswork",
 "url": "https://www.cmaanorcal.org/events-1/education-webinar-navigating-dsa-without-the-guesswork"
 },
-"5f479c623f5b6475c8d39e59cd11121c@bd-events": {
-"description": "",
-"end": null,
-"location": "Santa Clara, CA",
-"source": "CoreNet NorCal",
-"source_region": "Bay Area",
-"start": "2026-06-18T00:00:00+00:00",
-"title": "Location, Mobility, Talent: The Connection Between Transportation and Workplace Strategy",
-"url": "https://nocal.corenetglobal.org/events/upcoming-events"
-},
 "601a4dc451d1ed87d1d10beba0eb899a@bd-events": {
 "description": "",
 "end": "2026-06-25T17:00:00-07:00",
@@ -468,16 +448,6 @@
 "start": "2027-02-10T00:00:00-08:00",
 "title": "AIASF: 2027 Mass Timber Symposium",
 "url": "https://www.aiasf.org/events/mass-timber-symposium-2027"
-},
-"6f5fc3154d2c6c9551742365d39920d1@bd-events": {
-"description": "",
-"end": null,
-"location": "ZOOM Webinar",
-"source": "CMAA NorCal",
-"source_region": "Bay Area",
-"start": "2026-06-18T00:00:00+00:00",
-"title": "EDUCATION WEBINAR - The BIM Advantage: Reducing Project Risk",
-"url": "https://www.cmaanorcal.org/events-1/education-webinar-the-bim-advantage-reducing-project-risk"
 },
 "730c972ce14da2194f9e46f8b0f4a417@bd-events": {
 "description": "",
@@ -719,16 +689,6 @@
 "title": "CREATE Celebration",
 "url": "https://bomasf.org/events/events-calendar"
 },
-"a624f3b02c0f8d4bf276221ad69ada2d@bd-events": {
-"description": "\nJoin&nbsp;BOMA Greater Los Angeles, BOMA Orange County, BOMA Sacramento, BOMA San Diego, BOMA San Francisco, and BOMA Silicon Valley&nbsp;for a webinar exploring Inclusive&nbsp;Leadership: Creating Impact From Any Position.\n\nIn today&rsquo;s rapidly evolving environment, effective leadership requires adaptability, empathy, and the ability to create spaces where diverse perspectives are valued and",
-"end": "2026-06-18T10:30:00+00:00",
-"location": "Virtual - Zoom, San Diego, CA",
-"source": "BOMA San Diego",
-"source_region": "San Diego",
-"start": "2026-06-18T09:30:00+00:00",
-"title": "Inclusive Leadership: Creating Impact From Any Position",
-"url": "https://www.bomasd.org/calendar_list.asp"
-},
 "a64bda61b859db355aad383413d96ca9@bd-events": {
 "description": "Categories: City Center EVENT, NORTH BAY EVENT",
 "end": null,
@@ -838,16 +798,6 @@
 "start": "2026-08-13T00:00:00+00:00",
 "title": "The Owner Advisor Advantage",
 "url": "https://www.cmaanorcal.org/events-1/the-owner-advisor-advantage"
-},
-"c11da46c90a6473ac1698a9b21ebd2ea@bd-events": {
-"description": "Start your day with meaningful connections at NAIOP SFBA\u2019s Membership Breakfast: Coffee & Connections. This casual morning gathering offers members the opportunity to network with peers",
-"end": "2026-06-18T10:00:00+00:00",
-"location": "",
-"source": "NAIOP SF Bay Area",
-"source_region": "Bay Area",
-"start": "2026-06-18T09:00:00+00:00",
-"title": "Coffee & Connections Membership Breakfast \u2013 June 2026",
-"url": "https://members.naiopsfba.org/event-calendar/Details/coffee-connections-membership-breakfast-june-2026-1663532?sourceTypeId=Website"
 },
 "c3c7a298f969437762fb63b5c580c2e6@bd-events": {
 "description": "The Principal Member Download is a dedicated, face-to-face forum designed exclusively for BOMA San Diego&rsquo;s Principal Members. This casual and interactive gathering will give you the opportunity to connect with fellow members, share experiences, and gain valuable insights into maximizing the benefits of your membership.\n\nLed by experienced Principal Members, the session will cover:\n\n\n\t\n\tHow B",
@@ -1059,6 +1009,16 @@
 "title": "California Commercial Real Estate Summit",
 "url": "https://www.bomasd.org/calendar_list.asp"
 },
+"ee3b4be14ce13c428cbef933906ac4e1@bd-events": {
+"description": "Categories: City Center EVENT, EAST BAY EVENT",
+"end": null,
+"location": "",
+"source": "IIDA Northern California",
+"source_region": "Bay Area",
+"start": "2026-08-13T00:00:00+00:00",
+"title": "Design Expo",
+"url": "https://iidanc.org/events/design-expo-3/"
+},
 "f04f3c66e04d08185257b96d5615d39d@bd-events": {
 "description": "",
 "end": null,
@@ -1099,16 +1059,6 @@
 "title": "Real Estate Insider: 350 California & the State of the SF Office Market",
 "url": "https://members.naiopsfba.org/event-calendar/Details/real-estate-insider-350-california-the-state-of-the-sf-office-market-1741611?sourceTypeId=Website"
 },
-"f6df036de9372ccba49d16af4ca0e761@bd-events": {
-"description": "",
-"end": "2026-06-17T20:00:00-07:00",
-"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-06-17T18:00:00-07:00",
-"title": "AIASF: OVERTIME 26: REDUX - Opening Reception",
-"url": "https://www.aiasf.org/events/overtime-26-redux---opening-reception"
-},
 "fa71ca2db7d9c4d65f080f12eef64b8d@bd-events": {
 "description": "Categories: City Center EVENT, SACRAMENTO EVENT",
 "end": null,
@@ -1128,16 +1078,6 @@
 "start": "2026-07-17T00:00:00+00:00",
 "title": "Introduction to Lean Project Delivery",
 "url": "https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=NCA071726&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf"
-},
-"fdaf70223f7d3bbf0664ddbbe33e0fed@bd-events": {
-"description": "\nPOSTPONED: PLEASE CHECK BACK FOR NEW DATES AND TIMES\n\nJoin&nbsp;BOMA Greater Los Angeles, BOMA Orange County, BOMA Sacramento, BOMA San Diego, BOMA San Francisco, and BOMA Silicon Valley&nbsp;for a webinar exploring Inclusive&nbsp;Leadership: Creating Impact From Any Position.\n\nIn today&rsquo;s rapidly evolving environment, effective leadership requires adaptability, empathy, and the ability to c",
-"end": "2026-06-18T10:30:00+00:00",
-"location": "Virtual - Zoom, San Diego, CA",
-"source": "BOMA San Diego",
-"source_region": "San Diego",
-"start": "2026-06-18T09:30:00+00:00",
-"title": "POSTPONED: Inclusive Leadership: Creating Impact From Any Position",
-"url": "https://www.bomasd.org/calendar_list.asp"
 },
 "fea3083e5476a0e26f870905f99b3b12@bd-events": {
 "description": "",
