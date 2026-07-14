@@ -360,7 +360,7 @@
 "url": "https://bomasf.org/events/events-calendar"
 },
 "5c31847697fb9f255c0cbf2669e7f804@bd-events": {
-"description": "More Info to come....",
+"description": "",
 "end": null,
 "location": "Mountain View, CA",
 "source": "CoreNet NorCal",
@@ -688,6 +688,16 @@
 "start": "2026-09-17T00:00:00+00:00",
 "title": "CREATE Celebration",
 "url": "https://bomasf.org/events/events-calendar"
+},
+"a3b52fbba8fd531943beaf17f86ef426@bd-events": {
+"description": "",
+"end": null,
+"location": "American River College Community Rooms",
+"source": "CMAA NorCal",
+"source_region": "Bay Area",
+"start": "2026-07-23T00:00:00+00:00",
+"title": "SOLD OUT~ The Next Generation of Community College Facilities: Programs, Priorities & Opportunities",
+"url": "https://www.cmaanorcal.org/events-1/sold-out-the-next-generation-of-community-college-facilities-programs-priorities-opportunities"
 },
 "a64bda61b859db355aad383413d96ca9@bd-events": {
 "description": "Categories: City Center EVENT, NORTH BAY EVENT",
@@ -1048,6 +1058,16 @@
 "start": "2026-07-09T00:00:00+00:00",
 "title": "Design Expo",
 "url": "https://iidanc.org/events/design-expo-2/"
+},
+"fa90b2e39b364cc1375645b35f880bc9@bd-events": {
+"description": "",
+"end": "2026-07-22T18:00:00-07:00",
+"location": "201 Jackson St. San Francisco, CA",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-07-22T16:00:00-07:00",
+"title": "AIASF: Space to Heal: Where Waiting Becomes Welcome",
+"url": "https://www.aiasf.org/events/space-to-heal-where-waiting-becomes-welcome"
 },
 "fd178bd3dc09a70fff87fd65e77be7a1@bd-events": {
 "description": "",
