@@ -129,16 +129,6 @@
 "title": "TOBY Awards Workshop",
 "url": "https://bomasf.org/events/events-calendar"
 },
-"2fbd44da607fc136e25d251530d64c6f@bd-events": {
-"description": "",
-"end": "2026-06-23T19:30:00-07:00",
-"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-06-23T17:30:00-07:00",
-"title": "AIASF: Designing for Acoustics: Inside AIASF Headquarters Lecture Hall",
-"url": "https://www.aiasf.org/events/acoustical-case-study-aiasf-headquarters-lecture-hall"
-},
 "3064c764500dc592817c6c203ffdadf1@bd-events": {
 "description": "Categories: SACRAMENTO EVENT",
 "end": null,
@@ -288,16 +278,6 @@
 "start": "2026-08-25T08:30:00-07:00",
 "title": "AIASF: AI in Architectural Practice: Adoption, Responsibility, and Risk",
 "url": "https://www.aiasf.org/events/ai-in-architectural-practice-adoption-responsibility-and-risk"
-},
-"53133eac4313cb5c99fb495737f8cf3e@bd-events": {
-"description": "",
-"end": "2026-06-23T18:00:00+00:00",
-"location": "",
-"source": "NAIOP SF Bay Area",
-"source_region": "Bay Area",
-"start": "2026-06-23T16:00:00+00:00",
-"title": "Behind the Scenes Tour: Presidio Highlands Development Site",
-"url": "https://members.naiopsfba.org/event-calendar/Details/behind-the-scenes-tour-presidio-highlands-development-site-1742417?sourceTypeId=Website"
 },
 "54498fa03c02e370d279930079c7dae3@bd-events": {
 "description": "",
@@ -619,6 +599,16 @@
 "title": "Golf Tournament",
 "url": "https://www.i2sl.org/san-diego"
 },
+"8b8852bc1e44a85469efa2ed269898ed@bd-events": {
+"description": "",
+"end": null,
+"location": "",
+"source": "BOMA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-07-30T00:00:00+00:00",
+"title": "EP Career Success Workshop - The Art of the RFP: Building Better Partnerships",
+"url": "https://bomasf.org/events/events-calendar"
+},
 "8d13101605454e258e1eceea3e3a2476@bd-events": {
 "description": "BOMA SAN DIEGO DESIGNER PURSE BINGO 2026\n\nEvent Contacts\nParis Cox: paris.cox@jll.com,&nbsp;619-318-5284\n\nAmber Molina: amolina@cwp-ms.com, 619.618.2955.\n\n\n \nJoin us for a fun-filled night of&nbsp;luxury raffle prizes and BINGO! Bingo winners have a chance to win a designer handbag! You can also check out a recap of last year&#39;s event here!&nbsp;\n\nDue to the overwhelming popularity of this even",
 "end": "2026-07-22T19:30:00+00:00",
@@ -669,16 +659,6 @@
 "title": "Northeastern Chapter Meeting | AI in Healthcare",
 "url": "https://cshe.org/events/EventDetails.aspx?id=2039349"
 },
-"9f9126b6ffbbf22c4f2640d93d2e25bd@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "CSHE",
-"source_region": "Bay Area",
-"start": "2026-06-24T00:00:00+00:00",
-"title": "Redwood Chapter Meeting | Energy Efficient Buildings",
-"url": "https://cshe.org/events/EventDetails.aspx?id=2062750"
-},
 "a11fe5019b813f351732343957bb4444@bd-events": {
 "description": "",
 "end": null,
@@ -717,16 +697,6 @@
 "source_region": "San Francisco",
 "start": "2026-11-10T00:00:00+00:00",
 "title": "Codes Seminar",
-"url": "https://bomasf.org/events/events-calendar"
-},
-"a97912253db7a739f76d9e8ff10f84dd@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "BOMA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-06-24T00:00:00+00:00",
-"title": "BOMA at the Ballpark: Patio Party Only",
 "url": "https://bomasf.org/events/events-calendar"
 },
 "ae246684687dcb20c8435450d0f9a4c8@bd-events": {
@@ -838,16 +808,6 @@
 "start": "2026-09-10T00:00:00-07:00",
 "title": "AIASF: 23rd Annual Architecture + City Festival",
 "url": "https://www.aiasf.org/events/2026-architecture--city-the-city-festival-"
-},
-"d27e75466f6686890f6c8b43d168c94d@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "BOMA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-06-24T00:00:00+00:00",
-"title": "BOMA at the Ballpark: Game & Patio Party",
-"url": "https://bomasf.org/events/events-calendar"
 },
 "d4435138d80adee60c0a751ccf34f9c7@bd-events": {
 "description": "",
