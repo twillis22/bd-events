@@ -59,16 +59,6 @@
 "title": "Education Program: Inside the Evaluation Room",
 "url": "https://www.cmaanorcal.org/events-1/education-program-inside-the-evaluation-room"
 },
-"1ae17a4323efcf76868478fec1a526c7@bd-events": {
-"description": "",
-"end": "2026-06-25T20:00:00-07:00",
-"location": "Pier 27 James R. Herman Cruise Terminal The Embarcadero, San Francisco, CA",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-06-25T11:30:00-07:00",
-"title": "AIASF: Northern California's Premier Architectural Lighting and Design Show w 4 AIA HSW Accredited Seminars",
-"url": "https://www.aiasf.org/events/northern-californias-premier-architectural-lighting-and-design-show-w-4-aia-hsw-accredited-seminars-"
-},
 "1c1236b727c0848cd46040488bbe39d2@bd-events": {
 "description": "",
 "end": "2026-08-18T19:00:00-07:00",
@@ -188,16 +178,6 @@
 "start": "2026-10-12T09:30:00-07:00",
 "title": "AIASF: 2026 AIASF Golf Classic",
 "url": "https://www.aiasf.org/events/2026-aiasf-golf-classic-"
-},
-"39ec2c486fd5a54d6145316fc7394972@bd-events": {
-"description": "",
-"end": null,
-"location": "San Diego Community of Practice",
-"source": "Lean Construction Institute",
-"source_region": "",
-"start": "2026-06-26T00:00:00+00:00",
-"title": "Gemba Walk \u2013 T1 Arrive, San Diego International Airport",
-"url": "https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=SD062626&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf"
 },
 "3c0a384fdd6cd4dd5918eead71e647a3@bd-events": {
 "description": "",
@@ -368,16 +348,6 @@
 "start": "2026-07-16T00:00:00+00:00",
 "title": "EDUCATION WEBINAR - Navigating DSA without the Guesswork",
 "url": "https://www.cmaanorcal.org/events-1/education-webinar-navigating-dsa-without-the-guesswork"
-},
-"601a4dc451d1ed87d1d10beba0eb899a@bd-events": {
-"description": "",
-"end": "2026-06-25T17:00:00-07:00",
-"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-06-25T10:15:00-07:00",
-"title": "AIASF: 2026 Housing Symposium",
-"url": "https://www.aiasf.org/events/2026-housing-symposium"
 },
 "65230afcce0edf16eda8bec6f7d8e6f3@bd-events": {
 "description": "",
@@ -999,6 +969,16 @@
 "title": "2026 NAIOP Silicon Valley Annual BBQ",
 "url": "https://naiopsv.org/event/2026bbq/"
 },
+"f566a5103ff81924d1ae0c83b81bdb28@bd-events": {
+"description": "",
+"end": null,
+"location": "ZOOM Meeting",
+"source": "CMAA NorCal",
+"source_region": "Bay Area",
+"start": "2026-10-21T00:00:00+00:00",
+"title": "CCM/CMIT Workshop Webinar",
+"url": "https://www.cmaanorcal.org/events-1/ccm-cmit-workshop-webinar"
+},
 "f5e74ca7340ad9330b1a9abb7bd41770@bd-events": {
 "description": "",
 "end": "2026-08-19T13:30:00+00:00",
@@ -1028,6 +1008,16 @@
 "start": "2026-07-22T16:00:00-07:00",
 "title": "AIASF: Space to Heal: Where Waiting Becomes Welcome",
 "url": "https://www.aiasf.org/events/space-to-heal-where-waiting-becomes-welcome"
+},
+"fa94dd5e3cb99e7d35e7bee8bfd635b8@bd-events": {
+"description": "",
+"end": null,
+"location": "",
+"source": "BOMA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-08-20T00:00:00+00:00",
+"title": "Emerging Professionals Summer Mixer Rooftop Roundup",
+"url": "https://bomasf.org/events/events-calendar"
 },
 "fd178bd3dc09a70fff87fd65e77be7a1@bd-events": {
 "description": "",
