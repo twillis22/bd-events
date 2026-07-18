@@ -29,6 +29,16 @@
 "title": "Emerging Professionals Evening Event",
 "url": "https://www.bomasd.org/calendar_list.asp"
 },
+"0c4d5cba8502123683ebedd244c5cfac@bd-events": {
+"description": "",
+"end": "2026-10-08T19:00:00+00:00",
+"location": "",
+"source": "NAIOP SF Bay Area",
+"source_region": "Bay Area",
+"start": "2026-10-08T17:00:00+00:00",
+"title": "Developing Leaders Happy Hour",
+"url": "https://members.naiopsfba.org/event-calendar/Details/developing-leaders-happy-hour-1860254?sourceTypeId=Website"
+},
 "0df43e8b2223ef3c5ba4ba8a07e64ce2@bd-events": {
 "description": "Categories: City Center EVENT, SAN FRANCISCO EVENT",
 "end": null,
@@ -519,16 +529,6 @@
 "title": "Career Fair",
 "url": "https://www.cmaanorcal.org/events-1/career-fair-3"
 },
-"87097c692337fe29031d432346851d90@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "CSHE",
-"source_region": "Bay Area",
-"start": "2026-06-27T00:00:00+00:00",
-"title": "San Diego | Robert Mack Scholarship & Martin Schoonderwoerd Foundation Wood-Bat Softball Tournament",
-"url": "https://cshe.org/events/EventDetails.aspx?id=2060992"
-},
 "88e5365d29f7bb49df1eefd364272697@bd-events": {
 "description": "NAIOP Silicon Valley Annual Golf Tournament\nNAIOP Silicon Valley is excited to host our 6th Annual Golf Tournament\u00a0on\u00a0Wednesday, October 21, 2026, at the beautiful\u00a0Cinnabar Hills Golf Club\u00a0in\u00a0San Jose, CA! Don\u2019t miss this premier networking event where commercial real estate professionals come together for a fun-filled day of golf, connections, and friendly competition. Whether you\u2019re a seasoned g",
 "end": "2026-10-21T19:00:00+00:00",
@@ -700,7 +700,7 @@
 "url": "https://members.naiopsfba.org/event-calendar/Details/commercial-real-estate-finance-panel-1844719?sourceTypeId=Website"
 },
 "b7512d5c9fbf0d7c084922a48300622d@bd-events": {
-"description": "August Membership Luncheon\n\n&nbsp;Details to come!\n\nWhen: Tuesday, August&nbsp;11th, 11 AM - 1 PM\nWhere: Farmer &amp; The Seahorse | 10996 Torreyana Rd, San Diego, CA 92121\n\nCost: $50 for BOMA Principal members; $110 for BOMA Associate members; $150 non-members\n&nbsp;\nNote: Guests with dietary restrictions/preferences please select vegetarian meal option in registration.&nbsp;\n\n\n",
+"description": "August Membership Luncheon\nBeyond Game Day: Snapdragon Stadium&rsquo;s Mixed-Use Transformation.&nbsp;\n\nJoin Gina Jacobs and Paul Jackson from SDSU Project Management as they share insights into Snapdragon Stadium&#39;s mixed-use redevelopment. They&#39;ll discuss the San Diego River Bridge connecting Snapdragon Stadium to Camino Del Rio South, design innovations, sustainability efforts, the devel",
 "end": "2026-08-11T13:00:00+00:00",
 "location": "Farmer &amp; The Seahorse, 10996 Torreyana Rd Ste 240, San Diego, CA",
 "source": "BOMA San Diego",
@@ -817,7 +817,7 @@
 "source_region": "San Francisco",
 "start": "2026-10-22T17:30:00-07:00",
 "title": "AIASF: MAKERS series: Lewis Watts + Dewey Crumpler",
-"url": "https://www.aiasf.org/events/makers-series-lewis-watts"
+"url": "https://www.aiasf.org/events/makers-series-lewis-watts-dewey-crumpler"
 },
 "dcd25f422c61091b1331e6eeccf7c98b@bd-events": {
 "description": "",
