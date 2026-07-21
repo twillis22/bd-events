@@ -99,16 +99,6 @@
 "title": "CMAA NorCal and HABITAT FOR HUMANITY join forces at ROCK THE BLOCK",
 "url": "https://www.cmaanorcal.org/events-1/cmaa-norcal-and-habitat-for-humanity-join-forces-at-rock-the-block-2"
 },
-"27e7f305914b54e087377cae922c9f5c@bd-events": {
-"description": "Join the CoreNet Global Northern California Chapter Membership Committee for a virtual coffee chat on how to make the most of your new membership! All new members who joined in the past six months are invited to attend. This month's Coffee Chat has been moved to a Wednesday to accommodate the long weekend.",
-"end": null,
-"location": "Virtual, CA",
-"source": "CoreNet NorCal",
-"source_region": "Bay Area",
-"start": "2026-06-30T00:00:00+00:00",
-"title": "June New Member Coffee Chat",
-"url": "https://nocal.corenetglobal.org/events/upcoming-events"
-},
 "2b10bfd983f3b6b17ae652c98999a334@bd-events": {
 "description": "",
 "end": null,
@@ -689,6 +679,16 @@
 "title": "AIASF: Small Firms, Great Projects (SFGP) Launch Party + Presentation",
 "url": "https://www.aiasf.org/events/small-firms-great-projects-launch-party--panel-copy"
 },
+"b4996afc06273b58bdd4043e20b5d95c@bd-events": {
+"description": "",
+"end": "2026-07-30T20:30:00-07:00",
+"location": "Jackson Liles Architecture 2325 3rd Street San Francisco, CA 94107 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-07-30T17:30:00-07:00",
+"title": "AIASF: BAYA Dogpatch Firm Crawl",
+"url": "https://www.aiasf.org/events/baya-dogpatch-firm-crawl"
+},
 "b66223189d25518c6deea474ca86d718@bd-events": {
 "description": "",
 "end": "2026-11-04T18:30:00+00:00",
@@ -768,6 +768,16 @@
 "start": "2026-10-13T11:00:00+00:00",
 "title": "October Membership Luncheon",
 "url": "https://www.bomasd.org/calendar_list.asp"
+},
+"d08627f34688d8b8a79266a20fa04422@bd-events": {
+"description": "",
+"end": "2026-08-20T19:30:00-07:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-08-20T17:30:00-07:00",
+"title": "AIASF: From Vision to Reality: Understanding Project Delivery",
+"url": "https://www.aiasf.org/events/from-vision-to-reality-understanding-project-delivery-"
 },
 "d0e29323a0866a48272aaabeb82bb626@bd-events": {
 "description": "",
