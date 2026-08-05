@@ -69,16 +69,6 @@
 "title": "Leaders Breakfast 2026",
 "url": "https://iidanc.org/events/leaders-breakfast-2026/"
 },
-"12cddc0b57042a4e78301f810dcaac48@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "BOMA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-07-15T00:00:00+00:00",
-"title": "BOMA Java",
-"url": "https://bomasf.org/events/events-calendar"
-},
 "14d52f48aa40fcd5aa50876ea6b1392b@bd-events": {
 "description": "",
 "end": null,
@@ -115,7 +105,7 @@
 "location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
 "source": "AIA San Francisco",
 "source_region": "San Francisco",
-"start": "2026-08-18T08:30:00-07:00",
+"start": "2026-08-18T08:00:00-07:00",
 "title": "AIASF: AI-Ready: Building a Unified Data Foundation for AEC Firms",
 "url": "https://www.aiasf.org/events/ai-ready-building-a-unified-data-foundation-for-aec-firms"
 },
@@ -128,6 +118,16 @@
 "start": "2026-10-10T00:00:00+00:00",
 "title": "CMAA NorCal and HABITAT FOR HUMANITY join forces at ROCK THE BLOCK",
 "url": "https://www.cmaanorcal.org/events-1/cmaa-norcal-and-habitat-for-humanity-join-forces-at-rock-the-block-2"
+},
+"228c1b9b725909184cd5a11bbba62c6a@bd-events": {
+"description": "",
+"end": "2026-09-10T21:00:00-07:00",
+"location": "Center for Architecture + Design  140 Sutter Street San Francisco, CA 94104 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-09-10T18:00:00-07:00",
+"title": "AIASF: Architecture + the City Gala",
+"url": "https://www.aiasf.org/events/opening-night-party--"
 },
 "2894e9b96a562455035801322f1fba28@bd-events": {
 "description": "",
@@ -548,16 +548,6 @@
 "start": "2026-07-16T18:00:00-07:00",
 "title": "AIASF: Women in Architecture Dine Around",
 "url": "https://www.aiasf.org/events/women-in-architecture-dine-around"
-},
-"76d05b2efb448e72d92272cfc1b560d8@bd-events": {
-"description": "",
-"end": "2026-07-14T18:00:00-07:00",
-"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-07-14T17:00:00-07:00",
-"title": "AIASF: Mentorship X Fellows Fireside Chat",
-"url": "https://www.aiasf.org/events/mentorship-x-fellows-fire-side-chat"
 },
 "7aca1e35a04fad6fb06d1cc858b29730@bd-events": {
 "description": "",
