@@ -39,6 +39,16 @@
 "title": "Industrial Committee Fall Happy Hour",
 "url": "https://members.naiopsfba.org/event-calendar/Details/industrial-committee-fall-happy-hour-1874131?sourceTypeId=Website"
 },
+"0c029acb4568b0316cf87f785453cf01@bd-events": {
+"description": "",
+"end": "2026-08-27T13:00:00+00:00",
+"location": "",
+"source": "NAIOP SF Bay Area",
+"source_region": "Bay Area",
+"start": "2026-08-27T11:30:00+00:00",
+"title": "SF Multifamily Market Update",
+"url": "https://members.naiopsfba.org/event-calendar/Details/sf-multifamily-market-update-1885631?sourceTypeId=Website"
+},
 "0c4d5cba8502123683ebedd244c5cfac@bd-events": {
 "description": "",
 "end": "2026-10-08T19:00:00+00:00",
@@ -81,7 +91,7 @@
 },
 "1c1236b727c0848cd46040488bbe39d2@bd-events": {
 "description": "",
-"end": "2026-08-18T19:00:00-07:00",
+"end": "2026-08-18T19:30:00-07:00",
 "location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104",
 "source": "AIA San Francisco",
 "source_region": "San Francisco",
@@ -389,16 +399,6 @@
 "title": "Annual Joint Expo: BOMA, IFMA, IREM, & SDBEA",
 "url": "https://www.bomasd.org/calendar_list.asp"
 },
-"5aa185704f19be5f404cb0185d3bf45e@bd-events": {
-"description": "",
-"end": null,
-"location": "San Francisco, CA",
-"source": "CoreNet NorCal",
-"source_region": "Bay Area",
-"start": "2026-07-16T00:00:00+00:00",
-"title": "Forecasting Construction Market Trends",
-"url": "https://nocal.corenetglobal.org/events/upcoming-events"
-},
 "5c31847697fb9f255c0cbf2669e7f804@bd-events": {
 "description": "",
 "end": null,
@@ -418,16 +418,6 @@
 "start": "2026-10-15T00:00:00+00:00",
 "title": "Annual Meeting & Membership Luncheon",
 "url": "https://bomasf.org/events/events-calendar"
-},
-"5e5bd3072d3e7891f5657eef2a63440d@bd-events": {
-"description": "",
-"end": null,
-"location": "ZOOM Webinar",
-"source": "CMAA NorCal",
-"source_region": "Bay Area",
-"start": "2026-07-16T00:00:00+00:00",
-"title": "EDUCATION WEBINAR - Navigating DSA without the Guesswork",
-"url": "https://www.cmaanorcal.org/events-1/education-webinar-navigating-dsa-without-the-guesswork"
 },
 "5ffaba2ba6d18f9ccc74ddafacd408ea@bd-events": {
 "description": "",
@@ -529,6 +519,16 @@
 "title": "2026 Annual Golf Tournament",
 "url": "https://iidanc.org/events/2026-annual-golf-tournament/"
 },
+"72ddcbddb45bfb9a9523d291a9ef67d0@bd-events": {
+"description": "\nGet ready to roll the dice at BOMA San Diego Casino Night on&nbsp;Wednesday, September 16 at AleSmith Brewing! Enjoy casino games, a golf simulator, food, drinks, music, raffle prizes and a poker-themed photo station while connecting with fellow BOMA San Diego members.\n\nNo casino experience is needed. This beginner-friendly event is the perfect opportunity to mix, mingle and enjoy a little friend",
+"end": "2026-09-16T19:00:00+00:00",
+"location": "AleSmith Brewing, 9990 AleSmith Court, San Diego, CA",
+"source": "BOMA San Diego",
+"source_region": "San Diego",
+"start": "2026-09-16T16:00:00+00:00",
+"title": "Casino Night Summer Party",
+"url": "https://www.bomasd.org/calendar_list.asp"
+},
 "730c972ce14da2194f9e46f8b0f4a417@bd-events": {
 "description": "",
 "end": null,
@@ -538,16 +538,6 @@
 "start": "2026-10-07T00:00:00+00:00",
 "title": "DEI Candid Conversation",
 "url": "https://bomasf.org/events/events-calendar"
-},
-"739847b1ea481f743f434fa2bf99d824@bd-events": {
-"description": "",
-"end": "2026-07-16T20:00:00-07:00",
-"location": "None",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-07-16T18:00:00-07:00",
-"title": "AIASF: Women in Architecture Dine Around",
-"url": "https://www.aiasf.org/events/women-in-architecture-dine-around"
 },
 "7aca1e35a04fad6fb06d1cc858b29730@bd-events": {
 "description": "",
@@ -592,7 +582,7 @@
 "80c1cc2af8bcab8d701f6a9213f37179@bd-events": {
 "description": "",
 "end": "2026-09-12T12:00:00-07:00",
-"location": "Carnaval SF 682 Florida Street San Francisco, CA 94110 United States",
+"location": "CANA - Cultura y Arte Nativa de las Am\u00e9ricas 683 Florida Street San Francisco, CA 94110-2023 United States",
 "source": "AIA San Francisco",
 "source_region": "San Francisco",
 "start": "2026-09-12T10:00:00-07:00",
@@ -648,16 +638,6 @@
 "start": "2026-08-19T08:00:00+00:00",
 "title": "Environmental Health & Safety",
 "url": "https://www.bomasd.org/calendar_list.asp"
-},
-"891aed5d7aa469d91543d278a236a629@bd-events": {
-"description": "Open to NED Alumni & Current Class",
-"end": "2026-07-15T19:00:00+00:00",
-"location": "",
-"source": "NAIOP SF Bay Area",
-"source_region": "Bay Area",
-"start": "2026-07-15T17:00:00+00:00",
-"title": "NED Alumni Happy Hour",
-"url": "https://members.naiopsfba.org/event-calendar/Details/ned-alumni-happy-hour-1769262?sourceTypeId=Website"
 },
 "8ac6b02fb13e7e2b20a1167cb5bf5193@bd-events": {
 "description": "",
@@ -728,16 +708,6 @@
 "start": "2026-09-09T12:00:00-07:00",
 "title": "AIASF: International Architect Talk / The Dedalo Minosse International Prize",
 "url": "https://www.aiasf.org/events/international-architect-talk--the-dedalo-minosse-international-prize"
-},
-"9946786e634f4676eb878aea6cd2300c@bd-events": {
-"description": "",
-"end": null,
-"location": "San Francisco, CA",
-"source": "CoreNet NorCal",
-"source_region": "Bay Area",
-"start": "2026-07-16T00:00:00+00:00",
-"title": "What Drives Bay Area Construction Costs?",
-"url": "https://nocal.corenetglobal.org/events/upcoming-events"
 },
 "9ee48b613cee9f3d95d8962969ce1b82@bd-events": {
 "description": "",
@@ -878,6 +848,16 @@
 "start": "2026-08-13T00:00:00+00:00",
 "title": "The Owner Advisor Advantage",
 "url": "https://www.cmaanorcal.org/events-1/the-owner-advisor-advantage"
+},
+"be7a9057188b31dd0b9e12ca4793a4a4@bd-events": {
+"description": "",
+"end": "2026-08-17T20:00:00-07:00",
+"location": "The Irish Bank 10 Mark Lane San Francisco, CA 94108 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-08-17T17:00:00-07:00",
+"title": "AIASF: Technology in Architectural Practice Happy Hour",
+"url": "https://www.aiasf.org/events/technology-in-architectural-practice-happy-hour"
 },
 "c0cc57c32488e45c99ceac301aab256d@bd-events": {
 "description": "",
@@ -1119,16 +1099,6 @@
 "title": "Behaviors to Build a High-Performance Team in a Megaproject",
 "url": "https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=NCA081826&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf"
 },
-"f04f3c66e04d08185257b96d5615d39d@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "CSHE",
-"source_region": "Bay Area",
-"start": "2026-07-16T00:00:00+00:00",
-"title": "San Francisco Chapter | Fireside Chat with the Facility Experts!",
-"url": "https://cshe.org/events/EventDetails.aspx?id=2041304"
-},
 "f3cb8278a1bbb14a60f933d07b034fe3@bd-events": {
 "description": "NAIOP Silicon Valley is hosting our\u00a0Annual BBQ\u00a0on\u00a0September 16, 5:00-8:00 PM! This year, the BBQ will be hosted at The Ameswell Hotel in Mountain View! Join your NAIOP Silicon Valley colleagues for one of our most popular events of the year! Tickets may sell out, so sign up soon! \nLocation: The Ameswell Hotel | Mountain View\nDate & Time:\u00a0September 16, 2026 | 5:00- 8:00 PM \nRegister Here\nRegistrati",
 "end": "2026-09-16T20:00:00+00:00",
@@ -1188,16 +1158,6 @@
 "start": "2026-08-11T12:00:00-07:00",
 "title": "AIASF: Housing Knowledge Community Monthly Meeting",
 "url": "https://www.aiasf.org/events/housing-knowledge-community-monthly-meeting"
-},
-"fd178bd3dc09a70fff87fd65e77be7a1@bd-events": {
-"description": "",
-"end": null,
-"location": "Northern California Community of Practice",
-"source": "Lean Construction Institute",
-"source_region": "",
-"start": "2026-07-17T00:00:00+00:00",
-"title": "Introduction to Lean Project Delivery",
-"url": "https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=NCA071726&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf"
 },
 "fea3083e5476a0e26f870905f99b3b12@bd-events": {
 "description": "",
