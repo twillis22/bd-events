@@ -1,14 +1,4 @@
 {
-"014fb42344397bd6491a4388926c9734@bd-events": {
-"description": "Join the CoreNet Global Northern California Chapter Membership Committee for a virtual coffee chat on how to make the most of your new membership! All new members who joined in the past six months are invited to attend. This month's Coffee Chat has been moved to a Wednesday to accommodate the long weekend.",
-"end": null,
-"location": "Virtual, CA",
-"source": "CoreNet NorCal",
-"source_region": "Bay Area",
-"start": "2026-07-28T00:00:00+00:00",
-"title": "July New Member Coffee Chat",
-"url": "https://nocal.corenetglobal.org/events/upcoming-events"
-},
 "075c41cfaad40f3070d3a678043c6772@bd-events": {
 "description": "",
 "end": null,
@@ -208,6 +198,16 @@
 "start": "2026-10-09T00:00:00+00:00",
 "title": "Merge 2026",
 "url": "https://iidanc.org/events/merge-2026/"
+},
+"30dc185bb408a7e8063e486a1cfa10e8@bd-events": {
+"description": "CREATE's Annual Celebration highlights recent graduates and alumni working in the CRE industry. \nJoin us on 9/17 and hear first-hand how student lives and career paths are directly impacted because of CREATE. Enjoy food, drinks, and networking with CRE ...",
+"end": "2026-09-17T19:30:00+00:00",
+"location": "",
+"source": "NAIOP SF Bay Area",
+"source_region": "Bay Area",
+"start": "2026-09-17T17:30:00+00:00",
+"title": "Commercial Real Estate Alliance for Tomorrow's Employees (CREATE) Annual Celebration",
+"url": "https://members.naiopsfba.org/event-calendar/Details/commercial-real-estate-alliance-for-tomorrow-s-employees-create-annual-celebration-1896255?sourceTypeId=Website"
 },
 "356996cc0b2d7d647cd1da854500df74@bd-events": {
 "description": "",
@@ -718,6 +718,16 @@
 "start": "2026-09-11T14:00:00+00:00",
 "title": "YPG Alumni Marina Multifamily Tour & Happy Hour",
 "url": "https://members.naiopsfba.org/event-calendar/Details/ypg-alumni-marina-multifamily-tour-happy-hour-1881736?sourceTypeId=Website"
+},
+"90b9f8df1e3415d61e23feb4b2b192ea@bd-events": {
+"description": "",
+"end": null,
+"location": "",
+"source": "BOMA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-09-30T00:00:00+00:00",
+"title": "BOMA Block Party - BOMA by The Bayou",
+"url": "https://bomasf.org/events/events-calendar"
 },
 "931c289fd857e25f350296e0291c3e0e@bd-events": {
 "description": "",
