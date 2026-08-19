@@ -1,4 +1,14 @@
 {
+"00ce9cf6db89a34df6dfdca41a99799e@bd-events": {
+"description": "",
+"end": null,
+"location": "Adams Terrace",
+"source": "CMAA NorCal",
+"source_region": "Bay Area",
+"start": "2026-10-11T00:00:00+00:00",
+"title": "CMAA National Conference | Chapter's Happy Hour",
+"url": "https://www.cmaanorcal.org/events-1/cmaa-national-conference-chapters-happy-hour"
+},
 "075c41cfaad40f3070d3a678043c6772@bd-events": {
 "description": "",
 "end": null,
@@ -529,6 +539,16 @@
 "title": "AIASF: Professional Practice (ProPac) Monthly Meeting",
 "url": "https://www.aiasf.org/events/professional-practice-propac-monthly-meeting"
 },
+"6ada9ecc66c84bf5074ed3f85b08cdd5@bd-events": {
+"description": "",
+"end": "2026-08-30T13:00:00-07:00",
+"location": "Washington Square Park Filbert Street & Stockton Street, San Francisco, CA, USA San Francisco, CA 94133 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-08-29T11:00:00-07:00",
+"title": "AIASF: BAYA Sketch Walk: House and House Architects",
+"url": "https://www.aiasf.org/events/baya-sketch-walk-led-by-house-and-house-architects"
+},
 "6bb3438635120ff21b626506ef5c2391@bd-events": {
 "description": "Categories: IIDA NC CHAPTER EVENT",
 "end": null,
@@ -758,6 +778,16 @@
 "start": "2026-09-09T12:00:00-07:00",
 "title": "AIASF: International Architect Talk / The Dedalo Minosse International Prize",
 "url": "https://www.aiasf.org/events/international-architect-talk--the-dedalo-minosse-international-prize"
+},
+"966dfd9236591f930b9d76fb193c37a6@bd-events": {
+"description": "",
+"end": "2026-09-12T18:00:00-07:00",
+"location": "Neighborhood - Cole Valley.\nAddress will be sent out to attendees 24-28 hours before.",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-09-12T16:00:00-07:00",
+"title": "AIASF: 1937 Richard Neutra Darling House Tour and Conversations with Dr. Raymond Richard Neutra Hon. AIALA",
+"url": "https://www.aiasf.org/events/neutra-home-discussion"
 },
 "9c39996b76c8260b792c0c61f92d24c4@bd-events": {
 "description": "",
@@ -1032,7 +1062,7 @@
 "dc23891c6630d014da4de2097dba36d0@bd-events": {
 "description": "",
 "end": "2026-08-23T14:00:00-07:00",
-"location": "Lake Merced Park Picnic Area 1 Harding Road San Francisco, CA 94132-1021 United States",
+"location": "Golden Gate Park - Pioneer East Meadow 569 John F Kennedy Drive San Francisco, CA 94118 United States",
 "source": "AIA San Francisco",
 "source_region": "San Francisco",
 "start": "2026-08-23T11:00:00-07:00",
