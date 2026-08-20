@@ -289,16 +289,6 @@
 "title": "Holiday Party",
 "url": "https://bomasf.org/events/events-calendar"
 },
-"3cc50acfe23acddf53a42ccc313378c8@bd-events": {
-"description": "",
-"end": null,
-"location": "Palo Alto, CA",
-"source": "CoreNet NorCal",
-"source_region": "Bay Area",
-"start": "2026-07-30T00:00:00+00:00",
-"title": "NorCal End User Connection Happy Hour @ Ter\u00fan Pizzeria",
-"url": "https://nocal.corenetglobal.org/events/upcoming-events"
-},
 "3eb010b4099ee5daa44f5504982a49eb@bd-events": {
 "description": "",
 "end": null,
@@ -469,16 +459,6 @@
 "title": "Education Program: Inside the Evaluation Room",
 "url": "https://www.cmaanorcal.org/events-1/education-program-inside-the-evaluation-room"
 },
-"65370e0f577c4b63ef5b51fec3303b37@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "BOMA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-07-30T00:00:00+00:00",
-"title": "EP Career Success Workshop",
-"url": "https://bomasf.org/events/events-calendar"
-},
 "66603832b3db52c46b1234200c8b317e@bd-events": {
 "description": "Categories: FRESNO EVENT",
 "end": null,
@@ -541,7 +521,7 @@
 },
 "6ada9ecc66c84bf5074ed3f85b08cdd5@bd-events": {
 "description": "",
-"end": "2026-08-30T13:00:00-07:00",
+"end": "2026-08-29T13:00:00-07:00",
 "location": "Washington Square Park Filbert Street & Stockton Street, San Francisco, CA, USA San Francisco, CA 94133 United States",
 "source": "AIA San Francisco",
 "source_region": "San Francisco",
@@ -598,6 +578,16 @@
 "start": "2026-09-17T00:00:00+00:00",
 "title": "EDUCATION WEBINAR - Preparing to Hit the Ground Running",
 "url": "https://www.cmaanorcal.org/events-1/education-webinar-preparing-to-hit-the-ground-running"
+},
+"79d8f8d6dcc4a35390aa63bb9de021e1@bd-events": {
+"description": "The Marketing & Communications Committee supports branding and messaging across our chapter's website, email, social media, and more. It's a great way to get involved, meet other members, and help shape how CREDA SFBA shows up in the community. We're ...",
+"end": "2026-09-09T18:00:00+00:00",
+"location": "",
+"source": "NAIOP SF Bay Area",
+"source_region": "Bay Area",
+"start": "2026-09-09T16:00:00+00:00",
+"title": "Marketing & Communications Committee Happy Hour",
+"url": "https://members.naiopsfba.org/event-calendar/Details/marketing-communications-committee-happy-hour-1899452?sourceTypeId=Website"
 },
 "7aca1e35a04fad6fb06d1cc858b29730@bd-events": {
 "description": "",
@@ -719,16 +709,6 @@
 "title": "Golf Tournament",
 "url": "https://www.i2sl.org/san-diego"
 },
-"8b8852bc1e44a85469efa2ed269898ed@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "BOMA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-07-30T00:00:00+00:00",
-"title": "EP Career Success Workshop - The Art of the RFP: Building Better Partnerships",
-"url": "https://bomasf.org/events/events-calendar"
-},
 "90297bc7733d277fc57ba1c358a18c0b@bd-events": {
 "description": "",
 "end": "2026-09-11T16:00:00+00:00",
@@ -758,6 +738,16 @@
 "start": "2026-09-25T00:00:00+00:00",
 "title": "Vision to Reality: The Corporate Campus Lifecycle Design Lab",
 "url": "https://nocal.corenetglobal.org/events/upcoming-events"
+},
+"93e7e26a889a42c47fe44dd6ad31f251@bd-events": {
+"description": "Categories: City Center EVENT, SAN FRANCISCO EVENT",
+"end": null,
+"location": "",
+"source": "IIDA Northern California",
+"source_region": "Bay Area",
+"start": "2026-09-10T00:00:00+00:00",
+"title": "Color : Science, Language, and Psychology (Virtual CEU)",
+"url": "https://iidanc.org/events/color-science-language-and-psychology-virtual-ceu/"
 },
 "958cc7b4ac840ef9d0e475902e3ad1c6@bd-events": {
 "description": "",
@@ -828,6 +818,16 @@
 "start": "2026-09-17T00:00:00+00:00",
 "title": "CREATE Celebration",
 "url": "https://bomasf.org/events/events-calendar"
+},
+"a3e8775ceaabd37f345df0cd254b93fd@bd-events": {
+"description": "",
+"end": "2026-09-15T13:30:00-07:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-09-15T12:00:00-07:00",
+"title": "AIASF: Sketchy Tuesday - CA+D Cafe Space/Cento Coffee",
+"url": "https://www.aiasf.org/events/sketchy-tuesday-cad"
 },
 "a8ab2c1d4e9dad4296af6560b2450285@bd-events": {
 "description": "",
