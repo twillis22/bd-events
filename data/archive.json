@@ -9,16 +9,6 @@
 "title": "CMAA National Conference | Chapter's Happy Hour",
 "url": "https://www.cmaanorcal.org/events-1/cmaa-national-conference-chapters-happy-hour"
 },
-"075c41cfaad40f3070d3a678043c6772@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "BOMA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-08-05T00:00:00+00:00",
-"title": "August Membership Luncheon",
-"url": "https://bomasf.org/events/events-calendar"
-},
 "09c54059e64634471618627c2bf98721@bd-events": {
 "description": "Details to follow! Sponsorships available from $650 - $1,000.\n",
 "end": "2026-10-22T19:00:00+00:00",
@@ -228,6 +218,26 @@
 "start": "2026-09-17T17:30:00+00:00",
 "title": "Commercial Real Estate Alliance for Tomorrow's Employees (CREATE) Annual Celebration",
 "url": "https://members.naiopsfba.org/event-calendar/Details/commercial-real-estate-alliance-for-tomorrow-s-employees-create-annual-celebration-1896255?sourceTypeId=Website"
+},
+"318c1730a72f7b5d374f5973b5315539@bd-events": {
+"description": "Join CREDA SFBA for an exclusive walking tour of Treasure Island, San Francisco's newest waterfront neighborhood, led by Wilson Meany \u2014 master developer of the 20-year, $6+ billion Treasure Island redevelopment. The tour will guide attendees through ...",
+"end": "2026-10-14T18:00:00+00:00",
+"location": "",
+"source": "NAIOP SF Bay Area",
+"source_region": "Bay Area",
+"start": "2026-10-14T15:30:00+00:00",
+"title": "Treasure Island Tour & Happy Hour",
+"url": "https://members.naiopsfba.org/event-calendar/Details/treasure-island-tour-happy-hour-1904418?sourceTypeId=Website"
+},
+"32f9ca29ee2d6469a2a586194bb83d66@bd-events": {
+"description": "",
+"end": "2026-09-16T13:00:00-07:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-09-16T11:30:00-07:00",
+"title": "AIASF: Fohhn and 4Media Live Lunch + Learn Demo San Francisco",
+"url": "https://www.aiasf.org/events/fohhn-and-4media-live-lunch--learn-demo-san-francisco"
 },
 "356996cc0b2d7d647cd1da854500df74@bd-events": {
 "description": "",
@@ -1018,6 +1028,16 @@
 "start": "2026-09-10T00:00:00-07:00",
 "title": "AIASF: 23rd Annual Architecture + City Festival",
 "url": "https://www.aiasf.org/events/2026-architecture--city-the-city-festival-"
+},
+"d17501490bc426050f49700e8188e03f@bd-events": {
+"description": "",
+"end": "2026-09-15T20:00:00-07:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-09-15T17:30:00-07:00",
+"title": "AIASF: The Space Architect (Film Screening + Filmmaker Conversation)",
+"url": "https://www.aiasf.org/events/space-architect-film-screening"
 },
 "d708b250f1905c10ec42f0f5080f4e4b@bd-events": {
 "description": "",
