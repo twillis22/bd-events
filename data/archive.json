@@ -299,16 +299,6 @@
 "title": "Holiday Party",
 "url": "https://bomasf.org/events/events-calendar"
 },
-"3eb010b4099ee5daa44f5504982a49eb@bd-events": {
-"description": "",
-"end": null,
-"location": "San Diego Community of Practice",
-"source": "Lean Construction Institute",
-"source_region": "",
-"start": "2026-08-07T00:00:00+00:00",
-"title": "8th Lean Industry Day",
-"url": "https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=SD080726&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf"
-},
 "448fece2a1e7035a07236931ee5f52d8@bd-events": {
 "description": "BOMA Basics\n\nBOMA Basics gives our Associate Members a face-to-face forum to talk about navigating their BOMA memberships, how to get the most value out of their experience, and an open, honest discussion to answer/discuss frequently asked questions.\n\nIt will be a fun and casual event attended by your fellow new members as well as a few successful seasoned members who are hosting the event. It&rsq",
 "end": "2026-09-09T10:30:00+00:00",
@@ -638,6 +628,16 @@
 "start": "2026-09-24T00:00:00+00:00",
 "title": "StrengthsFinder Workshop",
 "url": "https://iidanc.org/events/strengthsfinder-workshop/"
+},
+"82899628b8ebe91944a1be20d26aa1e2@bd-events": {
+"description": "",
+"end": "2026-09-16T20:00:00-07:00",
+"location": "Center for Architecture + Design 140 Sutter St San Francisco , CA 94104",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-09-16T17:30:00-07:00",
+"title": "AIASF: The Architecture of Opera",
+"url": "https://www.aiasf.org/events/the-architecture-of-opera"
 },
 "83e53ad6563e85b7fb56e6499fdbffce@bd-events": {
 "description": "",
