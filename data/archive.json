@@ -339,16 +339,6 @@
 "title": "Annual Elmer Johnson Golf Tournament",
 "url": "https://bomasf.org/events/events-calendar"
 },
-"4a3d5325c09e5e3c4142864a7551fc44@bd-events": {
-"description": "",
-"end": "2026-08-20T18:30:00+00:00",
-"location": "",
-"source": "NAIOP SF Bay Area",
-"source_region": "Bay Area",
-"start": "2026-08-20T15:00:00+00:00",
-"title": "Pickleball Social 2026",
-"url": "https://members.naiopsfba.org/event-calendar/Details/pickleball-social-2026-1747403?sourceTypeId=Website"
-},
 "4aa5c39d2d7358d718ea474bf3e0337a@bd-events": {
 "description": "",
 "end": null,
@@ -419,16 +409,6 @@
 "title": "Annual Joint Expo: BOMA, IFMA, IREM, & SDBEA",
 "url": "https://www.bomasd.org/calendar_list.asp"
 },
-"5c31847697fb9f255c0cbf2669e7f804@bd-events": {
-"description": "",
-"end": null,
-"location": "Mountain View, CA",
-"source": "CoreNet NorCal",
-"source_region": "Bay Area",
-"start": "2026-08-20T00:00:00+00:00",
-"title": "The Power-Driven Future of CRE Decisions",
-"url": "https://nocal.corenetglobal.org/events/upcoming-events"
-},
 "5dba07903858c64b69f90e3da5aeac85@bd-events": {
 "description": "",
 "end": null,
@@ -438,26 +418,6 @@
 "start": "2026-10-15T00:00:00+00:00",
 "title": "Annual Meeting & Membership Luncheon",
 "url": "https://bomasf.org/events/events-calendar"
-},
-"65230afcce0edf16eda8bec6f7d8e6f3@bd-events": {
-"description": "",
-"end": null,
-"location": "Aurora Rooftop",
-"source": "CMAA NorCal",
-"source_region": "Bay Area",
-"start": "2026-08-20T00:00:00+00:00",
-"title": "Education Program: Inside the Evaluation Room",
-"url": "https://www.cmaanorcal.org/events-1/education-program-inside-the-evaluation-room"
-},
-"66603832b3db52c46b1234200c8b317e@bd-events": {
-"description": "Categories: FRESNO EVENT",
-"end": null,
-"location": "",
-"source": "IIDA Northern California",
-"source_region": "Bay Area",
-"start": "2026-08-20T00:00:00+00:00",
-"title": "Wellness Through Sound",
-"url": "https://iidanc.org/events/wellness-through-sound/"
 },
 "6714ecee5a2101b0b06dcb7116996d6b@bd-events": {
 "description": "",
@@ -478,16 +438,6 @@
 "start": "2026-10-07T08:00:00+00:00",
 "title": "Design, Operation and Maintenance of Building Systems Part I",
 "url": "https://www.bomasd.org/calendar_list.asp"
-},
-"696725c90afa094aa9cd4e0b6ac99c68@bd-events": {
-"description": "",
-"end": "2026-08-19T13:00:00-07:00",
-"location": "None",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-08-19T12:00:00-07:00",
-"title": "AIASF: International Practice Monthly Meeting",
-"url": "https://www.aiasf.org/events/international-practice-monthly-meeting"
 },
 "6969f7cad404d1660a8850ca3dae9bf2@bd-events": {
 "description": "",
@@ -789,6 +739,16 @@
 "title": "AIASF: Architecture + the City Launch Party",
 "url": "https://www.aiasf.org/events/opening-night-party--"
 },
+"9d94d655b320567cfd32ec7de602fd26@bd-events": {
+"description": "BOMA Post-Election Webcast: What the 2026 Election Means\nElection Day is approaching, but for commercial real estate, the bigger question is: what happens next?\nJoin BOMA&#39;s advocacy team for a timely discussion on how the 2026 election results could shape CRE policy at the federal and\nstate levels. From shifts in Congress and state leadership to the policy priorities that could define 2027 and",
+"end": "2026-11-12T13:00:00+00:00",
+"location": "Webcast, CA",
+"source": "BOMA San Diego",
+"source_region": "San Diego",
+"start": "2026-11-12T12:00:00+00:00",
+"title": "2026 Post Election Webcast",
+"url": "https://www.bomasd.org/calendar_list.asp"
+},
 "9ee48b613cee9f3d95d8962969ce1b82@bd-events": {
 "description": "",
 "end": null,
@@ -950,7 +910,7 @@
 "url": "https://nocal.corenetglobal.org/events/upcoming-events"
 },
 "d0509dd909eececa63d4f40251339a5a@bd-events": {
-"description": "October Membership Luncheon: Land Development Focus\n\n&nbsp;Details to come!\n\nWhen: Tuesday, October 13th, 11 AM - 1 PM\nWhere: Farmer &amp; The Seahorse | 10996 Torreyana Rd, San Diego, CA 92121\n\nCost: $50 for BOMA Principal members; $110 for BOMA Associate members; $150 non-members\n&nbsp;\nNote: Guests with dietary restrictions/preferences please select vegetarian meal option in registration.&nbsp;",
+"description": "\n\nOctober Membership Luncheon\nFrom Molecule to Market: The Business, Real Estate &amp; Infrastructure Behind Drug Development\n\nJoin BOMA San Diego for an inside look at the business, real estate and infrastructure behind drug development, from early-stage research through commercialization.\n\nOur expert panel will explore how laboratory space, specialized facilities, capital, operations and strateg",
 "end": "2026-10-13T13:00:00+00:00",
 "location": "Farmer &amp; The Seahorse, 10996 Torreyana Rd Ste 240, San Diego, CA",
 "source": "BOMA San Diego",
@@ -1059,16 +1019,6 @@
 "title": "Design After Dark",
 "url": "https://iidanc.org/events/design-after-dark/"
 },
-"e3141a90d6a133ac0d6b707acc372342@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "BOMA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-08-20T00:00:00+00:00",
-"title": "Emerging Professionals Summer Mixer",
-"url": "https://bomasf.org/events/events-calendar"
-},
 "e31528d6237cbdf6f83ec6164a20910b@bd-events": {
 "description": "",
 "end": "2026-08-25T13:30:00-07:00",
@@ -1168,16 +1118,6 @@
 "start": "2026-10-21T00:00:00+00:00",
 "title": "CCM/CMIT Workshop Webinar",
 "url": "https://www.cmaanorcal.org/events-1/ccm-cmit-workshop-webinar"
-},
-"fa94dd5e3cb99e7d35e7bee8bfd635b8@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "BOMA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-08-20T00:00:00+00:00",
-"title": "Emerging Professionals Summer Mixer Rooftop Roundup",
-"url": "https://bomasf.org/events/events-calendar"
 },
 "fbc17e1245396569dbe0a85412b56dea@bd-events": {
 "description": "",
