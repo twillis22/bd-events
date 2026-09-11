@@ -199,16 +199,6 @@
 "title": "BOMA Block Party",
 "url": "https://bomasf.org/events/events-calendar"
 },
-"2b8880950b87386a4e5b9c049bc81d80@bd-events": {
-"description": "On event day join us here - https://aiasf-org.zoom.us/j/82073957883?pwd=IyP8YzS5Mibtb0VOc8btm7y1aJud9r.1",
-"end": "2026-08-20T12:30:00-07:00",
-"location": "https://aiasf-org.zoom.us/j/82073957883?pwd=IyP8YzS5Mibtb0VOc8btm7y1aJud9r.1",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-08-20T11:30:00-07:00",
-"title": "AIASF: Committee on the Environment (COTE) Monthly Meeting",
-"url": "https://www.aiasf.org/events/committee-on-the-environment-cote-monthly-meeting"
-},
 "2d258e3215b00e299dd75ed66e03856d@bd-events": {
 "description": "",
 "end": "2026-09-30T19:00:00+00:00",
@@ -368,6 +358,16 @@
 "start": "2026-08-25T08:30:00-07:00",
 "title": "AIASF: AI in Architectural Practice: Adoption, Responsibility, and Risk",
 "url": "https://www.aiasf.org/events/ai-in-architectural-practice-adoption-responsibility-and-risk"
+},
+"50d88b9a3522536995a63bee347e3a7f@bd-events": {
+"description": "",
+"end": "2026-09-20T12:30:00-07:00",
+"location": "Pier 40 40 Pier San Francisco, CA 94107-2123 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-09-20T10:00:00-07:00",
+"title": "AIASF: Bay Front City Boat Tour",
+"url": "https://www.aiasf.org/events/bay-front-city-boat-tour"
 },
 "54498fa03c02e370d279930079c7dae3@bd-events": {
 "description": "",
@@ -829,6 +829,16 @@
 "title": "Commercial Real Estate Finance Panel",
 "url": "https://members.naiopsfba.org/event-calendar/Details/commercial-real-estate-finance-panel-1844719?sourceTypeId=Website"
 },
+"b76068e10e96d661763c30621e1e484f@bd-events": {
+"description": "",
+"end": "2026-09-29T10:30:00+00:00",
+"location": "",
+"source": "NAIOP SF Bay Area",
+"source_region": "Bay Area",
+"start": "2026-09-29T09:30:00+00:00",
+"title": "2026 Election Briefing: What the November Ballot Means for Bay Area Commercial Real Estate",
+"url": "https://members.naiopsfba.org/event-calendar/Details/2026-election-briefing-what-the-november-ballot-means-for-bay-area-commercial-real-estate-1922904?sourceTypeId=Website"
+},
 "b9371b3c35185797e2a419222f2fcb78@bd-events": {
 "description": "",
 "end": null,
@@ -918,16 +928,6 @@
 "start": "2026-10-13T11:00:00+00:00",
 "title": "October Membership Luncheon",
 "url": "https://www.bomasd.org/calendar_list.asp"
-},
-"d08627f34688d8b8a79266a20fa04422@bd-events": {
-"description": "",
-"end": "2026-08-20T20:00:00-07:00",
-"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-08-20T17:30:00-07:00",
-"title": "AIASF: From Vision to Reality: Understanding Project Delivery",
-"url": "https://www.aiasf.org/events/from-vision-to-reality-understanding-project-delivery-"
 },
 "d0e237847c3eb0634d03203160315d5f@bd-events": {
 "description": "",
