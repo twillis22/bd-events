@@ -449,6 +449,16 @@
 "title": "Annual Meeting & Membership Luncheon",
 "url": "https://bomasf.org/events/events-calendar"
 },
+"62f070c7d3ff8f3bb7a053b5fc772e3b@bd-events": {
+"description": "",
+"end": "2026-09-25T16:00:00-07:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-09-25T11:30:00-07:00",
+"title": "AIASF: Professional Development Summit",
+"url": "https://www.aiasf.org/events/professional-development-summit"
+},
 "668acd5d1667161e03e4c0c1bd314a1d@bd-events": {
 "description": "",
 "end": "2026-09-24T20:30:00-07:00",
@@ -618,6 +628,16 @@
 "start": "2026-09-12T10:00:00-07:00",
 "title": "AIASF: Mission District Cultural Heritage Talk and Tour",
 "url": "https://www.aiasf.org/events/mission-mural-walking-tour"
+},
+"815288222a555207526a78f74061758a@bd-events": {
+"description": "",
+"end": null,
+"location": "Oak, SF Bay Airport, Muir Woods Conf. Rm",
+"source": "CMAA NorCal",
+"source_region": "Bay Area",
+"start": "2026-10-13T00:00:00+00:00",
+"title": "Flight Plan: The Future of Northern California Airport Capital Programs",
+"url": "https://www.cmaanorcal.org/events-1/flight-plan-the-future-of-northern-california-airport-capital-programs"
 },
 "8277308ffc14960bd41dd5cdab695e26@bd-events": {
 "description": "Categories: City Center EVENT, SACRAMENTO EVENT",
@@ -990,7 +1010,7 @@
 "url": "https://nocal.corenetglobal.org/events/upcoming-events"
 },
 "d0509dd909eececa63d4f40251339a5a@bd-events": {
-"description": "\n\nOctober Membership Luncheon\nFrom Molecule to Market: The Business, Real Estate &amp; Infrastructure Behind Drug Development\n\nJoin BOMA San Diego for an inside look at the business, real estate and infrastructure behind drug development, from early-stage research through commercialization.\n\nOur expert panel will explore how laboratory space, specialized facilities, capital, operations and strateg",
+"description": "\nOctober Membership Luncheon\nFrom Molecule to Market: The Business, Real Estate &amp; Infrastructure Behind Drug Development\n\nJoin BOMA San Diego for an inside look at the business, real estate and infrastructure behind drug development, from early-stage research through commercialization.\n\nOur expert panel will explore how laboratory space, specialized facilities, capital, operations and strategi",
 "end": "2026-10-13T13:00:00+00:00",
 "location": "Farmer &amp; The Seahorse, 10996 Torreyana Rd Ste 240, San Diego, CA",
 "source": "BOMA San Diego",
@@ -1059,6 +1079,16 @@
 "title": "CREDA NorCal Regional Symposium",
 "url": "https://members.naiopsfba.org/event-calendar/Details/creda-norcal-regional-symposium-1844753?sourceTypeId=Website"
 },
+"d95034c35629987b427ab6079ac0c833@bd-events": {
+"description": "",
+"end": "2026-09-25T13:30:00-07:00",
+"location": "Ferry Building Terminal Plaza (located to the right/southern side of the ferry building) Ferry Building, San Francisco, CA, USA San Francisco, CA 94105 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-09-25T12:00:00-07:00",
+"title": "AIASF: Sketching San Francisco: Exploring Culture, History, and Place - Ferry Building",
+"url": "https://www.aiasf.org/events/sketching-san-francisco-exploring-culture-history-and-place---ferry-building"
+},
 "dad94430269f8947d4493395b9d0f12e@bd-events": {
 "description": "",
 "end": "2026-10-22T20:00:00-07:00",
@@ -1088,16 +1118,6 @@
 "start": "2026-10-30T00:00:00+00:00",
 "title": "Design After Dark",
 "url": "https://iidanc.org/events/design-after-dark/"
-},
-"e31528d6237cbdf6f83ec6164a20910b@bd-events": {
-"description": "",
-"end": "2026-08-25T13:30:00-07:00",
-"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-08-25T11:00:00-07:00",
-"title": "AIASF: Improving Efficiency & Quality in Design Documentation with AI",
-"url": "https://www.aiasf.org/events/improving-efficiency-and-quality-in-design-documentation-copy"
 },
 "e585b6560728ee72449c90765da4f5af@bd-events": {
 "description": "",
@@ -1158,6 +1178,16 @@
 "start": "2026-09-16T00:00:00+00:00",
 "title": "Design Expo",
 "url": "https://iidanc.org/events/design-expo/"
+},
+"ebe6a02c0378d621ea9d1ec1620c29a9@bd-events": {
+"description": "",
+"end": "2026-09-25T19:30:00-07:00",
+"location": "Mechanics Institute 57 Post Street San Francisco, CA 94104-5023 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-09-25T18:00:00-07:00",
+"title": "AIASF: Architecture, Democracy and the Public Forum",
+"url": "https://www.aiasf.org/events/architecture-democracy-and-the-public-forum"
 },
 "ed4dcd61ec4c0949f58f80e1eabf2d3c@bd-events": {
 "description": "",
