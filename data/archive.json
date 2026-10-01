@@ -349,6 +349,16 @@
 "title": "Holiday Party",
 "url": "https://bomasf.org/events/events-calendar"
 },
+"3de8b2e2e1b57d00f9e6dbb1c1d5052d@bd-events": {
+"description": "",
+"end": null,
+"location": "Northern California Community of Practice",
+"source": "Lean Construction Institute",
+"source_region": "",
+"start": "2026-10-02T00:00:00+00:00",
+"title": "Introduction to the Last Planner System\u00ae",
+"url": "https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=C_NCA10026&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf"
+},
 "4683aebb6498f439522b917eb9ec6958@bd-events": {
 "description": "",
 "end": null,
@@ -428,6 +438,16 @@
 "start": "2026-10-15T00:00:00+00:00",
 "title": "Annual Meeting & Membership Luncheon",
 "url": "https://bomasf.org/events/events-calendar"
+},
+"5e51cb55e228653951efec4f2485fd1c@bd-events": {
+"description": "",
+"end": null,
+"location": "San Diego Community of Practice",
+"source": "Lean Construction Institute",
+"source_region": "",
+"start": "2026-10-06T00:00:00+00:00",
+"title": "Target Value Delivery \u2013 Implementation and Next Steps",
+"url": "https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=C_SD10066&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf"
 },
 "62f070c7d3ff8f3bb7a053b5fc772e3b@bd-events": {
 "description": "",
@@ -729,16 +749,6 @@
 "title": "Vision to Reality: The Corporate Campus Lifecycle Design Lab",
 "url": "https://nocal.corenetglobal.org/events/upcoming-events"
 },
-"93e7e26a889a42c47fe44dd6ad31f251@bd-events": {
-"description": "Categories: City Center EVENT, SAN FRANCISCO EVENT",
-"end": null,
-"location": "",
-"source": "IIDA Northern California",
-"source_region": "Bay Area",
-"start": "2026-09-10T00:00:00+00:00",
-"title": "Color : Science, Language, and Psychology (Virtual CEU)",
-"url": "https://iidanc.org/events/color-science-language-and-psychology-virtual-ceu/"
-},
 "958cc7b4ac840ef9d0e475902e3ad1c6@bd-events": {
 "description": "",
 "end": null,
@@ -748,16 +758,6 @@
 "start": "2026-09-24T00:00:00+00:00",
 "title": "Catamaran Cruise",
 "url": "https://nocal.corenetglobal.org/events/upcoming-events"
-},
-"9591f548bd01241defe77c8ed560fe93@bd-events": {
-"description": "",
-"end": "2026-09-09T13:30:00-07:00",
-"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-09T12:00:00-07:00",
-"title": "AIASF: International Architect Talk / The Dedalo Minosse International Prize",
-"url": "https://www.aiasf.org/events/international-architect-talk--the-dedalo-minosse-international-prize"
 },
 "966dfd9236591f930b9d76fb193c37a6@bd-events": {
 "description": "",
@@ -829,6 +829,16 @@
 "title": "AIASF: Sketchy Tuesday - CA+D Cafe Space/Cento Coffee",
 "url": "https://www.aiasf.org/events/sketchy-tuesday-cad"
 },
+"a6e91ed780d38a42d1e1c607b9274cc5@bd-events": {
+"description": "",
+"end": null,
+"location": "",
+"source": "BOMA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-10-29T00:00:00+00:00",
+"title": "PAC Spirits Tasting Experience",
+"url": "https://bomasf.org/events/events-calendar"
+},
 "a7dc91f8625f8ef147d131eaa0f78c10@bd-events": {
 "description": "Categories: IIDA NC CHAPTER EVENT, Student EVENT",
 "end": null,
@@ -846,6 +856,16 @@
 "source": "BOMA San Francisco",
 "source_region": "San Francisco",
 "start": "2026-11-10T00:00:00+00:00",
+"title": "Codes Seminar",
+"url": "https://bomasf.org/events/events-calendar"
+},
+"ae15da9861874a2b28445bd627707e79@bd-events": {
+"description": "",
+"end": null,
+"location": "",
+"source": "BOMA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-11-17T00:00:00+00:00",
 "title": "Codes Seminar",
 "url": "https://bomasf.org/events/events-calendar"
 },
@@ -898,16 +918,6 @@
 "start": "2026-09-29T09:30:00+00:00",
 "title": "2026 Election Briefing: What the November Ballot Means for Bay Area Commercial Real Estate",
 "url": "https://members.naiopsfba.org/event-calendar/Details/2026-election-briefing-what-the-november-ballot-means-for-bay-area-commercial-real-estate-1922904?sourceTypeId=Website"
-},
-"bac6e209630392261caf04f879bc06cd@bd-events": {
-"description": "",
-"end": null,
-"location": "9310 Athena Circle San Diego, CA 92037",
-"source": "I2SL San Diego",
-"source_region": "San Diego",
-"start": "2026-09-10T00:00:00+00:00",
-"title": "San Diego Chapter Annual Conference",
-"url": "https://www.i2sl.org/san-diego"
 },
 "bb84a20a3b9ac0f9b8a2b0530cf60ba5@bd-events": {
 "description": "\n\tCBPA Industry Awards Dinner&nbsp;\n\tCBPA Annual Board Meeting&nbsp;\n\tBOMA California Board Meeting&nbsp;\n\n",
@@ -988,16 +998,6 @@
 "start": "2026-09-10T18:00:00-07:00",
 "title": "AIASF: 2026 Architecture + The City Festival Opening Party",
 "url": "https://www.aiasf.org/events/opening-night-party--"
-},
-"d0e29323a0866a48272aaabeb82bb626@bd-events": {
-"description": "",
-"end": "2026-09-28T00:00:00-07:00",
-"location": "None",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-10T00:00:00-07:00",
-"title": "AIASF: 23rd Annual Architecture + City Festival",
-"url": "https://www.aiasf.org/events/2026-architecture--city-the-city-festival-"
 },
 "d17501490bc426050f49700e8188e03f@bd-events": {
 "description": "",
