@@ -209,16 +209,6 @@
 "title": "AIASF: 1937 Richard Neutra Darling House Tour and Conversations with Dr. Raymond Richard Neutra",
 "url": "https://www.aiasf.org/events/neutra-home-discussion"
 },
-"28a39e7ca6b772ae605e901b3467d74f@bd-events": {
-"description": "This week in Houston real estate news, Mack Allen's 16K SF restaurant and event space opens at 5POP, The Woodlands office building trades, and more.",
-"end": null,
-"location": "",
-"source": "Bisnow Events",
-"source_region": "",
-"start": "2026-09-11T14:42:27-04:00",
-"title": "16K SF Restaurant, Event Space Opens At 5POP Office: The Houston Deal Sheet",
-"url": "https://www.bisnow.com/news/houston/deal-sheet/16k-sf-restaurant-event-space-opens-at-5pop-office-the-houston-deal-sheet"
-},
 "2b10bfd983f3b6b17ae652c98999a334@bd-events": {
 "description": "",
 "end": null,
@@ -299,16 +289,6 @@
 "title": "September New Member Coffee Chat",
 "url": "https://nocal.corenetglobal.org/events/upcoming-events"
 },
-"39a7f57401e64f2bb5222ea40419608d@bd-events": {
-"description": "",
-"end": "2026-09-11T13:30:00-07:00",
-"location": "Presidio Main Post (Meeting Location @ Visitor Center) 210 Lincoln Boulevard San Francisco, CA 94129-1705 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-11T12:00:00-07:00",
-"title": "AIASF: Sketching San Francisco: Exploring Culture, History, and Place - Presidio Main Post",
-"url": "https://www.aiasf.org/events/sketching-san-francisco-exploring-culture-history-and-place-sep-11th"
-},
 "39b372816b83ade4c700555fa4824c01@bd-events": {
 "description": "",
 "end": "2026-10-12T18:00:00-07:00",
@@ -338,6 +318,16 @@
 "start": "2026-10-02T00:00:00+00:00",
 "title": "Introduction to the Last Planner System\u00ae",
 "url": "https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=C_NCA10026&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf"
+},
+"4347de3d28dbd16f809fcb4148e3832c@bd-events": {
+"description": "",
+"end": "2026-10-13T20:00:00-07:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-10-13T18:00:00-07:00",
+"title": "AIASF: Designing with Purpose: Equity, Climate, and the Future of Architecture",
+"url": "https://www.aiasf.org/events/designing-with-purpose-equity-climate-and-the-future-of-architecture"
 },
 "4683aebb6498f439522b917eb9ec6958@bd-events": {
 "description": "",
@@ -828,16 +818,6 @@
 "start": "2026-11-17T00:00:00+00:00",
 "title": "Codes Seminar",
 "url": "https://bomasf.org/events/events-calendar"
-},
-"ae246684687dcb20c8435450d0f9a4c8@bd-events": {
-"description": "",
-"end": "2026-09-14T00:00:00-07:00",
-"location": "None",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-12T00:00:00-07:00",
-"title": "AIASF: 2026 AIASF San Francisco Home Tours",
-"url": "https://www.aiasf.org/events/2026-aiasf-home-tours"
 },
 "ae6b6ee8e5cc93a78c34c31b4f2daf8a@bd-events": {
 "description": "",
