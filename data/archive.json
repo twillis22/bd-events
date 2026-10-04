@@ -199,16 +199,6 @@
 "title": "AIASF: SRJC Decarb + Rehab Tour of STEM Building and Forsyth Hall",
 "url": "https://www.aiasf.org/events/srjc-decarb--rehab-tour-of-stem-building-and-forsyth-hall"
 },
-"2894e9b96a562455035801322f1fba28@bd-events": {
-"description": "",
-"end": "2026-09-12T18:00:00-07:00",
-"location": "Neighborhood - Cole Valley.\nAddress will be sent out to attendees 24-28 hours before.",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-12T16:00:00-07:00",
-"title": "AIASF: 1937 Richard Neutra Darling House Tour and Conversations with Dr. Raymond Richard Neutra",
-"url": "https://www.aiasf.org/events/neutra-home-discussion"
-},
 "2b10bfd983f3b6b17ae652c98999a334@bd-events": {
 "description": "",
 "end": null,
@@ -298,6 +288,16 @@
 "start": "2026-10-12T09:30:00-07:00",
 "title": "AIASF: 2026 AIASF Golf Classic",
 "url": "https://www.aiasf.org/events/2026-aiasf-golf-classic-"
+},
+"3a301a52649f0dba2db062a2eff9d24a@bd-events": {
+"description": "",
+"end": "2026-10-14T16:00:00-07:00",
+"location": "Center for Architecture + Design  140 Sutter Street San Francisco, CA 94104 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-10-14T13:00:00-07:00",
+"title": "AIASF: Insights on Zero Carbon Design",
+"url": "https://www.aiasf.org/events/insights-on-zero-carbon-design"
 },
 "3c62390ffc756e751f43165408c74284@bd-events": {
 "description": "",
@@ -579,16 +579,6 @@
 "title": "EP Career Success Workshop",
 "url": "https://bomasf.org/events/events-calendar"
 },
-"80c1cc2af8bcab8d701f6a9213f37179@bd-events": {
-"description": "",
-"end": "2026-09-12T12:00:00-07:00",
-"location": "CANA - Cultura y Arte Nativa de las Am\u00e9ricas 683 Florida Street San Francisco, CA 94110-2023 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-12T10:00:00-07:00",
-"title": "AIASF: Mission District Cultural Heritage Talk and Tour",
-"url": "https://www.aiasf.org/events/mission-mural-walking-tour"
-},
 "815288222a555207526a78f74061758a@bd-events": {
 "description": "",
 "end": null,
@@ -718,16 +708,6 @@
 "start": "2026-09-24T00:00:00+00:00",
 "title": "Catamaran Cruise",
 "url": "https://nocal.corenetglobal.org/events/upcoming-events"
-},
-"966dfd9236591f930b9d76fb193c37a6@bd-events": {
-"description": "",
-"end": "2026-09-12T18:00:00-07:00",
-"location": "Neighborhood - Cole Valley.\nAddress will be sent out to attendees 24-28 hours before.",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-12T16:00:00-07:00",
-"title": "AIASF: 1937 Richard Neutra Darling House Tour and Conversations with Dr. Raymond Richard Neutra Hon. AIALA",
-"url": "https://www.aiasf.org/events/neutra-home-discussion"
 },
 "9d94d655b320567cfd32ec7de602fd26@bd-events": {
 "description": "BOMA Post-Election Webcast: What the 2026 Election Means\nElection Day is approaching, but for commercial real estate, the bigger question is: what happens next?\nJoin BOMA&#39;s advocacy team for a timely discussion on how the 2026 election results could shape CRE policy at the federal and\nstate levels. From shifts in Congress and state leadership to the policy priorities that could define 2027 and",
