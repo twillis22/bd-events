@@ -31,11 +31,11 @@
 },
 "0ac21bbc9712aafd8bc770acbf5cb53d@bd-events": {
 "description": "",
-"end": "2026-10-22T19:00:00+00:00",
+"end": "2026-10-22T18:00:00+00:00",
 "location": "",
 "source": "NAIOP SF Bay Area",
 "source_region": "Bay Area",
-"start": "2026-10-22T17:00:00+00:00",
+"start": "2026-10-22T16:00:00+00:00",
 "title": "Industrial Committee Fall Happy Hour",
 "url": "https://members.naiopsfba.org/event-calendar/Details/industrial-committee-fall-happy-hour-1874131?sourceTypeId=Website"
 },
@@ -299,6 +299,16 @@
 "title": "AIASF: Insights on Zero Carbon Design",
 "url": "https://www.aiasf.org/events/insights-on-zero-carbon-design"
 },
+"3aafd2081b33c01faec2a5b96d32cbdf@bd-events": {
+"description": "Categories: City Center EVENT, SACRAMENTO EVENT",
+"end": null,
+"location": "",
+"source": "IIDA Northern California",
+"source_region": "Bay Area",
+"start": "2026-12-17T00:00:00+00:00",
+"title": "IIDA Sacramento City Center Holiday Party",
+"url": "https://iidanc.org/events/iida-sacramento-city-center-holiday-party-2/"
+},
 "3c62390ffc756e751f43165408c74284@bd-events": {
 "description": "",
 "end": null,
@@ -329,25 +339,15 @@
 "title": "AIASF: Designing with Purpose: Equity, Climate, and the Future of Architecture",
 "url": "https://www.aiasf.org/events/designing-with-purpose-equity-climate-and-the-future-of-architecture"
 },
-"4683aebb6498f439522b917eb9ec6958@bd-events": {
-"description": "",
+"4923beca94ec4e6f241c5182be6dfee7@bd-events": {
+"description": "Categories: City Center EVENT, SACRAMENTO EVENT",
 "end": null,
 "location": "",
-"source": "BOMA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-14T00:00:00+00:00",
-"title": "Annual Elmer Johnson Golf Tournament",
-"url": "https://bomasf.org/events/events-calendar"
-},
-"4aa5c39d2d7358d718ea474bf3e0337a@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "BOMA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-14T00:00:00+00:00",
-"title": "Annual Elmer Johnson Golf Tournament & Reception",
-"url": "https://bomasf.org/events/events-calendar"
+"source": "IIDA Northern California",
+"source_region": "Bay Area",
+"start": "2026-11-06T00:00:00+00:00",
+"title": "Habitat for Humanity Build Day",
+"url": "https://iidanc.org/events/habitat-for-humanity-build-day/"
 },
 "4bec897ecffb937464f6fd37e5988f29@bd-events": {
 "description": "Categories: City Center EVENT, SAN FRANCISCO EVENT",
