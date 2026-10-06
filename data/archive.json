@@ -769,15 +769,15 @@
 "title": "PAC Spirits Tasting Experience",
 "url": "https://bomasf.org/events/events-calendar"
 },
-"a7dc91f8625f8ef147d131eaa0f78c10@bd-events": {
-"description": "Categories: IIDA NC CHAPTER EVENT, Student EVENT",
+"a80ef24b3a5c904c0a4d703210b92746@bd-events": {
+"description": "Categories: City Center EVENT, SILICON VALLEY EVENT, Student EVENT",
 "end": null,
 "location": "",
 "source": "IIDA Northern California",
 "source_region": "Bay Area",
-"start": "2026-09-15T00:00:00+00:00",
-"title": "IIDA Student & StEP Virtual Introductory Forum",
-"url": "https://iidanc.org/events/iida-student-step-virtual-introductory-forum/"
+"start": "2026-11-06T00:00:00+00:00",
+"title": "Student Firm Tour",
+"url": "https://iidanc.org/events/student-firm-tour/"
 },
 "a8ab2c1d4e9dad4296af6560b2450285@bd-events": {
 "description": "",
@@ -849,6 +849,16 @@
 "title": "CBPA Awards Summit & BOMA Cal Board Meeting",
 "url": "https://www.bomasd.org/calendar_list.asp"
 },
+"bba606b9f0e17f01ee21bc8f927639fa@bd-events": {
+"description": "Join the CoreNet Global Northern California Chapter Membership Committee for a virtual coffee chat on how to make the most of your new membership! All new members who joined in the past six months are invited to attend. This month's Coffee Chat has been moved to a Wednesday to accommodate the long weekend.",
+"end": null,
+"location": "Virtual, CA",
+"source": "CoreNet NorCal",
+"source_region": "Bay Area",
+"start": "2026-10-20T00:00:00+00:00",
+"title": "New Member Coffee Chat",
+"url": "https://nocal.corenetglobal.org/events/upcoming-events"
+},
 "c3c7a298f969437762fb63b5c580c2e6@bd-events": {
 "description": "The Principal Member Download is a dedicated, face-to-face forum designed exclusively for BOMA San Diego&rsquo;s Principal Members. This casual and interactive gathering will give you the opportunity to connect with fellow members, share experiences, and gain valuable insights into maximizing the benefits of your membership.\n\nLed by experienced Principal Members, the session will cover:\n\n\n\t\n\tHow B",
 "end": "2026-09-23T11:00:00+00:00",
@@ -898,6 +908,16 @@
 "start": "2026-10-09T00:00:00+00:00",
 "title": "Day on the Bay",
 "url": "https://nocal.corenetglobal.org/events/upcoming-events"
+},
+"cde868cf21afeb663c73e48a8d28eb41@bd-events": {
+"description": "",
+"end": "2026-10-14T20:00:00-07:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-10-14T17:30:00-07:00",
+"title": "AIASF: Navigating Firm Crossroads: Startup, Client Relationships, and Ownership Transition",
+"url": "https://www.aiasf.org/events/navigating-firm-crossroads-startup-client-relationships-and-ownership-transition"
 },
 "d0509dd909eececa63d4f40251339a5a@bd-events": {
 "description": "\nOctober Membership Luncheon\nFrom Molecule to Market: The Business, Real Estate &amp; Infrastructure Behind Drug Development\n\nJoin BOMA San Diego for an inside look at the business, real estate and infrastructure behind drug development, from early-stage research through commercialization.\n\nOur expert panel will explore how laboratory space, specialized facilities, capital, operations and strategi",
