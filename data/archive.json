@@ -89,16 +89,6 @@
 "title": "Education Program: Inside the Evaluation Room",
 "url": "https://www.cmaanorcal.org/events-1/education-program-inside-the-evaluation-room"
 },
-"1567ec7c0860347e53790a9e323cab7d@bd-events": {
-"description": "",
-"end": "2026-09-15T18:00:00-07:00",
-"location": "Cathedral of St Mary of the Assumption  1111 Gough Street San Francisco, CA 94109-6606 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-15T16:00:00-07:00",
-"title": "AIASF: Cathedral Hill Walking Tour: Temples of the Past, Present, and Future",
-"url": "https://www.aiasf.org/events/cathedral-hill-walking-tour"
-},
 "164f5589fe0536fb63c06dfba990ec1f@bd-events": {
 "description": "Note the new Chapter Meeting date for September.",
 "end": null,
@@ -259,16 +249,6 @@
 "title": "Treasure Island Tour & Happy Hour",
 "url": "https://members.naiopsfba.org/event-calendar/Details/treasure-island-tour-happy-hour-1904418?sourceTypeId=Website"
 },
-"32f9ca29ee2d6469a2a586194bb83d66@bd-events": {
-"description": "",
-"end": "2026-09-16T13:00:00-07:00",
-"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-16T11:30:00-07:00",
-"title": "AIASF: Fohhn and 4Media Live Lunch + Learn Demo San Francisco",
-"url": "https://www.aiasf.org/events/fohhn-and-4media-live-lunch--learn-demo-san-francisco"
-},
 "36a36bd23183aa648d51fdf11a0a4909@bd-events": {
 "description": "Join the CoreNet Global Northern California Chapter Membership Committee for a virtual coffee chat on how to make the most of your new membership! All new members who joined in the past six months are invited to attend. This month's Coffee Chat has been moved to a Wednesday to accommodate the long weekend.",
 "end": null,
@@ -288,6 +268,16 @@
 "start": "2026-10-12T09:30:00-07:00",
 "title": "AIASF: 2026 AIASF Golf Classic",
 "url": "https://www.aiasf.org/events/2026-aiasf-golf-classic-"
+},
+"3a1580331b02f90ae81c3b7d005fb9f1@bd-events": {
+"description": "",
+"end": "2026-10-21T16:00:00-07:00",
+"location": "1030 Leavenworth Street San Francisco, CA 94109-5030 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-10-21T14:00:00-07:00",
+"title": "AIASF: CRAN Hard Hat Tour: Nob Hill - Single Family Home",
+"url": "https://www.aiasf.org/events/cran-hard-hat-tour-nob-hill---single-family-home-"
 },
 "3a301a52649f0dba2db062a2eff9d24a@bd-events": {
 "description": "",
@@ -468,16 +458,6 @@
 "start": "2026-10-12T00:00:00+00:00",
 "title": "2026 Annual Golf Tournament",
 "url": "https://iidanc.org/events/2026-annual-golf-tournament/"
-},
-"72ddcbddb45bfb9a9523d291a9ef67d0@bd-events": {
-"description": "\n\nGet ready to roll the dice at BOMA San Diego Casino Night on&nbsp;Wednesday, September 16 at AleSmith Brewing! Enjoy casino games, a golf simulator, food, drinks, music, raffle prizes and a poker-themed photo station while connecting with fellow BOMA San Diego members.\n\nNo casino experience is needed. This beginner-friendly event is the perfect opportunity to mix, mingle and enjoy a little frien",
-"end": "2026-09-16T19:00:00+00:00",
-"location": "AleSmith Brewing, 9990 AleSmith Court, San Diego, CA",
-"source": "BOMA San Diego",
-"source_region": "San Diego",
-"start": "2026-09-16T16:00:00+00:00",
-"title": "Casino Night Summer Party",
-"url": "https://www.bomasd.org/calendar_list.asp"
 },
 "730c972ce14da2194f9e46f8b0f4a417@bd-events": {
 "description": "",
@@ -749,16 +729,6 @@
 "title": "CREATE Celebration",
 "url": "https://bomasf.org/events/events-calendar"
 },
-"a3e8775ceaabd37f345df0cd254b93fd@bd-events": {
-"description": "",
-"end": "2026-09-15T13:30:00-07:00",
-"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-15T12:00:00-07:00",
-"title": "AIASF: Sketchy Tuesday - CA+D Cafe Space/Cento Coffee",
-"url": "https://www.aiasf.org/events/sketchy-tuesday-cad"
-},
 "a6e91ed780d38a42d1e1c607b9274cc5@bd-events": {
 "description": "",
 "end": null,
@@ -929,16 +899,6 @@
 "title": "October Membership Luncheon",
 "url": "https://www.bomasd.org/calendar_list.asp"
 },
-"d17501490bc426050f49700e8188e03f@bd-events": {
-"description": "",
-"end": "2026-09-15T20:00:00-07:00",
-"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-15T17:30:00-07:00",
-"title": "AIASF: The Space Architect (Film Screening + Filmmaker Conversation)",
-"url": "https://www.aiasf.org/events/space-architect-film-screening"
-},
 "d26410bad3ecc31ab2a4b8e42efee050@bd-events": {
 "description": "",
 "end": "2026-09-23T13:00:00-07:00",
@@ -988,6 +948,16 @@
 "start": "2026-10-22T17:30:00-07:00",
 "title": "AIASF: MAKERS series: Lewis Watts + Dewey Crumpler",
 "url": "https://www.aiasf.org/events/makers-series-lewis-watts-dewey-crumpler"
+},
+"dc24c3ccfe941e4f9ca80db1ad5e8023@bd-events": {
+"description": "",
+"end": "2026-10-20T13:00:00-07:00",
+"location": "ALLSTEEL Showroom  4 Maritime Plaza  San Francisco, CA 94104",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-10-20T12:00:00-07:00",
+"title": "AIASF: Sourcing, Sound, and Sustainability: How to Specify Interior Architectural Walls",
+"url": "https://www.aiasf.org/events/sourcing-sound-and-sustainability-how-to-specify-interior-architectural-walls"
 },
 "dcd25f422c61091b1331e6eeccf7c98b@bd-events": {
 "description": "",
@@ -1059,16 +1029,6 @@
 "title": "DEI Social Event",
 "url": "https://bomasf.org/events/events-calendar"
 },
-"ebdc96d49a7218a495961c696ffa50d9@bd-events": {
-"description": "Categories: FRESNO EVENT",
-"end": null,
-"location": "",
-"source": "IIDA Northern California",
-"source_region": "Bay Area",
-"start": "2026-09-16T00:00:00+00:00",
-"title": "Design Expo",
-"url": "https://iidanc.org/events/design-expo/"
-},
 "ebe6a02c0378d621ea9d1ec1620c29a9@bd-events": {
 "description": "",
 "end": "2026-09-25T19:30:00-07:00",
@@ -1078,16 +1038,6 @@
 "start": "2026-09-25T18:00:00-07:00",
 "title": "AIASF: Architecture, Democracy and the Public Forum",
 "url": "https://www.aiasf.org/events/architecture-democracy-and-the-public-forum"
-},
-"f3cb8278a1bbb14a60f933d07b034fe3@bd-events": {
-"description": "NAIOP Silicon Valley is hosting our\u00a0Annual BBQ\u00a0on\u00a0September 16, 5:00-8:00 PM! This year, the BBQ will be hosted at The Ameswell Hotel in Mountain View! Join your NAIOP Silicon Valley colleagues for one of our most popular events of the year! Tickets may sell out, so sign up soon! \nLocation: The Ameswell Hotel | Mountain View\nDate & Time:\u00a0September 16, 2026 | 5:00- 8:00 PM \nRegister Here\nRegistrati",
-"end": "2026-09-16T20:00:00+00:00",
-"location": "The Ameswell Hotel, 800 Moffett Blvd, Mountain View, CA, 94043, United States",
-"source": "NAIOP Silicon Valley",
-"source_region": "Silicon Valley",
-"start": "2026-09-16T17:00:00+00:00",
-"title": "2026 NAIOP Silicon Valley Annual BBQ",
-"url": "https://naiopsv.org/event/2026bbq/"
 },
 "f566a5103ff81924d1ae0c83b81bdb28@bd-events": {
 "description": "",
