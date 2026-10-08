@@ -9,6 +9,16 @@
 "title": "CMAA National Conference | Chapter's Happy Hour",
 "url": "https://www.cmaanorcal.org/events-1/cmaa-national-conference-chapters-happy-hour"
 },
+"04d1debbc42e720bbaf863e5e5b8b589@bd-events": {
+"description": "",
+"end": "2026-10-19T20:00:00-07:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-10-19T18:00:00-07:00",
+"title": "AIASF: Opening Reception: How Soon Is Now?",
+"url": "https://www.aiasf.org/events/opening-reception-how-soon-is-now"
+},
 "08b497cc75afcf3a405716eec08b8fed@bd-events": {
 "description": "Categories: City Center EVENT, SILICON VALLEY EVENT",
 "end": null,
@@ -228,16 +238,6 @@
 "start": "2026-10-09T00:00:00+00:00",
 "title": "Merge 2026",
 "url": "https://iidanc.org/events/merge-2026/"
-},
-"30dc185bb408a7e8063e486a1cfa10e8@bd-events": {
-"description": "CREATE's Annual Celebration highlights recent graduates and alumni working in the CRE industry. \nJoin us on 9/17 and hear first-hand how student lives and career paths are directly impacted because of CREATE. Enjoy food, drinks, and networking with CRE ...",
-"end": "2026-09-17T19:30:00+00:00",
-"location": "",
-"source": "NAIOP SF Bay Area",
-"source_region": "Bay Area",
-"start": "2026-09-17T17:30:00+00:00",
-"title": "Commercial Real Estate Alliance for Tomorrow's Employees (CREATE) Annual Celebration",
-"url": "https://members.naiopsfba.org/event-calendar/Details/commercial-real-estate-alliance-for-tomorrow-s-employees-create-annual-celebration-1896255?sourceTypeId=Website"
 },
 "318c1730a72f7b5d374f5973b5315539@bd-events": {
 "description": "Join CREDA SFBA for an exclusive walking tour of Treasure Island, San Francisco's newest waterfront neighborhood, led by Wilson Meany \u2014 master developer of the 20-year, $6+ billion Treasure Island redevelopment. The tour will guide attendees through ...",
@@ -499,16 +499,6 @@
 "title": "Developing Leaders Tour: One Steuart Lane",
 "url": "https://members.naiopsfba.org/event-calendar/Details/developing-leaders-tour-one-steuart-lane-1926228?sourceTypeId=Website"
 },
-"789e1830f2a7c41a9d3a8b37230b7714@bd-events": {
-"description": "",
-"end": null,
-"location": "ZOOM Webinar",
-"source": "CMAA NorCal",
-"source_region": "Bay Area",
-"start": "2026-09-17T00:00:00+00:00",
-"title": "EDUCATION WEBINAR - Preparing to Hit the Ground Running",
-"url": "https://www.cmaanorcal.org/events-1/education-webinar-preparing-to-hit-the-ground-running"
-},
 "7aca1e35a04fad6fb06d1cc858b29730@bd-events": {
 "description": "",
 "end": "2026-10-03T12:00:00-07:00",
@@ -578,16 +568,6 @@
 "start": "2026-09-24T00:00:00+00:00",
 "title": "StrengthsFinder Workshop",
 "url": "https://iidanc.org/events/strengthsfinder-workshop/"
-},
-"82899628b8ebe91944a1be20d26aa1e2@bd-events": {
-"description": "",
-"end": "2026-09-16T20:00:00-07:00",
-"location": "Center for Architecture + Design 140 Sutter St San Francisco , CA 94104",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-16T17:30:00-07:00",
-"title": "AIASF: The Architecture of Opera",
-"url": "https://www.aiasf.org/events/the-architecture-of-opera"
 },
 "83e53ad6563e85b7fb56e6499fdbffce@bd-events": {
 "description": "",
@@ -718,16 +698,6 @@
 "start": "2026-10-06T17:30:00-07:00",
 "title": "AIASF: Design for Women, By Women",
 "url": "https://www.aiasf.org/events/design-for-women-by-women"
-},
-"a11fe5019b813f351732343957bb4444@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "BOMA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-17T00:00:00+00:00",
-"title": "CREATE Celebration",
-"url": "https://bomasf.org/events/events-calendar"
 },
 "a6e91ed780d38a42d1e1c607b9274cc5@bd-events": {
 "description": "",
