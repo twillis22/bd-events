@@ -69,16 +69,6 @@
 "title": "Leveraging VDC and Takt Planning",
 "url": "https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=C_NCA09246&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf"
 },
-"0e3f02114c012f534e7c7f5a092d0002@bd-events": {
-"description": "Categories: IIDA NC CHAPTER EVENT",
-"end": null,
-"location": "",
-"source": "IIDA Northern California",
-"source_region": "Bay Area",
-"start": "2026-09-18T00:00:00+00:00",
-"title": "Leaders Breakfast 2026",
-"url": "https://iidanc.org/events/leaders-breakfast-2026/"
-},
 "1009877d447d5dffaa5b2d84e78ba69a@bd-events": {
 "description": "",
 "end": "2026-11-17T18:00:00+00:00",
@@ -609,16 +599,6 @@
 "title": "2026 NAIOP Silicon Valley Annual Golf Tournament",
 "url": "https://naiopsv.org/event/2026golftournament/"
 },
-"8ac6b02fb13e7e2b20a1167cb5bf5193@bd-events": {
-"description": "",
-"end": null,
-"location": "Oaks North Golf Course",
-"source": "I2SL San Diego",
-"source_region": "San Diego",
-"start": "2026-09-18T00:00:00+00:00",
-"title": "Golf Tournament",
-"url": "https://www.i2sl.org/san-diego"
-},
 "8bae462910683fab1fad76348594be9e@bd-events": {
 "description": "",
 "end": "2026-09-18T13:30:00-07:00",
@@ -728,6 +708,16 @@
 "start": "2026-11-10T00:00:00+00:00",
 "title": "Codes Seminar",
 "url": "https://bomasf.org/events/events-calendar"
+},
+"ac0f951834afff45ea90169e1886ce7a@bd-events": {
+"description": "Categories: City Center EVENT, SILICON VALLEY EVENT",
+"end": null,
+"location": "",
+"source": "IIDA Northern California",
+"source_region": "Bay Area",
+"start": "2026-11-06T00:00:00+00:00",
+"title": "Student Firm Tours 2026",
+"url": "https://iidanc.org/events/student-firm-tours-2026/"
 },
 "ae15da9861874a2b28445bd627707e79@bd-events": {
 "description": "",
@@ -849,6 +839,16 @@
 "title": "Day on the Bay",
 "url": "https://nocal.corenetglobal.org/events/upcoming-events"
 },
+"cbf38c9298a8a7d241910beaf1a224c9@bd-events": {
+"description": "",
+"end": "2026-10-21T20:00:00-07:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-10-21T17:30:00-07:00",
+"title": "AIASF: Building San Francisco's Future: Lessons from the Projects Shaping Our City",
+"url": "https://www.aiasf.org/events/building-san-francisco's-future-lessons-from-the-projects-shaping-our-city"
+},
 "cde868cf21afeb663c73e48a8d28eb41@bd-events": {
 "description": "",
 "end": "2026-10-14T20:00:00-07:00",
@@ -878,16 +878,6 @@
 "start": "2026-09-23T12:00:00-07:00",
 "title": "AIASF: Kapuso at the Upper Yard: Housing, Transit, and Public Space in Action",
 "url": "https://www.aiasf.org/events/kapuso-at-the-upper-yard-walking-tour"
-},
-"d6874b0fbc5fdfb57e97eac442b025bd@bd-events": {
-"description": "",
-"end": null,
-"location": "Northern California Community of Practice",
-"source": "Lean Construction Institute",
-"source_region": "",
-"start": "2026-09-18T00:00:00+00:00",
-"title": "Intermediate Last Planner System\u00ae Practical Application",
-"url": "https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=NCA091126&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf"
 },
 "d708b250f1905c10ec42f0f5080f4e4b@bd-events": {
 "description": "",
@@ -928,6 +918,16 @@
 "start": "2026-10-20T12:00:00-07:00",
 "title": "AIASF: Sourcing, Sound, and Sustainability: How to Specify Interior Architectural Walls",
 "url": "https://www.aiasf.org/events/sourcing-sound-and-sustainability-how-to-specify-interior-architectural-walls"
+},
+"dcb818989511d9f714426d34585c17dd@bd-events": {
+"description": "Categories: City Center EVENT, SAN FRANCISCO EVENT",
+"end": null,
+"location": "",
+"source": "IIDA Northern California",
+"source_region": "Bay Area",
+"start": "2026-10-19T00:00:00+00:00",
+"title": "IIDA Forums \u2013 Mosaic",
+"url": "https://iidanc.org/events/iida-forums-mosaic/"
 },
 "dcd25f422c61091b1331e6eeccf7c98b@bd-events": {
 "description": "",
@@ -1008,6 +1008,16 @@
 "start": "2026-09-25T18:00:00-07:00",
 "title": "AIASF: Architecture, Democracy and the Public Forum",
 "url": "https://www.aiasf.org/events/architecture-democracy-and-the-public-forum"
+},
+"efbf2a6e14115bef6ede67b4db397aa9@bd-events": {
+"description": "",
+"end": "2026-10-26T00:00:00-07:00",
+"location": "Location coming soon!",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-10-25T00:00:00-07:00",
+"title": "AIASF: WiA Sketch and Walk",
+"url": "https://www.aiasf.org/events/wia-sketch-and-walk"
 },
 "f566a5103ff81924d1ae0c83b81bdb28@bd-events": {
 "description": "",
