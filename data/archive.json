@@ -110,7 +110,7 @@
 "url": "https://www.cmaanorcal.org/events-1/future-of-bay-area-transit"
 },
 "1d4a30e6ffe847d0584d591a22018141@bd-events": {
-"description": "\n\n\nBOMA San Diego invites members to an evening of celebration, connection, and elegance at the Annual Membership Awards &amp; TOBY&nbsp;Gala. This signature event honors the members, volunteers, and leaders who have made an impact throughout the year, with cocktails, dinner, and dancing.&nbsp;Raise a glass with colleagues and friends as we close out the year in true BOMA San Diego style!\n&nbsp;\n\n",
+"description": "\n\n\n\nBOMA San Diego invites members to an evening of celebration, connection, and elegance at the Annual Membership Awards &amp; TOBY Gala. This signature event honors the members, volunteers, and leaders who have made an impact throughout the year, with cocktails, dinner, and dancing. Raise a glass with colleagues and friends as we close out the year in true BOMA San Diego style!\n\nNO REFUNDS OR CR",
 "end": "2026-11-20T22:00:00+00:00",
 "location": "Rancho Bernardo Inn - Aragon Lawn &amp; Ballroom, 17550 Bernardo Oaks Drive, San Diego, CA",
 "source": "BOMA San Diego",
@@ -599,16 +599,6 @@
 "title": "2026 NAIOP Silicon Valley Annual Golf Tournament",
 "url": "https://naiopsv.org/event/2026golftournament/"
 },
-"8bae462910683fab1fad76348594be9e@bd-events": {
-"description": "",
-"end": "2026-09-18T13:30:00-07:00",
-"location": "St. Mary's Square  St. Mary's Square",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-18T12:00:00-07:00",
-"title": "AIASF: Sketching San Francisco: Exploring Culture, History, and Place - St. Mary's Square",
-"url": "https://www.aiasf.org/events/sketching-san-francisco-exploring-culture-history-and-place-sep-11th-copy"
-},
 "8cca2b7b38454a70fa036e1ae5c1d673@bd-events": {
 "description": "",
 "end": "2026-10-15T13:00:00+00:00",
@@ -819,16 +809,6 @@
 "title": "Design Expo",
 "url": "https://iidanc.org/events/silicon-valley-design-expo/"
 },
-"ca8e3fb1a1f6f651a9b6c3c4039ea052@bd-events": {
-"description": "",
-"end": "2026-09-19T15:00:00-07:00",
-"location": "Multiple Locations including the Hallidie Building/Center for Architecture + Design",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-19T10:00:00-07:00",
-"title": "AIASF: Epicenter San Francisco: A Tour of Downtown, \"The Tides of Fortune that Changed the World.\"",
-"url": "https://www.aiasf.org/events/epicenter-san-francisco-a-tour-of-downtown-the-tides-of-fortune-that-changed-the-world"
-},
 "cb5b6d3989b8bd94ab6ee2c1d4378319@bd-events": {
 "description": "",
 "end": null,
@@ -878,6 +858,16 @@
 "start": "2026-09-23T12:00:00-07:00",
 "title": "AIASF: Kapuso at the Upper Yard: Housing, Transit, and Public Space in Action",
 "url": "https://www.aiasf.org/events/kapuso-at-the-upper-yard-walking-tour"
+},
+"d6a5a9ad3b58b78d46c2ca47a3dc62a5@bd-events": {
+"description": "",
+"end": "2026-11-02T14:00:00-08:00",
+"location": "Quarry House Factory 900 Brookside Drive suite c Richmond, CA 94801-1306 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-11-02T11:00:00-08:00",
+"title": "AIASF: CRAN Tour: Quarry House Stone Fabricator Factory",
+"url": "https://www.aiasf.org/events/quarry-house-stone-fabricator-factory-tour"
 },
 "d708b250f1905c10ec42f0f5080f4e4b@bd-events": {
 "description": "",
