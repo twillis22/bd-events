@@ -1,4 +1,14 @@
 {
+"00cbec88be612cb59a6968ec737aacd7@bd-events": {
+"description": "",
+"end": "2026-11-04T10:30:00-08:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-11-04T08:30:00-08:00",
+"title": "AIASF: Beyond the Model: Connecting Design Data Across the Project Lifecycle",
+"url": "https://www.aiasf.org/events/beyond-the-model-connecting-design-data-across-the-project-lifecycle"
+},
 "00ce9cf6db89a34df6dfdca41a99799e@bd-events": {
 "description": "",
 "end": null,
@@ -128,16 +138,6 @@
 "start": "2026-11-11T16:00:00+00:00",
 "title": "Real Estate Insider: San Francisco Office Leasing Outlook",
 "url": "https://members.naiopsfba.org/event-calendar/Details/real-estate-insider-san-francisco-office-leasing-outlook-1910696?sourceTypeId=Website"
-},
-"203801870da86ca877ed984f7a6100ee@bd-events": {
-"description": "",
-"end": "2026-09-22T13:30:00-07:00",
-"location": "Salesforce Gondola Landing 100 Fremont Street San Francisco, CA 94105 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-22T12:00:00-07:00",
-"title": "AIASF: Sketchy Tuesday - Salesforce Park",
-"url": "https://www.aiasf.org/events/sketchy-tuesday-"
 },
 "2133479752067f536609b0ba91f1fe47@bd-events": {
 "description": "",
@@ -719,6 +719,16 @@
 "title": "AIASF: Small Firms, Great Projects (SFGP) Launch Party + Presentation",
 "url": "https://www.aiasf.org/events/small-firms-great-projects-launch-party--panel-copy"
 },
+"afbd415ea0185da4f1741c3c0d3ff9da@bd-events": {
+"description": "",
+"end": "2026-11-05T19:30:00-08:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-11-05T17:30:00-08:00",
+"title": "AIASF: Beyond the Blueprint: Designing Experiences with Light, Sound & Color",
+"url": "https://www.aiasf.org/events/beyond-the-blueprint-designing-experiences-with-light-sound-and-color"
+},
 "b07cca4954940df25d6b2b7482dcc049@bd-events": {
 "description": "",
 "end": "2026-11-04T18:30:00+00:00",
@@ -768,6 +778,16 @@
 "start": "2026-10-20T00:00:00+00:00",
 "title": "New Member Coffee Chat",
 "url": "https://nocal.corenetglobal.org/events/upcoming-events"
+},
+"c2f21c0db203d56471234a55c127a15f@bd-events": {
+"description": "",
+"end": "2026-10-21T20:00:00-07:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-10-21T17:30:00-07:00",
+"title": "AIASF: Choosing the Right Delivery Method: Lessons from SFO, Diego Rivera Theater & Berkeley Gateway",
+"url": "https://www.aiasf.org/events/building-san-francisco's-future-lessons-from-the-projects-shaping-our-city"
 },
 "c3c7a298f969437762fb63b5c580c2e6@bd-events": {
 "description": "The Principal Member Download is a dedicated, face-to-face forum designed exclusively for BOMA San Diego&rsquo;s Principal Members. This casual and interactive gathering will give you the opportunity to connect with fellow members, share experiences, and gain valuable insights into maximizing the benefits of your membership.\n\nLed by experienced Principal Members, the session will cover:\n\n\n\t\n\tHow B",
