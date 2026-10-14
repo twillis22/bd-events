@@ -99,16 +99,6 @@
 "title": "Education Program: Inside the Evaluation Room",
 "url": "https://www.cmaanorcal.org/events-1/education-program-inside-the-evaluation-room"
 },
-"164f5589fe0536fb63c06dfba990ec1f@bd-events": {
-"description": "Note the new Chapter Meeting date for September.",
-"end": null,
-"location": "San Francisco, CA",
-"source": "CoreNet NorCal",
-"source_region": "Bay Area",
-"start": "2026-09-23T00:00:00+00:00",
-"title": "Agents in Action: Enterprise Al Adoption for CRE",
-"url": "https://nocal.corenetglobal.org/events/upcoming-events"
-},
 "19c6d6594f3bbff39da8703096ff58f0@bd-events": {
 "description": "",
 "end": null,
@@ -261,7 +251,7 @@
 },
 "3a1580331b02f90ae81c3b7d005fb9f1@bd-events": {
 "description": "",
-"end": "2026-10-21T16:00:00-07:00",
+"end": "2026-10-21T18:00:00-07:00",
 "location": "1030 Leavenworth Street San Francisco, CA 94109-5030 United States",
 "source": "AIA San Francisco",
 "source_region": "San Francisco",
@@ -308,6 +298,16 @@
 "start": "2026-10-02T00:00:00+00:00",
 "title": "Introduction to the Last Planner System\u00ae",
 "url": "https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=C_NCA10026&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf"
+},
+"3e54e2c0c770b3696e4f5e128a3a90df@bd-events": {
+"description": "",
+"end": "2026-11-10T20:00:00-08:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-11-10T18:00:00-08:00",
+"title": "AIASF: 2026 Community Alliance Awards",
+"url": "https://www.aiasf.org/events/2026-community-alliance-awards"
 },
 "4347de3d28dbd16f809fcb4148e3832c@bd-events": {
 "description": "",
@@ -770,7 +770,7 @@
 "url": "https://www.bomasd.org/calendar_list.asp"
 },
 "bba606b9f0e17f01ee21bc8f927639fa@bd-events": {
-"description": "Join the CoreNet Global Northern California Chapter Membership Committee for a virtual coffee chat on how to make the most of your new membership! All new members who joined in the past six months are invited to attend. This month's Coffee Chat has been moved to a Wednesday to accommodate the long weekend.",
+"description": "Join the CoreNet Global Northern California Chapter Membership Committee for a virtual coffee chat on how to make the most of your new membership! All new members who joined in the past six months are invited to attend. Due to the CoreNet Global Summit, we're hosting our October Coffee Chat one week earlier than usual.",
 "end": null,
 "location": "Virtual, CA",
 "source": "CoreNet NorCal",
@@ -788,16 +788,6 @@
 "start": "2026-10-21T17:30:00-07:00",
 "title": "AIASF: Choosing the Right Delivery Method: Lessons from SFO, Diego Rivera Theater & Berkeley Gateway",
 "url": "https://www.aiasf.org/events/building-san-francisco's-future-lessons-from-the-projects-shaping-our-city"
-},
-"c3c7a298f969437762fb63b5c580c2e6@bd-events": {
-"description": "The Principal Member Download is a dedicated, face-to-face forum designed exclusively for BOMA San Diego&rsquo;s Principal Members. This casual and interactive gathering will give you the opportunity to connect with fellow members, share experiences, and gain valuable insights into maximizing the benefits of your membership.\n\nLed by experienced Principal Members, the session will cover:\n\n\n\t\n\tHow B",
-"end": "2026-09-23T11:00:00+00:00",
-"location": "MODA - BioMed Realty, 5555 Oberlin Dr, San Diego, CA",
-"source": "BOMA San Diego",
-"source_region": "San Diego",
-"start": "2026-09-23T08:00:00+00:00",
-"title": "Principal Member Download",
-"url": "https://www.bomasd.org/calendar_list.asp"
 },
 "c8a493b88290e0466546aa923dac2c84@bd-events": {
 "description": "",
@@ -1011,11 +1001,11 @@
 },
 "efbf2a6e14115bef6ede67b4db397aa9@bd-events": {
 "description": "",
-"end": "2026-10-26T00:00:00-07:00",
-"location": "Location coming soon!",
+"end": "2026-10-25T13:30:00-07:00",
+"location": "Palace of Fine Arts (Meet at Terry Point/Eastern Edge of the Lagoon) 3301 Lyon Street San Francisco, CA 94123 United States",
 "source": "AIA San Francisco",
 "source_region": "San Francisco",
-"start": "2026-10-25T00:00:00-07:00",
+"start": "2026-10-25T11:30:00-07:00",
 "title": "AIASF: WiA Sketch and Walk",
 "url": "https://www.aiasf.org/events/wia-sketch-and-walk"
 },
