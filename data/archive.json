@@ -69,16 +69,6 @@
 "title": "Developing Leaders Happy Hour",
 "url": "https://members.naiopsfba.org/event-calendar/Details/developing-leaders-happy-hour-1860254?sourceTypeId=Website"
 },
-"0cf6889f914d5fcbd7005944c7a1d7c0@bd-events": {
-"description": "",
-"end": null,
-"location": "Northern California Community of Practice",
-"source": "Lean Construction Institute",
-"source_region": "",
-"start": "2026-09-24T00:00:00+00:00",
-"title": "Leveraging VDC and Takt Planning",
-"url": "https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=C_NCA09246&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf"
-},
 "1009877d447d5dffaa5b2d84e78ba69a@bd-events": {
 "description": "",
 "end": "2026-11-17T18:00:00+00:00",
@@ -88,16 +78,6 @@
 "start": "2026-11-17T16:00:00+00:00",
 "title": "Real Estate Insider: San Francisco Office Leasing Outlook",
 "url": "https://members.naiopsfba.org/event-calendar/Details/real-estate-insider-san-francisco-office-leasing-outlook-1910696?sourceTypeId=Website"
-},
-"14d52f48aa40fcd5aa50876ea6b1392b@bd-events": {
-"description": "",
-"end": null,
-"location": "Aurora Rooftop",
-"source": "CMAA NorCal",
-"source_region": "Bay Area",
-"start": "2026-09-24T00:00:00+00:00",
-"title": "Education Program: Inside the Evaluation Room",
-"url": "https://www.cmaanorcal.org/events-1/education-program-inside-the-evaluation-room"
 },
 "19c6d6594f3bbff39da8703096ff58f0@bd-events": {
 "description": "",
@@ -128,6 +108,16 @@
 "start": "2026-11-11T16:00:00+00:00",
 "title": "Real Estate Insider: San Francisco Office Leasing Outlook",
 "url": "https://members.naiopsfba.org/event-calendar/Details/real-estate-insider-san-francisco-office-leasing-outlook-1910696?sourceTypeId=Website"
+},
+"20ff79c791d4936bc92993a693389caf@bd-events": {
+"description": "",
+"end": "2026-11-11T18:00:00-08:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-11-11T13:00:00-08:00",
+"title": "AIASF: AI in Architectural Practice: TAP Symposium",
+"url": "https://www.aiasf.org/events/ai-in-architectural-practice-tap-symposium"
 },
 "2133479752067f536609b0ba91f1fe47@bd-events": {
 "description": "",
@@ -539,16 +529,6 @@
 "title": "Flight Plan: The Future of Northern California Airport Capital Programs",
 "url": "https://www.cmaanorcal.org/events-1/flight-plan-the-future-of-northern-california-airport-capital-programs"
 },
-"8277308ffc14960bd41dd5cdab695e26@bd-events": {
-"description": "Categories: City Center EVENT, SACRAMENTO EVENT",
-"end": null,
-"location": "",
-"source": "IIDA Northern California",
-"source_region": "Bay Area",
-"start": "2026-09-24T00:00:00+00:00",
-"title": "StrengthsFinder Workshop",
-"url": "https://iidanc.org/events/strengthsfinder-workshop/"
-},
 "83e53ad6563e85b7fb56e6499fdbffce@bd-events": {
 "description": "",
 "end": "2026-10-12T18:00:00-07:00",
@@ -619,16 +599,6 @@
 "title": "Vision to Reality: The Corporate Campus Lifecycle Design Lab",
 "url": "https://nocal.corenetglobal.org/events/upcoming-events"
 },
-"958cc7b4ac840ef9d0e475902e3ad1c6@bd-events": {
-"description": "",
-"end": null,
-"location": "San Francisco, CA",
-"source": "CoreNet NorCal",
-"source_region": "Bay Area",
-"start": "2026-09-24T00:00:00+00:00",
-"title": "Catamaran Cruise",
-"url": "https://nocal.corenetglobal.org/events/upcoming-events"
-},
 "9d94d655b320567cfd32ec7de602fd26@bd-events": {
 "description": "BOMA Post-Election Webcast: What the 2026 Election Means\nElection Day is approaching, but for commercial real estate, the bigger question is: what happens next?\nJoin BOMA&#39;s advocacy team for a timely discussion on how the 2026 election results could shape CRE policy at the federal and\nstate levels. From shifts in Congress and state leadership to the policy priorities that could define 2027 and",
 "end": "2026-11-12T13:00:00+00:00",
@@ -638,16 +608,6 @@
 "start": "2026-11-12T12:00:00+00:00",
 "title": "2026 Post Election Webcast",
 "url": "https://www.bomasd.org/calendar_list.asp"
-},
-"9ee48b613cee9f3d95d8962969ce1b82@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "BOMA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-24T00:00:00+00:00",
-"title": "PAC Spirits Tasting Experience",
-"url": "https://bomasf.org/events/events-calendar"
 },
 "a05f2134a1ddb4c8a346a01049902795@bd-events": {
 "description": "",
@@ -799,16 +759,6 @@
 "title": "AIASF: REAL TALK: Multidisciplinary Career Paths and Gensler Firm visit",
 "url": "https://www.aiasf.org/events/real-talk-multidisciplinary-career-paths-and-gensler-firm-visit"
 },
-"c95d9a81eebdf3ca929e2bf325ce55fa@bd-events": {
-"description": "Categories: City Center EVENT, SILICON VALLEY EVENT",
-"end": null,
-"location": "",
-"source": "IIDA Northern California",
-"source_region": "Bay Area",
-"start": "2026-09-24T00:00:00+00:00",
-"title": "Design Expo",
-"url": "https://iidanc.org/events/silicon-valley-design-expo/"
-},
 "cb5b6d3989b8bd94ab6ee2c1d4378319@bd-events": {
 "description": "",
 "end": null,
@@ -848,16 +798,6 @@
 "start": "2026-10-13T11:00:00+00:00",
 "title": "October Membership Luncheon",
 "url": "https://www.bomasd.org/calendar_list.asp"
-},
-"d26410bad3ecc31ab2a4b8e42efee050@bd-events": {
-"description": "",
-"end": "2026-09-23T13:00:00-07:00",
-"location": "Balboa BART Plaza 401 Geneva Avenue San Francisco, CA 94112 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-23T12:00:00-07:00",
-"title": "AIASF: Kapuso at the Upper Yard: Housing, Transit, and Public Space in Action",
-"url": "https://www.aiasf.org/events/kapuso-at-the-upper-yard-walking-tour"
 },
 "d6a5a9ad3b58b78d46c2ca47a3dc62a5@bd-events": {
 "description": "",
@@ -948,6 +888,16 @@
 "start": "2026-10-08T17:30:00-07:00",
 "title": "AIASF: DIALOGUES: Mimi Zeiger + Fernanda Canales",
 "url": "https://www.aiasf.org/events/dialogues-mimi-zeiger--fernanda-canales"
+},
+"e3593aa975e9c92674be3d3344698819@bd-events": {
+"description": "",
+"end": null,
+"location": "South SF, CA",
+"source": "CoreNet NorCal",
+"source_region": "Bay Area",
+"start": "2026-11-05T00:00:00+00:00",
+"title": "CRE in an Uncertain World: Navigating Risk, Resilience, and Change",
+"url": "https://nocal.corenetglobal.org/events/upcoming-events"
 },
 "e585b6560728ee72449c90765da4f5af@bd-events": {
 "description": "",
