@@ -339,6 +339,16 @@
 "title": "Design After Dark",
 "url": "https://iidanc.org/events/design-after-dark/"
 },
+"4e72f25e9a0604085b85b13763e17347@bd-events": {
+"description": "",
+"end": null,
+"location": "The Cannery Place",
+"source": "CMAA NorCal",
+"source_region": "Bay Area",
+"start": "2026-11-18T00:00:00+00:00",
+"title": "Planning for California\u2019s Future: State Capital Programs & Priorities",
+"url": "https://www.cmaanorcal.org/events-1/planning-for-californias-future-state-capital-programs-priorities"
+},
 "540233f65c5e2ccf59e40bc995828d55@bd-events": {
 "description": "",
 "end": "2026-10-07T20:00:00-07:00",
@@ -388,16 +398,6 @@
 "start": "2026-10-06T00:00:00+00:00",
 "title": "Target Value Delivery \u2013 Implementation and Next Steps",
 "url": "https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=C_SD10066&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf"
-},
-"62f070c7d3ff8f3bb7a053b5fc772e3b@bd-events": {
-"description": "",
-"end": "2026-09-25T16:00:00-07:00",
-"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-25T11:30:00-07:00",
-"title": "AIASF: Professional Development Summit",
-"url": "https://www.aiasf.org/events/professional-development-summit"
 },
 "67fa2c71f81a6d5533f73c705aa95d2d@bd-events": {
 "description": "\n\nThe Design, Operation &amp; Maintenance of Building Systems I\n\nOctober 7-9\nLocation: Online\nInstructor: Dave Ferguson\n\nPlease read carefully:\n\nClick &quot;Member Registration&quot;&nbsp;on this page to get started.\n\nClick &quot;Public Registration&quot;&nbsp;on this page to get started.\n\nTimes:&nbsp;8 a.m. - 5&nbsp;p.m. each day\n\nInstructor:&nbsp;Dave Ferguson\n The Design, Operation, and Mainten",
@@ -819,16 +819,6 @@
 "title": "CREDA NorCal Regional Symposium",
 "url": "https://members.naiopsfba.org/event-calendar/Details/creda-norcal-regional-symposium-1844753?sourceTypeId=Website"
 },
-"d95034c35629987b427ab6079ac0c833@bd-events": {
-"description": "",
-"end": "2026-09-25T13:30:00-07:00",
-"location": "Ferry Building Terminal Plaza (located to the right/southern side of the ferry building) Ferry Building, San Francisco, CA, USA San Francisco, CA 94105 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-25T12:00:00-07:00",
-"title": "AIASF: Sketching San Francisco: Exploring Culture, History, and Place - Ferry Building",
-"url": "https://www.aiasf.org/events/sketching-san-francisco-exploring-culture-history-and-place---ferry-building"
-},
 "dad94430269f8947d4493395b9d0f12e@bd-events": {
 "description": "",
 "end": "2026-10-22T20:00:00-07:00",
@@ -938,16 +928,6 @@
 "start": "2026-11-05T00:00:00+00:00",
 "title": "DEI Social Event",
 "url": "https://bomasf.org/events/events-calendar"
-},
-"ebe6a02c0378d621ea9d1ec1620c29a9@bd-events": {
-"description": "",
-"end": "2026-09-25T19:30:00-07:00",
-"location": "Mechanics Institute 57 Post Street San Francisco, CA 94104-5023 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-25T18:00:00-07:00",
-"title": "AIASF: Architecture, Democracy and the Public Forum",
-"url": "https://www.aiasf.org/events/architecture-democracy-and-the-public-forum"
 },
 "efbf2a6e14115bef6ede67b4db397aa9@bd-events": {
 "description": "",
