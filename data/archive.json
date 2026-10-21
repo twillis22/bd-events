@@ -179,16 +179,6 @@
 "title": "AIASF: SRJC Decarb + Rehab Tour of STEM Building and Forsyth Hall",
 "url": "https://www.aiasf.org/events/srjc-decarb--rehab-tour-of-stem-building-and-forsyth-hall"
 },
-"2b10bfd983f3b6b17ae652c98999a334@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "BOMA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-30T00:00:00+00:00",
-"title": "BOMA Block Party",
-"url": "https://bomasf.org/events/events-calendar"
-},
 "2cbbd24da54cb4f2fbc27f4512c20610@bd-events": {
 "description": "",
 "end": "2026-10-08T20:00:00-07:00",
@@ -198,16 +188,6 @@
 "start": "2026-10-08T17:00:00-07:00",
 "title": "AIASF: Technology in Architectural Practice Happy Hour",
 "url": "https://www.aiasf.org/events/technology-in-architectural-practice-happy-hour-"
-},
-"2d258e3215b00e299dd75ed66e03856d@bd-events": {
-"description": "",
-"end": "2026-09-30T19:00:00+00:00",
-"location": "",
-"source": "NAIOP SF Bay Area",
-"source_region": "Bay Area",
-"start": "2026-09-30T16:00:00+00:00",
-"title": "DealMakers Uncorked",
-"url": "https://members.naiopsfba.org/event-calendar/Details/dealmakers-uncorked-1760474?sourceTypeId=Website"
 },
 "3064c764500dc592817c6c203ffdadf1@bd-events": {
 "description": "Categories: SACRAMENTO EVENT",
@@ -559,6 +539,16 @@
 "title": "Career Fair",
 "url": "https://www.cmaanorcal.org/events-1/career-fair-3"
 },
+"855a15778ff3fafdcaa918a99e0d1101@bd-events": {
+"description": "",
+"end": "2026-11-04T20:00:00-08:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-11-04T18:00:00-08:00",
+"title": "AIASF: ARE PREP PPD 2 + PDD 2- Practice Exam & Office Hours",
+"url": "https://www.aiasf.org/events/are-prep-ppd-2--pdd-2--practice-exam-and-office-hours"
+},
 "85b4836d6088ef3f06beb77fcc8571e6@bd-events": {
 "description": "",
 "end": "2026-10-08T19:00:00+00:00",
@@ -588,16 +578,6 @@
 "start": "2026-10-15T11:30:00+00:00",
 "title": "Real Estate Insider: A Look at The Kelsey",
 "url": "https://members.naiopsfba.org/event-calendar/Details/real-estate-insider-a-look-at-the-kelsey-1926173?sourceTypeId=Website"
-},
-"90b9f8df1e3415d61e23feb4b2b192ea@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "BOMA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-09-30T00:00:00+00:00",
-"title": "BOMA Block Party - BOMA by The Bayou",
-"url": "https://bomasf.org/events/events-calendar"
 },
 "9d94d655b320567cfd32ec7de602fd26@bd-events": {
 "description": "BOMA Post-Election Webcast: What the 2026 Election Means\nElection Day is approaching, but for commercial real estate, the bigger question is: what happens next?\nJoin BOMA&#39;s advocacy team for a timely discussion on how the 2026 election results could shape CRE policy at the federal and\nstate levels. From shifts in Congress and state leadership to the policy priorities that could define 2027 and",
@@ -738,6 +718,16 @@
 "start": "2026-10-20T00:00:00+00:00",
 "title": "New Member Coffee Chat",
 "url": "https://nocal.corenetglobal.org/events/upcoming-events"
+},
+"bcfc420fa9f171d3b7b7659f37bb5dad@bd-events": {
+"description": "",
+"end": "2026-11-02T19:00:00-08:00",
+"location": "Join Us Virtually",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-11-02T18:00:00-08:00",
+"title": "AIASF: ARE PREP PPD 2 + PDD 2 - Virtual Lesson",
+"url": "https://www.aiasf.org/events/are-prep-ppd-2--pdd-2---virtual-lesson"
 },
 "c2f21c0db203d56471234a55c127a15f@bd-events": {
 "description": "",
