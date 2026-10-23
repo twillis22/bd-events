@@ -8,70 +8,10 @@ REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
 X-WR-TIMEZONE:America/Los_Angeles
 BEGIN:VEVENT
-SUMMARY:[AIA San Francisco] AIASF: Technology in Architectural Practice Ha
- ppy Hour
-DTSTART:20261008T170000
-DTEND:20261008T200000
-DTSTAMP:20261022T175102Z
-UID:2cbbd24da54cb4f2fbc27f4512c20610@bd-events
-DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
- s/technology-in-architectural-practice-happy-hour-
-LOCATION:Shroeder's 240 Front Street San Francisco\, CA 94111-4403 United 
- States
-URL:https://www.aiasf.org/events/technology-in-architectural-practice-happ
- y-hour-
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[IIDA Northern California] Merge 2026
-DTSTART:20261009T000000Z
-DTSTAMP:20261022T175102Z
-UID:3064c764500dc592817c6c203ffdadf1@bd-events
-DESCRIPTION:Categories: SACRAMENTO EVENT\n\nSource: IIDA Northern Californ
- ia\nLink: https://iidanc.org/events/merge-2026/
-URL:https://iidanc.org/events/merge-2026/
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[CoreNet NorCal] Day on the Bay
-DTSTART:20261009T000000Z
-DTSTAMP:20261022T175102Z
-UID:cb5b6d3989b8bd94ab6ee2c1d4378319@bd-events
-DESCRIPTION:\nSource: CoreNet NorCal\nLink: https://nocal.corenetglobal.or
- g/events/upcoming-events
-LOCATION:San Francisco\, CA
-URL:https://nocal.corenetglobal.org/events/upcoming-events
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[AIA San Francisco] AIASF: DIALOGUES: Mimi Zeiger + Fernanda Canal
- es
-DTSTART:20261008T173000
-DTEND:20261008T200000
-DTSTAMP:20261022T175102Z
-UID:ddbd1079aa33915e792050ba06ef4595@bd-events
-DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
- s/dialogues-mimi-zeiger--fernanda-canales
-LOCATION:Center for Architecture + Design 140 Sutter Street San Francisco
- \, CA 94104 United States
-URL:https://www.aiasf.org/events/dialogues-mimi-zeiger--fernanda-canales
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[AIA San Francisco] AIASF: ARE PREP PPD 1 + PDD 1 - Practice Exam 
- & Office Hours
-DTSTART:20261008T180000
-DTEND:20261008T200000
-DTSTAMP:20261022T175102Z
-UID:26c5bad5a90fade8b9cdd0cc77917b22@bd-events
-DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
- s/are-prep-ppd-1--pdd-1---practice-exam-and-office-hours
-LOCATION:Center for Architecture + Design 140 Sutter Street San Francisco
- \, CA 94104
-URL:https://www.aiasf.org/events/are-prep-ppd-1--pdd-1---practice-exam-and
- -office-hours
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CMAA NorCal] CMAA NorCal and HABITAT FOR HUMANITY join forces at 
  ROCK THE BLOCK
 DTSTART:20261010T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:2214681dc5fef4eb402efc995e1f712d@bd-events
 DESCRIPTION:\nSource: CMAA NorCal\nLink: https://www.cmaanorcal.org/events
  -1/cmaa-norcal-and-habitat-for-humanity-join-forces-at-rock-the-block-2
@@ -84,7 +24,7 @@ SUMMARY:[AIA San Francisco] AIASF: REAL TALK: Multidisciplinary Career Pat
  hs and Gensler Firm visit
 DTSTART:20261009T173000
 DTEND:20261009T193000
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:c8a493b88290e0466546aa923dac2c84@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/real-talk-multidisciplinary-career-paths-and-gensler-firm-visit
@@ -96,7 +36,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CMAA NorCal] CMAA National Conference | Chapter's Happy Hour
 DTSTART:20261011T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:00ce9cf6db89a34df6dfdca41a99799e@bd-events
 DESCRIPTION:\nSource: CMAA NorCal\nLink: https://www.cmaanorcal.org/events
  -1/cmaa-national-conference-chapters-happy-hour
@@ -107,7 +47,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[IIDA Northern California] 2026 Annual Golf Tournament
 DTSTART:20261012T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:6bb3438635120ff21b626506ef5c2391@bd-events
 DESCRIPTION:Categories: IIDA NC CHAPTER EVENT\n\nSource: IIDA Northern Cal
  ifornia\nLink: https://iidanc.org/events/2026-annual-golf-tournament/
@@ -117,7 +57,7 @@ BEGIN:VEVENT
 SUMMARY:[AIA San Francisco] AIASF: 2026 AIASF Golf Classic
 DTSTART:20261012T093000
 DTEND:20261012T180000
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:39b372816b83ade4c700555fa4824c01@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/2026-aiasf-golf-classic-
@@ -129,7 +69,7 @@ BEGIN:VEVENT
 SUMMARY:[AIA San Francisco] AIASF: 2026 Golf Classic Reception
 DTSTART:20261012T160000
 DTEND:20261012T180000
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:83e53ad6563e85b7fb56e6499fdbffce@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/2026-golf-classic-reception-
@@ -141,7 +81,7 @@ BEGIN:VEVENT
 SUMMARY:[CMAA NorCal] Flight Plan: The Future of Northern California Airpo
  rt Capital Programs
 DTSTART:20261013T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:815288222a555207526a78f74061758a@bd-events
 DESCRIPTION:\nSource: CMAA NorCal\nLink: https://www.cmaanorcal.org/events
  -1/flight-plan-the-future-of-northern-california-airport-capital-programs
@@ -153,7 +93,7 @@ BEGIN:VEVENT
 SUMMARY:[BOMA San Diego] October Membership Luncheon
 DTSTART:20261013T110000Z
 DTEND:20261013T130000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:d0509dd909eececa63d4f40251339a5a@bd-events
 DESCRIPTION:\nOctober Membership Luncheon\nFrom Molecule to Market: The Bu
  siness\, Real Estate &amp\; Infrastructure Behind Drug Development\n\nJoin
@@ -169,7 +109,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[IIDA Northern California] Student Firm Tour
 DTSTART:20261014T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:25b7831967176ba1e11f4010bab5431b@bd-events
 DESCRIPTION:Categories: City Center EVENT\, SILICON VALLEY EVENT\, Student
   EVENT\n\nSource: IIDA Northern California\nLink: https://iidanc.org/event
@@ -181,7 +121,7 @@ SUMMARY:[AIA San Francisco] AIASF: Designing with Purpose: Equity\, Climat
  e\, and the Future of Architecture
 DTSTART:20261013T180000
 DTEND:20261013T200000
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:4347de3d28dbd16f809fcb4148e3832c@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/designing-with-purpose-equity-climate-and-the-future-of-architecture
@@ -194,7 +134,7 @@ BEGIN:VEVENT
 SUMMARY:[NAIOP SF Bay Area] Treasure Island Tour & Happy Hour
 DTSTART:20261014T153000Z
 DTEND:20261014T180000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:318c1730a72f7b5d374f5973b5315539@bd-events
 DESCRIPTION:Join CREDA SFBA for an exclusive walking tour of Treasure Isla
  nd\, San Francisco's newest waterfront neighborhood\, led by Wilson Meany 
@@ -209,7 +149,7 @@ BEGIN:VEVENT
 SUMMARY:[AIA San Francisco] AIASF: Insights on Zero Carbon Design
 DTSTART:20261014T130000
 DTEND:20261014T160000
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:3a301a52649f0dba2db062a2eff9d24a@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/insights-on-zero-carbon-design
@@ -220,7 +160,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[BOMA San Francisco] Annual Meeting & Membership Luncheon
 DTSTART:20261015T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:5dba07903858c64b69f90e3da5aeac85@bd-events
 DESCRIPTION:\nSource: BOMA San Francisco\nLink: https://bomasf.org/events/
  events-calendar
@@ -231,7 +171,7 @@ SUMMARY:[AIA San Francisco] AIASF: Navigating Firm Crossroads: Startup\, C
  lient Relationships\, and Ownership Transition
 DTSTART:20261014T173000
 DTEND:20261014T200000
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:cde868cf21afeb663c73e48a8d28eb41@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/navigating-firm-crossroads-startup-client-relationships-and-ownership-tr
@@ -245,7 +185,7 @@ BEGIN:VEVENT
 SUMMARY:[NAIOP SF Bay Area] Real Estate Insider: A Look at The Kelsey
 DTSTART:20261015T113000Z
 DTEND:20261015T130000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:8cca2b7b38454a70fa036e1ae5c1d673@bd-events
 DESCRIPTION:\nSource: NAIOP SF Bay Area\nLink: https://members.naiopsfba.o
  rg/event-calendar/Details/real-estate-insider-a-look-at-the-kelsey-1926173
@@ -256,7 +196,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[IIDA Northern California] IIDA Forums – Mosaic
 DTSTART:20261019T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:dcb818989511d9f714426d34585c17dd@bd-events
 DESCRIPTION:Categories: City Center EVENT\, SAN FRANCISCO EVENT\n\nSource:
   IIDA Northern California\nLink: https://iidanc.org/events/iida-forums-mos
@@ -266,7 +206,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CoreNet NorCal] New Member Coffee Chat
 DTSTART:20261020T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:bba606b9f0e17f01ee21bc8f927639fa@bd-events
 DESCRIPTION:Join the CoreNet Global Northern California Chapter Membership
   Committee for a virtual coffee chat on how to make the most of your new m
@@ -281,7 +221,7 @@ BEGIN:VEVENT
 SUMMARY:[AIA San Francisco] AIASF: Opening Reception: How Soon Is Now?
 DTSTART:20261019T180000
 DTEND:20261019T200000
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:04d1debbc42e720bbaf863e5e5b8b589@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/opening-reception-how-soon-is-now
@@ -294,7 +234,7 @@ SUMMARY:[AIA San Francisco] AIASF: Sourcing\, Sound\, and Sustainability:
  How to Specify Interior Architectural Walls
 DTSTART:20261020T120000
 DTEND:20261020T130000
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:dc24c3ccfe941e4f9ca80db1ad5e8023@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/sourcing-sound-and-sustainability-how-to-specify-interior-architectural-
@@ -306,7 +246,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[BOMA San Francisco] Decarbonization Webinar
 DTSTART:20261021T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:74c64fc23fa3784d73684f725ce3ba1d@bd-events
 DESCRIPTION:\nSource: BOMA San Francisco\nLink: https://bomasf.org/events/
  events-calendar
@@ -315,7 +255,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CMAA NorCal] CCM/CMIT Workshop Webinar
 DTSTART:20261021T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:f566a5103ff81924d1ae0c83b81bdb28@bd-events
 DESCRIPTION:\nSource: CMAA NorCal\nLink: https://www.cmaanorcal.org/events
  -1/ccm-cmit-workshop-webinar
@@ -327,7 +267,7 @@ SUMMARY:[NAIOP Silicon Valley] 2026 NAIOP Silicon Valley Annual Golf Tourn
  ament
 DTSTART:20261021T110000Z
 DTEND:20261021T190000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:88e5365d29f7bb49df1eefd364272697@bd-events
 DESCRIPTION:NAIOP Silicon Valley Annual Golf Tournament\nNAIOP Silicon Val
  ley is excited to host our 6th Annual Golf Tournament on Wednesday\, Oct
@@ -345,7 +285,7 @@ SUMMARY:[AIA San Francisco] AIASF: CRAN Hard Hat Tour: Nob Hill - Single F
  amily Home
 DTSTART:20261021T140000
 DTEND:20261021T180000
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:3a1580331b02f90ae81c3b7d005fb9f1@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/cran-hard-hat-tour-nob-hill---single-family-home-
@@ -359,7 +299,7 @@ SUMMARY:[AIA San Francisco] AIASF: Choosing the Right Delivery Method: Les
  sons from SFO\, Diego Rivera Theater & Berkeley Gateway
 DTSTART:20261021T173000
 DTEND:20261021T200000
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:c2f21c0db203d56471234a55c127a15f@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/building-san-francisco's-future-lessons-from-the-projects-shaping-our-ci
@@ -374,7 +314,7 @@ SUMMARY:[AIA San Francisco] AIASF: Building San Francisco's Future: Lesson
  s from the Projects Shaping Our City
 DTSTART:20261021T173000
 DTEND:20261021T200000
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:cbf38c9298a8a7d241910beaf1a224c9@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/building-san-francisco's-future-lessons-from-the-projects-shaping-our-ci
@@ -385,10 +325,35 @@ URL:https://www.aiasf.org/events/building-san-francisco's-future-lessons-f
  rom-the-projects-shaping-our-city
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:[BOMA San Diego] Emerging Professionals Evening Event
+DTSTART:20261022T160000Z
+DTEND:20261022T190000Z
+DTSTAMP:20261023T174104Z
+UID:09c54059e64634471618627c2bf98721@bd-events
+DESCRIPTION:Details to follow! Sponsorships available from $650 - $1\,000.
+ \n\n\nSource: BOMA San Diego\nLink: https://www.bomasd.org/calendar_list.a
+ sp
+LOCATION:Stone Brewing Liberty Station\, 2816 Historic Decatur Rd UNIT 116
+ \, San Diego\, CA
+URL:https://www.bomasd.org/calendar_list.asp
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[NAIOP SF Bay Area] Industrial Committee Fall Happy Hour
+DTSTART:20261022T160000Z
+DTEND:20261022T180000Z
+DTSTAMP:20261023T174104Z
+UID:0ac21bbc9712aafd8bc770acbf5cb53d@bd-events
+DESCRIPTION:\nSource: NAIOP SF Bay Area\nLink: https://members.naiopsfba.o
+ rg/event-calendar/Details/industrial-committee-fall-happy-hour-1874131?sou
+ rceTypeId=Website
+URL:https://members.naiopsfba.org/event-calendar/Details/industrial-commit
+ tee-fall-happy-hour-1874131?sourceTypeId=Website
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:[BOMA San Diego] Halloween Trivia Night
 DTSTART:20261022T160000Z
 DTEND:20261022T190000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:e77e49bca479dbe92f5e103ec327cc7a@bd-events
 DESCRIPTION:BOMA San Diego&rsquo\;s Emerging Professionals Committee invit
  es you to Halloween Trivia Night at Stone Brewing Liberty Station!\n\nEnjo
@@ -402,36 +367,11 @@ LOCATION:Stone Brewing Liberty Station\, 2816 Historic Decatur Rd UNIT 116
 URL:https://www.bomasd.org/calendar_list.asp
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[NAIOP SF Bay Area] Industrial Committee Fall Happy Hour
-DTSTART:20261022T160000Z
-DTEND:20261022T180000Z
-DTSTAMP:20261022T175102Z
-UID:0ac21bbc9712aafd8bc770acbf5cb53d@bd-events
-DESCRIPTION:\nSource: NAIOP SF Bay Area\nLink: https://members.naiopsfba.o
- rg/event-calendar/Details/industrial-committee-fall-happy-hour-1874131?sou
- rceTypeId=Website
-URL:https://members.naiopsfba.org/event-calendar/Details/industrial-commit
- tee-fall-happy-hour-1874131?sourceTypeId=Website
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:[BOMA San Diego] Emerging Professionals Evening Event
-DTSTART:20261022T160000Z
-DTEND:20261022T190000Z
-DTSTAMP:20261022T175102Z
-UID:09c54059e64634471618627c2bf98721@bd-events
-DESCRIPTION:Details to follow! Sponsorships available from $650 - $1\,000.
- \n\n\nSource: BOMA San Diego\nLink: https://www.bomasd.org/calendar_list.a
- sp
-LOCATION:Stone Brewing Liberty Station\, 2816 Historic Decatur Rd UNIT 116
- \, San Diego\, CA
-URL:https://www.bomasd.org/calendar_list.asp
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[AIA San Francisco] AIASF: MAKERS series: Lewis Watts + Dewey Crum
  pler
-DTSTART;TZID=Pacific Standard Time:20261022T173000
-DTEND;TZID=Pacific Standard Time:20261022T200000
-DTSTAMP:20261022T175102Z
+DTSTART:20261022T173000
+DTEND:20261022T200000
+DTSTAMP:20261023T174104Z
 UID:dad94430269f8947d4493395b9d0f12e@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/makers-series-lewis-watts-dewey-crumpler
@@ -443,7 +383,7 @@ BEGIN:VEVENT
 SUMMARY:[AIA San Francisco] AIASF: WiA Sketch and Walk
 DTSTART;TZID=Pacific Standard Time:20261025T113000
 DTEND;TZID=Pacific Standard Time:20261025T133000
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:efbf2a6e14115bef6ede67b4db397aa9@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/wia-sketch-and-walk
@@ -454,7 +394,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[BOMA San Francisco] BOMA Java
 DTSTART:20261028T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:e8951c3d154235d3424dec29682f1ed2@bd-events
 DESCRIPTION:\nSource: BOMA San Francisco\nLink: https://bomasf.org/events/
  events-calendar
@@ -463,7 +403,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[BOMA San Francisco] PAC Spirits Tasting Experience
 DTSTART:20261029T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:a6e91ed780d38a42d1e1c607b9274cc5@bd-events
 DESCRIPTION:\nSource: BOMA San Francisco\nLink: https://bomasf.org/events/
  events-calendar
@@ -472,7 +412,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[IIDA Northern California] Design After Dark
 DTSTART:20261029T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:4bec897ecffb937464f6fd37e5988f29@bd-events
 DESCRIPTION:Categories: City Center EVENT\, SAN FRANCISCO EVENT\n\nSource:
   IIDA Northern California\nLink: https://iidanc.org/events/design-after-da
@@ -484,7 +424,7 @@ SUMMARY:[AIA San Francisco] AIASF: CRAN Tour: Quarry House Stone Fabricato
  r Factory
 DTSTART;TZID=Pacific Standard Time:20261102T110000
 DTEND;TZID=Pacific Standard Time:20261102T140000
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:d6a5a9ad3b58b78d46c2ca47a3dc62a5@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/quarry-house-stone-fabricator-factory-tour
@@ -497,7 +437,7 @@ BEGIN:VEVENT
 SUMMARY:[AIA San Francisco] AIASF: ARE PREP PPD 2 + PDD 2 - Virtual Lesson
 DTSTART;TZID=Pacific Standard Time:20261102T180000
 DTEND;TZID=Pacific Standard Time:20261102T190000
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:bcfc420fa9f171d3b7b7659f37bb5dad@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/are-prep-ppd-2--pdd-2---virtual-lesson
@@ -505,24 +445,11 @@ LOCATION:Join Us Virtually
 URL:https://www.aiasf.org/events/are-prep-ppd-2--pdd-2---virtual-lesson
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[NAIOP SF Bay Area] Market Pulse - Financing & Investment Sales Pe
- rspectives
-DTSTART:20261104T150000Z
-DTEND:20261104T183000Z
-DTSTAMP:20261022T175102Z
-UID:b07cca4954940df25d6b2b7482dcc049@bd-events
-DESCRIPTION:\nSource: NAIOP SF Bay Area\nLink: https://members.naiopsfba.o
- rg/event-calendar/Details/market-pulse-financing-investment-sales-perspect
- ives-1844719?sourceTypeId=Website
-URL:https://members.naiopsfba.org/event-calendar/Details/market-pulse-fina
- ncing-investment-sales-perspectives-1844719?sourceTypeId=Website
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[AIA San Francisco] AIASF: Beyond the Model: Connecting Design Dat
  a Across the Project Lifecycle
 DTSTART;TZID=Pacific Standard Time:20261104T083000
 DTEND;TZID=Pacific Standard Time:20261104T103000
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:00cbec88be612cb59a6968ec737aacd7@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/beyond-the-model-connecting-design-data-across-the-project-lifecycle
@@ -534,7 +461,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[BOMA San Francisco] DEI Social Event
 DTSTART:20261105T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:eb89654eba3439db59fc154f44215f0f@bd-events
 DESCRIPTION:\nSource: BOMA San Francisco\nLink: https://bomasf.org/events/
  events-calendar
@@ -544,7 +471,7 @@ BEGIN:VEVENT
 SUMMARY:[CoreNet NorCal] CRE in an Uncertain World: Navigating Risk\, Resi
  lience\, and Change
 DTSTART:20261105T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:e3593aa975e9c92674be3d3344698819@bd-events
 DESCRIPTION:\nSource: CoreNet NorCal\nLink: https://nocal.corenetglobal.or
  g/events/upcoming-events
@@ -556,7 +483,7 @@ SUMMARY:[AIA San Francisco] AIASF: ARE PREP PPD 2 + PDD 2- Practice Exam &
   Office Hours
 DTSTART;TZID=Pacific Standard Time:20261104T180000
 DTEND;TZID=Pacific Standard Time:20261104T200000
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:855a15778ff3fafdcaa918a99e0d1101@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/are-prep-ppd-2--pdd-2--practice-exam-and-office-hours
@@ -569,7 +496,7 @@ BEGIN:VEVENT
 SUMMARY:[BOMA San Diego] CBPA Awards Summit & BOMA Cal Board Meeting
 DTSTART:20261105T150000Z
 DTEND:20261105T190000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:bb84a20a3b9ac0f9b8a2b0530cf60ba5@bd-events
 DESCRIPTION:\n	CBPA Industry Awards Dinner&nbsp\;\n	CBPA Annual Board Meet
  ing&nbsp\;\n	BOMA California Board Meeting&nbsp\;\n\n\n\nSource: BOMA San 
@@ -580,7 +507,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[IIDA Northern California] Habitat for Humanity Build Day
 DTSTART:20261106T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:4923beca94ec4e6f241c5182be6dfee7@bd-events
 DESCRIPTION:Categories: City Center EVENT\, SACRAMENTO EVENT\n\nSource: II
  DA Northern California\nLink: https://iidanc.org/events/habitat-for-humani
@@ -590,7 +517,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[IIDA Northern California] Student Firm Tours 2026
 DTSTART:20261106T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:ac0f951834afff45ea90169e1886ce7a@bd-events
 DESCRIPTION:Categories: City Center EVENT\, SILICON VALLEY EVENT\n\nSource
  : IIDA Northern California\nLink: https://iidanc.org/events/student-firm-t
@@ -602,7 +529,7 @@ SUMMARY:[AIA San Francisco] AIASF: Beyond the Blueprint: Designing Experie
  nces with Light\, Sound & Color
 DTSTART;TZID=Pacific Standard Time:20261105T173000
 DTEND;TZID=Pacific Standard Time:20261105T193000
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:afbd415ea0185da4f1741c3c0d3ff9da@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/beyond-the-blueprint-designing-experiences-with-light-sound-and-color
@@ -616,7 +543,7 @@ SUMMARY:[AIA San Francisco] AIASF: Architecture X Architecture: A Dialecti
  c - Book Launch & Conversation
 DTSTART;TZID=Pacific Standard Time:20261109T180000
 DTEND;TZID=Pacific Standard Time:20261109T193000
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:0f0d220b3c3c9939ba6800133205633d@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/architecture-x-architecture-a-dialectic--book-launch-and-conversation
@@ -629,7 +556,7 @@ BEGIN:VEVENT
 SUMMARY:[AIA San Francisco] AIASF: 2026 Community Alliance Awards
 DTSTART;TZID=Pacific Standard Time:20261110T180000
 DTEND;TZID=Pacific Standard Time:20261110T200000
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:3e54e2c0c770b3696e4f5e128a3a90df@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/2026-community-alliance-awards
@@ -642,7 +569,7 @@ SUMMARY:[AIA San Francisco] AIASF: AI in Architectural Practice: TAP Sympo
  sium
 DTSTART;TZID=Pacific Standard Time:20261111T130000
 DTEND;TZID=Pacific Standard Time:20261111T180000
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:20ff79c791d4936bc92993a693389caf@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/ai-in-architectural-practice-tap-symposium
@@ -655,7 +582,7 @@ BEGIN:VEVENT
 SUMMARY:[BOMA San Diego] 2026 Post Election Webcast
 DTSTART:20261112T120000Z
 DTEND:20261112T130000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:9d94d655b320567cfd32ec7de602fd26@bd-events
 DESCRIPTION:BOMA Post-Election Webcast: What the 2026 Election Means\nElec
  tion Day is approaching\, but for commercial real estate\, the bigger ques
@@ -668,23 +595,25 @@ LOCATION:Webcast\, CA
 URL:https://www.bomasd.org/calendar_list.asp
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[NAIOP SF Bay Area] Developing Leaders Tour: One Steuart Lane
-DTSTART:20261112T160000Z
-DTEND:20261112T180000Z
-DTSTAMP:20261022T175102Z
-UID:7721e3c518467ce32720006ff729e0b7@bd-events
-DESCRIPTION:\nSource: NAIOP SF Bay Area\nLink: https://members.naiopsfba.o
- rg/event-calendar/Details/developing-leaders-tour-one-steuart-lane-1926228
- ?sourceTypeId=Website
-URL:https://members.naiopsfba.org/event-calendar/Details/developing-leader
- s-tour-one-steuart-lane-1926228?sourceTypeId=Website
+SUMMARY:[AIA San Francisco] AIASF: Energy Code Ace Presents: Codebreaker -
+  Multifamily Overview of Energy Code Changes
+DTSTART;TZID=Pacific Standard Time:20261112T080000
+DTEND;TZID=Pacific Standard Time:20261112T103000
+DTSTAMP:20261023T174104Z
+UID:5f2730cd10b05a294aaaf6f0600ecbfd@bd-events
+DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
+ s/energy-code-ace-presents-codebreaker---multifamily-overview-of-energy-co
+ de-changes
+LOCATION:Join Us Virtually
+URL:https://www.aiasf.org/events/energy-code-ace-presents-codebreaker---mu
+ ltifamily-overview-of-energy-code-changes
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[AIA San Francisco] AIASF: Professional Practice Committee Happy H
  our
 DTSTART;TZID=Pacific Standard Time:20261112T173000
 DTEND;TZID=Pacific Standard Time:20261112T193000
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:358acf56554f5e1bef948854dcba40f2@bd-events
 DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
  s/professional-practice-committee-happy-hour
@@ -694,23 +623,9 @@ URL:https://www.aiasf.org/events/professional-practice-committee-happy-hou
  r
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[AIA San Francisco] AIASF: Small Firms\, Great Projects (SFGP) Lau
- nch Party + Presentation
-DTSTART;TZID=Pacific Standard Time:20261112T180000
-DTEND;TZID=Pacific Standard Time:20261112T210000
-DTSTAMP:20261022T175102Z
-UID:ae6b6ee8e5cc93a78c34c31b4f2daf8a@bd-events
-DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
- s/small-firms-great-projects-launch-party--panel-copy
-LOCATION:Center for Architecture + Design 140 Sutter Street San Francisco
- \, CA 94104 United States
-URL:https://www.aiasf.org/events/small-firms-great-projects-launch-party--
- panel-copy
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CMAA NorCal] CMAA Rising CM Conference | Save the Date
 DTSTART:20261114T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:7c3138d465b12ce0e038aa983ae71e58@bd-events
 DESCRIPTION:\nSource: CMAA NorCal\nLink: https://cmaascfndn.org/CA-Rising-
  CM-Conference
@@ -720,30 +635,17 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[BOMA San Francisco] Codes Seminar
 DTSTART:20261117T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:ae15da9861874a2b28445bd627707e79@bd-events
 DESCRIPTION:\nSource: BOMA San Francisco\nLink: https://bomasf.org/events/
  events-calendar
 URL:https://bomasf.org/events/events-calendar
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[NAIOP SF Bay Area] Real Estate Insider: San Francisco Office Leas
- ing Outlook
-DTSTART:20261117T160000Z
-DTEND:20261117T180000Z
-DTSTAMP:20261022T175102Z
-UID:1009877d447d5dffaa5b2d84e78ba69a@bd-events
-DESCRIPTION:\nSource: NAIOP SF Bay Area\nLink: https://members.naiopsfba.o
- rg/event-calendar/Details/real-estate-insider-san-francisco-office-leasing
- -outlook-1910696?sourceTypeId=Website
-URL:https://members.naiopsfba.org/event-calendar/Details/real-estate-insid
- er-san-francisco-office-leasing-outlook-1910696?sourceTypeId=Website
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CMAA NorCal] Planning for California’s Future: State Capital Pr
  ograms & Priorities
 DTSTART:20261118T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:4e72f25e9a0604085b85b13763e17347@bd-events
 DESCRIPTION:\nSource: CMAA NorCal\nLink: https://www.cmaanorcal.org/events
  -1/planning-for-californias-future-state-capital-programs-priorities
@@ -752,9 +654,23 @@ URL:https://www.cmaanorcal.org/events-1/planning-for-californias-future-st
  ate-capital-programs-priorities
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:[AIA San Francisco] AIASF: A Replicable Path for Living Buildings:
+  The PAE Living Building
+DTSTART;TZID=Pacific Standard Time:20261118T080000
+DTEND;TZID=Pacific Standard Time:20261118T103000
+DTSTAMP:20261023T174104Z
+UID:f8c712a741cfb283d0b4c680c6d8be3c@bd-events
+DESCRIPTION:\nSource: AIA San Francisco\nLink: https://www.aiasf.org/event
+ s/a-replicable-path-for-living-buildings-the-pae-living-building
+LOCATION:Center for Architecture + Design 140 Sutter Street San Francisco
+ \, CA 94104 United States
+URL:https://www.aiasf.org/events/a-replicable-path-for-living-buildings-th
+ e-pae-living-building
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:[BOMA San Francisco] EP Career Success Workshop
 DTSTART:20261119T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:7ffb96bf4b89a65a272995e9184408d6@bd-events
 DESCRIPTION:\nSource: BOMA San Francisco\nLink: https://bomasf.org/events/
  events-calendar
@@ -764,7 +680,7 @@ BEGIN:VEVENT
 SUMMARY:[BOMA San Diego] Annual Membership Awards & TOBY Gala
 DTSTART:20261120T180000Z
 DTEND:20261120T220000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:1d4a30e6ffe847d0584d591a22018141@bd-events
 DESCRIPTION:\n\n\n\nBOMA San Diego invites members to an evening of celebr
  ation\, connection\, and elegance at the Annual Membership Awards &amp\; T
@@ -780,7 +696,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[BOMA San Francisco] Holiday Party
 DTSTART:20261203T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:3c62390ffc756e751f43165408c74284@bd-events
 DESCRIPTION:\nSource: BOMA San Francisco\nLink: https://bomasf.org/events/
  events-calendar
@@ -789,7 +705,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CMAA NorCal] Holiday Mixer - Walnut Creek
 DTSTART:20261208T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:dcd25f422c61091b1331e6eeccf7c98b@bd-events
 DESCRIPTION:\nSource: CMAA NorCal\nLink: https://www.cmaanorcal.org/events
  -1/holiday-mixer-walnut-creek-1
@@ -800,7 +716,7 @@ BEGIN:VEVENT
 SUMMARY:[BOMA San Diego] December Membership Luncheon
 DTSTART:20261208T100000Z
 DTEND:20261208T130000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:ffccc79b2ba5e07250bd64b10206eda9@bd-events
 DESCRIPTION:December&nbsp\;Membership Luncheon: Personal Development Focus
  \n\n&nbsp\;Details to come!\n\nWhen: Tuesday\, December 8th\, 11 AM - 1 PM
@@ -816,7 +732,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CMAA NorCal] Holiday Mixer - Sacramento
 DTSTART:20261210T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:54498fa03c02e370d279930079c7dae3@bd-events
 DESCRIPTION:\nSource: CMAA NorCal\nLink: https://www.cmaanorcal.org/events
  -1/holiday-mixer-sacramento-5
@@ -826,7 +742,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[BOMA San Francisco] Coffee with a Cop
 DTSTART:20261216T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:7b04d4ab54bd73952a48bbb168c7d507@bd-events
 DESCRIPTION:\nSource: BOMA San Francisco\nLink: https://bomasf.org/events/
  events-calendar
@@ -836,7 +752,7 @@ BEGIN:VEVENT
 SUMMARY:[IIDA Northern California] IIDA Sacramento City Center Holiday Par
  ty
 DTSTART:20261217T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:3aafd2081b33c01faec2a5b96d32cbdf@bd-events
 DESCRIPTION:Categories: City Center EVENT\, SACRAMENTO EVENT\n\nSource: II
  DA Northern California\nLink: https://iidanc.org/events/iida-sacramento-ci
@@ -844,21 +760,9 @@ DESCRIPTION:Categories: City Center EVENT\, SACRAMENTO EVENT\n\nSource: II
 URL:https://iidanc.org/events/iida-sacramento-city-center-holiday-party-2/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:[NAIOP SF Bay Area] CREDA NorCal Regional Symposium
-DTSTART:20270114T130000Z
-DTEND:20270114T183000Z
-DTSTAMP:20261022T175102Z
-UID:d708b250f1905c10ec42f0f5080f4e4b@bd-events
-DESCRIPTION:\nSource: NAIOP SF Bay Area\nLink: https://members.naiopsfba.o
- rg/event-calendar/Details/creda-norcal-regional-symposium-1844753?sourceTy
- peId=Website
-URL:https://members.naiopsfba.org/event-calendar/Details/creda-norcal-regi
- onal-symposium-1844753?sourceTypeId=Website
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:[CMAA NorCal] Career Fair
 DTSTART:20270128T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:8447decf55e9fe9a0114574ba3be313d@bd-events
 DESCRIPTION:\nSource: CMAA NorCal\nLink: https://www.cmaanorcal.org/events
  -1/career-fair-3
@@ -868,7 +772,7 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[CMAA NorCal] Awards Gala and Industry Celebration
 DTSTART:20270527T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:782bd9bdd84bcd7d9f7ac605d6bacf0d@bd-events
 DESCRIPTION:\nSource: CMAA NorCal\nLink: https://www.cmaanorcal.org/events
  -1/awards-gala-and-industry-celebration-3
@@ -880,7 +784,7 @@ BEGIN:VEVENT
 SUMMARY:[ISPE Conferences] 2027 ISPE Annual Meeting & Expo
 DTSTART:20271010T000000Z
 DTEND:20271014T000000Z
-DTSTAMP:20261022T175102Z
+DTSTAMP:20261023T174104Z
 UID:b73ec692cb3e527fd9080a22c2a93f24@bd-events
 DESCRIPTION:\nSource: ISPE Conferences\nLink: https://ispe.org/conferences
 LOCATION:San Diego\, CA USA and Virtual
