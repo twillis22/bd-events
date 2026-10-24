@@ -159,16 +159,6 @@
 "title": "AIASF: ARE PREP PPD 1 + PDD 1 - Practice Exam & Office Hours",
 "url": "https://www.aiasf.org/events/are-prep-ppd-1--pdd-1---practice-exam-and-office-hours"
 },
-"26f6f51c5c9891c4f653b0405fc89702@bd-events": {
-"description": "",
-"end": "2026-10-02T17:00:00-07:00",
-"location": "Santa Rosa Junior College - Santa Rosa,CA 1501 Mendocino Avenue Santa Rosa, CA 95401 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-10-02T15:00:00-07:00",
-"title": "AIASF: SRJC Decarb + Rehab Tour of STEM Building and Forsyth Hall",
-"url": "https://www.aiasf.org/events/srjc-decarb--rehab-tour-of-stem-building-and-forsyth-hall"
-},
 "2cbbd24da54cb4f2fbc27f4512c20610@bd-events": {
 "description": "",
 "end": "2026-10-08T20:00:00-07:00",
@@ -579,6 +569,16 @@
 "title": "AIASF: Design for Women, By Women",
 "url": "https://www.aiasf.org/events/design-for-women-by-women"
 },
+"a6726737015c1eb29c4f03b04d04af29@bd-events": {
+"description": "",
+"end": null,
+"location": "San Francisco, CA",
+"source": "CoreNet NorCal",
+"source_region": "Bay Area",
+"start": "2026-11-19T00:00:00+00:00",
+"title": "28th Annual CRE Awards Gala",
+"url": "https://nocal.corenetglobal.org/events/upcoming-events"
+},
 "a6e91ed780d38a42d1e1c607b9274cc5@bd-events": {
 "description": "",
 "end": null,
@@ -918,6 +918,16 @@
 "start": "2026-11-18T08:00:00-08:00",
 "title": "AIASF: A Replicable Path for Living Buildings: The PAE Living Building",
 "url": "https://www.aiasf.org/events/a-replicable-path-for-living-buildings-the-pae-living-building"
+},
+"fb529e35d14b194b75dcaa3f2d8ac96d@bd-events": {
+"description": "",
+"end": "2026-11-17T20:00:00-08:00",
+"location": "Barebottle Beer Garden at Salesforce Park Salesforce Park 4th Level, 425 Mission St San Francisco, CA 94105",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-11-17T18:00:00-08:00",
+"title": "AIASF: BAYA November Happy Hour",
+"url": "https://www.aiasf.org/events/baya-november-happy-hour"
 },
 "ffadb88fce2dfb99d86c437c084b248f@bd-events": {
 "description": "",
