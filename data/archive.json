@@ -115,19 +115,9 @@
 "location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104",
 "source": "AIA San Francisco",
 "source_region": "San Francisco",
-"start": "2026-11-11T13:00:00-08:00",
+"start": "2026-11-11T12:00:00-08:00",
 "title": "AIASF: AI in Architectural Practice: TAP Symposium",
 "url": "https://www.aiasf.org/events/ai-in-architectural-practice-tap-symposium"
-},
-"2133479752067f536609b0ba91f1fe47@bd-events": {
-"description": "",
-"end": "2026-10-05T19:00:00-07:00",
-"location": "None",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-10-05T18:00:00-07:00",
-"title": "AIASF: ARE PREP PPD 1 + PDD 1 - Virtual Lesson",
-"url": "https://www.aiasf.org/events/are-prep-ppd-1--pdd-1"
 },
 "2214681dc5fef4eb402efc995e1f712d@bd-events": {
 "description": "",
@@ -339,16 +329,6 @@
 "title": "Annual Meeting & Membership Luncheon",
 "url": "https://bomasf.org/events/events-calendar"
 },
-"5e51cb55e228653951efec4f2485fd1c@bd-events": {
-"description": "",
-"end": null,
-"location": "San Diego Community of Practice",
-"source": "Lean Construction Institute",
-"source_region": "",
-"start": "2026-10-06T00:00:00+00:00",
-"title": "Target Value Delivery \u2013 Implementation and Next Steps",
-"url": "https://mylci.leanconstruction.org/LCI/Events/Event_display.aspx?EventKey=C_SD10066&WebsiteKey=2007eced-50c6-4f09-8b60-274f701143bf"
-},
 "5f2730cd10b05a294aaaf6f0600ecbfd@bd-events": {
 "description": "",
 "end": "2026-11-12T10:30:00-08:00",
@@ -479,6 +459,16 @@
 "title": "Flight Plan: The Future of Northern California Airport Capital Programs",
 "url": "https://www.cmaanorcal.org/events-1/flight-plan-the-future-of-northern-california-airport-capital-programs"
 },
+"817e7f1b310b6909607baac999bf7152@bd-events": {
+"description": "",
+"end": "2026-11-11T12:30:00-08:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-11-11T11:00:00-08:00",
+"title": "AIASF: Beyond the Model: Connecting Design Data Across the Project Lifecycle",
+"url": "https://www.aiasf.org/events/beyond-the-model-connecting-design-data-across-the-project-lifecycle"
+},
 "83e53ad6563e85b7fb56e6499fdbffce@bd-events": {
 "description": "",
 "end": "2026-10-12T18:00:00-07:00",
@@ -568,6 +558,16 @@
 "start": "2026-10-06T17:30:00-07:00",
 "title": "AIASF: Design for Women, By Women",
 "url": "https://www.aiasf.org/events/design-for-women-by-women"
+},
+"a0975a985b94f1ed46e694db4e54b5ec@bd-events": {
+"description": "",
+"end": "2026-11-12T18:30:00-08:00",
+"location": "Berkeley California (Please register to see the exact location of this event.)",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-11-12T15:00:00-08:00",
+"title": "AIASF: CATALYST",
+"url": "https://www.aiasf.org/events/catalyst"
 },
 "a6726737015c1eb29c4f03b04d04af29@bd-events": {
 "description": "",
