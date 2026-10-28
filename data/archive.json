@@ -309,16 +309,6 @@
 "title": "Holiday Mixer - Sacramento",
 "url": "https://www.cmaanorcal.org/events-1/holiday-mixer-sacramento-5"
 },
-"58e0774213b4f4d8f69ff94215113e88@bd-events": {
-"description": "Don&#39;t Miss The Annual Joint Expo: Wednesday, October 7th\n\nSave the Date! BOMA San Diego is proud to partner with IREM San Diego, IFMA San Diego, and SDBEA for this year&rsquo;s Annual Joint Expo, Bringing the Industry Together.\n\nReturning to BioMed Realty&rsquo;s Center for Novel Therapeutics in La Jolla for a second year, this event brings together professionals from across San Diego&rsquo;s ",
-"end": "2026-10-07T19:00:00+00:00",
-"location": "Center for Novel Therapeutics, a BioMed Property, 9310 Athena Circle, La Jolla, CA",
-"source": "BOMA San Diego",
-"source_region": "San Diego",
-"start": "2026-10-07T16:00:00+00:00",
-"title": "Annual Joint Expo: BOMA, IFMA, IREM, & SDBEA",
-"url": "https://www.bomasd.org/calendar_list.asp"
-},
 "5dba07903858c64b69f90e3da5aeac85@bd-events": {
 "description": "",
 "end": null,
@@ -338,16 +328,6 @@
 "start": "2026-11-12T08:00:00-08:00",
 "title": "AIASF: Energy Code Ace Presents: Codebreaker - Multifamily Overview of Energy Code Changes",
 "url": "https://www.aiasf.org/events/energy-code-ace-presents-codebreaker---multifamily-overview-of-energy-code-changes"
-},
-"67fa2c71f81a6d5533f73c705aa95d2d@bd-events": {
-"description": "\n\nThe Design, Operation &amp; Maintenance of Building Systems I\n\nOctober 7-9\nLocation: Online\nInstructor: Dave Ferguson\n\nPlease read carefully:\n\nClick &quot;Member Registration&quot;&nbsp;on this page to get started.\n\nClick &quot;Public Registration&quot;&nbsp;on this page to get started.\n\nTimes:&nbsp;8 a.m. - 5&nbsp;p.m. each day\n\nInstructor:&nbsp;Dave Ferguson\n The Design, Operation, and Mainten",
-"end": "2026-10-09T17:00:00+00:00",
-"location": "Online, CA",
-"source": "BOMA San Diego",
-"source_region": "San Diego",
-"start": "2026-10-07T08:00:00+00:00",
-"title": "Design, Operation and Maintenance of Building Systems Part I",
-"url": "https://www.bomasd.org/calendar_list.asp"
 },
 "6969f7cad404d1660a8850ca3dae9bf2@bd-events": {
 "description": "",
@@ -369,16 +349,6 @@
 "title": "2026 Annual Golf Tournament",
 "url": "https://iidanc.org/events/2026-annual-golf-tournament/"
 },
-"730c972ce14da2194f9e46f8b0f4a417@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "BOMA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-10-07T00:00:00+00:00",
-"title": "DEI Candid Conversation",
-"url": "https://bomasf.org/events/events-calendar"
-},
 "74c64fc23fa3784d73684f725ce3ba1d@bd-events": {
 "description": "",
 "end": null,
@@ -388,16 +358,6 @@
 "start": "2026-10-21T00:00:00+00:00",
 "title": "Decarbonization Webinar",
 "url": "https://bomasf.org/events/events-calendar"
-},
-"7509bdddd9a7ecee14eb14510bf5dfe1@bd-events": {
-"description": "",
-"end": "2026-10-06T19:30:00-07:00",
-"location": "California College of the Arts 145 Hooper Street San Francisco, CA 94107 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-10-06T17:30:00-07:00",
-"title": "AIASF: BAYA Fall Portfolio Review",
-"url": "https://www.aiasf.org/events/baya-fall-portfolio-review"
 },
 "7721e3c518467ce32720006ff729e0b7@bd-events": {
 "description": "",
@@ -529,6 +489,16 @@
 "title": "Real Estate Insider: A Look at The Kelsey",
 "url": "https://members.naiopsfba.org/event-calendar/Details/real-estate-insider-a-look-at-the-kelsey-1926173?sourceTypeId=Website"
 },
+"8e6ea6b04f09f0990aea3c334afae76d@bd-events": {
+"description": "",
+"end": "2026-11-11T12:30:00-08:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-11-11T11:00:00-08:00",
+"title": "AIASF: BIM Data in Practice: Collaboration from Design to Asset",
+"url": "https://www.aiasf.org/events/bim-data-in-practice-collaboration-from-design-to-asset"
+},
 "8ecdc72c9ac0b63d1025d484641c1053@bd-events": {
 "description": "",
 "end": "2026-11-11T13:30:00-08:00",
@@ -548,16 +518,6 @@
 "start": "2026-11-12T12:00:00+00:00",
 "title": "2026 Post Election Webcast",
 "url": "https://www.bomasd.org/calendar_list.asp"
-},
-"a05f2134a1ddb4c8a346a01049902795@bd-events": {
-"description": "",
-"end": "2026-10-06T20:30:00-07:00",
-"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-10-06T17:30:00-07:00",
-"title": "AIASF: Design for Women, By Women",
-"url": "https://www.aiasf.org/events/design-for-women-by-women"
 },
 "a0975a985b94f1ed46e694db4e54b5ec@bd-events": {
 "description": "",
