@@ -29,16 +29,6 @@
 "title": "AIASF: Opening Reception: How Soon Is Now?",
 "url": "https://www.aiasf.org/events/opening-reception-how-soon-is-now"
 },
-"08b497cc75afcf3a405716eec08b8fed@bd-events": {
-"description": "Categories: City Center EVENT, SILICON VALLEY EVENT",
-"end": null,
-"location": "",
-"source": "IIDA Northern California",
-"source_region": "Bay Area",
-"start": "2026-10-08T00:00:00+00:00",
-"title": "Sensorium",
-"url": "https://iidanc.org/events/sensorium/"
-},
 "09c54059e64634471618627c2bf98721@bd-events": {
 "description": "Details to follow! Sponsorships available from $650 - $1,000.\n",
 "end": "2026-10-22T19:00:00+00:00",
@@ -58,16 +48,6 @@
 "start": "2026-10-22T16:00:00+00:00",
 "title": "Industrial Committee Fall Happy Hour",
 "url": "https://members.naiopsfba.org/event-calendar/Details/industrial-committee-fall-happy-hour-1874131?sourceTypeId=Website"
-},
-"0c4d5cba8502123683ebedd244c5cfac@bd-events": {
-"description": "",
-"end": "2026-10-08T19:00:00+00:00",
-"location": "",
-"source": "NAIOP SF Bay Area",
-"source_region": "Bay Area",
-"start": "2026-10-08T17:00:00+00:00",
-"title": "Developing Leaders Happy Hour",
-"url": "https://members.naiopsfba.org/event-calendar/Details/developing-leaders-happy-hour-1860254?sourceTypeId=Website"
 },
 "0f0d220b3c3c9939ba6800133205633d@bd-events": {
 "description": "",
@@ -279,6 +259,16 @@
 "title": "Design After Dark",
 "url": "https://iidanc.org/events/design-after-dark/"
 },
+"4d60c6ba9f41bbfbb55c314df2e5a6f8@bd-events": {
+"description": "",
+"end": "2026-11-12T18:30:00-08:00",
+"location": "Berkeley California (Please register to see the exact location of this event.)",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-11-12T15:00:00-08:00",
+"title": "AIASF: CATALYST: Regenerative Community Development & Finance",
+"url": "https://www.aiasf.org/events/catalyst"
+},
 "4e72f25e9a0604085b85b13763e17347@bd-events": {
 "description": "",
 "end": null,
@@ -288,16 +278,6 @@
 "start": "2026-11-18T00:00:00+00:00",
 "title": "Planning for California\u2019s Future: State Capital Programs & Priorities",
 "url": "https://www.cmaanorcal.org/events-1/planning-for-californias-future-state-capital-programs-priorities"
-},
-"540233f65c5e2ccf59e40bc995828d55@bd-events": {
-"description": "",
-"end": "2026-10-07T20:00:00-07:00",
-"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-10-07T17:30:00-07:00",
-"title": "AIASF: Corporate Sustainability Reporting: What's Changing and What's Next?",
-"url": "https://www.aiasf.org/events/corporate-sustainability-reporting-whats-changing-and-whats-next"
 },
 "54498fa03c02e370d279930079c7dae3@bd-events": {
 "description": "",
@@ -459,16 +439,6 @@
 "title": "AIASF: ARE PREP PPD 2 + PDD 2- Practice Exam & Office Hours",
 "url": "https://www.aiasf.org/events/are-prep-ppd-2--pdd-2--practice-exam-and-office-hours"
 },
-"85b4836d6088ef3f06beb77fcc8571e6@bd-events": {
-"description": "",
-"end": "2026-10-08T19:00:00+00:00",
-"location": "",
-"source": "NAIOP SF Bay Area",
-"source_region": "Bay Area",
-"start": "2026-10-08T17:00:00+00:00",
-"title": "Developing Leaders Oktoberfest Happy Hour",
-"url": "https://members.naiopsfba.org/event-calendar/Details/developing-leaders-oktoberfest-happy-hour-1860254?sourceTypeId=Website"
-},
 "88e5365d29f7bb49df1eefd364272697@bd-events": {
 "description": "NAIOP Silicon Valley Annual Golf Tournament\nNAIOP Silicon Valley is excited to host our 6th Annual Golf Tournament\u00a0on\u00a0Wednesday, October 21, 2026, at the beautiful\u00a0Cinnabar Hills Golf Club\u00a0in\u00a0San Jose, CA! Don\u2019t miss this premier networking event where commercial real estate professionals come together for a fun-filled day of golf, connections, and friendly competition. Whether you\u2019re a seasoned g",
 "end": "2026-10-21T19:00:00+00:00",
@@ -619,6 +589,16 @@
 "title": "Market Pulse - Financing & Investment Sales Perspectives",
 "url": "https://members.naiopsfba.org/event-calendar/Details/market-pulse-financing-investment-sales-perspectives-1844719?sourceTypeId=Website"
 },
+"b25fb198fd8f9bf9a6d78c187e499d35@bd-events": {
+"description": "",
+"end": "2026-11-12T21:00:00-08:00",
+"location": "The Sycamore 2140 Mission Street San Francisco, CA 94110-1248 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-11-12T18:00:00-08:00",
+"title": "AIASF: Small Firms, Great Projects (SFGP) Happy Hour",
+"url": "https://www.aiasf.org/events/small-firms-great-projects-launch-party-"
+},
 "b66223189d25518c6deea474ca86d718@bd-events": {
 "description": "",
 "end": "2026-11-04T18:30:00+00:00",
@@ -688,6 +668,16 @@
 "start": "2026-10-09T17:30:00-07:00",
 "title": "AIASF: REAL TALK: Multidisciplinary Career Paths and Gensler Firm visit",
 "url": "https://www.aiasf.org/events/real-talk-multidisciplinary-career-paths-and-gensler-firm-visit"
+},
+"c9094f2c05df869d54825507f5b202c7@bd-events": {
+"description": "",
+"end": null,
+"location": "",
+"source": "BOMA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-12-03T00:00:00+00:00",
+"title": "Holiday Party - Fire & Ice: Met Gala Style",
+"url": "https://bomasf.org/events/events-calendar"
 },
 "cb5b6d3989b8bd94ab6ee2c1d4378319@bd-events": {
 "description": "",
