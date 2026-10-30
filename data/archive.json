@@ -119,36 +119,6 @@
 "title": "Student Firm Tour",
 "url": "https://iidanc.org/events/student-firm-tour/"
 },
-"26c5bad5a90fade8b9cdd0cc77917b22@bd-events": {
-"description": "",
-"end": "2026-10-08T20:00:00-07:00",
-"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-10-08T18:00:00-07:00",
-"title": "AIASF: ARE PREP PPD 1 + PDD 1 - Practice Exam & Office Hours",
-"url": "https://www.aiasf.org/events/are-prep-ppd-1--pdd-1---practice-exam-and-office-hours"
-},
-"2cbbd24da54cb4f2fbc27f4512c20610@bd-events": {
-"description": "",
-"end": "2026-10-08T20:00:00-07:00",
-"location": "Shroeder's 240 Front Street San Francisco, CA 94111-4403 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-10-08T17:00:00-07:00",
-"title": "AIASF: Technology in Architectural Practice Happy Hour",
-"url": "https://www.aiasf.org/events/technology-in-architectural-practice-happy-hour-"
-},
-"3064c764500dc592817c6c203ffdadf1@bd-events": {
-"description": "Categories: SACRAMENTO EVENT",
-"end": null,
-"location": "",
-"source": "IIDA Northern California",
-"source_region": "Bay Area",
-"start": "2026-10-09T00:00:00+00:00",
-"title": "Merge 2026",
-"url": "https://iidanc.org/events/merge-2026/"
-},
 "318c1730a72f7b5d374f5973b5315539@bd-events": {
 "description": "Join CREDA SFBA for an exclusive walking tour of Treasure Island, San Francisco's newest waterfront neighborhood, led by Wilson Meany \u2014 master developer of the 20-year, $6+ billion Treasure Island redevelopment. The tour will guide attendees through ...",
 "end": "2026-10-14T18:00:00+00:00",
@@ -679,16 +649,6 @@
 "title": "Holiday Party - Fire & Ice: Met Gala Style",
 "url": "https://bomasf.org/events/events-calendar"
 },
-"cb5b6d3989b8bd94ab6ee2c1d4378319@bd-events": {
-"description": "",
-"end": null,
-"location": "San Francisco, CA",
-"source": "CoreNet NorCal",
-"source_region": "Bay Area",
-"start": "2026-10-09T00:00:00+00:00",
-"title": "Day on the Bay",
-"url": "https://nocal.corenetglobal.org/events/upcoming-events"
-},
 "cbf38c9298a8a7d241910beaf1a224c9@bd-events": {
 "description": "",
 "end": "2026-10-21T20:00:00-07:00",
@@ -739,6 +699,16 @@
 "title": "CREDA NorCal Regional Symposium",
 "url": "https://members.naiopsfba.org/event-calendar/Details/creda-norcal-regional-symposium-1844753?sourceTypeId=Website"
 },
+"d9371b6bd54bf166270883645e1f889d@bd-events": {
+"description": "Asset Management\n\nPlease read carefully:\nThis class is taught virtually (live) and a free digital book is included for all registrants. If you are a current BOMA San Diego member, a physical copy of the book will be sent to you free upon request (donated by our Annual Supporting Partners). Members will need to request this at the end of checkout during registration. Click &quot;Member Registration",
+"end": "2026-11-13T17:00:00+00:00",
+"location": "Online, San Diego, CA",
+"source": "BOMA San Diego",
+"source_region": "San Diego",
+"start": "2026-11-11T08:00:00+00:00",
+"title": "Asset Management",
+"url": "https://www.bomasd.org/calendar_list.asp"
+},
 "dad94430269f8947d4493395b9d0f12e@bd-events": {
 "description": "",
 "end": "2026-10-22T20:00:00-07:00",
@@ -788,16 +758,6 @@
 "start": "2026-10-30T00:00:00+00:00",
 "title": "Design After Dark",
 "url": "https://iidanc.org/events/design-after-dark/"
-},
-"ddbd1079aa33915e792050ba06ef4595@bd-events": {
-"description": "",
-"end": "2026-10-08T20:00:00-07:00",
-"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-10-08T17:30:00-07:00",
-"title": "AIASF: DIALOGUES: Mimi Zeiger + Fernanda Canales",
-"url": "https://www.aiasf.org/events/dialogues-mimi-zeiger--fernanda-canales"
 },
 "e3593aa975e9c92674be3d3344698819@bd-events": {
 "description": "",
