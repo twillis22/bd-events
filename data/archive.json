@@ -99,16 +99,6 @@
 "title": "AIASF: AI in Architectural Practice: TAP Symposium",
 "url": "https://www.aiasf.org/events/ai-in-architectural-practice-tap-symposium"
 },
-"2214681dc5fef4eb402efc995e1f712d@bd-events": {
-"description": "",
-"end": null,
-"location": "Holy Cross Parish",
-"source": "CMAA NorCal",
-"source_region": "Bay Area",
-"start": "2026-10-10T00:00:00+00:00",
-"title": "CMAA NorCal and HABITAT FOR HUMANITY join forces at ROCK THE BLOCK",
-"url": "https://www.cmaanorcal.org/events-1/cmaa-norcal-and-habitat-for-humanity-join-forces-at-rock-the-block-2"
-},
 "25b7831967176ba1e11f4010bab5431b@bd-events": {
 "description": "Categories: City Center EVENT, SILICON VALLEY EVENT, Student EVENT",
 "end": null,
@@ -589,6 +579,16 @@
 "title": "2027 ISPE Annual Meeting & Expo",
 "url": "https://ispe.org/conferences"
 },
+"b7eb609cabd383b3965a7b4743208b9d@bd-events": {
+"description": "",
+"end": "2026-11-14T19:15:00-08:00",
+"location": "Grace Cathedral  1100 California Street San Francisco, CA 94108-2206 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-11-14T17:30:00-08:00",
+"title": "AIASF: Gothic in Concrete: The Architecture of Grace Cathedral",
+"url": "https://www.aiasf.org/events/gothic-in-concrete-the-architecture-of-grace-cathedral"
+},
 "bb84a20a3b9ac0f9b8a2b0530cf60ba5@bd-events": {
 "description": "\n\tCBPA Industry Awards Dinner&nbsp;\n\tCBPA Annual Board Meeting&nbsp;\n\tBOMA California Board Meeting&nbsp;\n\n",
 "end": "2026-11-05T19:00:00+00:00",
@@ -628,16 +628,6 @@
 "start": "2026-10-21T17:30:00-07:00",
 "title": "AIASF: Choosing the Right Delivery Method: Lessons from SFO, Diego Rivera Theater & Berkeley Gateway",
 "url": "https://www.aiasf.org/events/building-san-francisco's-future-lessons-from-the-projects-shaping-our-city"
-},
-"c8a493b88290e0466546aa923dac2c84@bd-events": {
-"description": "",
-"end": "2026-10-09T19:30:00-07:00",
-"location": "Gensler 220 Montgomery Street San Francisco, CA 94104-3402 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-10-09T17:30:00-07:00",
-"title": "AIASF: REAL TALK: Multidisciplinary Career Paths and Gensler Firm visit",
-"url": "https://www.aiasf.org/events/real-talk-multidisciplinary-career-paths-and-gensler-firm-visit"
 },
 "c9094f2c05df869d54825507f5b202c7@bd-events": {
 "description": "",
