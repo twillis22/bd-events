@@ -85,29 +85,9 @@
 "location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104",
 "source": "AIA San Francisco",
 "source_region": "San Francisco",
-"start": "2026-11-11T12:00:00-08:00",
+"start": "2026-11-11T13:00:00-08:00",
 "title": "AIASF: AI in Architectural Practice: TAP Symposium",
 "url": "https://www.aiasf.org/events/ai-in-architectural-practice-tap-symposium"
-},
-"25b7831967176ba1e11f4010bab5431b@bd-events": {
-"description": "Categories: City Center EVENT, SILICON VALLEY EVENT, Student EVENT",
-"end": null,
-"location": "",
-"source": "IIDA Northern California",
-"source_region": "Bay Area",
-"start": "2026-10-14T00:00:00+00:00",
-"title": "Student Firm Tour",
-"url": "https://iidanc.org/events/student-firm-tour/"
-},
-"318c1730a72f7b5d374f5973b5315539@bd-events": {
-"description": "Join CREDA SFBA for an exclusive walking tour of Treasure Island, San Francisco's newest waterfront neighborhood, led by Wilson Meany \u2014 master developer of the 20-year, $6+ billion Treasure Island redevelopment. The tour will guide attendees through ...",
-"end": "2026-10-14T18:00:00+00:00",
-"location": "",
-"source": "NAIOP SF Bay Area",
-"source_region": "Bay Area",
-"start": "2026-10-14T15:30:00+00:00",
-"title": "Treasure Island Tour & Happy Hour",
-"url": "https://members.naiopsfba.org/event-calendar/Details/treasure-island-tour-happy-hour-1904418?sourceTypeId=Website"
 },
 "358acf56554f5e1bef948854dcba40f2@bd-events": {
 "description": "",
@@ -128,16 +108,6 @@
 "start": "2026-10-21T14:00:00-07:00",
 "title": "AIASF: CRAN Hard Hat Tour: Nob Hill - Single Family Home",
 "url": "https://www.aiasf.org/events/cran-hard-hat-tour-nob-hill---single-family-home-"
-},
-"3a301a52649f0dba2db062a2eff9d24a@bd-events": {
-"description": "",
-"end": "2026-10-14T16:00:00-07:00",
-"location": "Center for Architecture + Design  140 Sutter Street San Francisco, CA 94104 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-10-14T13:00:00-07:00",
-"title": "AIASF: Insights on Zero Carbon Design",
-"url": "https://www.aiasf.org/events/insights-on-zero-carbon-design"
 },
 "3aafd2081b33c01faec2a5b96d32cbdf@bd-events": {
 "description": "Categories: City Center EVENT, SACRAMENTO EVENT",
@@ -168,16 +138,6 @@
 "start": "2026-11-10T18:00:00-08:00",
 "title": "AIASF: 2026 Community Alliance Awards",
 "url": "https://www.aiasf.org/events/2026-community-alliance-awards"
-},
-"4347de3d28dbd16f809fcb4148e3832c@bd-events": {
-"description": "",
-"end": "2026-10-13T20:00:00-07:00",
-"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-10-13T18:00:00-07:00",
-"title": "AIASF: Designing with Purpose: Equity, Climate, and the Future of Architecture",
-"url": "https://www.aiasf.org/events/designing-with-purpose-equity-climate-and-the-future-of-architecture"
 },
 "4923beca94ec4e6f241c5182be6dfee7@bd-events": {
 "description": "Categories: City Center EVENT, SACRAMENTO EVENT",
@@ -596,7 +556,7 @@
 "source": "BOMA San Francisco",
 "source_region": "San Francisco",
 "start": "2026-12-03T00:00:00+00:00",
-"title": "Holiday Party - Fire & Ice: Met Gala Style",
+"title": "Holiday Party - Fire & Ice: MET Gala Style",
 "url": "https://bomasf.org/events/events-calendar"
 },
 "cbf38c9298a8a7d241910beaf1a224c9@bd-events": {
