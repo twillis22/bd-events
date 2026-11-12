@@ -9,25 +9,15 @@
 "title": "AIASF: Beyond the Model: Connecting Design Data Across the Project Lifecycle",
 "url": "https://www.aiasf.org/events/beyond-the-model-connecting-design-data-across-the-project-lifecycle"
 },
-"09c54059e64634471618627c2bf98721@bd-events": {
-"description": "Details to follow! Sponsorships available from $650 - $1,000.\n",
-"end": "2026-10-22T19:00:00+00:00",
-"location": "Stone Brewing Liberty Station, 2816 Historic Decatur Rd UNIT 116, San Diego, CA",
-"source": "BOMA San Diego",
-"source_region": "San Diego",
-"start": "2026-10-22T16:00:00+00:00",
-"title": "Emerging Professionals Evening Event",
-"url": "https://www.bomasd.org/calendar_list.asp"
-},
-"0ac21bbc9712aafd8bc770acbf5cb53d@bd-events": {
+"0b0b5dd74093544b70c49e75133b6d60@bd-events": {
 "description": "",
-"end": "2026-10-22T18:00:00+00:00",
-"location": "",
-"source": "NAIOP SF Bay Area",
-"source_region": "Bay Area",
-"start": "2026-10-22T16:00:00+00:00",
-"title": "Industrial Committee Fall Happy Hour",
-"url": "https://members.naiopsfba.org/event-calendar/Details/industrial-committee-fall-happy-hour-1874131?sourceTypeId=Website"
+"end": "2026-12-01T13:30:00-08:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-12-01T11:45:00-08:00",
+"title": "AIASF: Design and Delivery of Parametric Architecture in the Caribbean",
+"url": "https://www.aiasf.org/events/design-and-delivery-of-parametric-architecture-in-the-caribbean"
 },
 "0f0d220b3c3c9939ba6800133205633d@bd-events": {
 "description": "",
@@ -98,16 +88,6 @@
 "start": "2026-11-12T17:30:00-08:00",
 "title": "AIASF: Professional Practice Committee Happy Hour",
 "url": "https://www.aiasf.org/events/professional-practice-committee-happy-hour"
-},
-"3a1580331b02f90ae81c3b7d005fb9f1@bd-events": {
-"description": "",
-"end": "2026-10-21T18:00:00-07:00",
-"location": "1030 Leavenworth Street San Francisco, CA 94109-5030 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-10-21T14:00:00-07:00",
-"title": "AIASF: CRAN Hard Hat Tour: Nob Hill - Single Family Home",
-"url": "https://www.aiasf.org/events/cran-hard-hat-tour-nob-hill---single-family-home-"
 },
 "3aafd2081b33c01faec2a5b96d32cbdf@bd-events": {
 "description": "Categories: City Center EVENT, SACRAMENTO EVENT",
@@ -189,6 +169,16 @@
 "title": "Planning for California\u2019s Future: State Capital Programs & Priorities",
 "url": "https://www.cmaanorcal.org/events-1/planning-for-californias-future-state-capital-programs-priorities"
 },
+"5429bca5714ef3c8748458f128f5dd18@bd-events": {
+"description": "",
+"end": "2026-12-08T20:30:00-08:00",
+"location": "140 Sutter Street 140 Sutter Street San Francisco, CA 94104 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-12-08T17:30:00-08:00",
+"title": "AIASF: LiA General Meeting + End of the Year Fiesta",
+"url": "https://www.aiasf.org/events/lia-general-meeting--end-of-the-year-fiesta"
+},
 "54498fa03c02e370d279930079c7dae3@bd-events": {
 "description": "",
 "end": null,
@@ -218,6 +208,16 @@
 "start": "2027-02-10T00:00:00-08:00",
 "title": "AIASF: 2027 Mass Timber Symposium",
 "url": "https://www.aiasf.org/events/mass-timber-symposium-2027"
+},
+"7205f67f398168eb361a94f51069efc0@bd-events": {
+"description": "",
+"end": "2026-12-03T21:00:00-08:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-12-03T18:00:00-08:00",
+"title": "AIASF: Annual Meeting + Holiday Party",
+"url": "https://www.aiasf.org/events/annual-business-meeting"
 },
 "7721e3c518467ce32720006ff729e0b7@bd-events": {
 "description": "",
@@ -509,16 +509,6 @@
 "title": "AIASF: ARE PREP PPD 2 + PDD 2 - Virtual Lesson",
 "url": "https://www.aiasf.org/events/are-prep-ppd-2--pdd-2---virtual-lesson"
 },
-"c2f21c0db203d56471234a55c127a15f@bd-events": {
-"description": "",
-"end": "2026-10-21T20:00:00-07:00",
-"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-10-21T17:30:00-07:00",
-"title": "AIASF: Choosing the Right Delivery Method: Lessons from SFO, Diego Rivera Theater & Berkeley Gateway",
-"url": "https://www.aiasf.org/events/building-san-francisco's-future-lessons-from-the-projects-shaping-our-city"
-},
 "c6007cf8c598019c3a9493384b21d184@bd-events": {
 "description": "",
 "end": "2026-11-18T21:00:00-08:00",
@@ -538,16 +528,6 @@
 "start": "2026-12-03T00:00:00+00:00",
 "title": "Holiday Party - Fire & Ice: MET Gala Style",
 "url": "https://bomasf.org/events/events-calendar"
-},
-"cbf38c9298a8a7d241910beaf1a224c9@bd-events": {
-"description": "",
-"end": "2026-10-21T20:00:00-07:00",
-"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
-"source": "AIA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-10-21T17:30:00-07:00",
-"title": "AIASF: Building San Francisco's Future: Lessons from the Projects Shaping Our City",
-"url": "https://www.aiasf.org/events/building-san-francisco's-future-lessons-from-the-projects-shaping-our-city"
 },
 "d549d819e0809f7b7619397d9d3753fb@bd-events": {
 "description": "",
@@ -629,16 +609,6 @@
 "title": "CRE in an Uncertain World: Navigating Risk, Resilience, and Change",
 "url": "https://nocal.corenetglobal.org/events/upcoming-events"
 },
-"e77e49bca479dbe92f5e103ec327cc7a@bd-events": {
-"description": "BOMA San Diego&rsquo;s Emerging Professionals Committee invites you to Halloween Trivia Night at Stone Brewing Liberty Station!\n\nEnjoy a festive evening of beginner-friendly trivia, networking, food, drinks and friendly competition with the BOMA community. No trivia experience is needed &mdash; just bring your best guesses and get ready for a fun night out.\n\nGuests are also encouraged to dress up ",
-"end": "2026-10-22T19:00:00+00:00",
-"location": "Stone Brewing Liberty Station, 2816 Historic Decatur Rd UNIT 116, San Diego, CA",
-"source": "BOMA San Diego",
-"source_region": "San Diego",
-"start": "2026-10-22T16:00:00+00:00",
-"title": "Halloween Trivia Night",
-"url": "https://www.bomasd.org/calendar_list.asp"
-},
 "e8951c3d154235d3424dec29682f1ed2@bd-events": {
 "description": "",
 "end": null,
@@ -671,11 +641,11 @@
 },
 "f8c712a741cfb283d0b4c680c6d8be3c@bd-events": {
 "description": "",
-"end": "2026-11-18T10:30:00-08:00",
+"end": "2026-11-18T10:00:00-08:00",
 "location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
 "source": "AIA San Francisco",
 "source_region": "San Francisco",
-"start": "2026-11-18T08:00:00-08:00",
+"start": "2026-11-18T08:30:00-08:00",
 "title": "AIASF: A Replicable Path for Living Buildings: The PAE Living Building",
 "url": "https://www.aiasf.org/events/a-replicable-path-for-living-buildings-the-pae-living-building"
 },
