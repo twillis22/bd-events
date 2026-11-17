@@ -126,7 +126,7 @@
 "source": "AIA San Francisco",
 "source_region": "San Francisco",
 "start": "2026-12-08T11:00:00-08:00",
-"title": "AIASF: CA+D Holiday Market",
+"title": "AIASF: CA+D Holiday Market!",
 "url": "https://www.aiasf.org/events/holiday-market"
 },
 "4923beca94ec4e6f241c5182be6dfee7@bd-events": {
@@ -648,6 +648,16 @@
 "start": "2026-11-05T00:00:00+00:00",
 "title": "DEI Social Event",
 "url": "https://bomasf.org/events/events-calendar"
+},
+"f26e399427976c6dcce356d752d17e92@bd-events": {
+"description": "",
+"end": "2026-12-09T12:00:00-08:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2026-12-09T08:30:00-08:00",
+"title": "AIASF:  BuildSF Summit: Building San Francisco's Future",
+"url": "https://www.aiasf.org/events/-buildsf-summit-building-san-franciscos-future"
 },
 "f8c712a741cfb283d0b4c680c6d8be3c@bd-events": {
 "description": "",
