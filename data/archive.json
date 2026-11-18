@@ -189,6 +189,16 @@
 "title": "AIASF: BUILD SF Summit",
 "url": "https://www.aiasf.org/events/build-sf-summit"
 },
+"514cc33df2b622311da695fc8e9a66e9@bd-events": {
+"description": "",
+"end": "2027-02-25T20:00:00-08:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2027-02-25T17:30:00-08:00",
+"title": "AIASF: DIALOGUES: Eva Hagberg + Emanuele Coccia",
+"url": "https://www.aiasf.org/events/dialogues-eva-hagberg--emanuele-coccia"
+},
 "5429bca5714ef3c8748458f128f5dd18@bd-events": {
 "description": "",
 "end": "2026-12-08T20:30:00-08:00",
@@ -509,6 +519,16 @@
 "title": "AIASF: Gothic in Concrete: The Architecture of Grace Cathedral",
 "url": "https://www.aiasf.org/events/gothic-in-concrete-the-architecture-of-grace-cathedral"
 },
+"b823a2f0430f8518d72ea4e21fc4706d@bd-events": {
+"description": "",
+"end": "2027-03-25T20:00:00-07:00",
+"location": "Center for Architecture + Design 140 Sutter Street San Francisco, CA 94104 United States",
+"source": "AIA San Francisco",
+"source_region": "San Francisco",
+"start": "2027-03-25T17:30:00-07:00",
+"title": "AIASF: DIALOGUES: Neeraj Bhatia + Carles Baiges",
+"url": "https://www.aiasf.org/events/dialogues-neeraj-bhatia--carles-baiges"
+},
 "b828dd23077bbac79d390368d9bd0bb9@bd-events": {
 "description": "",
 "end": "2026-11-09T19:30:00-08:00",
@@ -628,16 +648,6 @@
 "start": "2026-11-05T00:00:00+00:00",
 "title": "CRE in an Uncertain World: Navigating Risk, Resilience, and Change",
 "url": "https://nocal.corenetglobal.org/events/upcoming-events"
-},
-"e8951c3d154235d3424dec29682f1ed2@bd-events": {
-"description": "",
-"end": null,
-"location": "",
-"source": "BOMA San Francisco",
-"source_region": "San Francisco",
-"start": "2026-10-28T00:00:00+00:00",
-"title": "BOMA Java",
-"url": "https://bomasf.org/events/events-calendar"
 },
 "eb89654eba3439db59fc154f44215f0f@bd-events": {
 "description": "",
